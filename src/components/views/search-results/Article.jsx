@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
-import InputExemple from './Input'
+import InputExemple from '../../common/Input'
+import TableRating from '../../common/Rating'
 import './Article.css'
-import TableRating from './Rating'
+
 
 
 const Article = ({author, title, abstract, nature, niveauhierarchie, support, transfert, onClick}) => (

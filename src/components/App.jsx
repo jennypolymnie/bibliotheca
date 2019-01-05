@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 //import LogoutIcon from './LogoutIcon.png';
 import './App.css';
-import CountElement from './NbArticleFound'
-import Article from './Article'
+import CountElement from './common/NbArticle'
+import Article from './views/search-results/Article'
 import HeaderGreetings from './Header'
-import InputExemple from './Input'
-import MenuExampleSecondary from './Menu'
+import InputExemple from './common/Input'
+import MenuExampleSecondary from './common/Menu'
 
 
 class App extends Component {

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Label} from 'semantic-ui-react'
-import './NbArticleFound.css'
+import './NbArticle.css'
 
 const CountElement = ({Name, Count}) => (
     <div className="CountElement"> 
