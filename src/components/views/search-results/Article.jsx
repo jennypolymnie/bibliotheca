@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
-import InputExemple from '../../common/Input'
-import TableRating from '../../common/Rating'
-import './Article.css'
+import InputExemple from './Input'
+import TableRating from './Rating'
+import './stylesheets/Article.scss'
 
 
 
