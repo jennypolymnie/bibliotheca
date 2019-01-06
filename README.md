@@ -68,5 +68,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ### Tutorial for multipage
+This is the good one (webpack-express): https://medium.com/@binyamin/creating-a-node-express-webpack-app-with-dev-and-prod-builds-a4962ce51334
+and this (webpack-react): https://www.valentinog.com/blog/react-webpack-babel/
+and this (routes): https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 
-Tutorial: https://medium.com/@krithix/multi-page-website-with-react-in-2017-f6f2af326526

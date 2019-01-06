@@ -2,7 +2,7 @@ import React from 'react'
 import {Table, Rating } from 'semantic-ui-react'
 
 const TableRating = () => (
-  <Table cellpadding="5">
+  <Table cellPadding="5">
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Elements</Table.HeaderCell>

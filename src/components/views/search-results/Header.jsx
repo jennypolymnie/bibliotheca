@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header, Image } from 'semantic-ui-react'
-import './stylesheets/Header.scss'
+import './stylesheets/Header.css'
 
 
 const HeaderGreetings = () => (

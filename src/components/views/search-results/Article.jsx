@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'semantic-ui-react'
 import InputExemple from './Input'
 import TableRating from './Rating'
-import './stylesheets/Article.scss'
+import './stylesheets/Article.css'
 
 
 

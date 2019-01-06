@@ -1,39 +1,53 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
-var webpack = require('webpack');
+const path = require("path")
+const webpack = require('webpack')
+const HtmlWebPackPlugin = require("html-webpack-plugin")
 module.exports = {
-  context: __dirname,
-  entry: "./src/index.jsx",
-  output: {
-    path: path.resolve('./src'),
-    filename: "bundle.js",
-    publicPath: '/public/'
+  entry: {
+    main: './src/index.jsx'
   },
+  output: {
+    path: path.join(__dirname, 'dist'),
+    publicPath: '/',
+    filename: '[name].js'
+  },
+  target: 'web',
+  devtool: '#source-map',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        loader: "babel-loader",
       },
       {
-        test: /\.(scss|css)$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        // Loads the javacript into html template provided.
+        // Entry point is set below in HtmlWebPackPlugin in Plugins 
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            //options: { minimize: true }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      },
+      {
+       test: /\.(png|svg|jpg|gif)$/,
+       use: ['file-loader']
       }
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new ExtractTextPlugin({ filename: 'app.css', allChunks: true })
-  ],
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  },
-  mode: 'production',
-};
+    new HtmlWebPackPlugin({
+      template: "./src/html/index.html",
+      filename: "./index.html",
+      excludeChunks: [ 'server' ]
+    })
+  ]
+}

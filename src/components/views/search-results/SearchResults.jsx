@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 //import LogoutIcon from './LogoutIcon.png';
-import './stylesheets/SearchResults.scss';
+import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle'
 import Article from './Article'
 import HeaderGreetings from './Header'
@@ -9,7 +9,7 @@ import InputExemple from './Input'
 import MenuExampleSecondary from './Menu'
 
 
-class App extends Component {
+class SearchResults extends Component {
 
   handleCardClick(Article) {
     console.log(Article, 'a agrandir dans une nouvelle fenêtre')
@@ -43,4 +43,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SearchResults;
