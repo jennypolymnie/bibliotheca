@@ -2,7 +2,7 @@ import React from '../../../../../Library/Caches/typescript/2.9/node_modules/@ty
 import {Table, Rating } from 'semantic-ui-react'
 
 const TableRating = () => (
-  <Table cellpadding="5">
+  <Table cellPadding="5">
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Elements</Table.HeaderCell>
