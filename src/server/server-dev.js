@@ -5,7 +5,7 @@ import config from '../../webpack.dev.config.js'
 import path from 'path'
 import express from 'express'
 const app = express(),
-            DIST_DIR = __dirname,
+            DIST_DIR = __dirname, // eslint-disable-line no-undef
             HTML_FILE = path.resolve(DIST_DIR, 'index.html'),
             compiler = webpack(config)
 
@@ -16,16 +16,17 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(webpackHotMiddleware(compiler))
 
 app.get('*', (req, res, next) => {
-    compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
-    if (err) {
-      return next(err)
-    }
-    res.set('content-type', 'text/html')
-    res.send(result)
-    res.end()
-    })
+    res.sendFile(HTML_FILE);
+    // compiler.outputFileSystem.readFile(HTML_FILE, (err, result) => {
+    // if (err) {
+    //   return next(err)
+    // }
+    // res.set('content-type', 'text/babel')
+    // res.send(result)
+    // res.end()
+    // })
 })
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080 // eslint-disable-line no-undef
 app.listen(PORT, () => {
     console.log(`App listening to ${PORT}....`)
     console.log('Press Ctrl+C to quit.')
