@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Input, Menu } from 'semantic-ui-react'
 
-export default class MenuExampleSecondary extends Component {
+export default class MenuSuperieur extends Component {
   state = { activeItem: 'Résultat de la recherche' }
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -12,8 +12,8 @@ export default class MenuExampleSecondary extends Component {
     return (
       <Menu secondary>
         <Menu.Item 
-        name='Résultat de la recherche' 
-        active={activeItem === 'Résultat de la recherche'} 
+        name='Menu principal' 
+        active={activeItem === 'Menu principal'} 
         onClick={this.handleItemClick} 
         />
         <Menu.Item
@@ -27,8 +27,8 @@ export default class MenuExampleSecondary extends Component {
           </Menu.Item>
 
           <Menu.Item
-            name='logout'
-            active={activeItem === 'logout'}
+            name='Déconnexion'
+            active={activeItem === 'Déconnexion'}
             onClick={this.handleItemClick}
           />
         </Menu.Menu>

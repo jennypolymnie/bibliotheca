@@ -5,7 +5,7 @@ import CountElement from './NbArticleFound'
 import Article from './Article'
 import HeaderGreetings from './Header'
 import InputExemple from './Input'
-import MenuExampleSecondary from './Menu'
+import MenuSuperieur from './MenuSuperieur'
 
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
     return (
         
       <div className="recherche">
-          <MenuExampleSecondary></MenuExampleSecondary>
+          <MenuSuperieur></MenuSuperieur>
         
           <HeaderGreetings />
 
@@ -37,6 +37,7 @@ class App extends Component {
         <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         </div>
+        
       </div>
     );
   }

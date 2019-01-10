@@ -1,0 +1,29 @@
+
+  
+.ProfilLab{
+    background-color:rgb(241, 239, 239);
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 900px;
+    margin: auto;
+    user-select: none;
+}
+
+.InfoRecherche{
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.InfoContact {
+    height: 350px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Choix{
+    height: 100px;
+    background-color: pink;
+
+}
+
+
