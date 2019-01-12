@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {Button, Form, Input} from 'semantic-ui-react'
-import InputExemple from './Input'
+import { Input } from 'semantic-ui-react'
+
 import HeaderGreetings from './Header'
 import MenuSuperieur from './MenuSuperieur'
 

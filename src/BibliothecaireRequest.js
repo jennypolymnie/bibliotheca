@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Button, Form, TextArea, Input} from 'semantic-ui-react';
-import HeaderGreetings from './Header';
 import MenuSuperieur from './MenuSuperieur';
 import { Header} from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+
 
 class BibliothecaireRequest extends Component {
   

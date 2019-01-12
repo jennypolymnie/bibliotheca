@@ -1,25 +1,17 @@
-import React, { Component } from 'react'
-import { Button, Checkbox, Form, Input,TextArea, Message} from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Button, Checkbox, Form, Input,Icon, Message} from 'semantic-ui-react';
 import './FormLab.css';
-import CheckboxToggle from './Toggle'
+import CheckboxToggle from './Toggle';
+import GridForm from './GridForm';
 
-const extraction = [
-    { key: 'Q', text: 'Qiamp', value: 'qiamp' },
-    { key: 'I', text: 'Investigator', value: 'investigator' },
-  ]
-
-  const amplification = [
-    { key: 'N', text: 'NGMSelect', value: 'ngmselect' },
-    { key: 'F', text: 'Fusion6C', value: 'fusion6c' },
-  ]
 
 class FormLab extends Component {
-  state = {}
-
-  handleChange = (e, { value }) => this.setState({ value })
+  
+  //state = {}
+  //handleChange = (e, { value }) => this.setState({ value })
 
   render() {
-    const { value } = this.state
+    //const { value } = this.state
 
     return (
       <div className = "ProfilLab">
@@ -27,28 +19,29 @@ class FormLab extends Component {
           <div>
              <Message color='blue'
               attached
-              header='Bienvenue sur notre site!'
+              header='Bienvenue dans notre application!'
               content='Merci de bien vouloir remplir le formulaire ci dessous'
               />
-             <Form className = "InfoLab">
-              <Form.Group grouped widths='equal'>
-                <Form.Field required control={Input} label='Nom du laboratoire' placeholder='Nom du laboratoire' />
-                <Form.Field required control={Input} label='Pays' placeholder='Pays' />
-                <Form.Field control={Input} label='Site web' placeholder='Site web' />
-              </Form.Group>
-            </Form>
           </div>
 
-          <div className ="InfoRecherche">
-            <Form>
-              <Form.Group grouped>
-              <label>Vos axes de recherche</label>
-                <Form.Field label='Mélanges complexes' control='input' type='checkbox' />
-                <Form.Field label='Détermination de la nature de la trace' control='input' type='checkbox' />
-                <Form.Field label='Détermination de la nature de la trace' control='input' type='checkbox' />
-                <Form.Field label='Détermination de la nature de la trace' control='input' type='checkbox' />
-                <Form.Field label='Détermination de la nature de la trace' control='input' type='checkbox' />
-                <Form.Field label='Détermination de la nature de la trace' control='input' type='checkbox' />
+          <div className = "InfoLab">
+             <h1>Labo</h1>
+             <Form>
+              <Form.Group grouped widths='equal'>
+                <Form.Field 
+                required 
+                control={Input} 
+                label='Nom du laboratoire' 
+                placeholder='Nom du laboratoire' />
+                <Form.Field 
+                required
+                control={Input}
+                label='Pays'
+                placeholder='Pays' />
+                <Form.Field 
+                control={Input}
+                label='Site web' 
+                placeholder='Site web' />
               </Form.Group>
             </Form>
           </div>
@@ -56,31 +49,133 @@ class FormLab extends Component {
           <div className = "InfoContact">
             <Form>
               <Form.Group grouped>
-              <label> Informations de contact </label>
-                <Form.Field control={Input} label='Email du contact technique' placeholder='email technique' />
-                <Form.Field control={Input} label='Email du contact interprétation' placeholder='email interpretation' />
-                <Form.Field control={TextArea} label='About' placeholder='Tell us more about you...' />
-                <Form.Field required control={Checkbox} label='Je suis accord avec les conditions de la plateforme' />
-                <Form.Field > <CheckboxToggle/> </Form.Field>
-                <Form.Field control={Button}>Enregistrer mon profil</Form.Field>
+              <label> <h1>Contact</h1> </label>
+                <Form.Field 
+                control={Input} 
+                label='Email du contact technique' 
+                placeholder='email technique' 
+                type='email'/>
+                <Form.Field 
+                control={Input} 
+                label='Email du contact interprétation' 
+                placeholder='email interpretation' 
+                type='email' />
               </Form.Group>
             </Form> 
           </div>
 
 
-          <div classeName ="Choix">
-              <Form>
-              <Form.Field><CheckboxToggle/></Form.Field>
-              </Form>
+          <div className = "Titre">
+          <h1>Axes de recherche</h1>
+          <Button basic circular color = 'green' icon>
+                <Icon size='large' name='question circle' />
+                </Button>
           </div>
 
-        {//
-          //<div classeName = "Partie2">
-          //<GridForm/>
-        //</div>
-        }
+
+          <div className ="InfoRecherche">
+          <div className= "InfoRecherche1">
+            <Form>
+              <Form.Group grouped>
+                <Form.Field 
+                label= "Le laboratoire est uniquement un laboratoire d'expertise "
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='Détermination de la nature du fluide biologique' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='ADN ancien' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='Méthylation' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='Interprétation des mélanges' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='Chromosome Y' 
+                control='input' 
+                type='checkbox' />
+              </Form.Group>
+            </Form>
+            </div>
+
+            <div className= "InfoRecherche2">
+            <Form>
+              <Form.Group grouped>
+                <Form.Field 
+                label='Chromosome X' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label="Logiciel d'interprétation" 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label="Détection de l'ADN de contact" 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='Détermination des caractéristiques physiques' 
+                control='input' 
+                type='checkbox' />
+                <Form.Field 
+                label='ADN mitochondrial' 
+                control='input' 
+                type='checkbox' />
+              </Form.Group>
+            </Form>
+            </div>
+
+
+            <div className= "InfoRecherche3">
+            <Form>
+              <Form.Group grouped>
+                <Form.Field 
+                label='Ajouter un thème' 
+                control='input' 
+                type='input' />
+              </Form.Group>
+            </Form>
+            </div>
+
+          </div>
+
+        
+          <div classeName = "Partie2">
+          <h1> Partie Analytique </h1>
+          <GridForm/>
+          </div>
     
-   
+          <div className = "Confidentialite">
+          <Form>
+          <Form.Field > <Checkbox toggle label="Souhaitez vous que ces informations soient visibles pour les autres laboratoires?"/> </Form.Field>
+          </Form>
+          </div>
+
+          <div className = "Acceptation">
+            <h1>Inscription</h1>
+            <Form>
+              <Form.Group inline>
+                <Form.Field 
+                required 
+                control={Checkbox} 
+                label='Je suis accord avec les conditions de la plateforme' />
+                <Form.Field control={Button}>Je poursuis avec le paiement</Form.Field>
+                <Form.Field control={Button}>Finalement je ne veux pas m'inscrire</Form.Field>
+              </Form.Group>
+            </Form> 
+          </div>
+
+
+
+
+
     </div>
 
    
