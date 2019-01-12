@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './components/App'
 // import 'semantic-ui-css/semantic.min.css'
 
-// require('./components/views/search-results/stylesheets/SearchResults.css');
-// require('./index.css');
+require('./components/views/search-results/stylesheets/SearchResults.css');
+require('./index.css');
 
 ReactDom.render(
   <BrowserRouter>
