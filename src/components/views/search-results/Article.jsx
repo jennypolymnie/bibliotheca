@@ -1,12 +1,15 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
-import InputExemple from './Input'
-import TableRating from './Rating'
+import InputExemple from './InputExemple'
+import TableRating from './TableRating'
+import PropTypes from 'prop-types'
 import './stylesheets/Article.css'
 
 
 
-const Article = ({author, title, abstract, nature, niveauhierarchie, support, transfert, onClick}) => (
+const Article = ({author, title, abstract, nature, hierarchieLevel, support, transfert, onClick}) => (
+  
+    
     <div className="Article">
 
         <div className = "Presentation">
@@ -17,23 +20,35 @@ const Article = ({author, title, abstract, nature, niveauhierarchie, support, tr
             <p>Abstract: {abstract}</p>
             </div>
 
-            <div className="fitting">
-            {//<p>nature: {nature}</p>
-            //<p>niveau de hiérarchie: {niveauhierarchie}</p>
-            //<p>support: {support}</p>
-            //<p>transfert: {transfert}</p>
-            }
-            <TableRating></TableRating>
+            <div className="Fitting">
+         
+            <TableRating 
+            nature = {nature} 
+            hierarchieLevel = {hierarchieLevel} 
+            support = {support}
+            transfert = {transfert}>
+            </TableRating>
             </div>
 
         </div>
 
-        <div className="avis">
+        <div className="Avis">
         <Button> Donnez votre avis </Button>
-        <InputExemple Info ="pos reviews" Entree ="12" ></InputExemple>
-        <InputExemple Info ="nèg reviews" Entree ="1" ></InputExemple>
+        <InputExemple info ="pos reviews" entree ="12" ></InputExemple>
+        <InputExemple info ="nèg reviews" entree ="1" ></InputExemple>
         </div>
     </div>
 )
+
+Article.PropTypes = {
+    author: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    abstract: PropTypes.string.isRequired,
+    nature: PropTypes.string.isRequired,
+    niveauhierarchie: PropTypes.string.isRequired,
+    support: PropTypes.string.isRequired,
+    transfert: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired,
+}
 
 export default Article

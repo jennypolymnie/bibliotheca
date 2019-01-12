@@ -1,8 +1,9 @@
 import React from 'react'
 import {Table, Rating } from 'semantic-ui-react'
+import PropTypes from 'prop-types'
 
-const TableRating = () => (
-  <Table cellPadding="5">
+const TableRating = ({nature, hierarchieLevel, support, transfert}) => (
+  <Table cellpadding="5">
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Elements</Table.HeaderCell>
@@ -13,7 +14,7 @@ const TableRating = () => (
     <Table.Body>
       <Table.Row>
         <Table.Cell>
-            Nature
+            {nature}
         </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={3} />
@@ -22,17 +23,7 @@ const TableRating = () => (
 
       <Table.Row>
         <Table.Cell>
-            Niveau hiérarchie
-        </Table.Cell>
-        <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
-        </Table.Cell>
-      </Table.Row>
-
-
-      <Table.Row>
-        <Table.Cell>
-            Support
+            {hierarchieLevel}
         </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={3} />
@@ -42,7 +33,17 @@ const TableRating = () => (
 
       <Table.Row>
         <Table.Cell>
-            Transfert
+            {support}
+        </Table.Cell>
+        <Table.Cell>
+          <Rating icon='star' defaultRating={3} maxRating={3} />
+        </Table.Cell>
+      </Table.Row>
+
+
+      <Table.Row>
+        <Table.Cell>
+            {transfert}
         </Table.Cell>
         <Table.Cell>
           <Rating icon='star' defaultRating={3} maxRating={3} />
@@ -52,5 +53,13 @@ const TableRating = () => (
     </Table.Body>
   </Table>
 )
+
+TableRating.PropTypes = {
+  nature: PropTypes.string.isRequired,
+  hierarchieLevel: PropTypes.string.isRequired,
+  support: PropTypes.string.isRequired,
+  transfert: PropTypes.string.isRequired,
+  
+}
 
 export default TableRating

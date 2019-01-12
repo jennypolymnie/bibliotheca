@@ -5,39 +5,36 @@ import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle'
 import Article from './Article'
 import HeaderGreetings from './Header'
-import InputExemple from './Input'
-import MenuExampleSecondary from './Menu'
+import InputExemple from './InputExemple'
+import MenuSuperieur from './MenuSuperieur'
 
 
 class SearchResults extends Component {
-
-  handleCardClick(Article) {
-    console.log(Article, 'a agrandir dans une nouvelle fenêtre')
-  }
 
   render() {
     
     return (
         
       <div className="recherche">
-          <MenuExampleSecondary></MenuExampleSecondary>
+          <MenuSuperieur></MenuSuperieur>
         
           <HeaderGreetings />
 
         <div className = "requete">
-        <InputExemple Info ="nature" Entree ="sang" ></InputExemple>
-        <InputExemple Info ="Niveau de hiérarchie" Entree ="source" ></InputExemple>
-        <InputExemple Info ="Support" Entree ="pierre" ></InputExemple>
-        <InputExemple Info ="Transfert" Entree ="primaire" ></InputExemple>
+        <InputExemple info ="nature" entree ="sang" ></InputExemple>
+        <InputExemple info ="Niveau de hiérarchie" entree ="source" ></InputExemple>
+        <InputExemple info ="Support" entree ="pierre" ></InputExemple>
+        <InputExemple info ="Transfert" entree ="primaire" ></InputExemple>
         </div>
 
         <div className = "resultat">
-        <CountElement Name = "Nombre d'articles correspondant à votre recherche" Count = {4} />
+        <CountElement name = "Nombre d'articles correspondant à votre recherche" count = {4} />
         <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         <Article author = "A.Sutcliffe" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
         </div>
+        
       </div>
     );
   }
