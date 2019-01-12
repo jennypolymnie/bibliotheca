@@ -1,9 +1,9 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
-import InputExemple from './InputExemple'
-import TableRating from './TableRating'
-import PropTypes from 'prop-types'
-import './stylesheets/Article.css'
+import React from 'react';
+import { Button } from 'semantic-ui-react';
+import InputExemple from './InputExemple';
+import TableRating from './TableRating';
+import PropTypes from 'prop-types';
+import './stylesheets/Article.css';
 
 
 
@@ -14,29 +14,29 @@ const Article = ({author, title, abstract, nature, hierarchieLevel, support, tra
 
         <div className = "Presentation">
 
-            <div className = "Donnees" onClick={() => onClick(Article)}>
-            <p>Authors: {author}</p>
-            <p>Title: {title} </p>
-            <p>Abstract: {abstract}</p>
+            <div className = "MainData" onClick={() => onClick(Article)}>
+                <p>Authors: {author}</p>
+                <p>Title: {title} </p>
+                <p>Abstract: {abstract}</p>
             </div>
 
-            <div className="Fitting">
-         
-            <TableRating 
-            nature = {nature} 
-            hierarchieLevel = {hierarchieLevel} 
-            support = {support}
-            transfert = {transfert}>
-            </TableRating>
+            <div className="Rating">
+                <TableRating 
+                    nature = {nature} 
+                    hierarchieLevel = {hierarchieLevel} 
+                    support = {support}
+                    transfert = {transfert}>
+                </TableRating>
             </div>
 
         </div>
 
-        <div className="Avis">
-        <Button> Donnez votre avis </Button>
-        <InputExemple info ="pos reviews" entree ="12" ></InputExemple>
-        <InputExemple info ="nèg reviews" entree ="1" ></InputExemple>
+        <div className="Review">
+            <Button> Donnez votre avis </Button>
+            <InputExemple info ="pos reviews" entree ="12" ></InputExemple>
+            <InputExemple info ="nèg reviews" entree ="1" ></InputExemple>
         </div>
+        
     </div>
 )
 

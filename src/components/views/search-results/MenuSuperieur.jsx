@@ -1,15 +1,24 @@
-import React, { Component } from 'react'
-import { Input, Menu } from 'semantic-ui-react'
+import React, { Component } from 'react';
+import { Menu } from 'semantic-ui-react';
+import { Link , Redirect } from 'react-router-dom';
 
 export default class MenuSuperieur extends Component {
-  state = { activeItem: 'Résultat de la recherche' }
+  state = { activeItem: 'Menu principal' }
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+  handleItemClick = ({ name }) => this.setState({ activeItem: name })
+  handleOnClick = () => {
+    this.setState({redirect: true});
+  }
 
   render() {
     const { activeItem } = this.state
 
+    if (this.state.redirect) {
+      return <Redirect push to="/ProfilUpdate" />;
+    }
+
     return (
+      <div>
       <Menu secondary>
         <Menu.Item 
         name='Menu principal' 
@@ -19,13 +28,9 @@ export default class MenuSuperieur extends Component {
         <Menu.Item
           name='Profil du laboratoire'
           active={activeItem === 'Profil du laboratoire'}
-          onClick={this.handleItemClick}
+          onClick={this.handleOnClick}
         />
         <Menu.Menu position='right'>
-          <Menu.Item>
-            <Input icon='search' placeholder='Search...' />
-          </Menu.Item>
-
           <Menu.Item
             name='Déconnexion'
             active={activeItem === 'Déconnexion'}
@@ -33,6 +38,7 @@ export default class MenuSuperieur extends Component {
           />
         </Menu.Menu>
       </Menu>
+      </div>
     )
   }
 }

@@ -1,12 +1,10 @@
 
 import React, { Component } from 'react';
-//import LogoutIcon from './LogoutIcon.png';
 import './stylesheets/SearchResults.css';
-import CountElement from './NbArticle'
-import Article from './Article'
-import HeaderGreetings from './Header'
-import InputExemple from './InputExemple'
-import MenuSuperieur from './MenuSuperieur'
+import CountElement from './NbArticle';
+import Article from './Article';
+import InputExemple from './InputExemple';
+import MenuSuperieur from './MenuSuperieur';
 
 
 class SearchResults extends Component {
@@ -18,13 +16,13 @@ class SearchResults extends Component {
       <div className="recherche">
           <MenuSuperieur></MenuSuperieur>
         
-          <HeaderGreetings />
+          <h2>Résultat de la recherche</h2>
 
         <div className = "requete">
-        <InputExemple info ="nature" entree ="sang" ></InputExemple>
-        <InputExemple info ="Niveau de hiérarchie" entree ="source" ></InputExemple>
-        <InputExemple info ="Support" entree ="pierre" ></InputExemple>
-        <InputExemple info ="Transfert" entree ="primaire" ></InputExemple>
+        <InputExemple info ="Nature" entry ="sang" ></InputExemple>
+        <InputExemple info ="Niveau de hiérarchie" entry ="source" ></InputExemple>
+        <InputExemple info ="Support" entry ="pierre" ></InputExemple>
+        <InputExemple info ="Transfert" entry ="primaire" ></InputExemple>
         </div>
 
         <div className = "resultat">

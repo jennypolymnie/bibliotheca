@@ -1,16 +1,16 @@
-import React from 'react'
-import { Input, Label } from 'semantic-ui-react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { Input, Label } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
-const InputExemple = ({info, entree}) => (
+const InputExemple = ({info, entry}) => (
     <div className = "Input">
         <Label> {info}</Label>
-        <Input placeholder={entree} />
+        <Input placeholder={entry} />
     </div>
 )
 
 InputExemple.PropTypes = {
     info: PropTypes.string.isRequired,
-    entree: PropTypes.number.isRequired,
+    entry: PropTypes.number.isRequired,
 }
 export default InputExemple

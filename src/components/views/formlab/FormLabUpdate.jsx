@@ -4,15 +4,12 @@ import './FormLab.css';
 import CheckboxToggle from './Toggle';
 import GridForm from './GridForm';
 import {Link} from 'react-router-dom';
+//import MenuSuperieur from './views/search-results/MenuSuperieur';
 
+class FormLabUpdate extends Component {
 
-class FormLab extends Component {
-  
-  //state = {}
-  //handleChange = (e, { value }) => this.setState({ value })
 
   render() {
-    //const { value } = this.state
 
     return (
       <div className = "ProfilLab">
@@ -20,8 +17,8 @@ class FormLab extends Component {
           <div>
              <Message color='blue'
               attached
-              header='Bienvenue dans notre application!'
-              content='Merci de bien vouloir remplir le formulaire ci dessous'
+              header='LSJML'
+              content='Vous pouvez modifier votre profil autant de fois que nécessaire'
               />
           </div>
 
@@ -160,17 +157,7 @@ class FormLab extends Component {
           </div>
 
           <div className = "Acceptation">
-            <h1>Inscription</h1>
-            <Form>
-              <Form.Group inline>
-                <Form.Field 
-                required 
-                control={Checkbox} 
-                label='Je suis accord avec les conditions de la plateforme' />
-                <Form.Field control={Button}>Je poursuis avec le paiement</Form.Field>
-                <Form.Field control={Button}>Finalement je ne veux pas m'inscrire</Form.Field>
-              </Form.Group>
-            </Form> 
+                <Button label = "Enregistrer les modifications" as= { Link } to = '/profilUpdate'></Button>
           </div>
 
 
@@ -184,4 +171,4 @@ class FormLab extends Component {
   }
 }
 
-export default FormLab
+export default FormLabUpdate

@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import {Button, Form, TextArea, Input} from 'semantic-ui-react';
-import MenuSuperieur from './MenuSuperieur';
+//import MenuSuperieur from './search-results/MenuSuperieur';
 import { Header} from 'semantic-ui-react';
-import PropTypes from 'prop-types';
 
 
-class BibliothecaireRequest extends Component {
+class BooksellerRequest extends Component {
   
     render() {
   
       return (
           
-        <div className="recherche">
-            <MenuSuperieur></MenuSuperieur>
+        <div className="Recherche">
+          
           
             <Header as='h2'> <p>Poser une question à la bibliothécaire</p></Header>
 
@@ -42,4 +41,4 @@ class BibliothecaireRequest extends Component {
     }
   }
   
-  export default BibliothecaireRequest;
+  export default BooksellerRequest;

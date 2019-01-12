@@ -1,7 +1,7 @@
-import React from 'react'
-import {Label} from 'semantic-ui-react'
-import './stylesheets/NbArticle.css'
-import PropTypes from 'prop-types'
+import React from 'react';
+import {Label} from 'semantic-ui-react';
+import './stylesheets/NbArticle.css';
+import PropTypes from 'prop-types';
 
 const CountElement = ({name, count}) => (
     <div className="CountElement"> 
