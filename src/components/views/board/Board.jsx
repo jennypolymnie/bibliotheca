@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Button, Message} from 'semantic-ui-react'
+import { Button, Message } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import './Board.css';
 
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {Button, Form, TextArea, Input} from 'semantic-ui-react';
+import {Button, Form, TextArea, Input, Message} from 'semantic-ui-react';
 //import MenuSuperieur from './search-results/MenuSuperieur';
-import { Header} from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 
 
 class ArticleProposal extends Component {
