@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {Button, Form, TextArea, Input, Message} from 'semantic-ui-react';
-//import MenuSuperieur from './search-results/MenuSuperieur';
+import MenuSuperieur from '../search-results/MenuSuperieur';
 import { Header } from 'semantic-ui-react';
+import './ArticleProposal.css';
 
 
 class ArticleProposal extends Component {
@@ -10,8 +11,8 @@ class ArticleProposal extends Component {
   
       return (
           
-        <div className="Recherche">
-
+        <div className="ArticleProposal">
+             <MenuSuperieur></MenuSuperieur>
             <Header as='h2'> <p>Proposer un article à la bibliothécaire</p></Header>
 
             <div>

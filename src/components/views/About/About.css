@@ -1,0 +1,25 @@
+.About {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    width: 900px;
+    margin: auto;
+    user-select: none;
+  }
+
+.Info {
+    height: 70px;
+    display: flex;
+    padding: 5px 5px 5px 10px;
+}
+
+.Number {
+    border: 3px solid black;
+    width: 60px;
+    height: 60px;
+    text-align:center;
+}
+
+.Title {
+    vertical-align: middle;
+}

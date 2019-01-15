@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import { Button, Checkbox, Form, Input,Icon, Message} from 'semantic-ui-react';
-import './FormLab.css';
-import CheckboxToggle from './Toggle';
+import { Button, Checkbox, Form, Input,Icon, Message, Radio} from 'semantic-ui-react';
+import './FormLabUpdate.css';
 import GridForm from './GridForm';
 import {Link} from 'react-router-dom';
-//import MenuSuperieur from './views/search-results/MenuSuperieur';
+import MenuSuperieur from '../search-results/MenuSuperieur'
 
 class FormLabUpdate extends Component {
 
-
+state={}
+handleChange = (e, { value }) => this.setState({ value })
+  
   render() {
-
+ 
     return (
       <div className = "ProfilLab">
 
+          <MenuSuperieur></MenuSuperieur>
           <div>
              <Message color='blue'
               attached
-              header='LSJML'
+              header='Fiche du laboratoire'
               content='Vous pouvez modifier votre profil autant de fois que nécessaire'
               />
           </div>
@@ -144,6 +146,89 @@ class FormLabUpdate extends Component {
 
           </div>
 
+          <div className="SameResearch">
+          <Form>  
+            <Form.Field label="Seriez vous intéressé à la réalisation d'un projet avec un autre laboratoire sur l'un de vos thèmes de recherche?"/>
+            <Form.Field>
+              <Radio
+                label='Oui pour un projet de développement'
+                name='SameTheme'
+                value='developpement'
+                checked={this.state.value === 'developpement'}
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Oui pour un projet de recherche'
+              name='SameTheme'
+              value='recherche'
+              checked={this.state.value === 'recherche'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Oui pour un projet de validation'
+              name='SameTheme'
+              value='validation'
+              checked={this.state.value === 'validation'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Non'
+              name='SameTheme'
+              value='non'
+              checked={this.state.value === 'non'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+          </Form>
+        </div>
+
+        <div className="DifferentResearch">
+          <Form>  
+            <Form.Field label="Seriez vous intéressé à la réalisation d'un projet avec un autre laboratoire sur un thème qui n'est pas l'un de vos thèmes de recherche?"/>
+            <Form.Field>
+              <Radio
+                label='Oui pour un projet de développement'
+                name='DifferentTheme'
+                value='developpement'
+                checked={this.state.value === 'developpement'}
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Oui pour un projet de recherche'
+              name='DifferentTheme'
+              value='recherche'
+              checked={this.state.value === 'recherche'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Oui pour un projet de validation'
+              name='DifferentTheme'
+              value='validation'
+              checked={this.state.value === 'validation'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+              label='Non'
+              name='DifferentTheme'
+              value='non'
+              checked={this.state.value === 'non'}
+              onChange={this.handleChange}
+              />
+            </Form.Field>
+          </Form>
+        </div>
         
           <div classeName = "Partie2">
           <h1> Partie Analytique </h1>
@@ -152,12 +237,16 @@ class FormLabUpdate extends Component {
     
           <div className = "Confidentialite">
           <Form>
-          <Form.Field > <Checkbox toggle label="Souhaitez vous que ces informations soient visibles pour les autres laboratoires?"/> </Form.Field>
+          <Form.Field > <Checkbox toggle label="Souhaitez vous que ces informations soient visibles pour 
+          les autres laboratoires? Cela permettrait aux laboratoires qui souhaiteraient changer d'équipement 
+          ou de chimie de vous consulter. Les laboratoires travaillant sur les mêmes axes de recherche que les
+          votre pourraient également vous contacter pour des projets communs. Vous pouvez modifier votre profil
+          à tout moment"/> </Form.Field>
           </Form>
           </div>
 
           <div className = "Acceptation">
-                <Button label = "Enregistrer les modifications" as= { Link } to = '/profilUpdate'></Button>
+                <Button as= { Link } to = '/profilUpdate'>Enregistrer les modifications</Button>
           </div>
 
 

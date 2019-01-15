@@ -1,0 +1,60 @@
+.ProfilLab{
+    background-color:rgb(241, 239, 239);
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    width: 900px;
+    margin: auto;
+    user-select: none;
+    height : 2000px;
+}
+
+.InfoLab{
+    padding-top:30px;
+}
+
+.Titre{
+    display: flex;
+    justify-content: space-between;
+}
+
+.InfoRecherche{
+    height: 200px;
+    margin-bottom: 30px;
+    padding-top:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.SameResearch {
+    height:200px;
+}
+
+.DifferentResearch {
+    height : 200px;
+}
+
+
+.InfoContact {
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Confidentialite {
+    padding-top:30px;
+    height : 100px;
+}
+
+.Acceptation {
+    height : 50px;
+}
+
+
+.Partie2{
+    height: 100px;
+    background-color: pink;
+
+}
+
+

@@ -1,17 +1,13 @@
-
-.Board{
+.Connexion {
+    background-color:rgb(241, 239, 239);
     flex-wrap: wrap;
     flex-direction: column;
+    padding: 5px 5px 5px 5px;
     width: 900px;
     margin: auto;
     user-select: none;
-}
+  }
 
-.Message {
-    margin: 10px 10px 10px 10px;
-    height: 100px;
-}
+.Button {
 
-.MainMenu{
-    height: 500px;
 }

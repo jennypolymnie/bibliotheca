@@ -18,6 +18,13 @@ class ArticleSearch extends Component {
             <Input icon='search' placeholder='Search...' />
    
         </div>
+
+
+
+
+
+
+
       );
     }
   }

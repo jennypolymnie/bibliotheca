@@ -10,43 +10,50 @@
     user-select: none;
 }
 
-.InfoLab{
-    padding-top:30px;
+.Title {
+    text-align: center;
 }
 
-.Titre{
+
+.LabInfo{
+    height :270px;
+}
+
+
+.ContactInfo {
+    height: 200px;
+}
+
+
+.ResearchQuestion{
     display: flex;
     justify-content: space-between;
+    height : 30px;
 }
 
-.InfoRecherche{
-    height: 200px;
+.ResearchInfo{
+    height: 170px;
     margin-bottom: 30px;
     padding-top:20px;
     display: flex;
     justify-content: space-between;
 }
 
-.InfoContact {
-    height: 150px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
 
 .Confidentialite {
-    padding-top:30px;
-    height : 100px;
 }
-
-.Acceptation {
-    height : 100px;
-}
-
 
 .Partie2{
     height: 100px;
     background-color: pink;
 
 }
+
+
+.Acceptation {
+    display: flex;
+}
+
+
 
 

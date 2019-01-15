@@ -1,0 +1,26 @@
+.Welcome{
+    background-color:rgb(241, 239, 239);
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    width: 900px;
+    margin: auto;
+    user-select: none;
+}
+
+.Title{
+    height:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+
+.Main{
+    height:200px;
+    Border : 3px blue solid ;
+    vertical-align: middle;
+    display: flex;
+}

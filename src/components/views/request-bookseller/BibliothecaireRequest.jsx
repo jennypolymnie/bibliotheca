@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Button, Form, TextArea, Input} from 'semantic-ui-react';
 import MenuSuperieur from '../search-results/MenuSuperieur';
 import { Header} from 'semantic-ui-react';
+import './BooksellerRequest.css';
 
 
 class BooksellerRequest extends Component {
@@ -10,9 +11,9 @@ class BooksellerRequest extends Component {
   
       return (
           
-        <div className="Recherche">
+        <div className="BooksellerRequest">
           
-          <MenuSuperieur />
+          <MenuSuperieur></MenuSuperieur>
           <Header as='h2'> <p>Poser une question à la bibliothécaire</p></Header>
           
           <Form>
