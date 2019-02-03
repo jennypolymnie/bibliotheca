@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Button, Form, Input,Icon, Message, Radio} from 'semantic-ui-react';
+import { Button, Form,Icon, Message, Radio} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import MenuSuperieur from '../search-results/MenuSuperieur';
 import './PartnerStudy.css'
+import RequestingLabInfo from './RequestingLabInfo';
 
 
 class PartnerStudy extends Component {
@@ -26,39 +27,26 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className = "Title">
-            <h2>Partenaire d'étude</h2>
-        </div>
-
-
         <div>
             <Message color='blue'
               attached
-              header='Bienvenue LSJML!'
+              header="Partenaire d'étude"
               content='Remplissez ce formulaire si vous souhaitez trouver un partenaire pour des projets de développement, de validation ou de recherche. La bibliothécaire va ensuite vous mettre en relation avec un ou des laboratoires potentiels'
               />
         </div>
 
 
-        <div className = "LabInfo">
-          <Form>
-            <Form.Group grouped widths='equal'>
-              <Form.Field 
-                required 
-                control={Input} 
-                label='Titre de votre projet' 
-                placeholder='' />
-              <Form.Field 
-                required
-                control={Input}
-                label='Personne de contact pour ce projet'
-                placeholder='email de la personne de contact' />
-            </Form.Group>
-          </Form>
+        <div className = "LabInfoRequest">
+         <RequestingLabInfo 
+         a='Titre de votre projet' 
+         b='Titre'
+         c='Email de la personne de contact pour ce projet'
+         d='adresse e-mail' >
+         </RequestingLabInfo>
         </div>
 
 
-        <div className="Pays">
+        <div className="LabCountry">
           <Form>  
             <Form.Field label="Même pays que le votre?"/>
             <Form.Field>
@@ -92,7 +80,7 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className = "Research">
+        <div className = "ResearchTitle">
           <h1>Thème(s) de recherche</h1>
           <Button basic circular color = 'green' icon as= { Link } to = '/articles'>
               <Icon size='large' name='question circle' />
@@ -100,8 +88,8 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className ="ResearchInfo">
-          <div className= "ResearchInfo1">
+        <div className ="ResearchRequest">
+          <div className= "ResearchRequest1">
             <Form>
               <Form.Group grouped>
                 <Form.Field 
@@ -132,7 +120,7 @@ class PartnerStudy extends Component {
             </Form>
           </div>
 
-          <div className= "ResearchInfo2">
+          <div className= "ResearchRequest2">
             <Form>
               <Form.Group grouped>
                 <Form.Field 
@@ -160,7 +148,7 @@ class PartnerStudy extends Component {
           </div>
 
 
-          <div className= "ResearchInfo3">
+          <div className= "ResearchRequest3">
             <Form>
               <Form.Group grouped>
                 <Form.Field 
@@ -206,9 +194,12 @@ class PartnerStudy extends Component {
         </div>
 
         <div className="Button">
-          <Form>
-            <Form.Field control={Button}>Lancer la requête</Form.Field>
-          </Form> 
+            <Button 
+            as= { Link } to = '/List'
+            color = 'blue' 
+            size='large'>
+            Lancer la requête
+            </Button>
         </div>
     </div>
 

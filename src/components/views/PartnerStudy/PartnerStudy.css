@@ -1,31 +1,47 @@
 .PartnerStudy {
-    background-color:rgb(241, 239, 239);
     flex-wrap: wrap;
     flex-direction: column;
     padding: 5px 5px 5px 5px;
-    width: 900px;
     margin: auto;
     user-select: none;
     height:1000px;
 
   }
 
-.LabInfo {
+.LabInfoRequest {
     height:150px;
+    padding-top:30px;
+    margin-left: 30px;
 }
 
-.Pays {
-    height : 150px;
+.LabCountry {
+    height :150px;
+    padding-top:30px;
+    margin-left: 30px;
 }
 
-.Research {
+.ResearchTitle {
     display: flex;
+    padding-top:30px;
+    margin-left: 30px;
 }
 
-.Title{
-    background-color: white;
+
+.ResearchRequest{
+ display:flex;
+ justify-content: space-between;
+ margin-left: 30px;
+ margin-right: 30px;
+}
+
+.Project{
+    height : 150px;
+    padding-top:30px;
+    margin-left: 30px;
 }
 
 .Button {
     height:70px;
+    padding-top:30px;
+    margin-left: 30px;
 }

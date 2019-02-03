@@ -1,0 +1,24 @@
+.RequestEquipment{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    margin: auto;
+    user-select: none;
+}
+
+.LabRequest {
+    height:200px;
+    margin: 20px 20px 20px 20px;
+}
+
+
+.QuestionType{
+height:100px;
+padding-top:30px;
+margin-left: 20px;
+}
+
+.ButtonRequestEquipment{
+    margin: 20px 40px 20px 20px;
+    height:100px;
+}

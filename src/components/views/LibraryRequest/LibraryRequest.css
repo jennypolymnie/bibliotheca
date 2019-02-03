@@ -1,0 +1,25 @@
+.LibraryRequest{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    margin: auto;
+    user-select: none;
+}
+
+.ProfilIncluded {
+    height : 70px;
+}
+
+.Choice{
+    background-color: #333532;
+    display:flex;
+    height:700px;
+}
+
+.BlocActivity, .BlocSource, .BlocSubSource, .BlocSubActivity {
+    width: 400px;
+    background-color: #A1A19A;
+    padding: 5px 5px 5px 5px;
+    height: 600px;
+    margin:10px 10px 10px 10px;
+}

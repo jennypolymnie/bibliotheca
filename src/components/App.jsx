@@ -6,14 +6,15 @@ import SearchResults from './views/search-results/SearchResults';
 import FormLab from './views/formlab/FormLab'
 import FormLabUpdate from './views/formlab/FormLabUpdate';
 import Board from './views/board/Board';
-import BooksellerRequest from './views/request-bookseller/BibliothecaireRequest';
+import BooksellerRequest from './views/request-bookseller/BooksellerRequest';
 import ArticleProposal from './views/request-bookseller/ArticleProposal';
-import Home from './views/home/Home';
-import LibraryRequest from './views/request-library/LibraryRequest';
+import LibraryRequest from './views/LibraryRequest/LibraryRequest';
 import Welcome from './views/Welcome/Welcome';
 import About from './views/About/About';
-import Connexion from './views/Connexion/Connexion';
 import PartnerStudy from './views/PartnerStudy/PartnerStudy';
+import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
+import RequestEquipment from './views/RequestEquipment/RequestEquipment';
+import ReviewForm from './views/Review/ReviewForm';
 
 export default class App extends Component {
   render = () => (
@@ -28,8 +29,10 @@ export default class App extends Component {
       <Route path="/libraryRequest" component={ LibraryRequest}/>
       <Route path="/welcome" component={ Welcome }/>
       <Route path="/About" component={ About }/>
-      <Route path="/Connexion" component={ Connexion}/>
       <Route path="/PartnerStudy" component= {PartnerStudy}/>
+      <Route path="/List" component= {PartnerListLab}/>
+      <Route path="/requestEquipment" component={RequestEquipment}/>
+      <Route path="/review" component={ReviewForm}/>
       <Route render={ () => <h1>404 Error</h1> } />
     </Switch>
   );

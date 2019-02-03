@@ -1,11 +1,11 @@
 import React from 'react';
-import { Table, Rating } from 'semantic-ui-react';
+import { Table, Icon} from 'semantic-ui-react';
 
-const TableRating = () => (
+const TableCheck = () => (
   <Table cellpadding="5">
     <Table.Header>
       <Table.Row>
-        <Table.HeaderCell>Elements</Table.HeaderCell>
+        <Table.HeaderCell>Element</Table.HeaderCell>
         <Table.HeaderCell>Présent</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
@@ -16,7 +16,7 @@ const TableRating = () => (
             Nature
         </Table.Cell>
         <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
+          <Icon name='check' size='large' color="green"/>
         </Table.Cell>
       </Table.Row>
 
@@ -25,7 +25,7 @@ const TableRating = () => (
             Niveau de hiérarchie
         </Table.Cell>
         <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
+        <Icon name='check' size='large' color="green" />
         </Table.Cell>
       </Table.Row>
 
@@ -35,7 +35,7 @@ const TableRating = () => (
             Support
         </Table.Cell>
         <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
+        <Icon name='check' size='large' color="green"/>
         </Table.Cell>
       </Table.Row>
 
@@ -45,7 +45,7 @@ const TableRating = () => (
             Transfert
         </Table.Cell>
         <Table.Cell>
-          <Rating icon='star' defaultRating={3} maxRating={3} />
+        <Icon name='check' size='large' color="green" />
         </Table.Cell>
       </Table.Row>
 
@@ -53,4 +53,4 @@ const TableRating = () => (
   </Table>
 )
 
-export default TableRating
+export default TableCheck

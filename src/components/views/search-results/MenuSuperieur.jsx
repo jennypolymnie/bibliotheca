@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Menu } from 'semantic-ui-react';
+import { Menu , Segment } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 import Avatar from './Avatar';
 
@@ -42,31 +42,33 @@ export default class MenuSuperieur extends Component {
 
     return (
       <div>
-      <Menu secondary>
-        <Menu.Item 
-        name='Menu principal' 
-        active={activeItem === 'Menu principal'} 
-        onClick={this.handleItemClick && this.handleBoard} 
-        />
-        <Menu.Item
-          name='Profil du laboratoire'
-          active={activeItem === 'Profil du laboratoire'}
-          onClick={this.handleItemClick && this.handleProfil}
-        />
-        <Menu.Item
-          name='A propos'
-          active={activeItem === 'A propos'}
-          onClick={this.handleItemClick && this.handleAbout}
-        />
-        <Menu.Menu position='right'>
-          <Avatar/>
+       <Segment inverted>
+        <Menu inverted pointing secondary>
           <Menu.Item
-            name='Déconnexion'
-            active={activeItem === 'Déconnexion'}
-            onClick={this.handleItemClick && this.handleDeconnexion}
+            name='A propos'
+            active={activeItem === 'A propos'}
+            onClick={this.handleItemClick && this.handleAbout}
           />
-        </Menu.Menu>
-      </Menu>
+          <Menu.Item 
+            name='Menu principal' 
+            active={activeItem === 'Menu principal'} 
+            onClick={this.handleItemClick && this.handleBoard} 
+          />
+          <Menu.Item
+            name='Profil du laboratoire'
+            active={activeItem === 'Profil du laboratoire'}
+            onClick={this.handleItemClick && this.handleProfil}
+          />
+          <Menu.Menu position='right'>
+            <Avatar/>
+              <Menu.Item
+                name='Déconnexion'
+                active={activeItem === 'Déconnexion'}
+                onClick={this.handleItemClick && this.handleDeconnexion}
+              />
+          </Menu.Menu>
+          </Menu>
+        </Segment>
       </div>
     )
   }

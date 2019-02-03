@@ -5,6 +5,7 @@ import CountElement from './NbArticle';
 import Article from './Article';
 import InputExemple from './InputExemple';
 import MenuSuperieur from './MenuSuperieur';
+import BdArticles from './BdArticles';
 
 
 class SearchResults extends Component {
@@ -27,10 +28,10 @@ class SearchResults extends Component {
 
         <div className = "resultat">
         <CountElement name = "Nombre d'articles correspondant à votre recherche" count = {4} />
-        <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
-        <Article author = "A.Sutcliffe" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
-        <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
-        <Article author = "J.Comte" title = "Nouveau Swab pour ADN de contact" onClick={this.handleCardClick}/>
+        {BdArticles.map(({authors, title, id}) => (
+          <Article key={id} author = {authors} title = {title} onClick={this.handleCardClick}/>
+        ))
+      }
         </div>
         
       </div>
