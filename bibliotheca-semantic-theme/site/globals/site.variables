@@ -1,0 +1,9 @@
+@primaryColor   : @blue;
+@secondaryColor : @darkgolden;
+@textColor      : @darkgolden;
+@activeColor    : @darkgolden;
+@blue           : #1A4893;
+@darkgrey       : #333533;
+@golden         : #A1A19A;
+@darkgolden     : #A59981;
+@silver         : #BBAB8F;

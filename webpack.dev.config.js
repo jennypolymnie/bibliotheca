@@ -45,6 +45,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.less$/,
+        use: [ 'style-loader', 'css-loader', 'less-loader' ]
+      },
+      {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
       },
@@ -56,6 +60,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      '../../theme.config$': path.resolve('bibliotheca-semantic-theme/theme.config')
+  }
   },
   plugins: [
     new HtmlWebPackPlugin({
