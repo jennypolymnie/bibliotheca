@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Message, Radio, Form } from 'semantic-ui-react';
+import { Button, Message, Radio, Form, Input} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import MenuSuperieur from '../search-results/MenuSuperieur';
-import RequestingLabInfo from '../PartnerStudy/RequestingLabInfo';
 import GridForm from '../formlab/GridForm';
 import './RequestEquipment.css';
 
@@ -37,14 +36,22 @@ class RequestEquipment extends Component {
             </div>
 
 
-            <div className = "LabRequest">
-            <RequestingLabInfo 
-                a='Poser votre question' 
-                b='question'
-                c='Email de la personne à renseigner'
-                d='adresse e-mail' >
-            </RequestingLabInfo>
-            </div>
+            <div>
+          <Form>
+            <Form.Group grouped widths='equal'>
+              <Form.Field 
+                required 
+                control={Input} 
+                label='Poser votre question'
+                placeholder='question' />
+              <Form.Field 
+                required
+                control={Input}
+                label='Email de la personne à renseigner'
+                placeholder='adresse e-mail' />
+            </Form.Group>
+          </Form>
+        </div>
 
 
             <div className = "Sélection">

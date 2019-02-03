@@ -5,6 +5,7 @@ import './LibraryRequest.css';
 import StainSupport from './StainSupport';
 import StainNature from './StainNature';
 import ScreeningTest from './ScreeningTest';
+import Concentration from './Concentration'
 import { Link } from 'react-router-dom';
 
 
@@ -105,7 +106,7 @@ class LibraryRequest extends Component {
                   placeholder='Choisir' 
                   fluid 
                   selection 
-                  options={StainSupport} />
+                  options={Concentration} />
                 </div>
               </div>
 

@@ -3,6 +3,7 @@ import ListLab from './ListLab';
 import {Button} from 'semantic-ui-react';
 import MenuSuperieur from '../../search-results/MenuSuperieur';
 import CountElement from '../../search-results/NbArticle';
+import Users from './Users';
 
 
 class PartnerListLab extends Component {
@@ -18,12 +19,14 @@ class PartnerListLab extends Component {
 
         <div>
         <CountElement name = "Nombre de laboratoire pouvant être intéressé" count = {4} />
-        <ListLab nameLab = "Unité de Génétique Forensique" nameDirector = "Vincent Castella" email ="vincent.castella@chuv.ch" />
-        <ListLab nameLab = "LSJML" nameDirector = "Diane Seguin" email = "diane.seguin@gv.ca"/>
+        {Users.filter(user => user.profil==="Lab").map((user, index) => (
+          <ListLab key={index} labName = {user.name} directorName = {user.directorName} email ={user.directorEmail} />
+        ))
+      }
         </div>
 
         <div>
-        <Button></Button>
+        <Button>Exporter les informations</Button>
         </div>
         
       </div>
