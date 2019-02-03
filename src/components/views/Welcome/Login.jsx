@@ -1,11 +1,10 @@
 import React from 'react'
-import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Header, Message, Segment } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
+import isMainColumn from '../../styleWrappers/isMainColumn';
 
 const Login = () => (
-  <div className='login-form'>
-    <Grid textAlign='center'>
-      <Grid.Column style={{ maxWidth: 450 }}>
+      <div className="login">
         <Header as='h2' color='blue' textAlign='center'>
            Connectez vous à votre compte
         </Header>
@@ -32,9 +31,7 @@ const Login = () => (
         <Message>
           Vous n'avez pas encore de compte <a href='/formLab'>Créer votre profil</a>
         </Message>
-      </Grid.Column>
-    </Grid>
-  </div>
-)
+      </div>
+);
 
-export default Login
+export default isMainColumn(Login)
