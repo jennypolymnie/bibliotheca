@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Container} from 'semantic-ui-react';
-import MenuSuperiorWelcome from '../search-results/MenuSuperieur';
+import MenuSuperiorAbout from './MenuSuperiorAbout';
 import './About.css';
 import { Message } from 'semantic-ui-react';
+
 
 
 class About extends Component {
@@ -13,9 +14,9 @@ class About extends Component {
         
       <div className="About">
         
-        <Container className="Menu">
-          <MenuSuperiorWelcome></MenuSuperiorWelcome>
-        </Container>
+        <div className="Menu">
+          <MenuSuperiorAbout></MenuSuperiorAbout>
+        </div>
         
         
         <div className ="Message">
@@ -27,57 +28,59 @@ class About extends Component {
               />
         </div>
 
-        <div className="Info">
-          <Container>
+        <div className="Stats">
+          <div className="Text">
             <p>Nombre de laboratoires lecteurs</p>
-          </Container>
+          </div>
           <div className="Number">
+            <div>
             <p>24</p>
+            </div>
           </div>
         </div>
         
-        <div className="Info">
-          <Container>
+        <div className="Stats">
+        <div className="Text">
             <p>Nombre d'articles datant de 2017 à aujourd'hui présent dans la bibliothèque</p>
-          </Container>
+          </div>
           <div className="Number">
             <p>2000</p>
           </div>
         </div>
 
-        <div className="Info">
-          <Container>
+        <div className="Stats">
+        <div className="Text">
             <p>Nombre de thèses présentes dans la bibliothèque</p>
-          </Container>
+          </div>
           <div className="Number">
             <p>150</p>
           </div>
         </div>
 
-        <div className="Info">
-          <Container>
+        <div className="Stats">
+        <div className="Text">
             <p>Nombre de journaux cités dans la bibliothèque</p>
-          </Container>
+          </div>
           <div className="Number">
             <p>100</p>
           </div>
         </div>
 
-        <div className="Info">
-          <Container>
+        <div className="Stats">
+        <div className="Text">
             <p>Conférences répertoriées dans la bibliothèque</p>
-          </Container>
+          </div>
           <div className="Number">
             <p>20</p>
           </div>
         </div>
 
-        <div className="Info">
-          <Container>
-            <p>La bibliothécaire</p>
-          </Container>
+        <div className="Stats">
+        <div className="Text">
+            <p>La bibliothécaire <a href='/formLab'>Profil de la bibliothécaire</a> </p> 
+          </div>
         </div>
-        
+    
       </div>
     );
     

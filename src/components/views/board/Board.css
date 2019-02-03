@@ -2,7 +2,6 @@
 .Board{
     flex-wrap: wrap;
     flex-direction: column;
-    width: 900px;
     margin: auto;
     user-select: none;
 }
@@ -12,6 +11,4 @@
     height: 100px;
 }
 
-.MainMenu{
-    height: 500px;
-}
+

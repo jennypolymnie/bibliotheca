@@ -1,9 +1,13 @@
 .BooksellerRequest{
-    background-color:rgb(241, 239, 239);
     flex-wrap: wrap;
     flex-direction: column;
     padding: 5px 5px 5px 5px;
-    width: 900px;
     margin: auto;
     user-select: none;
+}
+
+.RequestInfo {
+    padding-top:30px;
+    width:500px;
+    margin-left: 50px;
 }

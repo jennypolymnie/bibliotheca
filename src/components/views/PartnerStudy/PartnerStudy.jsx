@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Button, Form, Input,Icon, Message, Radio} from 'semantic-ui-react';
+import { Button, Form,Icon, Message, Radio, Input} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
 import MenuSuperieur from '../search-results/MenuSuperieur';
 import './PartnerStudy.css'
+import Research from './Research';
 
 
 class PartnerStudy extends Component {
@@ -26,39 +27,33 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className = "Title">
-            <h2>Partenaire d'étude</h2>
-        </div>
-
-
         <div>
             <Message color='blue'
               attached
-              header='Bienvenue LSJML!'
+              header="Partenaire d'étude"
               content='Remplissez ce formulaire si vous souhaitez trouver un partenaire pour des projets de développement, de validation ou de recherche. La bibliothécaire va ensuite vous mettre en relation avec un ou des laboratoires potentiels'
               />
         </div>
 
-
-        <div className = "LabInfo">
+        <div>
           <Form>
             <Form.Group grouped widths='equal'>
               <Form.Field 
                 required 
                 control={Input} 
-                label='Titre de votre projet' 
-                placeholder='' />
+                label="Titre de votre projet"
+                placeholder="Titre" />
               <Form.Field 
                 required
                 control={Input}
-                label='Personne de contact pour ce projet'
-                placeholder='email de la personne de contact' />
+                label="Email de la personne de contact pour ce projet"
+                placeholder='Email' />
             </Form.Group>
           </Form>
         </div>
 
 
-        <div className="Pays">
+        <div className="LabCountry">
           <Form>  
             <Form.Field label="Même pays que le votre?"/>
             <Form.Field>
@@ -92,7 +87,7 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className = "Research">
+        <div className = "ResearchTitle">
           <h1>Thème(s) de recherche</h1>
           <Button basic circular color = 'green' icon as= { Link } to = '/articles'>
               <Icon size='large' name='question circle' />
@@ -100,76 +95,8 @@ class PartnerStudy extends Component {
         </div>
 
 
-        <div className ="ResearchInfo">
-          <div className= "ResearchInfo1">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label= "Le laboratoire est uniquement un laboratoire d'expertise "
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Détermination de la nature du fluide biologique' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='ADN ancien' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Méthylation' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Interprétation des mélanges' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Chromosome Y' 
-                control='input' 
-                type='checkbox' />
-              </Form.Group>
-            </Form>
-          </div>
-
-          <div className= "ResearchInfo2">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label='Chromosome X' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label="Logiciel d'interprétation" 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label="Détection de l'ADN de contact" 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Détermination des caractéristiques physiques' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='ADN mitochondrial' 
-                control='input' 
-                type='checkbox' />
-              </Form.Group>
-            </Form>
-          </div>
-
-
-          <div className= "ResearchInfo3">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label='Ajouter un thème' 
-                control='input' 
-                type='input' />
-              </Form.Group>
-            </Form>
-          </div>
+        <div>
+          <Research></Research>
         </div>
 
         <div className="Project">
@@ -206,9 +133,12 @@ class PartnerStudy extends Component {
         </div>
 
         <div className="Button">
-          <Form>
-            <Form.Field control={Button}>Lancer la requête</Form.Field>
-          </Form> 
+            <Button 
+            as= { Link } to = '/List'
+            color = 'blue' 
+            size='large'>
+            Lancer la requête
+            </Button>
         </div>
     </div>
 

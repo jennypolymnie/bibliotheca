@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Container,Icon} from 'semantic-ui-react';
 import MenuSuperiorWelcome from './MenuSuperiorWelcome';
-import './Welcome.css'
+import './Welcome.css';
+import WelcomeBoard from './WelcomeBoard';
+import Login from './Login';
 
 
 class Welcome extends Component {
@@ -10,28 +11,23 @@ class Welcome extends Component {
     
     return (
         
-        <Container className="Welcome">
+        <div className="Wel">
         
-        <Container className="Menu">
-          <MenuSuperiorWelcome></MenuSuperiorWelcome>
-        </Container>
-        
-        <Container className="Title">
-        <h2>Bienvenue dans Bibliothéca</h2>
-         </Container>
+          <div>
+            <MenuSuperiorWelcome></MenuSuperiorWelcome>
+          </div>
 
-        <Container className="Main">
-        <div>
-        <p>Cette bibliothèque est destinée aux laboratoires de génétique forensique, aux instances judiciaires et aux étudiants intéressés à l'utilité de l'ADN dans les investigations criminelles</p>
+          <div className="Bo">
+            <div className="Welc">
+              <WelcomeBoard></WelcomeBoard>
+            </div>
+        
+            <div className="Log">
+              <Login></Login>
+            </div>
+          </div>
+        
         </div>
-        </Container>
-
-        <Container className="Video" textAlign="center">
-        <p>Voici une présentation de notre bibliothéque</p>
-        <Icon name='play' size='huge'/>
-        </Container>
-        
-        </Container>
     );
     
     }

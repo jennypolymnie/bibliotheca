@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Button, Form, TextArea, Input, Message} from 'semantic-ui-react';
 import MenuSuperieur from '../search-results/MenuSuperieur';
-import { Header } from 'semantic-ui-react';
 import './ArticleProposal.css';
+import { Link } from 'react-router-dom';
 
 
 class ArticleProposal extends Component {
@@ -13,45 +13,53 @@ class ArticleProposal extends Component {
           
         <div className="ArticleProposal">
              <MenuSuperieur></MenuSuperieur>
-            <Header as='h2'> <p>Proposer un article à la bibliothécaire</p></Header>
 
             <div>
              <Message color='blue'
               attached
-              header='LSJML!'
-              content="Je vous remercie d'avance pour votre contribution à Bibliothéca"
+              header='Proposer un article à la bibliothécaire'
+              content="Merci d'avance pour votre contribution à Bibliothéca"
               />
-          </div>
+            </div>
 
+            <div className="Formulaire">
             <Form>
               <Form.Group grouped>
                 <Form.Field 
                 required 
                 control={Input} 
                 label='Email du demandeur' 
-                placeholder='insérez votre e-mail'/>
+                placeholder='Votre e-mail'/>
                 <Form.Field 
                 required 
                 control={Input} 
                 label= "Titre de l'article ou du document que vous souhaitez transmettre" 
-                placeholder= "Merci de me donner le titre de l'article"/>
+                placeholder= "Titre"/>
                 <Form.Field 
                 required
                 control={TextArea} 
-                label='Pourquoi jugez vous cet article intéressant?' 
+                label='Pourquoi jugez-vous cet article intéressant?' 
                 placeholder="Pas besoin d'écrire une critique, juste quelques lignes" 
                 style={{ minHeight: 200 }}
                 />
-                 <Form.Field 
-                control={Button} >Télécharger votre document
-                </Form.Field>
-                <Form.Field 
-                control={Button} >Envoyez la proposition
-                </Form.Field>
-
               </Form.Group>
             </Form> 
-   
+
+            <div>
+            <Button 
+            color='blue'
+            >
+            Joindre votre document
+            </Button>
+
+            <Button 
+            color='blue'
+            as = { Link } to = '/RequestSend'
+            >
+            Envoyez la proposition
+            </Button>
+            </div>
+            </div>
         </div>
       );
     }

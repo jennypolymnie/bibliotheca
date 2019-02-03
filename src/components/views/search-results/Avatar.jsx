@@ -8,7 +8,7 @@ const Avatar = () => {
       src: './image/avatar.jpg',
     }
   
-    return <Label as='a' content='Elliot' image={imageProps} />
+    return <Label as='a' content='LSJML' image={imageProps} />
   }
   
   export default Avatar

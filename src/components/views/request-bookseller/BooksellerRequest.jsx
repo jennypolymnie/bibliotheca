@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {Button, Form, TextArea, Input} from 'semantic-ui-react';
+import {Button, Form, TextArea, Input, Message} from 'semantic-ui-react';
 import MenuSuperieur from '../search-results/MenuSuperieur';
-import { Header} from 'semantic-ui-react';
 import './BooksellerRequest.css';
+import { Link } from 'react-router-dom';
 
 
 class BooksellerRequest extends Component {
@@ -14,15 +14,25 @@ class BooksellerRequest extends Component {
         <div className="BooksellerRequest">
           
           <MenuSuperieur></MenuSuperieur>
-          <Header as='h2'> <p>Poser une question à la bibliothécaire</p></Header>
+ 
+          <div>
+             <Message color='blue'
+              attached
+              header='Poser une question à la bibliothécaire'
+              content="Que puis je faire pour vous?"
+              />
+          </div>
           
+          <div className="RequestInfo">
+
+          <div>
           <Form>
             <Form.Group grouped>
               <Form.Field 
               required 
               control={Input} 
               label='Email du demandeur' 
-              placeholder='insérez votre e-mail'/>
+              placeholder='Votre e-mail'/>
               <Form.Field 
               required
               control={TextArea} 
@@ -30,13 +40,17 @@ class BooksellerRequest extends Component {
               placeholder='Posez votre question' 
               style={{ minHeight: 200 }}
               />
-              <Form.Field 
-              control={Button} >Envoyez la demande
-              </Form.Field>
-
             </Form.Group>
           </Form> 
-   
+          </div>
+              
+          <div>
+              <Button
+              color='blue' size='large' as = { Link } to = '/QuestionSend'>Envoyez la demande
+              </Button>
+          </div>
+            
+          </div>
         </div>
       );
     }
