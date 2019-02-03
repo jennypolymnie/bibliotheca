@@ -46,7 +46,7 @@ export default class App extends Component {
                 </Grid.Column >
                 <Grid.Column verticalAlign={"middle"} textAlign={"center"} width={14}>
                 <Switch>
-                  {/* <Route exact path="/" component={ Welcome }/>
+                  <Route exact path="/" component={ CenterGrid }/>
                   <Route path="/proposals" component={ ArticleProposal }/>
                   <Route path="/articles" component={ SearchResults }/>
                   <Route path="/profilUpdate" component={ FormLabUpdate }/>
@@ -59,8 +59,7 @@ export default class App extends Component {
                   <Route path="/PartnerStudy" component= {PartnerStudy}/>
                   <Route path="/List" component= {PartnerListLab}/>
                   <Route path="/requestEquipment" component={RequestEquipment}/>
-                  <Route path="/review" component={ReviewForm}/> */}
-                  <Route path="/" component={CenterGrid}/>
+                  <Route path="/review" component={ReviewForm}/>
                   <Route render={ () => <h1>404 Error</h1> } />
                 </Switch>
                 </Grid.Column>
