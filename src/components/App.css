@@ -1,0 +1,16 @@
+.vertical-center{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.full-height{
+    min-height: 100%;
+}
+.ui.grid > .row > .column.paddless-column{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.float-container{
+    display:flex;
+}
