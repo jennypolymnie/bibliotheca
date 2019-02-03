@@ -1,0 +1,11 @@
+.Address{
+    font-size: 1em;
+    background-color: #333532;
+    color:#BBAB8F;
+    outline: 2px solid silver;
+    cursor: pointer;
+    margin: 20px 20px 20px 20px;
+    padding : 5px 5px 5px 5px ;
+    height:200px;
+    width: 700px;
+  }

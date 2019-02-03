@@ -1,26 +1,27 @@
-.Welcome{
-    background-color:rgb(241, 239, 239);
+.Wel{
     flex-wrap: wrap;
+    display:flex;
     flex-direction: column;
     padding: 5px 5px 5px 5px;
-    width: 900px;
     margin: auto;
     user-select: none;
 }
 
-.Title{
-    height:100px;
+.Bo{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    background-color: aqua;
 }
 
-.Main{
-    height:200px;
-    Border : 3px blue solid ;
+.Welc{
+    width: 900px;
+    height: 700px;
     vertical-align: middle;
-    display: flex;
+    margin-top: 50px;
+   
+}
+
+.Log {
+    width: 500px;
+    height: 500px;
+    vertical-align: middle;
+    margin-top: 50px;
 }

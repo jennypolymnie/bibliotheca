@@ -7,9 +7,17 @@ import MenuSuperieur from '../search-results/MenuSuperieur'
 
 class FormLabUpdate extends Component {
 
-state={}
-handleChange = (e, { value }) => this.setState({ value })
-  
+
+state = {}
+handleSame = (e, { value }) => this.setState({
+  same: value
+})
+handleDifferent = (e, { value }) => this.setState({ 
+  different: value 
+})
+
+
+
   render() {
  
     return (
@@ -154,8 +162,8 @@ handleChange = (e, { value }) => this.setState({ value })
                 label='Oui pour un projet de développement'
                 name='SameTheme'
                 value='developpement'
-                checked={this.state.value === 'developpement'}
-                onChange={this.handleChange}
+                checked={this.state.same === 'developpement'}
+                onChange={this.handleSame}
               />
             </Form.Field>
             <Form.Field>
@@ -163,8 +171,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Oui pour un projet de recherche'
               name='SameTheme'
               value='recherche'
-              checked={this.state.value === 'recherche'}
-              onChange={this.handleChange}
+              checked={this.state.same === 'recherche'}
+              onChange={this.handleSame}
               />
             </Form.Field>
             <Form.Field>
@@ -172,8 +180,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Oui pour un projet de validation'
               name='SameTheme'
               value='validation'
-              checked={this.state.value === 'validation'}
-              onChange={this.handleChange}
+              checked={this.state.same === 'validation'}
+              onChange={this.handleSame}
               />
             </Form.Field>
             <Form.Field>
@@ -181,8 +189,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Non'
               name='SameTheme'
               value='non'
-              checked={this.state.value === 'non'}
-              onChange={this.handleChange}
+              checked={this.state.same === 'non'}
+              onChange={this.handleSame}
               />
             </Form.Field>
           </Form>
@@ -196,8 +204,8 @@ handleChange = (e, { value }) => this.setState({ value })
                 label='Oui pour un projet de développement'
                 name='DifferentTheme'
                 value='developpement'
-                checked={this.state.value === 'developpement'}
-                onChange={this.handleChange}
+                checked={this.state.different === 'developpement'}
+                onChange={this.handleDifferent}
               />
             </Form.Field>
             <Form.Field>
@@ -205,8 +213,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Oui pour un projet de recherche'
               name='DifferentTheme'
               value='recherche'
-              checked={this.state.value === 'recherche'}
-              onChange={this.handleChange}
+              checked={this.state.different === 'recherche'}
+              onChange={this.handleDifferent}
               />
             </Form.Field>
             <Form.Field>
@@ -214,8 +222,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Oui pour un projet de validation'
               name='DifferentTheme'
               value='validation'
-              checked={this.state.value === 'validation'}
-              onChange={this.handleChange}
+              checked={this.state.different === 'validation'}
+              onChange={this.handleDifferent}
               />
             </Form.Field>
             <Form.Field>
@@ -223,8 +231,8 @@ handleChange = (e, { value }) => this.setState({ value })
               label='Non'
               name='DifferentTheme'
               value='non'
-              checked={this.state.value === 'non'}
-              onChange={this.handleChange}
+              checked={this.state.different === 'non'}
+              onChange={this.handleDifferent}
               />
             </Form.Field>
           </Form>
@@ -246,7 +254,7 @@ handleChange = (e, { value }) => this.setState({ value })
           </div>
 
           <div className = "Acceptation">
-                <Button as= { Link } to = '/profilUpdate'>Enregistrer les modifications</Button>
+                <Button size = 'large' as= { Link } to = '/profilUpdate'>Enregistrer les modifications</Button>
           </div>
 
 

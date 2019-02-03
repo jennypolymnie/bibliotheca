@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const ButtonBoard2 = () => (
   <Grid textAlign='center' columns={2}>
     <Grid.Row>
-      <Grid.Column>
+      <Grid.Column style={{ maxWidth: 450}}>
         <Menu fluid vertical>
 
             <Menu.Item className='header'> <h2>Bibliothèque</h2></Menu.Item>
@@ -33,7 +33,7 @@ const ButtonBoard2 = () => (
                 size ='big' 
                 color = 'blue' 
                 fluid 
-                as= { Link } to = '/articles'> 
+                as= { Link } to = '/review'> 
                 Donner son avis sur les articles </Button>
             </Menu.Item>
 
@@ -48,7 +48,7 @@ const ButtonBoard2 = () => (
         </Menu>
       </Grid.Column>
 
-      <Grid.Column>
+      <Grid.Column style={{ maxWidth: 450}}>
         <Menu fluid vertical>
 
           <Menu.Item className='header'><h2>Forum</h2></Menu.Item>
@@ -76,7 +76,7 @@ const ButtonBoard2 = () => (
           size ='big' 
           color = 'blue' 
           fluid 
-          as= { Link } to = '/articles'> 
+          as= { Link } to = '/requestEquipment'> 
           Demander conseil pour une technologie </Button>
           </Menu.Item>
 

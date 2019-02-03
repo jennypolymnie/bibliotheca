@@ -1,0 +1,21 @@
+.ReviewForm{
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px 5px 5px 5px;
+    margin: auto;
+    user-select: none;
+}
+
+.ArticleReviewed {
+    margin: 30px 30px 30px 30px;
+
+}
+
+.QuestionRadio {
+    margin: 20px 20px 20px 20px;
+}
+
+.QuestionRadio p{
+    font-weight: bold;
+    text-transform: uppercase;
+}
