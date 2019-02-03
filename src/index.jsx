@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import App from './components/App'
-// import 'semantic-ui-css/semantic.min.css'
-
-require('./components/views/search-results/stylesheets/SearchResults.css');
-require('./index.css');
+import 'semantic-ui-css/semantic.min.css'
+import './index.css';
 
 ReactDom.render(
   <BrowserRouter>
