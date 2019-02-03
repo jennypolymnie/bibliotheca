@@ -89,9 +89,10 @@ class PartnerStudy extends Component {
 
         <div className = "ResearchTitle">
           <h1>Thème(s) de recherche</h1>
-          <Button basic circular color = 'green' icon as= { Link } to = '/articles'>
-              <Icon size='large' name='question circle' />
+          <div className = "Icon">
+          <Button color="golden" size='small' circular icon ='question circle' as= { Link } to = '/articles'>
           </Button>
+          </div>
         </div>
 
 

@@ -46,7 +46,7 @@ class BooksellerRequest extends Component {
               
           <div>
               <Button
-              color='blue' size='large' as = { Link } to = '/QuestionSend'>Envoyez la demande
+              color='blue' size='large' as = { Link } to = '/requestSend'>Envoyez la demande
               </Button>
           </div>
             

@@ -241,12 +241,6 @@ class FormLab extends Component {
           </Form>
         </div>
 
-
-
-
-
-
-
         <div classeName = "Partie2">
           <h1> Partie Analytique </h1>
           <GridForm/>

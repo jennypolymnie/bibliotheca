@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 
-const ListLab = ({labName, directorName, email, webSite, onClick}) => (
+const ListLab = ({labName, directorName, email, website, onClick}) => (
   
     
     <div className="ListLabo">
@@ -14,7 +14,7 @@ const ListLab = ({labName, directorName, email, webSite, onClick}) => (
                 <p>Nom du laboratoire: {labName}</p>
                 <p>Nom du responsable: {directorName} </p>
                 <p>Email: {email}</p>
-                <p>Site web du laboratoire: {webSite}</p>
+                <p>Site web du laboratoire: {website}</p>
                 
             </div>
 

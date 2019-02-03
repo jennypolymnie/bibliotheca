@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Message } from 'semantic-ui-react';
 import './Board.css';
-import ButtonBoard2 from './ButtonBoard2';
+import Choices from './Choices';
 import MenuSuperieur from '../search-results/MenuSuperieur';
 
 class Board extends Component {
@@ -24,7 +24,7 @@ class Board extends Component {
             </div>
 
             <div className ="MainMenu">
-            <ButtonBoard2></ButtonBoard2>
+            <Choices></Choices>
             </div>
         </div>
     

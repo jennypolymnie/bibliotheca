@@ -1,119 +1,334 @@
-import React from 'react'
-import { Grid, Menu, Form, Select } from 'semantic-ui-react'
-
-const extraction = [
-    { key: 'Q', text: 'Qiamp', value: 'qiamp' },
-    { key: 'I', text: 'Investigator', value: 'investigator' },
-    { key: 'N', text: 'pas réalisé', value: 'pas réalisé' },
-  ]
-
-  const quantification = [
-    { key: 'N', text: 'YHres', value: 'YHres' },
-    { key: 'F', text: 'Quantifiler Duo', value: 'Quantifiler Duo' },
-    { key: 'A', text: 'Autre', value: 'Autre' },
-  ]
-
-  const amplification = [
-    { key: 'N', text: 'NGMSelect', value: 'ngmselect' },
-    { key: 'F', text: 'Fusion6C', value: 'fusion6c' },
-  ]
-
-  const sang = [
-    { key: 'N', text: 'Hexagon OBTI', value: 'hexagonobti' },
-    { key: 'F', text: 'Autre', value: 'autre' },
-  ]
-
-  const salive = [
-    { key: 'N', text: 'RSID Saliva', value: 'rsidsaliva' },
-    { key: 'F', text: 'Autre', value: 'autre' },
-  ]
-
-  const sperme = [
-    { key: 'N', text: 'Christmas Tree', value: 'christmastree' },
-    { key: 'F', text: 'PSA', value: 'psa' },
-  ]
-
+import React from 'react';
+import { Grid, Menu, Form, Select} from 'semantic-ui-react';
+import ExtractionChemistry from './ExtractionChemistry';
+import QuantificationChemistry from './QuantificationChemistry';
+import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
+import AmplificationYChemistry from './AmplificationYChemistry';
+import SalivaTest from './SalivaTest';
+import BloodTest from './BloodTest';
+import SpermTest from './SpermTest';
+import './GridForm.css';
 
   const GridForm = () => (
   
     <Grid textAlign='center' columns={2}>
       <Grid.Row>
 
-        <Grid.Column>
-          <Menu fluid vertical>
+        <Grid.Column color="blue">
+          <Menu fluid vertical className="Menu" >
             <Menu.Item className='header'>Chimie</Menu.Item>
             <Menu.Item>Kit Extraction</Menu.Item>
+            <Form >
+            <Form.Group widths='equal'>
             <Form.Field 
+            label="Kit 1"
             control={Select} 
-            options={extraction} 
+            options={ExtractionChemistry} 
             placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 2"
+            control={Select} 
+            options={ExtractionChemistry} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 3"
+            control={Select} 
+            options={ExtractionChemistry} 
+            placeholder='Choisir' />
+             </Form.Group>      
+            </Form>
 
             <Menu.Item>Kit de quantification</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
             <Form.Field 
+            label="Kit 1"
             control={Select} 
-            options={quantification} 
+            options={QuantificationChemistry} 
             placeholder='Choisir' />
+             <Form.Field 
+             label="Kit 2"
+            control={Select} 
+            options={QuantificationChemistry} 
+            placeholder='Choisir' />
+             <Form.Field 
+             label="Kit 3"
+            control={Select} 
+            options={QuantificationChemistry} 
+            placeholder='Choisir' />
+             </Form.Group>      
+            </Form>
           
-            <Menu.Item>Kit Amplification</Menu.Item>
+            <Menu.Item>Kit Amplification STRs Autosomaux</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
             <Form.Field 
+            label="Kit 1"
             control={Select} 
-            options={amplification} 
+            options={AmplificationAutosomChemistry} 
             placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 2"
+            control={Select} 
+            options={AmplificationAutosomChemistry} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 3"
+            control={Select} 
+            options={AmplificationAutosomChemistry} 
+            placeholder='Choisir' />
+            </Form.Group>      
+            </Form>
+
+            <Menu.Item>Kit Amplification STRs Y</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
+            <Form.Field 
+            label="Kit 1"
+            control={Select} 
+            options={AmplificationYChemistry} 
+            placeholder='Choisir' /> 
+            <Form.Field 
+            label="Kit 2"
+            control={Select} 
+            options={AmplificationYChemistry} 
+            placeholder='Choisir' /> 
+            <Form.Field 
+            label="Kit 3"
+            control={Select} 
+            options={AmplificationYChemistry} 
+            placeholder='Choisir' />
+            </Form.Group>      
+            </Form>
+
+             <Menu.Item>Kit Amplification STRs X</Menu.Item>
+             <Form>
+            <Form.Group widths='equal'>
+            <Form.Field 
+            label="Kit 1"
+            control={Select} 
+            options={AmplificationAutosomChemistry} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 2"
+            control={Select} 
+            options={AmplificationAutosomChemistry} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Kit 3"
+            control={Select} 
+            options={AmplificationAutosomChemistry} 
+            placeholder='Choisir' /> 
+            </Form.Group>      
+            </Form>
           
             <Menu.Item>Test indicatif sang</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
             <Form.Field 
+            label="Test 1"
             control={Select} 
-            options={sang} 
+            options={BloodTest} 
             placeholder='Choisir' />
+            <Form.Field 
+            label="Test 2"
+            control={Select} 
+            options={BloodTest} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Test 3"
+            control={Select} 
+            options={BloodTest} 
+            placeholder='Choisir' />
+            </Form.Group>      
+            </Form>
           
             <Menu.Item>Test indicatif salive</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
             <Form.Field 
+            label="Test 1"
             control={Select} 
-            options={salive} 
+            options={SalivaTest} 
             placeholder='Choisir' />
-          
-            <Menu.Item>Test indicatif sperme</Menu.Item>
             <Form.Field 
+            label="Test 2"
             control={Select} 
-            options={sperme} 
+            options={SalivaTest} 
             placeholder='Choisir' />
-          
+            <Form.Field 
+            label="Test 3"
+            control={Select} 
+            options={SalivaTest} 
+            placeholder='Choisir' />
+           </Form.Group>      
+            </Form>
+
+
+            <Menu.Item>Tests indicatif sperme</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
+            <Form.Field 
+            label="Test 1"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+
+            <Form.Field 
+            label="Test 2"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+
+            <Form.Field 
+            label="Test 3"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+             </Form.Group>      
+            </Form>
+
+
+           <Menu.Item>Tests indicatifs urine</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
+            <Form.Field 
+            label="Test 1"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+
+            <Form.Field 
+            label="Test 2"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+
+            <Form.Field 
+            label="Test 3"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+            </Form.Group>      
+            </Form>
+
+            <Menu.Item>Test indicatif secrétions vaginales</Menu.Item>
+            <Form>
+            <Form.Group widths='equal'>
+            <Form.Field 
+            label="Test 1"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Test 2"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+            <Form.Field 
+            label="Test 3"
+            control={Select} 
+            options={SpermTest} 
+            placeholder='Choisir' />
+            </Form.Group>
+            </Form>
+
             <Menu.Item></Menu.Item>
           </Menu>
       </Grid.Column>
       
-      <Grid.Column>
+      <Grid.Column color="blue">
         <Menu fluid vertical>
           <Menu.Item className='header'>Equippement</Menu.Item>
           <Menu.Item>Robot Extraction</Menu.Item>
+          <Form>
+          <Form.Group widths='equal'>
           <Form.Field 
           control={Select} 
-          options={sperme} 
+          options={SpermTest} 
           placeholder='Choisir' />
+          <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          </Form.Group>
+          </Form>
 
           <Menu.Item>Bloc chauffant</Menu.Item>
+          <Form>
+          <Form.Group widths='equal'>
           <Form.Field 
           control={Select} 
-          options={sperme} 
+          options={SpermTest} 
           placeholder='Choisir' />
+           <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+           <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          </Form.Group>
+          </Form>
           
           <Menu.Item>Electrophorèse capillaire</Menu.Item>
+          <Form>
+          <Form.Group widths='equal'>
           <Form.Field 
           control={Select} 
-          options={sperme} 
+          options={SpermTest} 
           placeholder='Choisir' />
-          
+          <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          </Form.Group>
+          </Form>
+
           <Menu.Item>Quantification</Menu.Item>
+          <Form>
+          <Form.Group widths='equal'>
           <Form.Field
           control={Select} 
-          options={sperme} 
+          options={SpermTest} 
           placeholder='Choisir' />
+           <Form.Field
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+           <Form.Field
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+          </Form.Group>
+          </Form>
           
           <Menu.Item>Sequenceur nouvelle génération</Menu.Item>
+          <Form>
+          <Form.Group widths='equal'>
           <Form.Field 
           control={Select} 
-          options={sperme} 
+          options={SpermTest} 
           placeholder='Choisir' />
+           <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+           <Form.Field 
+          control={Select} 
+          options={SpermTest} 
+          placeholder='Choisir' />
+           </Form.Group>
+          </Form>
           
           <Menu.Item></Menu.Item>
         </Menu>

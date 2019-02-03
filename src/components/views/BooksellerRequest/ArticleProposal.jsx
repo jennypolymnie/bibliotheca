@@ -38,7 +38,7 @@ class ArticleProposal extends Component {
                 <Form.Field 
                 required
                 control={TextArea} 
-                label='Pourquoi jugez-vous cet article intéressant?' 
+                label='Pourquoi jugez-vous cet article ou ce document intéressant?' 
                 placeholder="Pas besoin d'écrire une critique, juste quelques lignes" 
                 style={{ minHeight: 200 }}
                 />
@@ -46,15 +46,13 @@ class ArticleProposal extends Component {
             </Form> 
 
             <div>
-            <Button 
-            color='blue'
-            >
+            <Button color='blue'>
             Joindre votre document
             </Button>
 
             <Button 
             color='blue'
-            as = { Link } to = '/RequestSend'
+            as = { Link } to = '/proposalSend'
             >
             Envoyez la proposition
             </Button>

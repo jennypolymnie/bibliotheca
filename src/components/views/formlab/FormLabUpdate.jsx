@@ -3,7 +3,8 @@ import { Button, Checkbox, Form, Input,Icon, Message, Radio} from 'semantic-ui-r
 import './FormLabUpdate.css';
 import GridForm from './GridForm';
 import {Link} from 'react-router-dom';
-import MenuSuperieur from '../search-results/MenuSuperieur'
+import MenuSuperieur from '../search-results/MenuSuperieur';
+import Research from '../PartnerStudy/Research';
 
 class FormLabUpdate extends Component {
 
@@ -82,75 +83,7 @@ handleDifferent = (e, { value }) => this.setState({
 
 
           <div className ="InfoRecherche">
-          <div className= "InfoRecherche1">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label= "Le laboratoire est uniquement un laboratoire d'expertise "
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Détermination de la nature du fluide biologique' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='ADN ancien' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Méthylation' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Interprétation des mélanges' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Chromosome Y' 
-                control='input' 
-                type='checkbox' />
-              </Form.Group>
-            </Form>
-            </div>
-
-            <div className= "InfoRecherche2">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label='Chromosome X' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label="Logiciel d'interprétation" 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label="Détection de l'ADN de contact" 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='Détermination des caractéristiques physiques' 
-                control='input' 
-                type='checkbox' />
-                <Form.Field 
-                label='ADN mitochondrial' 
-                control='input' 
-                type='checkbox' />
-              </Form.Group>
-            </Form>
-            </div>
-
-
-            <div className= "InfoRecherche3">
-            <Form>
-              <Form.Group grouped>
-                <Form.Field 
-                label='Ajouter un thème' 
-                control='input' 
-                type='input' />
-              </Form.Group>
-            </Form>
-            </div>
+          <Research></Research>
 
           </div>
 
@@ -254,7 +187,7 @@ handleDifferent = (e, { value }) => this.setState({
           </div>
 
           <div className = "Acceptation">
-                <Button size = 'large' as= { Link } to = '/profilUpdate'>Enregistrer les modifications</Button>
+                <Button color='blue' size = 'large' as= { Link } to = '/profilUpdate'>Enregistrer les modifications</Button>
           </div>
 
 

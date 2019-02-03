@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Menu, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-const ButtonBoard2 = () => (
+const Choices = () => (
   <Grid textAlign='center' columns={2}>
     <Grid.Row>
       <Grid.Column style={{ maxWidth: 450}}>
@@ -68,7 +68,7 @@ const ButtonBoard2 = () => (
           color = 'blue' 
           fluid 
           as= { Link } to = '/PartnerStudy'> 
-          Rechercher un partenaire pour une étude </Button>
+          Rechercher un partenaire pour un projet </Button>
           </Menu.Item>
 
           <Menu.Item>
@@ -80,6 +80,17 @@ const ButtonBoard2 = () => (
           Demander conseil pour une technologie </Button>
           </Menu.Item>
 
+          <Menu.Item>
+          <Button 
+          size ='big' 
+          color = 'blue' 
+          fluid 
+          as= { Link } to = '/requestEquipment'> 
+          Consulter les projets en attente </Button>
+          </Menu.Item>
+
+
+
         </Menu>
       </Grid.Column>
 
@@ -87,4 +98,4 @@ const ButtonBoard2 = () => (
   </Grid>
 )
 
-export default ButtonBoard2
+export default Choices

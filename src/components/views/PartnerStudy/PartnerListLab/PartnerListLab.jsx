@@ -20,13 +20,13 @@ class PartnerListLab extends Component {
         <div>
         <CountElement name = "Nombre de laboratoire pouvant être intéressé" count = {4} />
         {Users.filter(user => user.profil==="Lab").map((user, index) => (
-          <ListLab key={index} labName = {user.name} directorName = {user.directorName} email ={user.directorEmail} />
+          <ListLab key={index} labName = {user.name} directorName = {user.directorName} email ={user.directorEmail} website={user.website} />
         ))
       }
         </div>
 
         <div>
-        <Button>Exporter les informations</Button>
+        <Button color="blue">Exporter les informations</Button>
         </div>
         
       </div>
