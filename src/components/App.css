@@ -18,12 +18,16 @@
     position:fixed;
     top: 40%;
 }
-.fixed-left{
+.menu-buttons-left{
     left: 1%;
 }
-.fixed-right{
-    right: 2%;
+.fixed-left-text{
+    left: 8%;
 }
-.left-align {
-    float:left;
+.menu-buttons-right{
+    right: 1%;
+}
+
+.fixed-right-text{
+    right: 8%;
 }

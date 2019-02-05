@@ -22,24 +22,26 @@ import CenterGrid from './views/Welcome/CenterGrid';
 import RequestSend from './views/BooksellerRequest/RequestSend';
 import ProposalSend from './views/BooksellerRequest/ProposalSend';
 import './App.css';
+
+const buttonSize = 'large';
 export default class App extends Component {
   render = () => (
     <Grid padded className="full-height">      
             <Grid.Row>
                 <Grid.Column width={1} textAlign={'center'} color='blue' className="paddless-column">
                  <div className='vertical-center'>
-                  <Menu icon vertical secondary floated='right' className='fixed-center fixed-left'>
-                      <Menu.Item name='1' active={true}>
-                          <Icon fitted name='search' color='yellow' size='large'/> 
+                  <Menu icon compact vertical secondary floated='right' className='fixed-center menu-buttons-left'>
+                      <Menu.Item name='1' active={false}>
+                          <Icon fitted name='search' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='2' active={false}>
-                          <Icon fitted name='cloud upload' color='yellow' size='large'/> 
+                          <Icon fitted name='cloud upload' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='3' active={false}>
-                          <Icon fitted name='star half' color='yellow' size='large'/> 
+                          <Icon fitted name='star half' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='4' active={false}>
-                          <Icon fitted name='question circle outline' color='yellow' size='large'/> 
+                          <Icon fitted name='question circle outline' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                   </Menu>
                   </div>
@@ -67,15 +69,15 @@ export default class App extends Component {
                 </Grid.Column>
                 <Grid.Column width={1} textAlign={'center'} color='blue' className="paddless-column">
                 <div className='vertical-center'>
-                  <Menu icon vertical secondary className='fixed-center fixed-right'>
+                  <Menu icon vertical secondary floated='left' className='fixed-center menu-buttons-right'>
                       <Menu.Item name='4' active={false}>
-                        <Icon fitted name='search' color='yellow' size='large'/> 
+                        <Icon fitted name='discussions' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                       <Menu.Item name='6' active={false}>
-                        <Icon fitted name='search' color='yellow' size='large'/> 
+                        <Icon fitted name='slideshare' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                       <Menu.Item name='7' active={false}>
-                        <Icon fitted name='search' color='yellow' size='large'/> 
+                        <Icon fitted name='universal access' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                   </Menu>
                   </div>
