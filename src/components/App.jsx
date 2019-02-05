@@ -28,21 +28,19 @@ export default class App extends Component {
             <Grid.Row>
                 <Grid.Column width={1} textAlign={'center'} color='blue' className="paddless-column">
                  <div className='vertical-center'>
-                  <Menu fluid icon vertical secondary tabular='left'>
-                    <Menu.Menu position="right">
-                      <Menu.Item name='1' active={true} position='right'>
-                          <Icon fitted name='search' color='yellow'/> 
+                  <Menu icon vertical secondary floated='right' className='fixed-center fixed-left'>
+                      <Menu.Item name='1' active={true}>
+                          <Icon fitted name='search' color='yellow' size='large'/> 
                         </Menu.Item>
-                        <Menu.Item name='2' active={false} position='right'>
-                          <Icon fitted name='cloud upload' color='yellow'/> 
+                        <Menu.Item name='2' active={false}>
+                          <Icon fitted name='cloud upload' color='yellow' size='large'/> 
                         </Menu.Item>
-                        <Menu.Item name='3' active={false} position='right'>
-                          <Icon fitted name='star half' color='yellow'/> 
+                        <Menu.Item name='3' active={false}>
+                          <Icon fitted name='star half' color='yellow' size='large'/> 
                         </Menu.Item>
-                        <Menu.Item name='4' active={false} position='right'>
-                          <Icon fitted name='question circle outline' color='yellow'/> 
+                        <Menu.Item name='4' active={false}>
+                          <Icon fitted name='question circle outline' color='yellow' size='large'/> 
                         </Menu.Item>
-                      </Menu.Menu>
                   </Menu>
                   </div>
                 </Grid.Column >
@@ -68,16 +66,16 @@ export default class App extends Component {
                 </Switch>
                 </Grid.Column>
                 <Grid.Column width={1} textAlign={'center'} color='blue' className="paddless-column">
-                <div className='vertical-center float-container'>
-                  <Menu compact icon vertical secondary tabular='right' floated='left'>
-                      <Menu.Item name='4' active={false} position='left'>
-                        <Icon fitted name='search' color='yellow'/> 
+                <div className='vertical-center'>
+                  <Menu icon vertical secondary className='fixed-center fixed-right'>
+                      <Menu.Item name='4' active={false}>
+                        <Icon fitted name='search' color='yellow' size='large'/> 
                       </Menu.Item>
-                      <Menu.Item name='6' active={false} position='left'>
-                        <Icon fitted name='search' color='yellow'/> 
+                      <Menu.Item name='6' active={false}>
+                        <Icon fitted name='search' color='yellow' size='large'/> 
                       </Menu.Item>
-                      <Menu.Item name='7' active={false} position='left'>
-                        <Icon fitted name='search' color='yellow'/> 
+                      <Menu.Item name='7' active={false}>
+                        <Icon fitted name='search' color='yellow' size='large'/> 
                       </Menu.Item>
                   </Menu>
                   </div>

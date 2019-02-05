@@ -14,3 +14,16 @@
 .float-container{
     display:flex;
 }
+.fixed-center{
+    position:fixed;
+    top: 40%;
+}
+.fixed-left{
+    left: 1%;
+}
+.fixed-right{
+    right: 2%;
+}
+.left-align {
+    float:left;
+}
