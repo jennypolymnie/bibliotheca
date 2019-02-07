@@ -29,7 +29,7 @@ const Login = () => (
         </Form>
 
         <Message>
-          Vous n'avez pas encore de compte <a href='/formLab'>Créer votre profil</a>
+          Vous n'avez pas encore de compte <a href='/profilType'>Créer votre profil</a>
         </Message>
       </div>
 );

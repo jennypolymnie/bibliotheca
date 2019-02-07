@@ -3,7 +3,6 @@ import { Button, Checkbox, Form, Input,Icon, Message, Radio} from 'semantic-ui-r
 import './FormLab.css';
 import GridForm from './GridForm';
 import {Link} from 'react-router-dom';
-import MenuSuperiorWelcome from '../Welcome/MenuSuperiorWelcome';
 
 
 class FormLab extends Component {
@@ -20,8 +19,6 @@ class FormLab extends Component {
 
     return (
       <div className = "ProfilLab">
-
-        <MenuSuperiorWelcome></MenuSuperiorWelcome>
         <div>
           <Message 
             color='blue'
@@ -36,14 +33,26 @@ class FormLab extends Component {
         </div>
 
         <div className = "LabInfo">
-          <h1>Labo</h1>
+          <h1>Informations générales</h1>
           <Form>
             <Form.Group grouped widths='equal'>
+            <Form.Field 
+                required 
+                control={Input} 
+                label='Nom' 
+                placeholder='Nom' />
+              <Form.Field 
+                required 
+                control={Input} 
+                label='Prénom' 
+                placeholder='Nom et Prénom du directeur laboratoire' />
+
               <Form.Field 
                 required 
                 control={Input} 
                 label='Nom du laboratoire' 
                 placeholder='Nom du laboratoire' />
+   
               <Form.Field 
                 required
                 control={Input}

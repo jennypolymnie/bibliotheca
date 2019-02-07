@@ -21,6 +21,8 @@ import Login from './views/Welcome/Login';
 import CenterGrid from './views/Welcome/CenterGrid';
 import RequestSend from './views/BooksellerRequest/RequestSend';
 import ProposalSend from './views/BooksellerRequest/ProposalSend';
+import ProfilType from './views/ProfilType/ProfilType';
+import SearchPage from './views/Review/SearchPage';
 import './App.css';
 export default class App extends Component {
   render = () => (
@@ -46,7 +48,7 @@ export default class App extends Component {
                   </Menu>
                   </div>
                 </Grid.Column >
-                <Grid.Column verticalAlign={"middle"} textAlign={"center"} width={14}>
+                <Grid.Column verticalAlign={"middle"} width={14}>
                 <Switch>
                   <Route exact path="/" component={ CenterGrid }/>
                   <Route path="/proposals" component={ ArticleProposal }/>
@@ -64,6 +66,8 @@ export default class App extends Component {
                   <Route path="/review" component={ReviewForm}/>
                   <Route path="/requestSend" component={RequestSend}/>
                   <Route path="/proposalSend" component={ProposalSend}/>
+                  <Route path="/profilType" component={ProfilType}/>
+                  <Route path="/search" component={SearchPage}/>
                   <Route render={ () => <h1>404 Error</h1> } />
                 </Switch>
                 </Grid.Column>
