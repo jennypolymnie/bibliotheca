@@ -3,31 +3,32 @@ import { Menu, Segment } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 
 export default class MenuSuperiorWelcome extends Component {
-  state = {  }
+  state = { }
 
   handleItemClick = ({ name }) => this.setState({ activeItem: name })
-  handleAbout = () => this.setState ({about: true});
+
+  handleAbout = () => this.setState({ about: true });
 
 
   render() {
-    const { activeItem } = this.state
+      const { activeItem } = this.state;
 
-    if (this.state.about) {
-      return <Redirect push to="/About"/>
-    }
+      if (this.state.about) {
+          return <Redirect push to="/About" />;
+      }
 
-    return (
-      <div>
-      <Segment inverted>
-        <Menu inverted pointing secondary>
-        <Menu.Item 
-        name='A propos' 
-        active={activeItem === 'A propos'} 
-        onClick={this.handleAbout} 
-        />
-      </Menu>
-      </Segment>
-      </div>
-    )
+      return (
+          <div>
+              <Segment inverted>
+                  <Menu inverted pointing secondary>
+                      <Menu.Item
+                          name="A propos"
+                          active={activeItem === 'A propos'}
+                          onClick={this.handleAbout}
+                      />
+                  </Menu>
+              </Segment>
+          </div>
+      );
   }
 }

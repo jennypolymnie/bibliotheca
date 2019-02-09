@@ -5,32 +5,29 @@ import Choices from './Choices';
 import MenuSuperieur from '../search-results/MenuSuperieur';
 
 class Board extends Component {
-
-  
     render() {
+        return (
+            <div className="Board">
 
-      return (
-        <div className = "Board">
+                <MenuSuperieur />
 
-            <MenuSuperieur></MenuSuperieur>
+                <div className="Message">
+                    <Message
+                        color="blue"
+                        attached
+                        header="Menu principal"
+                        content="Comment puis je vous aider aujourd hui?"
+                    />
+                </div>
 
-            <div className ="Message">
-              <Message 
-                color='blue'
-                attached
-                header='Menu principal'
-                content='Comment puis je vous aider aujourd hui?'
-              />
+                <div className="MainMenu">
+                    <Choices />
+                </div>
             </div>
 
-            <div className ="MainMenu">
-            <Choices></Choices>
-            </div>
-        </div>
-    
 
-              )
-            }
-          }
+        );
+    }
+}
 
-export default Board
+export default Board;

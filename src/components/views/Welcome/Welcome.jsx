@@ -6,31 +6,28 @@ import Login from './Login';
 
 
 class Welcome extends Component {
+    render() {
+        return (
 
-  render() {
-    
-    return (
-        
-        <div className="Wel">
-        
-          <div>
-            <MenuSuperiorWelcome></MenuSuperiorWelcome>
-          </div>
+            <div className="Wel">
 
-          <div className="Bo">
-            <div className="Welc">
-              <WelcomeBoard></WelcomeBoard>
+                <div>
+                    <MenuSuperiorWelcome />
+                </div>
+
+                <div className="Bo">
+                    <div className="Welc">
+                        <WelcomeBoard />
+                    </div>
+
+                    <div className="Log">
+                        <Login />
+                    </div>
+                </div>
+
             </div>
-        
-            <div className="Log">
-              <Login></Login>
-            </div>
-          </div>
-        
-        </div>
-    );
-    
+        );
     }
 }
-      
-      export default Welcome;
+
+export default Welcome;
