@@ -5,34 +5,31 @@ import Choices from './Choices';
 import LogoIcon from '../Welcome/LogoIcon';
 
 class Board extends Component {
-
-  
     render() {
+        return (
+            <div className="Board">
 
-      return (
-        <div className = "Board">
 
+                <div className="Message">
+                    <Message
+                        color="blue"
+                        attached
+                        header="Menu principal"
+                        content="Comment puis je vous aider aujourd hui?"
+                    />
+                </div>
 
-            <div className ="Message">
-              <Message 
-                color='blue'
-                attached
-                header='Menu principal'
-                content='Comment puis je vous aider aujourd hui?'
-              />
+                <LogoIcon />
+                <Image src={require('../../../resources/bibliotheca_blue.svg')} size="small" />
+
+                <div className="MainMenu">
+                    <Choices />
+                </div>
             </div>
 
-            <LogoIcon></LogoIcon>
-            <Image src={require ('../../../resources/bibliotheca_blue.svg')} size='small' />
 
-            <div className ="MainMenu">
-            <Choices></Choices>
-            </div>
-        </div>
-    
+        );
+    }
+}
 
-              )
-            }
-          }
-
-export default Board
+export default Board;

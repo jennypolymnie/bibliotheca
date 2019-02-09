@@ -1,42 +1,57 @@
 import React from 'react';
 import { Rating } from 'semantic-ui-react';
-import InputExemple from '../search-results/InputExemple';
 import PropTypes from 'prop-types';
+import InputExemple from '../search-results/InputExemple';
 import './ArticleReviewed.css';
 
 
+const ArticleReviewed = ({
+    author, title, abstract, link, onClick
+}) => (
 
-const ArticleReviewed = ({author, title, abstract,link, onClick}) => (
-  
-    
+
     <div className="Article">
 
-        <div className = "Presentation">
+        <div className="Presentation">
 
-            <div className = "MainData" onClick={() => onClick(ArticleReviewed)}>
-                <p>Authors: {author}</p>
-                <p>Title: {title} </p>
-                <p>Abstract: {abstract}</p>
-                <p>Lien: {link}</p>
+            <div className="MainData" onClick={() => onClick(ArticleReviewed)}>
+                <p>
+Authors:
+                    {author}
+                </p>
+                <p>
+Title:
+                    {title}
+                    {' '}
+
+                </p>
+                <p>
+Abstract:
+                    {abstract}
+                </p>
+                <p>
+Lien:
+                    {link}
+                </p>
             </div>
 
         </div>
 
         <div className="Review">
-            <InputExemple info="Nombre d'avis"></InputExemple>
+            <InputExemple info="Nombre d'avis" />
             <p>Rigueur</p>
-            <Rating disabled icon='star' defaultRating={2} maxRating={5} />
+            <Rating disabled icon="star" defaultRating={2} maxRating={5} />
             <p>Analyse</p>
-            <Rating disabled icon='star' defaultRating={3} maxRating={5} />
+            <Rating disabled icon="star" defaultRating={3} maxRating={5} />
             <p>Résultats</p>
-            <Rating disabled icon='star' defaultRating={4} maxRating={5} />
+            <Rating disabled icon="star" defaultRating={4} maxRating={5} />
             <p>Interprétation</p>
-            <Rating disabled icon='star' defaultRating={3} maxRating={5} />
-            
+            <Rating disabled icon="star" defaultRating={3} maxRating={5} />
+
         </div>
-        
+
     </div>
-)
+);
 
 ArticleReviewed.PropTypes = {
     author: PropTypes.string.isRequired,
@@ -44,6 +59,6 @@ ArticleReviewed.PropTypes = {
     abstract: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
     link: PropTypes.string.isRequired
-}
+};
 
-export default ArticleReviewed
+export default ArticleReviewed;

@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import { Menu, Segment } from 'semantic-ui-react';
 import { Redirect } from 'react-router-dom';
 
-export default class MenuSuperiorAbout extends Component {
+export default class MenuSuperiorWelcome extends Component {
   state = { }
 
   handleItemClick = ({ name }) => this.setState({ activeItem: name })
 
-  handleWelcome = () => this.setState({ welcome: true });
+  handleAbout = () => this.setState({ about: true });
 
 
   render() {
       const { activeItem } = this.state;
 
-      if (this.state.welcome) {
-          return <Redirect push to="/welcome" />;
+      if (this.state.about) {
+          return <Redirect push to="/About" />;
       }
 
       return (
@@ -22,9 +22,9 @@ export default class MenuSuperiorAbout extends Component {
               <Segment inverted>
                   <Menu inverted pointing secondary>
                       <Menu.Item
-                          name="Accueil"
-                          active={activeItem === 'Accueil'}
-                          onClick={this.handleWelcome}
+                          name="A propos"
+                          active={activeItem === 'A propos'}
+                          onClick={this.handleAbout}
                       />
                   </Menu>
               </Segment>

@@ -6,15 +6,13 @@ import 'semantic-ui-less/semantic.less';
 import './index.css';
 
 ReactDom.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.querySelector('#app') // eslint-disable-line no-undef 
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>,
+    document.querySelector('#app') // eslint-disable-line no-undef
 );
 
 // Needed for Hot Module Replacement
-if(typeof(module.hot) !== 'undefined') { // eslint-disable-line no-undef 
-  module.hot.accept() // eslint-disable-line no-undef  
+if (typeof (module.hot) !== 'undefined') { // eslint-disable-line no-undef
+    module.hot.accept(); // eslint-disable-line no-undef
 }
-
-
