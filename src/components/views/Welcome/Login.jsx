@@ -25,15 +25,16 @@ const Login = () => (
                     placeholder="Password"
                     type="password"
                 />
-                <Button color="blue" fluid size="large" as={Link} to="/board">
-                    Connexion
+                <Button color="blue" fluid size="large" as={Link} to="/logo">
+              Connexion
                 </Button>
             </Segment>
         </Form>
 
         <Message>
-            {'Vous n\'avez pas encore de compte'}
-            <a href="/formLab">Créer votre profil</a>
+          Vous n'avez pas encore de compte
+            {' '}
+            <a href="/profilType">Créer votre profil</a>
         </Message>
     </div>
 );

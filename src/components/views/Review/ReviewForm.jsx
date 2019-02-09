@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Radio, Form, Button } from 'semantic-ui-react';
-import Article from '../search-results/Article';
-import MenuSuperieur from '../search-results/MenuSuperieur';
+import ArticleReviewed from './ArticleReviewed';
 import './ReviewForm.css';
+import ReviewQuestions from './ReviewQuestions';
+import TableQuestions from './TableQuestions';
 
 
 class ReviewForm extends Component {
-state = {}
+  state = {}
 
-  handleRigor= (e, { value }) => this.setState({
+  handleRigor = (e, { value }) => this.setState({
       rigor: value
   })
 
@@ -24,22 +25,49 @@ state = {}
       interpretation: value
   })
 
+  handleChange = name => {
+      switch (name) {
+          case 'rigor':
+              return handleRigor;
+          case 'stat':
+              return handleStat;
+          case 'result':
+              return handleResult;
+          case 'interpret':
+              return handleInterpret;
+      }
+  }
+
   render() {
       return (
 
           <div className="ReviewForm">
 
-              <div>
-                  <MenuSuperieur />
-              </div>
-
               <div className="ArticleReviewed">
-                  <Article
+                  <ArticleReviewed
                       author="J.Comte"
                       title="Nouveau Swab pour ADN de contact"
                       onClick={this.handleCardClick}
                   />
               </div>
+
+              {// <div>
+
+                  // {TableQuestions.map(({ id, label, name, value }) => (
+                  // <ReviewQuestions
+                  // key={id}
+                  // label={label}
+                  // name={name}
+                  // value={value}
+                  // checked={this.state.value===value}
+                  // onChange={this.handleChange({name})}
+                  // >
+                  // </ReviewQuestions>
+
+                  // ))}
+                  // </div>
+              }
+
 
               <div className="QuestionRadio">
                   <p> Rigueur scientifique </p>
@@ -150,6 +178,41 @@ state = {}
                   </Form>
 
               </div>
+
+              <div className="QuestionRadio">
+                  <p> Interprétation </p>
+                  <Form className="Radio">
+                      <Form.Field>
+                          <Radio
+                              label="Les résultats sont tous interprétés, détaillés et comparés à d'autres études"
+                              name="Interprétés"
+                              value="interpreted"
+                              checked={this.state.interpretation === 'interpreted'}
+                              onChange={this.handleInterpret}
+                          />
+                      </Form.Field>
+                      <Form.Field>
+                          <Radio
+                              label="Les résultats sont tous interprétés, détaillés mais ne sont pas comparés à d'autres études"
+                              name="notenough"
+                              value="notenough"
+                              checked={this.state.interpretation === 'notenough'}
+                              onChange={this.handleInterpret}
+                          />
+                      </Form.Field>
+                      <Form.Field>
+                          <Radio
+                              label="Certains résultats, différents de la majorité, n'ont pas été interprétés"
+                              name="uninterpreted"
+                              value="uninterpreted"
+                              checked={this.state.interpretation === 'uninterpreted'}
+                              onChange={this.handleInterpret}
+                          />
+                      </Form.Field>
+                  </Form>
+
+              </div>
+              <Button color="blue">Soumettez votre opinion</Button>
 
               <div className="QuestionRadio">
                   <p> Interprétation </p>

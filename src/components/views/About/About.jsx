@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Container } from 'semantic-ui-react';
-import MenuSuperiorAbout from './MenuSuperiorAbout';
 import './About.css';
 import { Message } from 'semantic-ui-react';
 
@@ -10,6 +8,16 @@ class About extends Component {
         return (
 
             <div className="About">
+
+
+                <div className="Message">
+                    <Message
+                        color="blue"
+                        attached
+                        header="A propos de la bibliothèque"
+                        content="Notre bibliothèque en quelques chiffres"
+                    />
+                </div>
 
                 <div className="Menu">
                     <MenuSuperiorAbout />
@@ -87,4 +95,5 @@ La bibliothécaire
         );
     }
 }
+
 export default About;

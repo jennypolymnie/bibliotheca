@@ -3,7 +3,6 @@ import {
     Button, Form, Icon, Message, Radio, Input
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import './PartnerStudy.css';
 import Research from './Research';
 
@@ -22,11 +21,6 @@ class PartnerStudy extends Component {
     render() {
         return (
             <div className="PartnerStudy">
-
-                <div>
-                    <MenuSuperieur />
-                </div>
-
 
                 <div>
                     <Message

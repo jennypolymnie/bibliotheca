@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, TextArea, Input, Message
+    Button, Form, TextArea, Input, Header
 } from 'semantic-ui-react';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import './ArticleProposal.css';
 import { Link } from 'react-router-dom';
 
@@ -12,15 +11,9 @@ class ArticleProposal extends Component {
         return (
 
             <div className="ArticleProposal">
-                <MenuSuperieur />
 
                 <div>
-                    <Message
-                        color="blue"
-                        attached
-                        header="Proposer un article à la bibliothécaire"
-                        content="Merci d'avance pour votre contribution à Bibliothéca"
-                    />
+                    <Header as="h1">Proposer un document</Header>
                 </div>
 
                 <div className="Formulaire">

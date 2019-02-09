@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Message } from 'semantic-ui-react';
-import MenuSuperieur from '../search-results/MenuSuperieur';
-
 
 class RequestSend extends Component {
     render() {
@@ -9,7 +7,6 @@ class RequestSend extends Component {
 
             <div className="RequestSend">
 
-                <MenuSuperieur />
 
                 <div>
                     <Message positive>

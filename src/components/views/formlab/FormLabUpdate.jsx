@@ -5,7 +5,6 @@ import {
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
 import GridForm from './GridForm';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import Research from '../PartnerStudy/Research';
 
 class FormLabUpdate extends Component {
@@ -24,7 +23,6 @@ render() {
     return (
         <div className="ProfilLab">
 
-            <MenuSuperieur />
             <div>
                 <Message
                     color="blue"

@@ -11,15 +11,18 @@
 }
 
 .Choice{
-    background-color: #333532;
     display:flex;
     height:700px;
+
 }
 
 .BlocActivity, .BlocSource, .BlocSubSource, .BlocSubActivity {
-    width: 400px;
-    background-color: #A1A19A;
+    width: 300px;
     padding: 5px 5px 5px 5px;
     height: 600px;
     margin:10px 10px 10px 10px;
+}
+
+.QuestionDropdown{
+    height: 400px;
 }

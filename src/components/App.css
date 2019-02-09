@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
 }
+
 .full-height{
     min-height: 100%;
 }
@@ -18,6 +19,15 @@
     position:fixed;
     top: 40%;
 }
+
+.fixed-top{
+    position:fixed;
+    top: 0px;   
+}
+.miniLogo {
+    max-width: 60px;
+}
+
 .menu-buttons-left{
     left: 1%;
 }
@@ -30,4 +40,8 @@
 
 .fixed-right-text{
     right: 8%;
+}
+
+i.link.icon.sidebar-icon:hover{
+    color:white !important;
 }

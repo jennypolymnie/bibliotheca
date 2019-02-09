@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Message } from 'semantic-ui-react';
+import { Message, Image } from 'semantic-ui-react';
 import './Board.css';
 import Choices from './Choices';
-import MenuSuperieur from '../search-results/MenuSuperieur';
+import LogoIcon from '../Welcome/LogoIcon';
 
 class Board extends Component {
     render() {
         return (
             <div className="Board">
 
-                <MenuSuperieur />
 
                 <div className="Message">
                     <Message
@@ -19,6 +18,9 @@ class Board extends Component {
                         content="Comment puis je vous aider aujourd hui?"
                     />
                 </div>
+
+                <LogoIcon />
+                <Image src={require('../../../resources/bibliotheca_blue.svg')} size="small" />
 
                 <div className="MainMenu">
                     <Choices />

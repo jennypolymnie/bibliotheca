@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import ListLab from './ListLab';
-import MenuSuperieur from '../../search-results/MenuSuperieur';
 import CountElement from '../../search-results/NbArticle';
 import Users from './Users';
 
@@ -11,7 +10,6 @@ class PartnerListLab extends Component {
         return (
 
             <div>
-                <MenuSuperieur />
 
                 <h2>Résultat de la recherche</h2>
 

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, TextArea, Input, Message
+    Button, Form, TextArea, Input, Header
 } from 'semantic-ui-react';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import './BooksellerRequest.css';
 import { Link } from 'react-router-dom';
 
@@ -13,15 +12,8 @@ class BooksellerRequest extends Component {
 
             <div className="BooksellerRequest">
 
-                <MenuSuperieur />
-
                 <div>
-                    <Message
-                        color="blue"
-                        attached
-                        header="Poser une question à la bibliothécaire"
-                        content="Que puis je faire pour vous?"
-                    />
+                    <Header as="h1">Question à la bibliothécaire</Header>
                 </div>
 
                 <div className="RequestInfo">
