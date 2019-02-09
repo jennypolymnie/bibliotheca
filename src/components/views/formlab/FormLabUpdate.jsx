@@ -4,7 +4,6 @@ import {
 } from 'semantic-ui-react';
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import GridForm from './GridForm';
 import Research from '../PartnerStudy/Research';
 

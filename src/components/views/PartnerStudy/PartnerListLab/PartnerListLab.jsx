@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
-import { Button } from 'semantic-ui-react';
 import ListLab from './ListLab';
 import CountElement from '../../search-results/NbArticle';
 import Users from './Users';
