@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import {Container} from 'semantic-ui-react';
-import MenuSuperiorAbout from './MenuSuperiorAbout';
 import './About.css';
 import { Message } from 'semantic-ui-react';
 
@@ -13,10 +11,6 @@ class About extends Component {
     return (
         
       <div className="About">
-        
-        <div className="Menu">
-          <MenuSuperiorAbout></MenuSuperiorAbout>
-        </div>
         
         
         <div className ="Message">

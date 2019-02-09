@@ -3,7 +3,7 @@ import { Image } from 'semantic-ui-react'
 
 const LogoIcon = () => (
   <div>
-    <Image src={require ('./Images/logobibli1.jpg')} avatar />
+    <Image src={require ('../../../resources/bibliotheca_blue.svg')} avatar />
   </div>
 )
 

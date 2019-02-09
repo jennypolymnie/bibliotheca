@@ -3,7 +3,6 @@ import { Button, Checkbox, Form, Input,Icon, Message, Radio} from 'semantic-ui-r
 import './FormLabUpdate.css';
 import GridForm from './GridForm';
 import {Link} from 'react-router-dom';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import Research from '../PartnerStudy/Research';
 
 class FormLabUpdate extends Component {
@@ -24,7 +23,6 @@ handleDifferent = (e, { value }) => this.setState({
     return (
       <div className = "ProfilLab">
 
-          <MenuSuperieur></MenuSuperieur>
           <div>
              <Message color='blue'
               attached

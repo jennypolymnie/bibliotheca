@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Message} from 'semantic-ui-react';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 
 
 class ProposalSend extends Component {
@@ -10,8 +9,6 @@ class ProposalSend extends Component {
       return (
           
         <div className="ProposalSend">
-          
-          <MenuSuperieur></MenuSuperieur>
  
           <div>
             <Message positive>

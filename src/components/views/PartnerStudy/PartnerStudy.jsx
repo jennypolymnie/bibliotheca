@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form,Icon, Message, Radio, Input} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import './PartnerStudy.css'
 import Research from './Research';
 
@@ -21,11 +20,6 @@ class PartnerStudy extends Component {
 
     return (
       <div className = "PartnerStudy">
-
-        <div>
-            <MenuSuperieur></MenuSuperieur>
-        </div>
-
 
         <div>
             <Message color='blue'

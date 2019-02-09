@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ArticleReviewed from './ArticleReviewed';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import { Radio, Form, Button } from 'semantic-ui-react';
 import './ReviewForm.css'
 import ReviewQuestions from './ReviewQuestions';
@@ -42,10 +41,6 @@ class ReviewForm extends Component {
 
       <div className="ReviewForm">
 
-        <div>
-          <MenuSuperieur></MenuSuperieur>
-        </div>
-
         <div className="ArticleReviewed">
           <ArticleReviewed
             author="J.Comte"
@@ -69,14 +64,6 @@ class ReviewForm extends Component {
          // ))}
         //</div>
         }
-
-
-
-
-
-
-
-
 
 
         <div className="QuestionRadio">

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Message, Radio, Form, Input} from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import GridForm from '../formlab/GridForm';
 import './RequestEquipment.css';
 
@@ -19,10 +18,6 @@ class RequestEquipment extends Component {
     return (
       
         <div className = "RequestEquipment">
-
-            <div>
-                <MenuSuperieur></MenuSuperieur>
-            </div>
 
             <div>
                 <Message 

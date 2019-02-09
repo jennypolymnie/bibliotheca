@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Message, Image } from 'semantic-ui-react';
 import './Board.css';
 import Choices from './Choices';
-import MenuSuperieur from '../search-results/MenuSuperieur';
 import LogoIcon from '../Welcome/LogoIcon';
 
 class Board extends Component {
@@ -13,7 +12,6 @@ class Board extends Component {
       return (
         <div className = "Board">
 
-            <MenuSuperieur></MenuSuperieur>
 
             <div className ="Message">
               <Message 
@@ -25,7 +23,7 @@ class Board extends Component {
             </div>
 
             <LogoIcon></LogoIcon>
-            <Image src={require ('../Welcome/Images/logobibli1.jpg')} size='small' />
+            <Image src={require ('../../../resources/bibliotheca_blue.svg')} size='small' />
 
             <div className ="MainMenu">
             <Choices></Choices>

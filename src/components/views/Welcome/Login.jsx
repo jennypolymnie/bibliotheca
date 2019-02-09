@@ -22,7 +22,7 @@ const Login = () => (
               placeholder='Password'
               type='password'
             />
-            <Button color='blue' fluid size='large' as={ Link } to = '/board'>
+            <Button color='blue' fluid size='large' as={ Link } to = '/logo'>
               Connexion
             </Button>
           </Segment>

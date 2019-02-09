@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-import { Search, Grid } from 'semantic-ui-react'
+import { Search, Grid, Header } from 'semantic-ui-react'
 
 
 const BdArticles = [
@@ -37,13 +37,19 @@ class SearchPage extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.history.push('/articles');
+        this.props.history.push('/reviewForm');
     }
 
     render() {
         const { isLoading, value, results } = this.state
 
         return (
+
+            <div>
+            <div>
+            <Header as='h1'>Rechercher un article</Header>
+            </div>
+
             <Grid>
                 <Grid.Column color='blue' width={10}>
                     <form onSubmit={this.handleSubmit}>
@@ -60,6 +66,7 @@ class SearchPage extends Component {
                     </form>
                 </Grid.Column>
             </Grid>
+            </div>
         )
     }
 }
