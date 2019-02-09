@@ -26,14 +26,13 @@ const Login = () => (
                     type="password"
                 />
                 <Button color="blue" fluid size="large" as={Link} to="/logo">
-              Connexion
+                    {'Connexion'}
                 </Button>
             </Segment>
         </Form>
 
         <Message>
-          Vous n'avez pas encore de compte
-            {' '}
+            {'Vous n\'avez pas encore de compte'}
             <a href="/profilType">Créer votre profil</a>
         </Message>
     </div>

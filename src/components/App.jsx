@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import { Grid, Menu, Image, Icon } from 'semantic-ui-react';
+import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './views/search-results/SearchResults';
 import FormLab from './views/formlab/FormLab';
 import FormLabUpdate from './views/formlab/FormLabUpdate';
