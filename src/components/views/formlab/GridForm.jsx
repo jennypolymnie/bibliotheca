@@ -11,7 +11,7 @@ import './GridForm.css';
 
   const GridForm = () => (
   
-    <Grid textAlign='center' columns={2}>
+    <Grid textAlign='center'>
       <Grid.Row>
 
         <Grid.Column color="blue">
@@ -235,103 +235,6 @@ import './GridForm.css';
 
             <Menu.Item></Menu.Item>
           </Menu>
-      </Grid.Column>
-      
-      <Grid.Column color="blue">
-        <Menu fluid vertical>
-          <Menu.Item className='header'>Equippement</Menu.Item>
-          <Menu.Item>Robot Extraction</Menu.Item>
-          <Form>
-          <Form.Group widths='equal'>
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          </Form.Group>
-          </Form>
-
-          <Menu.Item>Bloc chauffant</Menu.Item>
-          <Form>
-          <Form.Group widths='equal'>
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          </Form.Group>
-          </Form>
-          
-          <Menu.Item>Electrophorèse capillaire</Menu.Item>
-          <Form>
-          <Form.Group widths='equal'>
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          </Form.Group>
-          </Form>
-
-          <Menu.Item>Quantification</Menu.Item>
-          <Form>
-          <Form.Group widths='equal'>
-          <Form.Field
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-          </Form.Group>
-          </Form>
-          
-          <Menu.Item>Sequenceur nouvelle génération</Menu.Item>
-          <Form>
-          <Form.Group widths='equal'>
-          <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           <Form.Field 
-          control={Select} 
-          options={SpermTest} 
-          placeholder='Choisir' />
-           </Form.Group>
-          </Form>
-          
-          <Menu.Item></Menu.Item>
-        </Menu>
       </Grid.Column>
     </Grid.Row>
   </Grid>

@@ -23,6 +23,7 @@ import RequestSend from './views/BooksellerRequest/RequestSend';
 import ProposalSend from './views/BooksellerRequest/ProposalSend';
 import ProfilType from './views/ProfilType/ProfilType';
 import SearchPage from './views/Review/SearchPage';
+import AnalyticalPart from './views/formlab/AnalyticPart';
 import './App.css';
 
 const buttonSize = 'large';
@@ -34,16 +35,16 @@ export default class App extends Component {
                  <div className='vertical-center'>
                   <Menu icon compact vertical secondary floated='right' className='fixed-center menu-buttons-left'>
                       <Menu.Item name='1' active={false}>
-                          <Icon fitted name='search' color='yellow' size={buttonSize}/> 
+                          <Icon fitted className='sidebar-icon' link name='search' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='2' active={false}>
-                          <Icon fitted name='cloud upload' color='yellow' size={buttonSize}/> 
+                          <Icon fitted className='sidebar-icon' link name='cloud upload' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='3' active={false}>
-                          <Icon fitted name='star half' color='yellow' size={buttonSize}/> 
+                          <Icon fitted className='sidebar-icon' link name='star half' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                         <Menu.Item name='4' active={false}>
-                          <Icon fitted name='question circle outline' color='yellow' size={buttonSize}/> 
+                          <Icon fitted className='sidebar-icon' link name='question circle outline' color='yellow' size={buttonSize}/> 
                         </Menu.Item>
                   </Menu>
                   </div>
@@ -57,6 +58,7 @@ export default class App extends Component {
                   <Route path="/board" component={ Board }/>
                   <Route path="/booksellerRequest" component={ BooksellerRequest }/>
                   <Route path="/formLab" component={ FormLab }/>
+                  <Route path="/analyticalPart" component={ AnalyticalPart}/>
                   <Route path="/libraryRequest" component={ LibraryRequest}/>
                   <Route path="/welcome" component={ Welcome }/>
                   <Route path="/About" component={ About }/>
@@ -75,13 +77,13 @@ export default class App extends Component {
                 <div className='vertical-center'>
                   <Menu icon vertical secondary floated='left' className='fixed-center menu-buttons-right'>
                       <Menu.Item name='4' active={false}>
-                        <Icon fitted name='discussions' color='yellow' size={buttonSize}/> 
+                        <Icon className='sidebar-icon' link fitted name='discussions' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                       <Menu.Item name='6' active={false}>
-                        <Icon fitted name='slideshare' color='yellow' size={buttonSize}/> 
+                        <Icon fitted className='sidebar-icon' link name='slideshare' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                       <Menu.Item name='7' active={false}>
-                        <Icon fitted name='universal access' color='yellow' size={buttonSize}/> 
+                        <Icon fitted className='sidebar-icon' link name='universal access' color='yellow' size={buttonSize}/> 
                       </Menu.Item>
                   </Menu>
                   </div>

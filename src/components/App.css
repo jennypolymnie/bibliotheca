@@ -31,3 +31,7 @@
 .fixed-right-text{
     right: 8%;
 }
+
+i.link.icon.sidebar-icon:hover{
+    color:white !important;
+}
