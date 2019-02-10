@@ -1,33 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import MenuSuperiorWelcome from './MenuSuperiorWelcome';
-import './Welcome.css';
 import WelcomeBoard from './WelcomeBoard';
 import Login from './Login';
 
+const Welcome = () => (
+    <div className="Wel">
 
-class Welcome extends Component {
-    render() {
-        return (
+        <div>
+            <MenuSuperiorWelcome />
+        </div>
 
-            <div className="Wel">
-
-                <div>
-                    <MenuSuperiorWelcome />
-                </div>
-
-                <div className="Bo">
-                    <div className="Welc">
-                        <WelcomeBoard />
-                    </div>
-
-                    <div className="Log">
-                        <Login />
-                    </div>
-                </div>
-
+        <div className="Bo">
+            <div className="Welc">
+                <WelcomeBoard />
             </div>
-        );
-    }
-}
+
+            <div className="Log">
+                <Login />
+            </div>
+        </div>
+
+    </div>
+);
 
 export default Welcome;
