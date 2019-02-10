@@ -5,7 +5,6 @@ import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './views/search-results/SearchResults';
 import FormLab from './views/formlab/FormLab';
 import FormLabUpdate from './views/formlab/FormLabUpdate';
-import Board from './views/board/Board';
 import BooksellerRequest from './views/BooksellerRequest/BooksellerRequest';
 import ArticleProposal from './views/BooksellerRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
@@ -56,7 +55,6 @@ export default () => (
                     <Route path="/proposals" component={ArticleProposal} />
                     <Route path="/articles" component={SearchResults} />
                     <Route path="/profilUpdate" component={FormLabUpdate} />
-                    <Route path="/board" component={Board} />
                     <Route path="/reviewForm" component={ReviewForm} />
                     <Route path="/booksellerRequest" component={BooksellerRequest} />
                     <Route path="/formLab" component={FormLab} />
