@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+
 .vertical-center{
     height: 100%;
     width: 100%;
@@ -44,4 +47,16 @@
 
 i.link.icon.sidebar-icon:hover{
     color:white !important;
+}
+
+div.ui.header.title {
+    font-size: 6rem;
+    min-height: 14rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 200; 
+}
+
+.ui.statistics .statistic > .value, .ui.statistic > .value {
+    font-family: 'Cinzel', serif !important;
+    font-weight: 200 !important;
 }

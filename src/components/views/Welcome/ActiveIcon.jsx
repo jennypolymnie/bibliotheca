@@ -44,7 +44,7 @@ const ActiveItem = C => props => {
             });
         }
     };
-    
+
     return (
         <C onClick={() => redirect(to)} name={name} active={false}>
             {renderIcon(src, iconProps)}

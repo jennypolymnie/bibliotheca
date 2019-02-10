@@ -1,3 +1,18 @@
+@headerFont        : 'Poppins 600', sans-serif;
+@pageFont          : 'Poppins', sans-serif;
+@importGoogleFonts : true;
+@googleProtocol    : 'https://';
+@googleFontRequest : 'Poppins:400,500,600,700|Roboto:400,700|Cinzel:200';
+
+/*-------------------
+    Base Sizes
+--------------------*/
+
+@emSize      : 14px;
+@fontSize    : 14px;
+
+
+
 @primaryColor   : @blue;
 @secondaryColor : @darkgolden;
 @textColor      : @darkgrey;
