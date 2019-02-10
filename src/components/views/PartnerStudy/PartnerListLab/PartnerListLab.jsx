@@ -14,7 +14,7 @@ class PartnerListLab extends Component {
                 <h2>Résultat de la recherche</h2>
 
                 <div>
-                    <CountElement name="Nombre de laboratoire pouvant être intéressé" count={4} />
+                    <CountElement name="Nombre de laboratoire pouvant être intéressé" count={2} />
                     {Users.filter(user => user.profil === 'Lab').map((user, index) => (
                         <ListLab key={index} labName={user.name} directorName={user.directorName} email={user.directorEmail} website={user.website} />
                     ))

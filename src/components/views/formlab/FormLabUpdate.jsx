@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {
-    Button, Checkbox, Form, Input, Icon, Message, Radio
+    Button, Checkbox, Form, Input, Icon, Header, Radio, Label
 } from 'semantic-ui-react';
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
 import GridForm from './GridForm';
 import Research from '../PartnerStudy/Research';
+import GridFormEquipment from './GridFormEquipment';
 
 class FormLabUpdate extends Component {
 state = {}
@@ -22,16 +23,7 @@ handleDifferent = (e, { value }) => this.setState({
 render() {
     return (
         <div className="ProfilLab">
-
-            <div>
-                <Message
-                    color="blue"
-                    attached
-                    header="Fiche du laboratoire"
-                    content="Vous pouvez modifier votre profil autant de fois que nécessaire"
-                />
-            </div>
-
+            <Header as="h1"> Profil du labo </Header>
             <div className="InfoLab">
                 <h1>Labo</h1>
                 <Form>
@@ -60,11 +52,11 @@ render() {
             <div className="InfoContact">
                 <Form>
                     <Form.Group grouped>
-                        <label>
+                        <Label>
                             {' '}
                             <h1>Contact</h1>
                             {' '}
-                        </label>
+                        </Label>
                         <Form.Field
                             control={Input}
                             label="Email du contact technique"
@@ -180,8 +172,13 @@ render() {
             </div>
 
             <div classeName="Partie2">
-                <h1> Partie Analytique </h1>
+                <h1> Chimie </h1>
                 <GridForm />
+            </div>
+
+            <div classeName="Partie2">
+                <h1> Equipement </h1>
+                <GridFormEquipment />
             </div>
 
             <div className="Confidentialite">

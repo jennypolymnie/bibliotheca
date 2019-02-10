@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { Search, Grid, Header } from 'semantic-ui-react';
+import './SearchPage.css';
 
 
 const BdArticles = [
@@ -55,26 +56,30 @@ class SearchPage extends Component {
         return (
 
             <div>
-                <div>
+                <div className="title-page">
                     <Header as="h1">Rechercher un article</Header>
                 </div>
 
-                <Grid>
-                    <Grid.Column color="blue" width={10}>
-                        <form onSubmit={this.handleSubmit}>
-                            <Search
-                                size="massive"
-                                input={{ fluid: true }}
-                                loading={isLoading}
-                                onResultSelect={this.handleResultSelect}
-                                onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
-                                results={results}
-                                value={value}
-                                {...this.props}
-                            />
-                        </form>
-                    </Grid.Column>
-                </Grid>
+
+                <div>
+                    <Grid>
+                        <Grid.Column color="blue" width={10}>
+                            <form onSubmit={this.handleSubmit}>
+                                <Search
+                                    size="massive"
+                                    placeholder="Titre de l'article"
+                                    input={{ fluid: true }}
+                                    loading={isLoading}
+                                    onResultSelect={this.handleResultSelect}
+                                    onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
+                                    results={results}
+                                    value={value}
+                                    {...this.props}
+                                />
+                            </form>
+                        </Grid.Column>
+                    </Grid>
+                </div>
             </div>
         );
     }

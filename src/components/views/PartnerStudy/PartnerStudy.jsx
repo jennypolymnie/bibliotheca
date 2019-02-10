@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Icon, Message, Radio, Input
+    Button, Form, Radio, Input, Header
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './PartnerStudy.css';
@@ -23,12 +23,7 @@ class PartnerStudy extends Component {
             <div className="PartnerStudy">
 
                 <div>
-                    <Message
-                        color="blue"
-                        attached
-                        header="Partenaire d'étude"
-                        content="Remplissez ce formulaire si vous souhaitez trouver un partenaire pour des projets de développement, de validation ou de recherche. La bibliothécaire va ensuite vous mettre en relation avec un ou des laboratoires potentiels"
-                    />
+                    <Header as="h1"> Trouver un partenaire d'étude </Header>
                 </div>
 
                 <div>
@@ -137,7 +132,7 @@ class PartnerStudy extends Component {
                         color="blue"
                         size="large"
                     >
-            Lancer la requête
+                        Lancer la requête
                     </Button>
                 </div>
             </div>
