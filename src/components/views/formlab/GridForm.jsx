@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Grid, Menu, Form, Select
+    Grid, Menu, Form, Select, Segment, Dropdown, Header, Icon
 } from 'semantic-ui-react';
 import ExtractionChemistry from './ExtractionChemistry';
 import QuantificationChemistry from './QuantificationChemistry';
@@ -10,238 +10,264 @@ import SalivaTest from './SalivaTest';
 import BloodTest from './BloodTest';
 import SpermTest from './SpermTest';
 import './GridForm.css';
+import AddNewElement from './AddNewElement';
 
 const GridForm = () => (
 
-    <Grid textAlign="center">
-        <Grid.Row>
-            <Grid.Column color="blue">
-                <Menu fluid vertical className="Menu">
-                    <Menu.Item className="header">Chimie</Menu.Item>
-                    <Menu.Item>Kit Extraction</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Kit 1"
-                                control={Select}
-                                options={ExtractionChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 2"
-                                control={Select}
-                                options={ExtractionChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 3"
-                                control={Select}
-                                options={ExtractionChemistry}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+    <div>
+        <div className="etapes">
+            <Header as="h3">Amplification</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
 
-                    <Menu.Item>Kit de quantification</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Kit 1"
-                                control={Select}
-                                options={QuantificationChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 2"
-                                control={Select}
-                                options={QuantificationChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 3"
-                                control={Select}
-                                options={QuantificationChemistry}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
-
-                    <Menu.Item>Kit Amplification STRs Autosomaux</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Kit 1"
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'>Autosomal </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                            <Form.Field
-                                label="Kit 2"
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'>Chromosome Y </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                            <Form.Field
-                                label="Kit 3"
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'>Chromosome X </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                        </Form.Group>
-                    </Form>
+                        </Grid.Column>
+                    </Grid.Row>
 
-                    <Menu.Item>Kit Amplification STRs Y</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Kit 1"
-                                control={Select}
-                                options={AmplificationYChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 2"
-                                control={Select}
-                                options={AmplificationYChemistry}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Kit 3"
-                                control={Select}
-                                options={AmplificationYChemistry}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+                    <Grid.Row>
+                        <Grid.Column>
 
-                    <Menu.Item>Kit Amplification STRs X</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Kit 1"
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+                            </p>
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+                             </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+
+        </div>
+        <div className="etapes">
+            <Header as="h3">Extraction</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> ADN </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                            <Form.Field
-                                label="Kit 2"
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'>ARN </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                            <Form.Field
-                                label="Kit 3"
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'>Concentration </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                        </Form.Group>
-                    </Form>
+                        </Grid.Column>
+                    </Grid.Row>
 
-                    <Menu.Item>Test indicatif sang</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Test 1"
-                                control={Select}
-                                options={BloodTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 2"
-                                control={Select}
-                                options={BloodTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 3"
-                                control={Select}
-                                options={BloodTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+                    <Grid.Row>
+                        <Grid.Column>
 
-                    <Menu.Item>Test indicatif salive</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Test 1"
-                                control={Select}
-                                options={SalivaTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 2"
-                                control={Select}
-                                options={SalivaTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 3"
-                                control={Select}
-                                options={SalivaTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
 
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
 
-                    <Menu.Item>Tests indicatif sperme</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Test 1"
+        <div className="etapes">
+            <Header as="h3">Tests Indicatifs</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> Sang </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
-                                options={SpermTest}
+                                options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
-                            <Form.Field
-                                label="Test 2"
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> Salive </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
-                                options={SpermTest}
+                                options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
-                            <Form.Field
-                                label="Test 3"
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> Sperme </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
-                                options={SpermTest}
+                                options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                        </Form.Group>
-                    </Form>
+                        </Grid.Column>
+                    </Grid.Row>
 
-                    <Menu.Item>Test indicatif secrétions vaginales</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                label="Test 1"
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 2"
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                label="Test 3"
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+                    <Grid.Row>
+                        <Grid.Column>
 
-                    <Menu.Item></Menu.Item>
-                </Menu>
-            </Grid.Column>
-        </Grid.Row>
-    </Grid>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+
+        </div>
+
+        <div className="etapes">
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> Sécrétions vaginales </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> Urine </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> ADN de contact </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+                        </Grid.Column>
+                    </Grid.Row>
+
+                    <Grid.Row>
+                        <Grid.Column>
+
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un kit
+            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+
+        </div>
+
+    </div>
 );
 
 export default GridForm;

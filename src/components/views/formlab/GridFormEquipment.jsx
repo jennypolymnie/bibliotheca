@@ -1,133 +1,191 @@
 import React from 'react';
 import {
-    Grid, Menu, Form, Select
+    Grid, Select, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
-import ExtractionChemistry from './ExtractionChemistry';
-import QuantificationChemistry from './QuantificationChemistry';
+
 import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
-import AmplificationYChemistry from './AmplificationYChemistry';
-import SalivaTest from './SalivaTest';
-import BloodTest from './BloodTest';
-import SpermTest from './SpermTest';
-import './GridForm.css';
+import './GridFormEquipment.css';
 
 const GridFormEquipment = () => (
 
-    <Grid textAlign="center">
-        <Grid.Row>
-            <Grid.Column color="blue">
-                <Menu fluid vertical>
-                    <Menu.Item className="header">Equippement</Menu.Item>
-                    <Menu.Item>Robot Extraction</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+    <div>
+        <div className="equipment">
+            <Header as="h3">Robot Extraction</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
 
-                    <Menu.Item>Bloc chauffant</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <Dropdown
+                                fluid
                                 control={Select}
-                                options={SpermTest}
+                                options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
 
-                    <Menu.Item>Electrophorèse capillaire</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
 
-                    <Menu.Item>Quantification</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
 
-                    <Menu.Item>Sequenceur nouvelle génération</Menu.Item>
-                    <Form>
-                        <Form.Group widths="equal">
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                            <Form.Field
-                                control={Select}
-                                options={SpermTest}
-                                placeholder="Choisir"
-                            />
-                        </Form.Group>
-                    </Form>
+        <div className="equipment">
+            <Header as="h3">Quantification</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
 
-                    <Menu.Item></Menu.Item>
-                </Menu>
-            </Grid.Column>
-        </Grid.Row>
-    </Grid>
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
+
+        <div className="equipment">
+            <Header as="h3">Bloc Chauffant</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
+        <div className="equipment">
+            <Header as="h3">Electrophorèse capillaire</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
+        <div className="equipment">
+            <Header as="h3">Séquenceur nouvelle génération</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={AmplificationAutosomChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as='h4' textAlign='center'> </Header>
+                            <p>
+                                <Icon color='yellow' name='plus circle' />
+                                Ajouter un élément
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+    </div>
 );
 
 export default GridFormEquipment;

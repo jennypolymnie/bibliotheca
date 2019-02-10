@@ -7,51 +7,29 @@
     margin: auto;
     user-select: none;
 }
-
-.Title {
-    text-align: center;
-}
-
-
 .LabInfo{
-    height :450px;
+    height :400px;
 }
 
 
-.ContactInfo {
-    height: 200px;
+.InfoContact {
+    height: 250px;
 }
 
 
-.ResearchQuestion{
+.research-questions{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    height : 30px;
+    height : 400px;
 }
 
 .ResearchInfo{
-    height: 170px;
+    height: 200px;
     margin-bottom: 30px;
     padding-top:20px;
     display: flex;
     justify-content: space-between;
 }
-
-
-.Confidentialite {
-}
-
-.Partie2{
-    height: 100px;
-    background-color: pink;
-
-}
-
-
-.Acceptation {
-    display: flex;
-}
-
-
 
 

@@ -4,7 +4,6 @@ import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
 import InputExemple from './InputExemple';
-import MenuSuperieur from './MenuSuperieur';
 import BdArticles from './BdArticles';
 
 
@@ -13,7 +12,6 @@ class SearchResults extends Component {
         return (
 
             <div className="recherche">
-                <MenuSuperieur />
 
                 <h2>Résultat de la recherche</h2>
 
