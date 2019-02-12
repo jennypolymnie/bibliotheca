@@ -49,7 +49,7 @@ class ReviewForm extends Component {
                 <div className="ArticleReviewed">
                     <ArticleReviewed
                         author="David G. Casey, Judy Price'"
-                        title="Nouveau Swab pour ADN de contact"
+                        title="The sensitivity and specificity of the RSID-saliva kit for the detection of human salivary amylse in the Forensic Science Laboratory, Dublin, Ireland"
                         journal="Forensic Science International"
                         abstract="We demonstrate here that the RSID™-saliva test can be used as a test for human salivary..."
                         link="https://www.sciencedirect.com/science/article/pii/S0379073809004204"

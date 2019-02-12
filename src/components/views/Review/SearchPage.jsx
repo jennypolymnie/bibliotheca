@@ -2,25 +2,8 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { Search, Grid, Header } from 'semantic-ui-react';
 import './SearchPage.css';
+import BdArticles from '../search-results/BdArticles';
 
-
-const BdArticles = [
-    {
-        id: 1, authors: 'Jenny', title: 'Identification des taches de sang', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 2, authors: 'Andrew', title: 'Un nouveau robot pour la génétique forensique', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 3, authors: 'Diana', title: 'Des nouveaux DIP STR', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 4, authors: 'Gabriel', title: 'Une nouvelle méthode de détection', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 5, authors: 'Paul', title: 'La nouvelle application en génétique', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    }
-];
 
 class SearchPage extends Component {
     componentWillMount() { this.resetComponent(); }
