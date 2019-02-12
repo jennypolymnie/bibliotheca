@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Radio, Form, Input
+    Button, Radio, Form, Input, Header
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import GridForm from '../formlab/GridForm';
@@ -18,6 +18,8 @@ class RequestEquipment extends Component {
         return (
 
             <div className="RequestEquipment">
+
+                <Header as="h1">Demander conseil</Header>
                 <div>
                     <Form>
                         <Form.Group grouped widths="equal">

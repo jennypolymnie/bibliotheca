@@ -13,39 +13,39 @@ const TableCheck = () => (
         <Table.Body>
             <Table.Row>
                 <Table.Cell>
-            Nature
+                    Nature
                 </Table.Cell>
                 <Table.Cell>
-                    <Icon name="check" size="large" color="green" />
+                    <Icon name="check" size="large" color="darkgrey" />
                 </Table.Cell>
             </Table.Row>
 
             <Table.Row>
                 <Table.Cell>
-            Niveau de hiérarchie
+                    Support
                 </Table.Cell>
                 <Table.Cell>
-                    <Icon name="check" size="large" color="green" />
-                </Table.Cell>
-            </Table.Row>
-
-
-            <Table.Row>
-                <Table.Cell>
-            Support
-                </Table.Cell>
-                <Table.Cell>
-                    <Icon name="check" size="large" color="green" />
+                    <Icon name="check" size="large" color="darkgrey" />
                 </Table.Cell>
             </Table.Row>
 
 
             <Table.Row>
                 <Table.Cell>
-            Transfert
+                    Concentration
                 </Table.Cell>
                 <Table.Cell>
-                    <Icon name="check" size="large" color="green" />
+                    <Icon name="check" size="large" color="darkgrey" />
+                </Table.Cell>
+            </Table.Row>
+
+
+            <Table.Row>
+                <Table.Cell>
+                    Test indicatif
+                </Table.Cell>
+                <Table.Cell>
+                    <Icon name="check" size="large" color="darkgrey" />
                 </Table.Cell>
             </Table.Row>
 

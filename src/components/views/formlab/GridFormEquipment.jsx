@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Grid, Select, Header, Segment, Dropdown, Icon
+    Grid, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
 
 import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
@@ -10,7 +10,7 @@ const GridFormEquipment = () => (
 
     <div>
         <div className="equipment">
-            <Header as="h3">Robot Extraction</Header>
+            <Header as="h4">Robot Extraction</Header>
             <Segment color="yellow" fluid>
                 <Grid columns={3} divided>
                     <Grid.Row>
@@ -46,7 +46,7 @@ const GridFormEquipment = () => (
 
 
         <div className="equipment">
-            <Header as="h3">Quantification</Header>
+            <Header as="h4">Quantification</Header>
             <Segment color="yellow" fluid>
                 <Grid columns={3} divided>
                     <Grid.Row>
@@ -82,7 +82,7 @@ const GridFormEquipment = () => (
 
 
         <div className="equipment">
-            <Header as="h3">Bloc Chauffant</Header>
+            <Header as="h4">Bloc Chauffant</Header>
             <Segment color="yellow" fluid>
                 <Grid columns={3} divided>
                     <Grid.Row>
@@ -117,7 +117,7 @@ const GridFormEquipment = () => (
         </div>
 
         <div className="equipment">
-            <Header as="h3">Electrophorèse capillaire</Header>
+            <Header as="h4">Electrophorèse capillaire</Header>
             <Segment color="yellow" fluid>
                 <Grid columns={3} divided>
                     <Grid.Row>
@@ -152,7 +152,7 @@ const GridFormEquipment = () => (
         </div>
 
         <div className="equipment">
-            <Header as="h3">Séquenceur nouvelle génération</Header>
+            <Header as="h4">Séquenceur nouvelle génération</Header>
             <Segment color="yellow" fluid>
                 <Grid columns={3} divided>
                     <Grid.Row>

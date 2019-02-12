@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 
 const BdArticles = [
     {
-        id: 1, authors: 'Jenny', title: 'Identification des taches de sang', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
+        id: 1,
+        authors: 'David G. Casey, Judy Price',
+        title: 'The sensitivity and specificity of the RSID-saliva kit for the detection of human salivary amylse in the Forensic Science Laboratory, Dublin, Ireland',
+        abstract: 'We demonstrate here that the RSID™-saliva test can be used as a test for human salivary...',
+        journal: 'Forensic Science International',
+        link: 'https://www.sciencedirect.com/science/article/pii/S0379073809004204'
     },
     {
         id: 2, authors: 'Andrew', title: 'Un nouveau robot pour la génétique forensique', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'

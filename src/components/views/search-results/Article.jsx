@@ -1,69 +1,93 @@
 import React from 'react';
-import { Button, Rating } from 'semantic-ui-react';
+import { Button, Rating, Segment, Menu, Icon, Label } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import InputExemple from './InputExemple';
 import TableCheck from './TableCheck';
+import { Link } from 'react-router-dom';
 import BdArticles from './BdArticles';
 import './stylesheets/Article.css';
 
 
 const Article = ({
-    author, title, abstract, link, nature, hierarchyLevel, support, transfert, onClick
+    author, title, abstract, link, nature, concentration, support, test, onClick, journal
 }) => (
 
 
-    <div className="Article">
+        <div className="Article">
+            <Segment>
+                <div className="Presentation">
 
-        <div className="Presentation">
+                    <div className="MainData" onClick={() => onClick(Article)}>
+                        <p>
+                            <span className="emphasis">{'Authors: '}</span>
+                            {author}
+                        </p>
+                        <p>
+                            <span className="emphasis">{'Title: '}</span>
+                            {title}
+                            {' '}
 
-            <div className="MainData" onClick={() => onClick(Article)}>
-                <p>
-Authors:
-                    {author}
-                </p>
-                <p>
-Title:
-                    {title}
-                    {' '}
+                        </p>
 
-                </p>
-                <p>
-Abstract:
-                    {abstract}
-                </p>
-                <p>
-Lien:
-                    {link}
-                </p>
-            </div>
+                        <p>
+                            <span className="emphasis">{'Journal: '}</span>
+                            {journal}
+                            {' '}
 
-            <div className="Elements">
-                <TableCheck
-                    nature={nature}
-                    hierarchyLevel={hierarchyLevel}
-                    support={support}
-                    transfert={transfert}
-                />
-            </div>
+                        </p>
+                        <p>
+                            <span className="emphasis">{'Abstract: '}</span>
+                            {abstract}
+                        </p>
+                        <p>
+                            <span className="emphasis">{'Lien: '}</span>
+                            {link}
+                        </p>
+                    </div>
 
+                    <div className="Elements">
+                        <TableCheck
+                            nature={nature}
+                            support={support}
+                            concentration={concentration}
+                            test={test}
+                        />
+                    </div>
+
+                </div>
+
+                <div className="Review">
+                    <Button as={Link} to='/review' color="blue"> Donnez votre avis </Button>
+                    <div>
+                        <div>Rigueur</div>
+                        <Rating disabled icon="star" defaultRating={2} maxRating={5} />
+                    </div>
+                    <div>
+                        <div>Analyse</div>
+                        <Rating disabled icon="star" defaultRating={3} maxRating={5} />
+                    </div>
+                    <div>
+                        <div>Résultats</div>
+                        <Rating disabled icon="star" defaultRating={4} maxRating={5} />
+                    </div>
+                    <div>
+                        <div>Interprétation</div>
+                        <Rating disabled icon="star" defaultRating={3} maxRating={5} />
+                    </div>
+                    <Menu>
+                        <Menu.Item as='a'>
+                            <Icon name='users' /> Nombre d'avis
+                        <Label color='blue' floating>
+                                22
+                        </Label>
+                        </Menu.Item>
+                    </Menu>
+
+                </div>
+            </Segment>
         </div>
 
-        <div className="Review">
-            <Button> Donnez votre avis </Button>
-            <p>Rigueur</p>
-            <Rating disabled icon="star" defaultRating={2} maxRating={5} />
-            <p>Analyse</p>
-            <Rating disabled icon="star" defaultRating={3} maxRating={5} />
-            <p>Résultats</p>
-            <Rating disabled icon="star" defaultRating={4} maxRating={5} />
-            <p>Interprétation</p>
-            <Rating disabled icon="star" defaultRating={3} maxRating={5} />
-            <InputExemple info="Nombre d'avis" />
-
-        </div>
-
-    </div>
-);
+    );
 
 Article.PropTypes = {
     author: PropTypes.string.isRequired,
