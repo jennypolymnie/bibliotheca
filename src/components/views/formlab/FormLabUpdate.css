@@ -1,57 +1,8 @@
-.ProfilLab{
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 5px 5px 5px 5px;
-    margin: auto;
-    user-select: none;
-    height : 2500px;
-}
 
-.InfoLab{
-    padding-top:30px;
-}
-
-
-.InfoContact {
-    padding-top: 30px;
-}
-
-
-.Titre{
+.research-title {
     display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
 }
 
-.InfoRecherche{
-    height: 200px;
-    display: flex;
-    justify-content: space-between;
+.research{
+    width: 250px;
 }
-
-.SameResearch {
-    height:200px;
-}
-
-.DifferentResearch {
-    height : 200px;
-}
-
-.Confidentialite {
-    padding-top:30px;
-    height : 100px;
-}
-
-.Acceptation {
-    padding-top:30px;
-}
-
-
-.Partie2{
-    
-    height: 100px;
-    background-color: pink;
-
-}
-
-

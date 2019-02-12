@@ -5,12 +5,13 @@
   flex-direction: column;
   margin: auto;
   user-select: none;
+  
 }
 
 .requete {
  display: flex;
  justify-content: space-around;
- height: 100px;
+ margin-bottom: 30px;
 }
 
 .resultat {

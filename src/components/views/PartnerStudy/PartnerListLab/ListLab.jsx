@@ -1,39 +1,36 @@
 import React from 'react';
 import './ListLab.css';
 import PropTypes from 'prop-types';
+import { Segment, Label } from 'semantic-ui-react';
 
 
 const ListLab = ({
     labName, directorName, email, website, onClick
 }) => (
-
-
-    <div className="ListLabo">
-
-
-        <div className="Address" onClick={() => onClick(ListLab)}>
+    // <div className="ListLabo">
+    <Segment raised>
+        <Label color="blue" ribbon size="large">
+            {labName}
+        </Label>
+        <div onClick={() => onClick(ListLab)}>
             <p>
-Nom du laboratoire:
-                {labName}
-            </p>
-            <p>
-Nom du responsable:
+                    Nom du responsable:
                 {directorName}
                 {' '}
 
             </p>
             <p>
-Email:
+                    Email:
                 {email}
             </p>
             <p>
-Site web du laboratoire:
+                    Site web du laboratoire:
                 {website}
             </p>
 
         </div>
-
-    </div>
+    </Segment>
+    // </div>
 );
 
 ListLab.PropTypes = {

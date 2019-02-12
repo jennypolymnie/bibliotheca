@@ -1,8 +1,8 @@
-@headerFont        : 'Poppins 600', sans-serif;
-@pageFont          : 'Poppins', sans-serif;
+@headerFont        : 'Lato 600', sans-serif;
+@pageFont          : 'Lato', sans-serif;
 @importGoogleFonts : true;
 @googleProtocol    : 'https://';
-@googleFontRequest : 'Poppins:400,500,600,700|Roboto:400,700|Cinzel:200';
+@googleFontRequest : 'Lato:400,500,600,700|Roboto:400,700|Cinzel:200';
 
 /*-------------------
     Base Sizes
@@ -22,4 +22,5 @@
 @silver         : #A1A19A;
 @darkgolden     : #A59981;
 @golden         : #BBAB8F;
-@yellow         : @golden;
+@yellow         : @golden; 
+@grey           : @darkgrey;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Grid, Menu, Form, Select, Segment, Dropdown, Header, Icon
+    Grid, Select, Segment, Dropdown, Header, Icon
 } from 'semantic-ui-react';
 import ExtractionChemistry from './ExtractionChemistry';
 import QuantificationChemistry from './QuantificationChemistry';
@@ -15,68 +15,7 @@ import AddNewElement from './AddNewElement';
 const GridForm = () => (
 
     <div>
-        <div className="etapes">
-            <Header as="h3">Amplification</Header>
-            <Segment color="yellow" fluid>
-                <Grid columns={3} divided>
-                    <Grid.Row>
 
-                        <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'>Autosomal </Header>
-                            <Dropdown
-                                fluid
-                                control={Select}
-                                options={AmplificationAutosomChemistry}
-                                placeholder="Choisir"
-                            />
-
-                        </Grid.Column>
-                        <Grid.Column>
-                            <Header as='h4' textAlign='center'>Chromosome Y </Header>
-                            <Dropdown
-                                fluid
-                                control={Select}
-                                options={AmplificationAutosomChemistry}
-                                placeholder="Choisir"
-                            />
-                        </Grid.Column>
-                        <Grid.Column>
-                            <Header as='h4' textAlign='center'>Chromosome X </Header>
-                            <Dropdown
-                                fluid
-                                control={Select}
-                                options={AmplificationAutosomChemistry}
-                                placeholder="Choisir"
-                            />
-                        </Grid.Column>
-                    </Grid.Row>
-
-                    <Grid.Row>
-                        <Grid.Column>
-
-                            <p>
-                                <Icon color='yellow' name='plus circle' />
-                                Ajouter un kit
-                            </p>
-
-                        </Grid.Column>
-                        <Grid.Column>
-                            <p>
-                                <Icon color='yellow' name='plus circle' />
-                                Ajouter un kit
-                            </p>
-                        </Grid.Column>
-                        <Grid.Column>
-                            <p>
-                                <Icon color='yellow' name='plus circle' />
-                                Ajouter un kit
-                             </p>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Segment>
-
-        </div>
         <div className="etapes">
             <Header as="h3">Extraction</Header>
             <Segment color="yellow" fluid>
@@ -84,7 +23,127 @@ const GridForm = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> ADN </Header>
+                            <Header as="h4" textAlign="center"> ADN </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={ExtractionChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as="h4" textAlign="center">ARN </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={ExtractionChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as="h4" textAlign="center">Concentration </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={ExtractionChemistry}
+                                placeholder="Choisir"
+                            />
+                        </Grid.Column>
+                    </Grid.Row>
+
+                    <Grid.Row>
+                        <Grid.Column>
+
+                            <p>
+                                <Icon color="yellow" name="plus circle" />
+                                Ajouter un kit
+                            </p>
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color="yellow" name="plus circle" />
+                                Ajouter un kit
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color="yellow" name="plus circle" />
+                                Ajouter un kit
+                            </p>
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+        <div className="etapes">
+            <Header as="h3">Quantification</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center"> ADN autosomal </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={QuantificationChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <Header as="h4" textAlign="center"> ADN Y </Header>
+                            <Dropdown
+                                fluid
+                                control={Select}
+                                options={QuantificationChemistry}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                        <Grid.Column>
+
+                        </Grid.Column>
+                    </Grid.Row>
+
+                    <Grid.Row>
+                        <Grid.Column>
+
+                            <p>
+                                <Icon color="yellow" name="plus circle" />
+                                Ajouter un kit
+                            </p>
+
+                        </Grid.Column>
+                        <Grid.Column>
+                            <p>
+                                <Icon color="yellow" name="plus circle" />
+                                Ajouter un kit
+                            </p>
+                        </Grid.Column>
+                        <Grid.Column>
+
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
+
+
+
+
+        <div className="etapes">
+            <Header as="h3">Amplification</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center">Autosomal </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
@@ -94,17 +153,16 @@ const GridForm = () => (
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'>ARN </Header>
+                            <Header as="h4" textAlign="center">Chromosome Y </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
-                                options={AmplificationAutosomChemistry}
+                                options={AmplificationYChemistry}
                                 placeholder="Choisir"
                             />
-
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'>Concentration </Header>
+                            <Header as="h4" textAlign="center">Chromosome X </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
@@ -118,27 +176,29 @@ const GridForm = () => (
                         <Grid.Column>
 
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
 
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
             </Segment>
+
         </div>
+
 
         <div className="etapes">
             <Header as="h3">Tests Indicatifs</Header>
@@ -147,31 +207,31 @@ const GridForm = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> Sang </Header>
+                            <Header as="h4" textAlign="center"> Sang </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
-                                options={AmplificationAutosomChemistry}
+                                options={BloodTest}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> Salive </Header>
+                            <Header as="h4" textAlign="center"> Salive </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
-                                options={AmplificationAutosomChemistry}
+                                options={SalivaTest}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> Sperme </Header>
+                            <Header as="h4" textAlign="center"> Sperme </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
-                                options={AmplificationAutosomChemistry}
+                                options={SpermTest}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -181,22 +241,22 @@ const GridForm = () => (
                         <Grid.Column>
 
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
 
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
@@ -210,7 +270,7 @@ const GridForm = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> Sécrétions vaginales </Header>
+                            <Header as="h4" textAlign="center"> Sécrétions vaginales </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
@@ -220,7 +280,7 @@ const GridForm = () => (
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> Urine </Header>
+                            <Header as="h4" textAlign="center"> Urine </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
@@ -230,7 +290,7 @@ const GridForm = () => (
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> ADN de contact </Header>
+                            <Header as="h4" textAlign="center"> ADN de contact </Header>
                             <Dropdown
                                 fluid
                                 control={Select}
@@ -244,22 +304,22 @@ const GridForm = () => (
                         <Grid.Column>
 
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
 
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                         <Grid.Column>
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un kit
-            </p>
+                            </p>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

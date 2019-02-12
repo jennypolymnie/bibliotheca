@@ -3,16 +3,16 @@ import { Statistic } from 'semantic-ui-react';
 
 const items = [
     {
-        key: 'TotalReaders', label: 'Laboratoires lecteurs', value: 30
+        key: 'TotalReaders', label: 'Laboratoires lecteurs', value: 34
     },
     {
-        key: 'TotalArticles ', label: 'Articles classés', value: 40
+        key: 'TotalArticles ', label: 'Articles classés', value: '1K'
     },
     {
-        key: 'TotalThesis', label: 'Thèses présentes', value: 50
+        key: 'TotalThesis', label: 'Thèses présentes', value: 52
     },
     {
-        key: 'TotalJournals', label: 'Journaux cités', value: 50
+        key: 'TotalJournals', label: 'Journaux cités', value: 57
     },
     {
         key: 'TotalMeetings', label: 'Conférences répertoriées', value: 50

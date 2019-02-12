@@ -1,11 +1,13 @@
 import React from 'react';
-import { Reveal, Icon, Button, Dropdown, Select } from 'semantic-ui-react';
+import {
+    Reveal, Icon, Button, Dropdown, Select
+} from 'semantic-ui-react';
 
 const AddNewElement = () => (
-    <Reveal animated='move right'>
+    <Reveal animated="move right">
         <Reveal.Content visible>
             <p>
-                <Icon color='green' name='plus circle' />
+                <Icon color="green" name="plus circle" />
                 Ajouter un kit
             </p>
         </Reveal.Content>
