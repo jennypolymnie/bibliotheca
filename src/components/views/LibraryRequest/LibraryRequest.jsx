@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Radio, Checkbox, Dropdown, Message, Form, Header, Segment
+    Button, Radio, Checkbox, Dropdown, Form, Header, Segment
 } from 'semantic-ui-react';
 import './LibraryRequest.css';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,11 @@ class LibraryRequest extends Component {
 
                             <div className="QuestionDropdown">
                                 <div>
-                                    <p> {'Population pertinente'} </p>
+                                    <p>
+                                        {' '}
+                                        {'Population pertinente'}
+                                        {' '}
+                                    </p>
                                 </div>
 
                                 <div>
@@ -50,7 +54,11 @@ class LibraryRequest extends Component {
                                 </div>
 
                                 <div>
-                                    <p> {"Kit d'amplification"} </p>
+                                    <p>
+                                        {' '}
+                                        {"Kit d'amplification"}
+                                        {' '}
+                                    </p>
                                 </div>
 
                                 <div>
@@ -71,7 +79,7 @@ class LibraryRequest extends Component {
                                     to="/articles"
                                 >
                                     Envoyez la requête
-                              </Button>
+                                </Button>
                             </div>
                         </Segment>
                     </div>
@@ -138,7 +146,7 @@ class LibraryRequest extends Component {
                                     to="/articles"
                                 >
                                     Envoyez la requête
-                              </Button>
+                                </Button>
                             </div>
                         </Segment>
                     </div>
@@ -151,7 +159,11 @@ class LibraryRequest extends Component {
                             <div className="QuestionDropdown">
 
                                 <div>
-                                    <p> {"Fluides à distinguer"}  </p>
+                                    <p>
+                                        {' '}
+                                        {'Fluides à distinguer'}
+                                        {' '}
+                                    </p>
                                 </div>
                                 <div>
                                     <Dropdown
@@ -162,7 +174,11 @@ class LibraryRequest extends Component {
                                     />
                                 </div>
                                 <div>
-                                    <p> {"Support de la trace"}  </p>
+                                    <p>
+                                        {' '}
+                                        {'Support de la trace'}
+                                        {' '}
+                                    </p>
                                 </div>
                                 <div>
                                     <Dropdown
@@ -173,7 +189,11 @@ class LibraryRequest extends Component {
                                     />
                                 </div>
                                 <div>
-                                    <p> {"Concentration (ng/ul)"}  </p>
+                                    <p>
+                                        {' '}
+                                        {'Concentration (ng/ul)'}
+                                        {' '}
+                                    </p>
                                 </div>
                                 <div>
                                     <Dropdown
@@ -184,7 +204,11 @@ class LibraryRequest extends Component {
                                     />
                                 </div>
                                 <div>
-                                    <p> {"Test indicatif appliqué"}  </p>
+                                    <p>
+                                        {' '}
+                                        {'Test indicatif appliqué'}
+                                        {' '}
+                                    </p>
                                 </div>
                                 <div>
                                     <Dropdown
@@ -195,7 +219,11 @@ class LibraryRequest extends Component {
                                     />
                                 </div>
                                 <div>
-                                    <p> {"Test indicatif appliqué"}  </p>
+                                    <p>
+                                        {' '}
+                                        {'Test indicatif appliqué'}
+                                        {' '}
+                                    </p>
                                 </div>
                                 <div>
                                     <Dropdown
@@ -215,7 +243,7 @@ class LibraryRequest extends Component {
                                     to="/articles"
                                 >
                                     Envoyez la requête
-                              </Button>
+                                </Button>
                             </div>
                         </Segment>
                     </div>
@@ -307,7 +335,7 @@ class LibraryRequest extends Component {
                                     to="/articles"
                                 >
                                     Envoyez la requête
-                              </Button>
+                                </Button>
                             </div>
                         </Segment>
                     </div>

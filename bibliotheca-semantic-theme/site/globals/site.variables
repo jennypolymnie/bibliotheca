@@ -22,5 +22,10 @@
 @silver         : #A1A19A;
 @darkgolden     : #A59981;
 @golden         : #BBAB8F;
+@lightBlue      : @blue;
+@blueBackground : @blue;
+
+@inputPlaceholderColor: lighten(@inputColor, 35);
+@inputPlaceholderFocusColor: lighten(@inputColor, 15);
 @yellow         : @golden; 
 @grey           : @darkgrey;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Grid, Select, Segment, Dropdown, Header, Icon
+    Grid, Segment, Dropdown, Header, Icon
 } from 'semantic-ui-react';
 import ExtractionChemistry from './ExtractionChemistry';
 import QuantificationChemistry from './QuantificationChemistry';
@@ -10,7 +10,6 @@ import SalivaTest from './SalivaTest';
 import BloodTest from './BloodTest';
 import SpermTest from './SpermTest';
 import './GridForm.css';
-import AddNewElement from './AddNewElement';
 
 const GridForm = () => (
 
@@ -26,7 +25,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> ADN </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={ExtractionChemistry}
                                 placeholder="Choisir"
                             />
@@ -36,7 +35,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center">ARN </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={ExtractionChemistry}
                                 placeholder="Choisir"
                             />
@@ -46,7 +45,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center">Concentration </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={ExtractionChemistry}
                                 placeholder="Choisir"
                             />
@@ -88,7 +87,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> ADN autosomal </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={QuantificationChemistry}
                                 placeholder="Choisir"
                             />
@@ -98,7 +97,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> ADN Y </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={QuantificationChemistry}
                                 placeholder="Choisir"
                             />
@@ -132,10 +131,6 @@ const GridForm = () => (
             </Segment>
         </div>
 
-
-
-
-
         <div className="etapes">
             <Header as="h3">Amplification</Header>
             <Segment color="yellow" fluid>
@@ -146,7 +141,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center">Autosomal </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -156,7 +151,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center">Chromosome Y </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationYChemistry}
                                 placeholder="Choisir"
                             />
@@ -165,7 +160,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center">Chromosome X </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -210,7 +205,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> Sang </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={BloodTest}
                                 placeholder="Choisir"
                             />
@@ -220,7 +215,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> Salive </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={SalivaTest}
                                 placeholder="Choisir"
                             />
@@ -230,7 +225,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> Sperme </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={SpermTest}
                                 placeholder="Choisir"
                             />
@@ -273,7 +268,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> Sécrétions vaginales </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -283,7 +278,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> Urine </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -293,7 +288,7 @@ const GridForm = () => (
                             <Header as="h4" textAlign="center"> ADN de contact </Header>
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />

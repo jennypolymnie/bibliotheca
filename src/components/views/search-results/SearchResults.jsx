@@ -1,13 +1,17 @@
 
 import React, { Component } from 'react';
+import { Input, Checkbox, Dropdown, Grid, Segment, Search, List, Label } from 'semantic-ui-react';
 import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
-import InputExemple from './InputExemple';
 import BdArticles from './BdArticles';
-import { Input } from 'semantic-ui-react';
-import { blue } from 'ansi-colors';
 
+const options = [
+    {
+        text: 'Source',
+        value: 'source'
+    }
+];
 
 class SearchResults extends Component {
     render() {
@@ -16,23 +20,44 @@ class SearchResults extends Component {
             <div className="recherche">
 
                 <h2>Résultat de la recherche</h2>
-
-                <div className="requete">
-                    <Input label="Nature supposée" placeholder="salive" />
-                    <Input label="Support" placeholder="mouchoir" />
-                    <Input label="Concentration" placeholder="<100pg/ul" />
-                    <Input label="Test" placeholder="RSIDSaliva" />
-                </div>
-
-                <div className="resultat">
+                <Segment secondary>
+                    <Grid padded="vertically">
+                        <Grid.Row>
+                            <Grid.Column width={4}>
+                                <Search placeholder="mots clés" />
+                            </Grid.Column>
+                            <Grid.Column width={8}>
+                                <Dropdown label="Type" value="source" options={options} basic as="h3" />
+                            </Grid.Column>
+                            <Grid.Column width={4}>
+                                <Checkbox toggle label="Utiliser le profil du laboratoire" />
+                            </Grid.Column>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <Grid.Column width={4}>
+                                <Input label={{ content: 'Nature', color: 'grey' }} placeholder="salive" />
+                            </Grid.Column>
+                            <Grid.Column width={4}>
+                                <Input label={{ content: 'Support', color: 'grey' }} placeholder="mouchoir" />
+                            </Grid.Column>
+                            <Grid.Column width={4}>
+                                <Input label={{ content: 'Concentration', color: 'grey' }} placeholder="<100pg/ul" />
+                            </Grid.Column>
+                            <Grid.Column width={4}>
+                                <Input label={{ content: 'Test', color: 'grey' }} placeholder="RSIDSaliva" />
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
+                </Segment>
+                <List relaxed>
                     <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
-                    {BdArticles.map(({ authors, title, id, abstract, journal, link }) => (
-
+                    {BdArticles.map(({
+                        authors, title, id, abstract, journal, link
+                    }) => (
                         <Article key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} onClick={this.handleCardClick} />
-
                     ))
                     }
-                </div>
+                </List>
 
             </div>
         );

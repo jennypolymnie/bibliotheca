@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Reveal, Icon, Button, Dropdown, Select
+    Reveal, Icon, Dropdown
 } from 'semantic-ui-react';
 
 const AddNewElement = () => (
@@ -13,7 +13,7 @@ const AddNewElement = () => (
         </Reveal.Content>
         <Reveal.Content hidden>
             <Dropdown
-                control={Select}
+                selection
                 placeholder="Choisir"
             />
         </Reveal.Content>

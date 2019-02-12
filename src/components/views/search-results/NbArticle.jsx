@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const CountElement = ({ name, count }) => (
     <div className="CountElement">
-        <Label>
+        <Label color="blue" basic>
             <span>
                 {' '}
                 {name}
@@ -20,7 +20,7 @@ const CountElement = ({ name, count }) => (
     </div>
 );
 
-CountElement.PropTypes = {
+CountElement.propTypes = {
     name: PropTypes.string.isRequired,
     count: PropTypes.number.isRequired
 };

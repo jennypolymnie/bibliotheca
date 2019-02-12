@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Grid, Select, Header, Segment, Dropdown, Icon
+    Grid, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
 
 import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
@@ -19,7 +19,7 @@ const GridFormEquipment = () => (
                             <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -55,7 +55,7 @@ const GridFormEquipment = () => (
                             <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -91,7 +91,7 @@ const GridFormEquipment = () => (
                             <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -126,7 +126,7 @@ const GridFormEquipment = () => (
                             <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
@@ -161,7 +161,7 @@ const GridFormEquipment = () => (
                             <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />

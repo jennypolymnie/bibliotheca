@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Radio, Form, Button, Header } from 'semantic-ui-react';
+import {
+    Radio, Form, Button, Header
+} from 'semantic-ui-react';
 import ArticleReviewed from './ArticleReviewed';
 import './ReviewForm.css';
 import ReviewQuestions from './ReviewQuestions';
