@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
-import { Input, Checkbox, Dropdown, Grid, Segment, Search, List, Label } from 'semantic-ui-react';
+import {
+    Input, Checkbox, Dropdown, Grid, Segment, Search, List, Label
+} from 'semantic-ui-react';
 import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
