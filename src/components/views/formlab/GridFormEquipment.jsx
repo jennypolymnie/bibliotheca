@@ -16,26 +16,26 @@ const GridFormEquipment = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
@@ -52,26 +52,26 @@ const GridFormEquipment = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
@@ -88,26 +88,26 @@ const GridFormEquipment = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
@@ -123,26 +123,26 @@ const GridFormEquipment = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
@@ -158,26 +158,26 @@ const GridFormEquipment = () => (
                     <Grid.Row>
 
                         <Grid.Column fluid>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <Dropdown
                                 fluid
-                                control={Select}
+                                selection
                                 options={AmplificationAutosomChemistry}
                                 placeholder="Choisir"
                             />
 
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>
                         <Grid.Column>
-                            <Header as='h4' textAlign='center'> </Header>
+                            <Header as="h4" textAlign="center" />
                             <p>
-                                <Icon color='yellow' name='plus circle' />
+                                <Icon color="yellow" name="plus circle" />
                                 Ajouter un élément
                             </p>
                         </Grid.Column>

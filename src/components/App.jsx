@@ -20,6 +20,7 @@ import ProfilType from './views/ProfilType/ProfilType';
 import SearchPage from './views/Review/SearchPage';
 import AnalyticalPart from './views/formlab/AnalyticPart';
 import { AvailableActiveItem } from './views/Welcome/ActiveIcon';
+import ForumPage from './views/forum/Forum';
 import './App.css';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
@@ -37,10 +38,9 @@ export default () => (
 
                 <div className="vertical-center">
                     <Menu icon compact vertical secondary floated="right" className="fixed-center menu-buttons-left">
-
                         <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/search" fitted name="search" iconName="cloud upload" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="star half" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/search" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="question circle outline" color="yellow" size={buttonSize} />
 
                     </Menu>
@@ -69,6 +69,7 @@ export default () => (
                     <Route path="/proposalSend" component={ProposalSend} />
                     <Route path="/profilType" component={ProfilType} />
                     <Route path="/search" component={SearchPage} />
+                    <Route path="/forum" component={ForumPage} />
                     <Route render={() => <h1>404 Error</h1>} />
                 </Switch>
             </Grid.Column>
@@ -82,8 +83,7 @@ export default () => (
 
                 <div className="vertical-center">
                     <Menu icon vertical secondary floated="left" className="fixed-center menu-buttons-right">
-
-                        <AvailableActiveItem to="/libraryRequest" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/requestEquipment" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
                     </Menu>
