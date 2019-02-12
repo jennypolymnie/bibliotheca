@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Grid, Icon, Search } from 'semantic-ui-react';
+import {
+    Button, Grid, Icon, Search
+} from 'semantic-ui-react';
 
 class ThemeSelector extends React.Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class ThemeSelector extends React.Component {
         <Grid container>
             <Grid.Row>
                 <Grid.Column width={4}>
-                    <Search placeholder="Trouver une discussion"/>
+                    <Search placeholder="Trouver une discussion" />
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row>

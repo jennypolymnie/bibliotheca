@@ -1,26 +1,10 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { Search, Grid, Header } from 'semantic-ui-react';
+import { Search, Grid, Header, Segment, List } from 'semantic-ui-react';
+import CountElement from '../search-results/NbArticle';
+import ArticleShort from '../search-results/ArticleShort';
+import BdArticles from '../search-results/BdArticles';
 import './SearchPage.css';
-
-
-const BdArticles = [
-    {
-        id: 1, authors: 'Jenny', title: 'Identification des taches de sang', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 2, authors: 'Andrew', title: 'Un nouveau robot pour la génétique forensique', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 3, authors: 'Diana', title: 'Des nouveaux DIP STR', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 4, authors: 'Gabriel', title: 'Une nouvelle méthode de détection', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    },
-    {
-        id: 5, authors: 'Paul', title: 'La nouvelle application en génétique', abstract: 'Sang', journal: 'Forensic Science International', link: 'Forensic Science International'
-    }
-];
 
 class SearchPage extends Component {
     componentWillMount() { this.resetComponent(); }
@@ -59,27 +43,36 @@ class SearchPage extends Component {
                 <div className="title-page">
                     <Header as="h1">Rechercher un article</Header>
                 </div>
-
-
-                <div>
-                    <Grid>
-                        <Grid.Column color="blue" width={10}>
-                            <form onSubmit={this.handleSubmit}>
-                                <Search
-                                    size="massive"
-                                    placeholder="Titre de l'article"
-                                    input={{ fluid: true }}
-                                    loading={isLoading}
-                                    onResultSelect={this.handleResultSelect}
-                                    onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
-                                    results={results}
-                                    value={value}
-                                    {...this.props}
-                                />
-                            </form>
-                        </Grid.Column>
+                <Segment secondary>
+                    <Grid padded="vertically">
+                        <Grid.Row centered>
+                            <Grid.Column width={16}>
+                                <form onSubmit={this.handleSubmit}>
+                                    <Search
+                                        size="large"
+                                        placeholder="Titre de l'article"
+                                        input={{ fluid: true }}
+                                        loading={isLoading}
+                                        onResultSelect={this.handleResultSelect}
+                                        onSearchChange={_.debounce(this.handleSearchChange, 500, { leading: true })}
+                                        results={results}
+                                        value={value}
+                                        {...this.props}
+                                    />
+                                </form>
+                            </Grid.Column>
+                        </Grid.Row>
                     </Grid>
-                </div>
+                </Segment>
+                <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
+                <List relaxed>
+                    {BdArticles.map(({
+                        authors, title, id, abstract, journal, link
+                    }) => (
+                        <ArticleShort key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} />
+                    ))
+                    }
+                </List>
             </div>
         );
     }

@@ -43,11 +43,21 @@ class ForumPage extends React.Component {
             discussionItems: topics,
             filteredItems: [],
             themes: [
-                { name: 'Contamination', selected: false, icon: 'bug', color: 'grey' },
-                { name: 'Mélanges complexes', selected: false, icon: 'superscript', color: 'olive' },
-                { name: 'Fluides biologiques', selected: false, icon: 'eye dropper', color: 'red' },
-                { name: 'Réseaux Bayesien', selected: false, icon: 'code branch', color:'yellow' },
-                { name: 'Logiciel', selected: false, icon: 'code', color: 'blue' }
+                {
+                    name: 'Contamination', selected: false, icon: 'bug', color: 'grey'
+                },
+                {
+                    name: 'Mélanges complexes', selected: false, icon: 'superscript', color: 'olive'
+                },
+                {
+                    name: 'Fluides biologiques', selected: false, icon: 'eye dropper', color: 'red'
+                },
+                {
+                    name: 'Réseaux Bayesien', selected: false, icon: 'code branch', color: 'yellow'
+                },
+                {
+                    name: 'Logiciel', selected: false, icon: 'code', color: 'blue'
+                }
             ]
         };
         this.filterItem = this.filterItems.bind(this);
