@@ -3,7 +3,7 @@ import {
     Button, Radio, Form, Input, Header, Grid, Checkbox, Label
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import GridForm from '../formlab/GridForm';
+import GridForm from '../LabForm/GridForm';
 import './RequestEquipment.css';
 
 

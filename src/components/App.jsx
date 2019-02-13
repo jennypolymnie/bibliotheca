@@ -3,24 +3,23 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './views/search-results/SearchResults';
-import FormLab from './views/formlab/FormLab';
-import FormLabUpdate from './views/formlab/FormLabUpdate';
-import BooksellerRequest from './views/BooksellerRequest/BooksellerRequest';
-import ArticleProposal from './views/BooksellerRequest/ArticleProposal';
+import FormLab from './views/LabForm/FormLab';
+import FormLabUpdate from './views/LabForm/FormLabUpdate';
+import BooksellerRequest from './views/LibrarianRequest/BooksellerRequest';
+import ArticleProposal from './views/LibrarianRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
-import About from './views/About/About';
 import PartnerStudy from './views/PartnerStudy/PartnerStudy';
 import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
-import RequestEquipment from './views/RequestEquipment/RequestEquipment';
+import RequestEquipment from './views/ReachOut/RequestEquipment';
 import ReviewForm from './views/Review/ReviewForm';
-import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Welcome/CenterGrid';
-import RequestSend from './views/BooksellerRequest/RequestSend';
-import ProposalSend from './views/BooksellerRequest/ProposalSend';
-import ProfilType from './views/ProfilType/ProfilType';
+import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
+import RequestSend from './views/LibrarianRequest/RequestSend';
+import ProposalSend from './views/LibrarianRequest/ProposalSend';
+import ProfilType from './views/Profile/ProfilType';
 import SearchPage from './views/Review/SearchPage';
-import AnalyticalPart from './views/formlab/AnalyticPart';
-import { AvailableActiveItem } from './views/Welcome/ActiveIcon';
-import ForumPage from './views/forum/Forum';
+import AnalyticalPart from './views/LabForm/AnalyticPart';
+import { AvailableActiveItem } from './views/Home/ActiveIcon';
+import ForumPage from './views/Forum/Forum';
 import './App.css';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
@@ -60,7 +59,6 @@ export default () => (
                     <Route path="/formLab" component={FormLab} />
                     <Route path="/analyticalPart" component={AnalyticalPart} />
                     <Route path="/libraryRequest" component={LibraryRequest} />
-                    <Route path="/About" component={About} />
                     <Route path="/PartnerStudy" component={PartnerStudy} />
                     <Route path="/List" component={PartnerListLab} />
                     <Route path="/requestEquipment" component={RequestEquipment} />
