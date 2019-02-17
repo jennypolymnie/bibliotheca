@@ -36,6 +36,7 @@ const generateIconProps = props => {
 
 const ActiveItem = C => props => {
     const { to, name, src } = props;
+
     const iconProps = generateIconProps(props);
     const redirect = toPath => {
         if (toPath) {
