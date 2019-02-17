@@ -45,11 +45,11 @@ class RequestEquipment extends Component {
                     </Grid.Row>
 
                     <Grid.Row columns={1}>
-                        <Grid.Column textAlign='center'>
+                        <Grid.Column textAlign="center">
                             <Button.Group>
-                                <Label color='blue' basic>chimie</Label>
+                                <Label color="blue" basic>chimie</Label>
                                 <Checkbox toggle />
-                                <Label color='blue' basic>Equipement</Label>
+                                <Label color="blue" basic>Equipement</Label>
                             </Button.Group>
                         </Grid.Column>
                     </Grid.Row>

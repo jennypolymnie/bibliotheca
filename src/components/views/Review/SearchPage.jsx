@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { Search, Grid, Header, Segment, List } from 'semantic-ui-react';
+import {
+    Search, Grid, Header, Segment, List
+} from 'semantic-ui-react';
 import CountElement from '../search-results/NbArticle';
 import ArticleShort from '../search-results/ArticleShort';
 import BdArticles from '../search-results/BdArticles';
@@ -64,13 +66,12 @@ class SearchPage extends Component {
                         </Grid.Row>
                     </Grid>
                 </Segment>
-                <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
                 <List relaxed>
                     {BdArticles.map(({
                         authors, title, id, abstract, journal, link
                     }) => (
-                            <ArticleShort key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} />
-                        ))
+                        <ArticleShort key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} />
+                    ))
                     }
                 </List>
             </div>

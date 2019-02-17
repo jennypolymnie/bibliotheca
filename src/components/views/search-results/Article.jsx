@@ -85,7 +85,7 @@ const Article = ({
         </div>
     </Segment>
 
-    );
+);
 
 Article.propTypes = {
     author: PropTypes.string.isRequired,

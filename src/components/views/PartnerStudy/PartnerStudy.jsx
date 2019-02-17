@@ -149,7 +149,7 @@ class PartnerStudy extends Component {
                                 size="large"
                             >
                                 Lancer la requête
-                    </Button>
+                            </Button>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>
