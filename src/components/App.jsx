@@ -15,7 +15,7 @@ import ReviewForm from './views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
 import RequestSend from './views/LibrarianRequest/RequestSend';
 import ProposalSend from './views/LibrarianRequest/ProposalSend';
-import ProfilType from './views/Profile/ProfilType';
+import ProfileSelection from './views/Profile/ProfileSelection';
 import SearchPage from './views/Review/SearchPage';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
@@ -65,7 +65,7 @@ export default () => (
                     <Route path="/review" component={ReviewForm} />
                     <Route path="/requestSend" component={RequestSend} />
                     <Route path="/proposalSend" component={ProposalSend} />
-                    <Route path="/profilType" component={ProfilType} />
+                    <Route path="/profilType" component={ProfileSelection} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/forum" component={ForumPage} />
                     <Route render={() => <h1>404 Error</h1>} />
