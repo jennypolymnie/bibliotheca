@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import {
-    Input, Checkbox, Dropdown, Grid, Segment, Search, List, Label
+    Input, Checkbox, Dropdown, Grid, Segment, Search, List
 } from 'semantic-ui-react';
 import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';

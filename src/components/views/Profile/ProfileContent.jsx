@@ -11,10 +11,19 @@ const ProfileContent = props => {
                 {text}
             </Grid.Row>
             <Grid.Row>
-                <p>Le coût pour utiliser Bibliothéca sera de: {cost} euros / mois</p>
+                <p>
+Le coût pour utiliser Bibliothéca sera de:
+                    {cost}
+                    {' '}
+euros / mois
+                </p>
             </Grid.Row>
             <Grid.Row>
-                <Button as={Link} to={to} size="large" color="blue"> {'Sélectionner ce profil'} </Button>
+                <Button as={Link} to={to} size="large" color="blue">
+                    {' '}
+                    {'Sélectionner ce profil'}
+                    {' '}
+                </Button>
             </Grid.Row>
         </Grid>
     );
