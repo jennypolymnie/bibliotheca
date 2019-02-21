@@ -4,11 +4,11 @@ import {
 } from 'semantic-ui-react';
 import ExtractionChemistry from './ExtractionChemistry';
 import QuantificationChemistry from './QuantificationChemistry';
-import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
-import AmplificationYChemistry from './AmplificationYChemistry';
-import SalivaTest from './SalivaTest';
-import BloodTest from './BloodTest';
-import SpermTest from './SpermTest';
+import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
+import AmplificationYChemistry from '../../data/AmplificationYChemistry';
+import SalivaTest from '../../data/SalivaTest';
+import BloodTest from '../../data/BloodTest';
+import SpermTest from '../../data/SpermTest';
 import './GridForm.css';
 
 const GridForm = () => (

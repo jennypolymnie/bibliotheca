@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const SpermTest = [
     {
@@ -16,11 +15,4 @@ const SpermTest = [
 
 ];
 
-SpermTest.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default SpermTest;

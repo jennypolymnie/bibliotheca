@@ -3,7 +3,7 @@ import {
     Grid, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
 
-import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
+import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
 import './GridFormEquipment.css';
 
 const GridFormEquipment = () => (

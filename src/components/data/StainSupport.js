@@ -1,6 +1,4 @@
 
-import PropTypes from 'prop-types';
-
 const StainSupport = [
     {
         id: 1, name: 'Pierre', value: 'pierre', text: 'Pierre'
@@ -29,11 +27,4 @@ const StainSupport = [
 
 ];
 
-StainSupport.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default StainSupport;

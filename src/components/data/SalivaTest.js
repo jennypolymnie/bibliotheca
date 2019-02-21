@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const SalivaTest = [
     {
@@ -13,11 +12,4 @@ const SalivaTest = [
 
 ];
 
-SalivaTest.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default SalivaTest;

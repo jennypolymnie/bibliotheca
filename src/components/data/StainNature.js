@@ -1,6 +1,4 @@
 
-import PropTypes from 'prop-types';
-
 const StainNature = [
     {
         id: 1, name: 'Sang', value: 'sang', text: 'Sang'
@@ -25,11 +23,4 @@ const StainNature = [
     }
 ];
 
-StainNature.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default StainNature;

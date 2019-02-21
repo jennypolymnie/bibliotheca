@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const AmplificationAutosomChemistry = [
     {
@@ -16,11 +15,4 @@ const AmplificationAutosomChemistry = [
 
 ];
 
-AmplificationAutosomChemistry.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default AmplificationAutosomChemistry;

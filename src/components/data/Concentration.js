@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const Concentration = [
     {
@@ -12,11 +11,4 @@ const Concentration = [
     }
 ];
 
-Concentration.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default Concentration;
