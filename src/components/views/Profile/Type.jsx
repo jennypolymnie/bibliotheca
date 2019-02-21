@@ -9,8 +9,8 @@ const Expertise = () => (
     <div>
         <div>{'Vous même et l\'ensemble de votre équipe disposerez d\'un compte permettant de:'}</div>
         <List bulleted>
-            <List.Item>{'Accéder à la banque de données de Bibliothéca'}</List.Item>
-            <List.Item>{'Evaluer des articles'}</List.Item>
+            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
+            <List.Item>Evaluer des articles</List.Item>
             <List.Item>
                 {'Accéder aux profils des autres laboratoires d\'expertise en génétique forensique'}
                 <List.List>
@@ -18,8 +18,8 @@ const Expertise = () => (
                     <List.Item>Trouver un partenaire pour un projet de recherche</List.Item>
                 </List.List>
             </List.Item>
-            <List.Item>{'Proposer des articles, des thèses, des documents, des études non publiées'}</List.Item>
-            <List.Item>{'Echanger sur le forum'}</List.Item>
+            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
+            <List.Item>Echanger sur le forum</List.Item>
         </List>
     </div>
 );
@@ -28,7 +28,7 @@ const Academic = () => (
     <div>
         <div>{'Vous même et l\'ensemble de votre équipe disposerez d\'un compte permettant de:'}</div>
         <List bulleted>
-            <List.Item>{'Accéder à la banque de données de Bibliothéca'}</List.Item>
+            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
             <List.Item>
                 {'Accéder aux profils des autres laboratoires d\'expertise en génétique forensique'}
                 <List.List>
@@ -36,7 +36,7 @@ const Academic = () => (
                     <List.Item>Trouver un partenaire pour un projet de recherche</List.Item>
                 </List.List>
             </List.Item>
-            <List.Item>{'Proposer des articles, des thèses, des documents, des études non publiées'}</List.Item>
+            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
         </List>
     </div>
 );
@@ -45,8 +45,8 @@ const Student = () => (
     <div>
         <div>{'Grâce à l\'université à laquelle vous êtes rattaché(e) vous pourrez:'}</div>
         <List bulleted>
-            <List.Item>{'Accéder à la banque de données de Bibliothéca'}</List.Item>
-            <List.Item>{'Proposer des articles, des thèses, des documents, des études non publiées'}</List.Item>
+            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
+            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
         </List>
     </div>
 );
@@ -55,8 +55,8 @@ const Independent = () => (
     <div>
         <div>{'En tant qu\'indépendant vous pourrez:'}</div>
         <List bulleted>
-            <List.Item>{'Accéder à la banque de données de Bibliothéca'}</List.Item>
-            <List.Item>{'Proposer des articles, des thèses, des documents, des études non publiées'}</List.Item>
+            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
+            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
         </List>
     </div>
 );
@@ -66,7 +66,7 @@ const Type = [
         id: 1,
         name: 'Expertise',
         tab: 'Directeur d\'un laboratoire d\'expertise',
-        text: <Expertise></Expertise>,
+        text: <Expertise />,
         to: '/formLab',
         cost: 70
     },
@@ -74,7 +74,7 @@ const Type = [
         id: 2,
         name: 'Academic',
         tab: 'Directeur d\'un laboratoire académique',
-        text: <Academic></Academic>,
+        text: <Academic />,
         to: '/formLab',
         cost: 50
     },
@@ -82,7 +82,7 @@ const Type = [
         id: 3,
         name: 'Student',
         tab: 'Etudiant Universitaire',
-        text: <Student></Student>,
+        text: <Student />,
         to: '/formLab',
         cost: 0
     },
@@ -98,7 +98,7 @@ const Type = [
         id: 5,
         name: 'Scientist',
         tab: 'Scientifique Indépendant',
-        text: <Independent></Independent>,
+        text: <Independent />,
         to: '/formLab',
         cost: 100
     }

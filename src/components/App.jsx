@@ -19,7 +19,7 @@ import ProfileSelection from './views/Profile/ProfileSelection';
 import SearchPage from './views/Review/SearchPage';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
-import ForumPage from './views/Forum/Forum';
+import ForumPage from './views/forum/Forum';
 import './App.css';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
