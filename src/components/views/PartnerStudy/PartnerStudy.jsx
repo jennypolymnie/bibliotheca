@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Radio, Input, Header, Grid, Icon
+    Button, Form, Radio, Input, Header, Grid, Icon, Segment
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import './PartnerStudy.css';
 import Research from './Research';
 
 
@@ -23,10 +22,13 @@ class PartnerStudy extends Component {
             <div className="PartnerStudy">
 
                 <div>
-                    <Header as="h1"> Trouver un partenaire d'étude </Header>
+                    <Header as="h1">
+                        {'Trouver un partenaire d\'étude'}
+                    </Header>
                 </div>
 
                 <Grid>
+
                     <Grid.Row columns={1}>
                         <Grid.Column>
                             <Form>
@@ -84,29 +86,15 @@ class PartnerStudy extends Component {
                         </Grid.Column>
                     </Grid.Row>
 
-
-                    <Grid.Row columns={1}>
-                        <Grid.Column>
-                            <div className="research-title">
-                                <div className="research">
-                                    <h2>Axes de recherche</h2>
-                                </div>
-                                <div>
-                                    <Button basic circular color="darkgrey" icon as={Link} to="/articles">
-                                        <Icon size="large" name="question circle" />
-                                    </Button>
-                                </div>
-                            </div>
-                        </Grid.Column>
-                    </Grid.Row>
                     <Grid.Row columns={1}>
                         <Grid.Column fluid>
+                            <h2>Axes de recherche</h2>
                             <Research />
                         </Grid.Column>
                     </Grid.Row>
 
-                    <Grid.Row columns={1}>
-                        <Grid.Column>
+                    <Grid.Row columns={2}>
+                        <Grid.Column width={3}>
                             <Form>
                                 <Form.Field label="Il s'agit d'un projet de:" />
                                 <Form.Field>
@@ -138,6 +126,11 @@ class PartnerStudy extends Component {
                                 </Form.Field>
                             </Form>
                         </Grid.Column>
+                        <Grid.Column textAlign="left">
+                            <Button basic circular color="darkgrey" icon as={Link} to="/articles">
+                                <Icon size="large" name="question circle" />
+                            </Button>
+                        </Grid.Column>
                     </Grid.Row>
 
                     <Grid.Row columns={1}>
@@ -152,6 +145,7 @@ class PartnerStudy extends Component {
                             </Button>
                         </Grid.Column>
                     </Grid.Row>
+
                 </Grid>
             </div>
         );

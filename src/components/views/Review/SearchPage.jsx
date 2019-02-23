@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import {
-    Search, Grid, Header, Segment, List
+    Search, Grid, Header, Segment
 } from 'semantic-ui-react';
-import CountElement from '../search-results/NbArticle';
-import ArticleShort from '../search-results/ArticleShort';
 import BdArticles from '../search-results/BdArticles';
 import './SearchPage.css';
 
@@ -52,7 +50,7 @@ class SearchPage extends Component {
                                 <form onSubmit={this.handleSubmit}>
                                     <Search
                                         size="large"
-                                        placeholder="Titre de l'article"
+                                        placeholder="Titre, auteur(s), journal"
                                         input={{ fluid: true }}
                                         loading={isLoading}
                                         onResultSelect={this.handleResultSelect}
@@ -66,14 +64,6 @@ class SearchPage extends Component {
                         </Grid.Row>
                     </Grid>
                 </Segment>
-                <List relaxed>
-                    {BdArticles.map(({
-                        authors, title, id, abstract, journal, link
-                    }) => (
-                        <ArticleShort key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} />
-                    ))
-                    }
-                </List>
             </div>
         );
     }

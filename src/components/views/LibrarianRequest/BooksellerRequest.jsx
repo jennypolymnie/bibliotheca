@@ -15,21 +15,13 @@ const BooksellerRequest = () => (
 
         <Grid.Row>
             <Form className="to-librarian">
-                <Form.Group grouped>
-                    <Form.Field
-                        required
-                        control={Input}
-                        label="Email du demandeur"
-                        placeholder="Votre e-mail"
-                    />
-                    <Form.Field
-                        required
-                        control={TextArea}
-                        label="Que souhaitez-vous demander à la bibliothécaire?"
-                        placeholder="Posez votre question"
-                        style={{ minHeight: 200 }}
-                    />
-                </Form.Group>
+                <Form.Field
+                    required
+                    control={TextArea}
+                    label="Comment puis je vous aider?"
+                    placeholder="Posez votre question"
+                    style={{ minHeight: 200 }}
+                />
             </Form>
         </Grid.Row>
 

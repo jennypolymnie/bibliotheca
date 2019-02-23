@@ -3,6 +3,8 @@ import {
     Button, Form, Grid, Segment, Icon
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import Essai from './Essai';
+
 
 const Login = () => (
     <Segment>
@@ -38,10 +40,7 @@ const Login = () => (
                     </Button>
                 </Grid.Column>
                 <Grid.Column>
-                    <Button icon color="grey" fluid as={Link} to="/logo">
-                        {'Démo '}
-                        <Icon size="large" name="video play" color="darkgrey" />
-                    </Button>
+                    <Essai />
                 </Grid.Column>
             </Grid.Row>
 

@@ -8,7 +8,7 @@ import FormLabUpdate from './views/LabForm/FormLabUpdate';
 import BooksellerRequest from './views/LibrarianRequest/BooksellerRequest';
 import ArticleProposal from './views/LibrarianRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
-import PartnerStudy from './views/PartnerStudy/PartnerStudy';
+import PartnerStudy2 from './views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
 import RequestEquipment from './views/ReachOut/RequestEquipment';
 import ReviewForm from './views/Review/ReviewForm';
@@ -59,7 +59,7 @@ export default () => (
                     <Route path="/formLab" component={FormLab} />
                     <Route path="/analyticalPart" component={AnalyticalPart} />
                     <Route path="/libraryRequest" component={LibraryRequest} />
-                    <Route path="/PartnerStudy" component={PartnerStudy} />
+                    <Route path="/PartnerStudy" component={PartnerStudy2} />
                     <Route path="/List" component={PartnerListLab} />
                     <Route path="/requestEquipment" component={RequestEquipment} />
                     <Route path="/review" component={ReviewForm} />
