@@ -2,8 +2,8 @@ import React from 'react';
 import {
     Grid, Segment, Dropdown, Header, Icon
 } from 'semantic-ui-react';
-import ExtractionChemistry from './ExtractionChemistry';
-import QuantificationChemistry from './QuantificationChemistry';
+import ExtractionChemistry from '../../data/ExtractionChemistry';
+import QuantificationChemistry from '../../data/QuantificationChemistry';
 import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
 import AmplificationYChemistry from '../../data/AmplificationYChemistry';
 import SalivaTest from '../../data/SalivaTest';

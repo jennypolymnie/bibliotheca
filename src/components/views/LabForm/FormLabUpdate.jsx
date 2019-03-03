@@ -184,9 +184,7 @@ class FormLabUpdate extends Component {
 
 
                         <Grid.Row columns={1}>
-                            <Grid.Column>
-                                <h2>Chimie</h2>
-                            </Grid.Column>
+                            <h2>Chimie</h2>
                         </Grid.Row>
                         <Grid.Row columns={1}>
                             <Grid.Column fluid>
@@ -195,9 +193,7 @@ class FormLabUpdate extends Component {
                         </Grid.Row>
 
                         <Grid.Row columns={1}>
-                            <Grid.Column>
-                                <h2>Equipement</h2>
-                            </Grid.Column>
+                            <h2>Equipement</h2>
                         </Grid.Row>
                         <Grid.Row columns={1}>
                             <Grid.Column fluid>

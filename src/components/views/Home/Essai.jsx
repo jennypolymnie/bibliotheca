@@ -48,13 +48,11 @@ class Essai extends Component {
                     onRequestClose={this.closeModal}
                     style={customStyles}
                 >
-                    <Video url="https://www.youtube.com/watch?v=S98-BIpzZuk&start_radio=1&list=RDS98-BIpzZuk" playing />
-                    <Button.Group basic size='small'>
+                    <Button.Group basic size='small' floated="right">
                         <Button icon='close' onClick={this.closeModal} />
-                        <Button icon='pause' />
-                        <Button icon='play' />
                         <Button icon='share alternate' />
                     </Button.Group>
+                    <Video url="https://www.youtube.com/watch?v=S98-BIpzZuk&start_radio=1&list=RDS98-BIpzZuk" playing />
                 </Modal>
             </div>
         );

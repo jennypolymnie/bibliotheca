@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 // import screenfull from 'screenfull';
 import ReactPlayer from 'react-player';
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 
 class Video extends Component {
     state = {
@@ -32,14 +32,14 @@ class Video extends Component {
             <div>
 
                 <ReactPlayer
-                    width='100%'
-                    height='100%'
+                    width='2'
+                    height='2'
                     url="https://www.youtube.com/watch?v=S98-BIpzZuk&start_radio=1&list=RDS98-BIpzZuk"
                     playing={playing}
                 />
 
-                <Button onClick={this.stop}>Stop</Button>
-                <Button onClick={this.playPause}>{playing ? 'Pause' : 'Play'}</Button>
+                <Button onClick={this.stop} basic icon="stop" />
+                <Button onClick={this.playPause} basic>{playing ? 'Pause' : 'Play'}</Button>
                 {/* <Button onClick={this.onClickFullscreen}>Fullscreen</Button> */}
 
             </div>

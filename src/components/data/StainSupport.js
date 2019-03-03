@@ -4,26 +4,27 @@ const StainSupport = [
         id: 1, name: 'Pierre', value: 'pierre', text: 'Pierre'
     },
     {
-        id: 2, name: 'Vêtement', value: 'vetement', text: 'Vêtement'
+        id: 2, name: 'Vêtement', value: 'clothe', text: 'Vêtement'
     },
     {
-        id: 3, name: "Manche d'outil", value: 'outil', text: "Manche d'outil"
+        id: 3, name: "Manche d'outil", value: 'tools', text: "Manche d'outil"
     },
     {
-        id: 4, name: 'Peau humaine', value: 'peauhumaine', text: 'Peau humaine'
+        id: 4, name: 'Parties du corps', value: 'bodypart', text: 'Parties du corps'
     },
     {
-        id: 5, name: 'Arme de poing', value: 'armedepoing', text: 'Arme de poing'
+        id: 5, name: 'Arme à feu', value: 'firearm', text: 'Arme à feu'
     },
     {
-        id: 6, name: 'Préservatif', value: 'preservatif', text: 'Préservatif'
+        id: 6, name: 'Préservatif', value: 'condom', text: 'Préservatif'
     },
     {
-        id: 7, name: 'Sac plastique', value: 'sacplastique', text: 'Sac plastique'
+        id: 7, name: 'Sac', value: 'bag', text: 'Sac'
     },
     {
-        id: 8, name: 'Ongle', value: 'ongle', text: 'Ongle'
+        id: 8, name: 'Couteau', value: 'knife', text: 'Couteau'
     }
+
 
 ];
 

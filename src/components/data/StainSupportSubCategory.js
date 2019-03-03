@@ -1,16 +1,8 @@
-import StainSupport from './StainSupport';
-import StainNature from './StainNature';
-import ScreeningTest from './ScreeningTest';
-import Concentration from './Concentration';
-import RelevantPopulation from './RelevantPopulation';
-import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
-import ActivityContext from './ActivityContext';
-import EnvironmentalConditions from './EnvironmentalConditions';
+import Material from './Material';
 
-const OptionsRequest = [
-
+const StainSupportSubCategory = [
     {
-        id: 1, name: 'Population pertinente', options: RelevantPopulation, categories: ['subsource']
+        id: 1, name: 'Matériel', options: Material, categories: ['subsource']
     },
     {
         id: 2, name: 'Kit d\'amplication', options: AmplificationAutosomChemistry, categories: ['subsource']
@@ -44,10 +36,7 @@ const OptionsRequest = [
     },
     {
         id: 12, name: 'Type d\'activité', options: ActivityContext, categories: ['activity']
-    },
-    {
-        id: 13, name: 'Conditions environnementales', options: EnvironmentalConditions, categories: ['activity']
     }
 ];
 
-export default OptionsRequest;
+export default StainSupportSubCategory;
