@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Input, Icon, Radio, Header
+    Button, Form, Input, Icon, Radio
 } from 'semantic-ui-react';
 import './FormLab.css';
 import { Link } from 'react-router-dom';
-import GridForm from './GridForm';
-
+import StandardLayout from '../../layout/StandardLayout';
 
 class FormLab extends Component {
     state = {}
@@ -21,9 +20,6 @@ class FormLab extends Component {
     render() {
         return (
             <div className="ProfilLab">
-
-                <Header as="h1"> Profil du labo </Header>
-
                 <div className="LabInfo">
                     <h2>Informations générales</h2>
                     <Form>
@@ -268,4 +264,4 @@ class FormLab extends Component {
     }
 }
 
-export default FormLab;
+export default StandardLayout(FormLab, 'Profil du labo');

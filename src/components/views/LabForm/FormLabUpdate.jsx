@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import GridForm from './GridForm';
 import Research from '../PartnerStudy/Research';
 import GridFormEquipment from './GridFormEquipment';
+import StandardLayout from '../../layout/StandardLayout';
 
 class FormLabUpdate extends Component {
     state = {}
@@ -23,10 +24,6 @@ class FormLabUpdate extends Component {
     render() {
         return (
             <div className="ProfilLab">
-
-                <Header as="h1">Profil du laboratoire</Header>
-
-
                 <div className="InformationLab">
                     <Grid padded="false">
                         <Grid.Row columns={1}>
@@ -226,4 +223,4 @@ class FormLabUpdate extends Component {
     }
 }
 
-export default FormLabUpdate;
+export default StandardLayout(FormLabUpdate, 'Profil du laboratoire');

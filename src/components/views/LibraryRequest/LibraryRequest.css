@@ -1,9 +1,10 @@
 .LibraryRequest{
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
     flex-direction: column;
     padding: 5px 5px 5px 5px;
     margin: auto;
-    user-select: none;
+    user-select: none; */
+    width: 100%;
 }
 
 .ProfilIncluded {
@@ -16,13 +17,34 @@
 
 }
 
-.BlocActivity, .BlocSource, .BlocSubSource, .BlocSubActivity {
+/* .BlocActivity, .BlocSource, .BlocSubSource, .BlocSubActivity {
     width: 300px;
     padding: 5px 5px 5px 5px;
     height: 600px;
     margin:10px 10px 10px 10px;
-}
+} */
 
 .QuestionDropdown{
     height: 400px;
 }
+
+.ui.segment.search_button,
+.search_button {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+.ui.segment.search_option {
+    padding-bottom: 4em;
+}
+
+.ui.header.request_type{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-align: center;
+}
+
+/* .ui.segment.basic.search_option_field {
+     margin: 1em 0em; 
+} */
