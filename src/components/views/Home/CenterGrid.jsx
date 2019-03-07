@@ -10,7 +10,7 @@ const withCenterGrid = C => props => (
         <Grid container stretched padded="vertically">
             <Grid.Row verticalAlign="middle" centered>
                 <Header as="div" className="title" color="blue">
-                    {'Bibliotheca'}
+                    {'BFOR'}
                 </Header>
             </Grid.Row>
             <Grid.Row verticalAlign="middle" container>
