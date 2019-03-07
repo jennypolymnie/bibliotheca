@@ -5,7 +5,7 @@ import { Form, Grid } from 'semantic-ui-react';
 
 const Research = () => (
 
-    <div className="bet">
+    <div>
 
         <Grid container padded="false">
             <Grid.Row>

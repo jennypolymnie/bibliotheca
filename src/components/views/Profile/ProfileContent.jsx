@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Segment, Grid } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 const ProfileContent = props => {
@@ -12,10 +13,10 @@ const ProfileContent = props => {
             </Grid.Row>
             <Grid.Row>
                 <p>
-Le coût pour utiliser Bibliothéca sera de:
+                    Le coût pour utiliser Bibliothéca sera de:
                     {cost}
                     {' '}
-euros / mois
+                    euros / mois
                 </p>
             </Grid.Row>
             <Grid.Row>
@@ -28,5 +29,12 @@ euros / mois
         </Grid>
     );
 };
+
+// ProfileContent.PropTypes = {
+//     text: PropTypes.string.isRequired,
+//     cost: PropTypes.number.isRequired,
+//     to: PropTypes.string.isRequired
+
+// };
 
 export default ProfileContent;

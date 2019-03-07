@@ -32,8 +32,8 @@ const Academic = () => (
             <List.Item>
                 {'Accéder aux profils des autres laboratoires d\'expertise en génétique forensique'}
                 <List.List>
-                    <List.Item> Echanger sur des technologies</List.Item>
-                    <List.Item>Trouver un partenaire pour un projet de recherche</List.Item>
+                    <List.Item> Echanger sur des technologies </List.Item>
+                    <List.Item> Trouver un partenaire pour un projet de recherche </List.Item>
                 </List.List>
             </List.Item>
             <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
@@ -41,12 +41,30 @@ const Academic = () => (
     </div>
 );
 
+const University = () => (
+    <div>
+        <div>{'Vous même et l\'ensemble de votre équipe disposerez d\'un compte permettant de:'}</div>
+        <List bulleted>
+            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
+            <List.Item>
+                {'Accéder aux profils des autres laboratoires d\'expertise en génétique forensique'}
+                <List.List>
+                    <List.Item> Echanger sur des technologies </List.Item>
+                    <List.Item> Trouver un partenaire pour un projet de recherche </List.Item>
+                </List.List>
+            </List.Item>
+            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
+        </List>
+    </div>
+);
+
+
 const Student = () => (
     <div>
         <div>{'Grâce à l\'université à laquelle vous êtes rattaché(e) vous pourrez:'}</div>
         <List bulleted>
-            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
-            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
+            <List.Item> Accéder à la banque de données de Bibliothéca </List.Item>
+            <List.Item> Proposer des articles, des thèses, des documents, des études non publiées </List.Item>
         </List>
     </div>
 );
@@ -55,8 +73,8 @@ const Independent = () => (
     <div>
         <div>{'En tant qu\'indépendant vous pourrez:'}</div>
         <List bulleted>
-            <List.Item>Accéder à la banque de données de Bibliothéca</List.Item>
-            <List.Item>Proposer des articles, des thèses, des documents, des études non publiées</List.Item>
+            <List.Item> Accéder à la banque de données de Bibliothéca </List.Item>
+            <List.Item> Proposer des articles, des thèses, des documents, des études non publiées </List.Item>
         </List>
     </div>
 );
@@ -90,9 +108,9 @@ const Type = [
         id: 4,
         name: 'Professor',
         tab: 'Professeur Universitaire',
-        text: 'En tant que laboratoire d\'expertise vous aurez accès au profil des autres laboratoires',
+        text: <University />,
         to: '/formLab',
-        cost: 200
+        cost: 50
     },
     {
         id: 5,
@@ -100,7 +118,7 @@ const Type = [
         tab: 'Scientifique Indépendant',
         text: <Independent />,
         to: '/formLab',
-        cost: 100
+        cost: 50
     }
 ];
 

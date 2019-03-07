@@ -1,5 +1,4 @@
 import React from 'react';
-import './ListLab.css';
 import PropTypes from 'prop-types';
 import { Segment, Label } from 'semantic-ui-react';
 
@@ -7,31 +6,29 @@ import { Segment, Label } from 'semantic-ui-react';
 const ListLab = ({
     labName, directorName, email, website, onClick
 }) => (
-    // <div className="ListLabo">
-    <Segment raised>
-        <Label color="blue" ribbon size="large">
-            {labName}
-        </Label>
-        <div onClick={() => onClick(ListLab)}>
-            <p>
+        <Segment raised>
+            <Label color="blue" ribbon size="large">
+                {labName}
+            </Label>
+            <div onClick={() => onClick(ListLab)}>
+                <p>
                     Nom du responsable:
                 {directorName}
-                {' '}
+                    {' '}
 
-            </p>
-            <p>
+                </p>
+                <p>
                     Email:
-                {email}
-            </p>
-            <p>
+                    <a href={"mailto:"}> {email} </a>
+                </p>
+                <p>
                     Site web du laboratoire:
-                {website}
-            </p>
+                 <a href="www.curml.ch" >{website}</a>
+                </p>
 
-        </div>
-    </Segment>
-    // </div>
-);
+            </div>
+        </Segment>
+    );
 
 ListLab.PropTypes = {
     labName: PropTypes.string.isRequired,

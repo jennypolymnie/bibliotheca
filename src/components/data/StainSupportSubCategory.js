@@ -1,6 +1,6 @@
 import Material from './Material';
 
-const StainSupportSubCategory = [
+const Material = [
     {
         id: 1, name: 'Matériel', options: Material, categories: ['subsource']
     },

@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, browserHistory } from 'react-router';
+// import { Provider } from 'react-redux';
+// import store, { history } from '../store';
 import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './views/search-results/SearchResults';
 import FormLab from './views/LabForm/FormLab';
@@ -15,7 +17,7 @@ import ReviewForm from './views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
 import RequestSend from './views/LibrarianRequest/RequestSend';
 import ProposalSend from './views/LibrarianRequest/ProposalSend';
-import ProfileSelection from './views/Profile/ProfileSelection';
+import Profile from './views/Profile/Profile';
 import SearchPage from './views/Review/SearchPage';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
@@ -47,6 +49,8 @@ export default () => (
             </Grid.Column>
             <Grid.Column width={14}>
                 <Switch>
+                    {/* <Provider store={store}> */}
+                    {/* <Router history={history}> */}
                     <Route exact path="/" component={LoginWithCenterGrid} />
                     <Route exact path="/logo">
                         <LogoWithCenterGrid src={logoBlue} size="massive" />
@@ -65,10 +69,12 @@ export default () => (
                     <Route path="/review" component={ReviewForm} />
                     <Route path="/requestSend" component={RequestSend} />
                     <Route path="/proposalSend" component={ProposalSend} />
-                    <Route path="/profilType" component={ProfileSelection} />
+                    <Route path="/profilType" component={Profile} />
                     <Route path="/search" component={SearchPage} />
                     <Route path="/forum" component={ForumPage} />
                     <Route render={() => <h1>404 Error</h1>} />
+                    {/* </Provider> */}
+                    {/* </Router> */}
                 </Switch>
             </Grid.Column>
 
