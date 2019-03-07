@@ -7,6 +7,7 @@ import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
 import BdArticles from './BdArticles';
+import StandardLayout from '../../layout/StandardLayout';
 
 const options = [
     {
@@ -18,10 +19,7 @@ const options = [
 class SearchResults extends Component {
     render() {
         return (
-
             <div className="recherche">
-
-                <h2>Résultat de la recherche</h2>
                 <Segment secondary>
                     <Grid padded="vertically">
                         <Grid.Row>
@@ -66,4 +64,4 @@ class SearchResults extends Component {
     }
 }
 
-export default SearchResults;
+export default StandardLayout(SearchResults, 'Résultat de la recherche');

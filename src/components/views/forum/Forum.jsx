@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Header, Segment } from 'semantic-ui-react';
 import ThemeSelector from './ThemeSelector';
 import DiscussionItems from './DiscussionItems';
+import StandardLayout from '../../layout/StandardLayout';
 
 const topics = [
     {
@@ -108,11 +109,6 @@ class ForumPage extends React.Component {
     render = () => (
         <Grid padded="horizontally">
             <Grid.Row>
-                <Header as="h1">
-                    {'Rechercher dans le forum'}
-                </Header>
-            </Grid.Row>
-            <Grid.Row>
                 <ThemeSelector
                     themes={this.state.themes}
                 />
@@ -131,4 +127,4 @@ class ForumPage extends React.Component {
     )
 }
 
-export default ForumPage;
+export default StandardLayout(ForumPage, 'Rechercher dans le forum');

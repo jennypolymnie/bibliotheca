@@ -1,5 +1,12 @@
 // name of actioncreator
 
+export function newUser(userID) {
+    return {
+        type: 'NEW_USER',
+        userID
+    };
+}
+
 export function selectProfilType(profilType, userID) {
     return {
         type: 'SELECT_PROFILTYPE',
@@ -7,6 +14,23 @@ export function selectProfilType(profilType, userID) {
         userID
     };
 }
+
+export function createGeneralInfo(profilType, userID, lastname, firstname, labname, country, website, technicalEmail, interpretationEmail, researchThemes) {
+    return {
+        type: 'CREATE_GENERAL_INFO',
+        profilType,
+        userID,
+        lastname,
+        firstname,
+        labname,
+        country,
+        website,
+        technicalEmail,
+        interpretationEmail,
+        researchThemes
+    };
+}
+
 
 export function connexion(profilInfo, userID) {
     return {
@@ -19,7 +43,7 @@ export function connexion(profilInfo, userID) {
 export function makeASearchPreevaluation(parameter, useLabProfil) {
     return {
         type: 'MAKE_A_SEARCH_PREEVALUATION',
-        parameter
+        parameter,
         useLabProfil
     };
 }

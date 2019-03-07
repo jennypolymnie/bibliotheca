@@ -1,19 +1,25 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../store/actions/actionCreators';
-//import 
+import App from './App';
 
 function mapStateToProps(state) {
     return {
-        state1: state.state1,
-        state2: state.state2
-    }
+        users: state.users,
+        AmplificationAutosomChemistry: state.AmplificationAutosomChemistry,
+        AmplificationYChemistry: state.AmplificationYChemistry,
+        BloodTest: state.BloodTest,
+        ExtractionChemistry: state.ExtractionChemistry,
+        QuantificationChemistry: state.QuantificationChemistry,
+        SalivaTest: state.SalivaTest,
+        SpermTest: state.SpermTest
+    };
 }
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(actionCreators, dispatch);
 }
 
-const infuseData = connect(mapStateToProps, mapDispatchToProps);
+const infuseData = connect(mapStateToProps, mapDispatchToProps)(App);
 
 export default infuseData;
