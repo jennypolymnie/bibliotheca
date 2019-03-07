@@ -5,8 +5,6 @@ import {
 import './ArticleProposal.css';
 import { Link } from 'react-router-dom';
 
-
-
 class ArticleProposal extends Component {
     state = {}
 
@@ -57,12 +55,6 @@ class ArticleProposal extends Component {
                                 label="Oui et je consens à la distribution libre sur bibliotheca"
                                 value="yes"
                                 checked={value === 'yes'}
-                                onChange={this.handleChange}
-                            />
-                            <Form.Radio
-                                label="Oui mais je refuse la distribution libre sur bibliotheca"
-                                value="partial"
-                                checked={value === 'partial'}
                                 onChange={this.handleChange}
                             />
                             <Form.Radio

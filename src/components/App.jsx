@@ -29,7 +29,7 @@ import logoBlue from '../resources/bibliotheca_blue.svg';
 
 const buttonSize = 'large';
 
-export default () => (
+const App = () => (
     <Grid padded className="full-height">
         <Grid.Row>
             <Grid.Column width={1} color="blue" className="paddless-column">
@@ -95,4 +95,8 @@ export default () => (
             </Grid.Column>
         </Grid.Row>
     </Grid>
+
+    // {React.cloneElement(this.props.children, this.props)}
 );
+
+export default App;

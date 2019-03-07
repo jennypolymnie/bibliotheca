@@ -33,6 +33,7 @@ class PartnerStudy2 extends Component {
                         <Segment>
                             <Form>
                                 <Form.Field
+                                    fluid
                                     inline
                                     required
                                     control={Input}
@@ -44,6 +45,7 @@ class PartnerStudy2 extends Component {
                         <Segment>
                             <Form>
                                 <Form.Field
+                                    fluid
                                     inline
                                     required
                                     control={Input}

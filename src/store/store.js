@@ -7,7 +7,7 @@ import rootReducer from './reducers/indexReducer';
 
 
 // import data
-import users from
+import users from '../components/views/PartnerStudy/PartnerListLab/Users';
 
 // create an object for the default data
 const defaultState = {

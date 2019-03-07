@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    Button, Form, TextArea, Input, Header, Grid
+    Button, Form, TextArea, Header, Grid
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import './ArticleProposal.css';
