@@ -6,13 +6,13 @@ import StandardLayout from '../../layout/StandardLayout';
 
 const topics = [
     {
-        name: 'Astuce pour STRMIX',
+        name: 'Astuces pour STRMIX',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat recusandae incidunt cum consequatur necessitatibus facilis commodi? Reiciendis iure autem pariatur tempore libero necessitatibus omnis blanditiis ipsam, sit asperiores illum quasi!',
         icon: 'code',
         color: 'blue'
     },
     {
-        name: 'Déterminer un a posteriori, pourquoi?',
+        name: 'Le noeud activité',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat recusandae incidunt cum consequatur necessitatibus facilis commodi? Reiciendis iure autem pariatur tempore libero necessitatibus omnis blanditiis ipsam, sit asperiores illum quasi!',
         icon: 'code branch',
         color: 'yellow'
@@ -24,13 +24,13 @@ const topics = [
         color: 'red'
     },
     {
-        name: 'Je n\'arrive pas à change mon profil de laboratoire!!!',
+        name: 'Comment prévenir les contaminations au laboratoire',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat recusandae incidunt cum consequatur necessitatibus facilis commodi? Reiciendis iure autem pariatur tempore libero necessitatibus omnis blanditiis ipsam, sit asperiores illum quasi!',
         icon: 'bug',
         color: 'grey'
     },
     {
-        name: 'Comment faire une boucle dans R?',
+        name: 'Genemapper et le filtre global?',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat recusandae incidunt cum consequatur necessitatibus facilis commodi? Reiciendis iure autem pariatur tempore libero necessitatibus omnis blanditiis ipsam, sit asperiores illum quasi!',
         icon: 'blue',
         color: 'code'
@@ -115,7 +115,7 @@ class ForumPage extends React.Component {
             </Grid.Row>
             <Grid.Row>
                 <Header as="h2">
-                    {'Discussions pertinentes'}
+                    {'Discussions'}
                 </Header>
             </Grid.Row>
             <Grid.Row>

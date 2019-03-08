@@ -19,7 +19,7 @@ class FormLab extends Component {
 
     render() {
         return (
-            <div className="ProfilLab">
+            <div>
                 <div className="LabInfo">
                     <h2>Informations générales</h2>
                     <Form>
@@ -27,14 +27,14 @@ class FormLab extends Component {
                             <Form.Field
                                 required
                                 control={Input}
-                                label="Nom"
+                                label="Nom du directeur du laboratoire"
                                 placeholder="Nom"
                             />
                             <Form.Field
                                 required
                                 control={Input}
-                                label="Prénom"
-                                placeholder="Nom et Prénom du directeur laboratoire"
+                                label="Prénom du directeur laboratoire"
+                                placeholder="Prénom"
                             />
 
                             <Form.Field

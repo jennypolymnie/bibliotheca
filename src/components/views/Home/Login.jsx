@@ -16,7 +16,7 @@ const Login = () => (
                         fluid
                         icon="user"
                         iconPosition="left"
-                        placeholder="Nom du laboratoire"
+                        placeholder="Nom d'utilisateur"
                     />
                     <Form.Input
                         fluid

@@ -25,6 +25,7 @@ import ForumPage from './views/forum/Forum';
 import './App.css';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
+import EquipmentPart from './views/LabForm/EquipmentPart';
 // import { createRequireFromPath } from 'module';
 
 const buttonSize = 'large';
@@ -62,6 +63,7 @@ const App = () => (
                     <Route path="/booksellerRequest" component={BooksellerRequest} />
                     <Route path="/formLab" component={FormLab} />
                     <Route path="/analyticalPart" component={AnalyticalPart} />
+                    <Route path="/equipmentPart" component={EquipmentPart} />
                     <Route path="/libraryRequest" component={LibraryRequest} />
                     <Route path="/PartnerStudy" component={PartnerStudy2} />
                     <Route path="/List" component={PartnerListLab} />

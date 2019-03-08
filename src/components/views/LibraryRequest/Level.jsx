@@ -25,50 +25,49 @@ const generateList = id => OptionsRequest
     ));
 
 const Preevaluation = () => (
-    <Grid container>
+    <Segment color="yellow" raised container>
+        <Grid>
+            <Grid.Row columns={2}>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center"> Nature de la trace </Header>
+                    <Dropdown
+                        placeholder="Choisir"
+                        fluid
+                        selection
+                        options={StainNature}
+                    />
+                </Grid.Column>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center"> Support de la trace </Header>
+                    <Dropdown
+                        placeholder="Choisir"
+                        fluid
+                        selection
+                        options={StainSupport}
+                    />
+                </Grid.Column>
+            </Grid.Row>
 
-        <Grid.Row columns={2}>
-            {/* <Segment color="yellow" raised container> */}
-            <Grid.Column>
-                <Header as="h4" textAlign="center"> Nature de la trace </Header>
-                <Dropdown
-                    placeholder="Choisir"
-                    fluid
-                    selection
-                    options={StainNature}
-                />
-            </Grid.Column>
-            <Grid.Column>
-                <Header as="h4" textAlign="center"> Support de la trace </Header>
-                <Dropdown
-                    placeholder="Choisir"
-                    fluid
-                    selection
-                    options={StainSupport}
-                />
-            </Grid.Column>
-            {/* </Segment> */}
-        </Grid.Row>
-
-        <Grid.Row>
-            <Button
-                color="blue"
-                size="large"
-                as={Link}
-                to="/articles"
-            >
-                Envoyez la requête
-            </Button>
-
-        </Grid.Row>
-
-    </Grid>
+            <Grid.Row>
+                <Grid.Column>
+                    <Button
+                        color="blue"
+                        size="large"
+                        as={Link}
+                        to="/articles"
+                    >
+                        Envoyez la requête
+                    </Button>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    </Segment>
 
 );
 
 
-const Interpretation = () => (
-    <Grid stretched container>
+const Data = () => (
+    <Grid stretched>
         {
             Hierarchy.map(({ name, id }) => (
                 <Grid.Column key={id} width={4} padded stretched>
@@ -92,11 +91,25 @@ const Interpretation = () => (
     </Grid>
 );
 
-const Defense = () => (
-    <Grid container>
-        <Grid.Column>
-            <Segment color="yellow" raised container>
-                <Grid.Row>
+const ReseauxBayesien = () => (
+    <Segment color="yellow" raised container>
+        <Grid>
+            <Grid.Row columns={2}>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center"> Niveau </Header>
+                    <Dropdown
+                        placeholder="Choisir"
+                        fluid
+                        selection
+                        options={Hierarchy}
+                    />
+                </Grid.Column>
+                <Grid.Column>
+                </Grid.Column>
+            </Grid.Row>
+
+            <Grid.Row>
+                <Grid.Column>
                     <Button
                         color="blue"
                         size="large"
@@ -105,35 +118,36 @@ const Defense = () => (
                     >
                         Envoyez la requête
                     </Button>
-                </Grid.Row>
-            </Segment>
-        </Grid.Column>
-    </Grid>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
+    </Segment>
 
 );
+
 
 const panes = [
     {
         menuItem: 'Pré évaluation',
         render: () => (
-            <Tab.Pane>
+            <Tab.Pane as="Container">
                 <Preevaluation />
             </Tab.Pane>
         )
     },
     {
-        menuItem: 'Interprétation',
+        menuItem: 'Données',
         render: () => (
-            <Tab.Pane>
-                <Interpretation />
+            <Tab.Pane as="Container">
+                <Data />
             </Tab.Pane>
         )
     },
     {
-        menuItem: 'Défense',
+        menuItem: 'Réseaux Bayesien',
         render: () => (
-            <Tab.Pane>
-                <Defense />
+            <Tab.Pane as="Container">
+                <ReseauxBayesien />
             </Tab.Pane>
         )
     }
@@ -141,7 +155,7 @@ const panes = [
 
 
 const Level = () => (
-    <Tab grid={{ paneWidth: 13, tabWidth: 2 }} menu={{ fluid: true, vertical: true, tabular: true }} panes={panes} />
+    <Tab grid={{ paneWidth: 14, tabWidth: 2 }} menu={{ fluid: true, vertical: true, tabular: true }} panes={panes} />
 );
 
 export default Level;

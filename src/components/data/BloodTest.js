@@ -10,6 +10,9 @@ const BloodTest = [
         id: 3, name: 'Hemastix', value: 'Hemastix', text: 'Hemastix'
     },
     {
+        id: 3, name: 'RSID Blood', value: 'RsidBlood', text: 'RSID Blood'
+    },
+    {
         id: 4, name: 'Autre', value: 'Autre', text: 'Autre'
     }
 

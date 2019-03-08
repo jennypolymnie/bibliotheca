@@ -8,6 +8,9 @@ import { Button } from 'semantic-ui-react';
 // const input = document.querySelector('video');
 // const url = URL.createObjectURL(input.Video[0]);
 
+// const input = document.querySelector('[ type="file" accept="video/*,.mp4" ]');
+// const url = URL.createObjectURL(input.files[0]);
+
 
 class Video extends Component {
     state = {
@@ -15,9 +18,9 @@ class Video extends Component {
     }
 
 
-    onClickFullscreen = () => {
-        screenfull.request(ReactDOM.findDOMNode(this.refs.player))
-    }
+    // onClickFullscreen = () => {
+    //     screenfull.request(ReactDOM.findDOMNode(this.refs.player))
+    // }
 
     playPause = () => {
         this.setState({ playing: !this.state.playing });

@@ -86,7 +86,7 @@ const Type = [
         tab: 'Directeur d\'un laboratoire d\'expertise',
         text: <Expertise />,
         to: '/formLab',
-        cost: 70
+        cost: 0
     },
     {
         id: 2,
@@ -94,7 +94,7 @@ const Type = [
         tab: 'Directeur d\'un laboratoire académique',
         text: <Academic />,
         to: '/formLab',
-        cost: 50
+        cost: 0
     },
     {
         id: 3,
@@ -110,7 +110,7 @@ const Type = [
         tab: 'Professeur Universitaire',
         text: <University />,
         to: '/formLab',
-        cost: 50
+        cost: 0
     },
     {
         id: 5,
@@ -118,7 +118,7 @@ const Type = [
         tab: 'Scientifique Indépendant',
         text: <Independent />,
         to: '/formLab',
-        cost: 50
+        cost: 0
     }
 ];
 

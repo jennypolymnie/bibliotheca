@@ -10,7 +10,13 @@ const SpermTest = [
         id: 3, name: 'PSA', value: 'PSA', text: 'PSA'
     },
     {
-        id: 4, name: 'Autre', value: 'Autre', text: 'Autre'
+        id: 4, name: 'RSID Semen', value: 'RSIDSemen', text: 'RSID Semen'
+    },
+    {
+        id: 5, name: 'Phosphatase acide', value: 'PhosphataseAcide', text: 'Phosphatase acide'
+    },
+    {
+        id: 6, name: 'Autre', value: 'Autre', text: 'Autre'
     }
 
 ];

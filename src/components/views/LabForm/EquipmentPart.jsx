@@ -4,14 +4,15 @@ import {
 } from 'semantic-ui-react';
 import './FormLab.css';
 import { Link } from 'react-router-dom';
-import GridForm from './GridForm';
+import GridFormEquipment from './GridFormEquipment';
 
 
 const AnalyticalPart = () => (
+
     <div>
         <div classeName="Partie2">
-            <h1> Partie Analytique </h1>
-            <GridForm />
+            <h1> Partie Equipement </h1>
+            <GridFormEquipment />
         </div>
 
         <div className="Confidentialite">
@@ -21,7 +22,7 @@ const AnalyticalPart = () => (
                 </Form.Field>
             </Form>
         </div>
-        <Button color="blue" as={Link} to="/equipmentPart">Continuer</Button>
+        <Button color="blue" as={Link} to="/logo">Continuer</Button>
 
     </div>
 
