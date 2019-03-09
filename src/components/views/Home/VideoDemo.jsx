@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
-// import screenfull from 'screenfull';
+import screenfull from 'screenfull';
 import ReactPlayer from 'react-player';
 import { Button } from 'semantic-ui-react';
 
@@ -18,9 +18,9 @@ class Video extends Component {
     }
 
 
-    // onClickFullscreen = () => {
-    //     screenfull.request(ReactDOM.findDOMNode(this.refs.player))
-    // }
+    onClickFullscreen = () => {
+        screenfull.request(ReactDOM.findDOMNode(this.refs.player));
+    }
 
     playPause = () => {
         this.setState({ playing: !this.state.playing });
@@ -30,13 +30,9 @@ class Video extends Component {
         this.setState({ playing: false });
     }
 
-    // onClickFullscreen = () => {
-    //     screenfull.request(findDOMNode(this.player));
-    // }
-
-    // ref = player => {
-    //     this.player = player;
-    // }
+    ref = player => {
+        this.player = player;
+    }
 
     render() {
         const { playing } = this.state;
@@ -45,7 +41,7 @@ class Video extends Component {
             <div>
 
                 <ReactPlayer
-                    //ref="player"
+                    ref="player"
                     width='2'
                     height='2'
                     url={url}

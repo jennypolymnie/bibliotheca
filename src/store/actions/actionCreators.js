@@ -1,15 +1,30 @@
+import {
+    NEW_USER, USERNAME_ALREADYUSED, SELECT_PROFILTYPE, CREATE_GENERAL_INFO, CONNEXION, MAKE_A_SEARCH_PREEVALUATION, MAKE_A_SEARCH_SUBSOURCE, MAKE_A_SEARCH_SOURCE, MAKE_A_SEARCH_SUBACTIVITY
+} from './constants';
+
 // name of actioncreator
 
-export function newUser(userID) {
+export function newUser(Users, userID, userName, userPassword) {
     return {
-        type: 'NEW_USER',
-        userID
+        type: NEW_USER,
+        Users,
+        userID,
+        userName,
+        userPassword
+    };
+}
+
+export function userNameAlreadyUsed(userID, userName) {
+    return {
+        type: USERNAME_ALREADYUSED,
+        userID,
+        userName
     };
 }
 
 export function selectProfilType(profilType, userID) {
     return {
-        type: 'SELECT_PROFILTYPE',
+        type: SELECT_PROFILTYPE,
         profilType,
         userID
     };
@@ -17,7 +32,7 @@ export function selectProfilType(profilType, userID) {
 
 export function createGeneralInfo(profilType, userID, lastname, firstname, labname, country, website, technicalEmail, interpretationEmail, researchThemes) {
     return {
-        type: 'CREATE_GENERAL_INFO',
+        type: CREATE_GENERAL_INFO,
         profilType,
         userID,
         lastname,
@@ -34,7 +49,7 @@ export function createGeneralInfo(profilType, userID, lastname, firstname, labna
 
 export function connexion(profilInfo, userID) {
     return {
-        type: 'CONNEXION',
+        type: CONNEXION,
         profilInfo,
         userID
     };
@@ -42,7 +57,7 @@ export function connexion(profilInfo, userID) {
 
 export function makeASearchPreevaluation(parameter, useLabProfil) {
     return {
-        type: 'MAKE_A_SEARCH_PREEVALUATION',
+        type: MAKE_A_SEARCH_PREEVALUATION,
         parameter,
         useLabProfil
     };
@@ -51,7 +66,7 @@ export function makeASearchPreevaluation(parameter, useLabProfil) {
 
 export function makeASearchSubsource(parameter, useLabProfil) {
     return {
-        type: 'MAKE_A_SEARCH_SUBSOURCE',
+        type: MAKE_A_SEARCH_SUBSOURCE,
         parameter,
         useLabProfil
     };
@@ -59,7 +74,7 @@ export function makeASearchSubsource(parameter, useLabProfil) {
 
 export function makeASearchSource(parameter, useLabProfil) {
     return {
-        type: 'MAKE_A_SEARCH_SOURCE',
+        type: MAKE_A_SEARCH_SOURCE,
         parameter,
         useLabProfil
     };
@@ -68,7 +83,7 @@ export function makeASearchSource(parameter, useLabProfil) {
 
 export function makeASearchSubActivity(parameter, useLabProfil) {
     return {
-        type: 'MAKE_A_SEARCH_SUBACTIVITY',
+        type: MAKE_A_SEARCH_SUBACTIVITY,
         parameter,
         useLabProfil
     };
