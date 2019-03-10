@@ -1,15 +1,12 @@
-import PropTypes from 'prop-types';
 
-const AppUsers = [
-    {
-        userID: 1, userName: '', userPassword: ''
-    }
-
-];
-
-AppUsers.PropTypes = {
-    userID: PropTypes.number.isRequired,
-    userName: PropTypes.string.isRequired,
-    userPassword: PropTypes.string.isRequired
+const AppUsers = {
+    byId: {
+        user1: {
+            Id: 'user1',
+            userName: 'jenny',
+            userPassword: 'biubiu1908'
+        }
+    },
+    allIds: ['user1']
 };
 export default AppUsers;

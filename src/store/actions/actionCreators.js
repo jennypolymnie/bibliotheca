@@ -1,13 +1,20 @@
 import {
-    NEW_USER, USERNAME_ALREADYUSED, SELECT_PROFILTYPE, CREATE_GENERAL_INFO, CONNEXION, MAKE_A_SEARCH_PREEVALUATION, MAKE_A_SEARCH_SUBSOURCE, MAKE_A_SEARCH_SOURCE, MAKE_A_SEARCH_SUBACTIVITY
+    NEW_USER,
+    USERNAME_ALREADYUSED,
+    SELECT_PROFILTYPE,
+    CREATE_GENERAL_INFO,
+    CONNEXION,
+    MAKE_A_SEARCH_PREEVALUATION,
+    MAKE_A_SEARCH_SUBSOURCE,
+    MAKE_A_SEARCH_SOURCE,
+    MAKE_A_SEARCH_SUBACTIVITY
 } from './constants';
 
 // name of actioncreator
 
-export function newUser(Users, userID, userName, userPassword) {
+export function newUser(userID, userName, userPassword) {
     return {
         type: NEW_USER,
-        Users,
         userID,
         userName,
         userPassword
