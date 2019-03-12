@@ -10,8 +10,10 @@ import './index.css';
 
 // import initial state
 import AppUsers from './components/data/AppUsers';
+import UpdateProfile from './components/data/UpdateProfile';
 
 const initialState = {
+    updateProfile: UpdateProfile,
     users: AppUsers,
     router: {}
 };

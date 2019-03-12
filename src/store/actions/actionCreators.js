@@ -7,7 +7,8 @@ import {
     MAKE_A_SEARCH_PREEVALUATION,
     MAKE_A_SEARCH_SUBSOURCE,
     MAKE_A_SEARCH_SOURCE,
-    MAKE_A_SEARCH_SUBACTIVITY
+    MAKE_A_SEARCH_SUBACTIVITY,
+    UPDATE_PROFILE
 } from './constants';
 
 // name of actioncreator
@@ -18,6 +19,20 @@ export function newUser(userID, userName, userPassword) {
         userID,
         userName,
         userPassword
+    };
+}
+
+export function updateProfile(userID, labName, firstName, lastName, country, website, technicalEmail, interpretationEmail) {
+    return {
+        type: UPDATE_PROFILE,
+        userID,
+        labName,
+        firstName,
+        lastName,
+        country,
+        website,
+        technicalEmail,
+        interpretationEmail
     };
 }
 

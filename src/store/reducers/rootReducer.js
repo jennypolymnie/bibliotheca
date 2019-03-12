@@ -4,10 +4,11 @@ import { connectRouter } from 'connected-react-router';
 // import reducers
 
 import users from './users';
-import researchThemes from './researchThemes';
+import updateProfile from './updateProfile';
 
 const rootReducer = history => combineReducers({
     router: connectRouter(history),
+    updateProfile,
     users
 });
 

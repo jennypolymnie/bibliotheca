@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+
 import {
-    Button, Checkbox, Form, Input, Icon, Header, Radio, Grid
+    Button, Checkbox, Form, Input, Icon, Radio, Grid
 } from 'semantic-ui-react';
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
@@ -8,7 +9,7 @@ import GridForm from './GridForm';
 import Research from '../PartnerStudy/Research';
 import GridFormEquipment from './GridFormEquipment';
 import StandardLayout from '../../layout/StandardLayout';
-import GeneralInfo from './GeneralInfo';
+import GeneralInfoConnect from './GeneralInfo';
 
 
 class FormLabUpdate extends Component {
@@ -31,59 +32,9 @@ class FormLabUpdate extends Component {
                         <h2>Informations générales</h2>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row columns={2}>
-                    <Grid.Column fluid>
-                        <Form>
-                            <Form.Group grouped widths="equal">
-                                <Form.Field
-                                    required
-                                    control={Input}
-                                    label="Nom du laboratoire"
-                                    placeholder="Nom du laboratoire"
-                                />
-                                <Form.Field
-                                    required
-                                    control={Input}
-                                    label="Prénom du directeur du laboratoire"
-                                    placeholder="Prénom"
-                                />
-                                <Form.Field
-                                    required
-                                    control={Input}
-                                    label="Nom du directeur du laboratoire"
-                                    placeholder="Nom"
-                                />
-                                <Form.Field
-                                    required
-                                    control={Input}
-                                    label="Pays"
-                                    placeholder="Pays"
-                                />
-                                <Form.Field
-                                    control={Input}
-                                    label="Site web"
-                                    placeholder="Site web"
-                                />
-                            </Form.Group>
-                        </Form>
-                    </Grid.Column>
+                <Grid.Row columns={1}>
                     <Grid.Column>
-                        <Form>
-                            <Form.Group grouped>
-                                <Form.Field
-                                    control={Input}
-                                    label="Email du contact technique"
-                                    placeholder="email technique"
-                                    type="email"
-                                />
-                                <Form.Field
-                                    control={Input}
-                                    label="Email du contact interprétation"
-                                    placeholder="email interpretation"
-                                    type="email"
-                                />
-                            </Form.Group>
-                        </Form>
+                        <GeneralInfoConnect />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={1}>

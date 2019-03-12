@@ -1,10 +1,13 @@
 import React from 'react';
 import { Form, Input } from 'semantic-ui-react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from '../../../store/actions/actionCreators';
 
 const GeneralInfo = () => (
 
     <Form>
-        <Form.Group>
+        <Form.Group widths="equal">
             <Form.Field
                 fluid
                 required
@@ -68,4 +71,22 @@ const GeneralInfo = () => (
 
 );
 
-export default GeneralInfo;
+function mapStateToProps(state) {
+    return {
+        labName: state.updateProfile.labName,
+        firstName: state.updateProfile.firstName,
+        lastName: state.updateProfile.lastName,
+        country: state.updateProfile.country,
+        website: state.updateProfile.website,
+        technicalEmail: state.updateProfile.technicalEmail,
+        interpretationEmail: state.updateProfile.interpretationEmail
+    };
+}
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(actionCreators, dispatch);
+}
+
+const GeneralInfoConnect = connect(mapStateToProps, mapDispatchToProps)(GeneralInfo);
+
+export default GeneralInfoConnect;
