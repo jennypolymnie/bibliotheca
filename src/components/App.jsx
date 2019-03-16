@@ -12,7 +12,7 @@ import ArticleProposal from './views/LibrarianRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
 import PartnerStudy2 from './views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
-import RequestAdvice from './views/ReachOut/RequestEquipment';
+import RequestAdvice from './views/ReachOut/RequestAdvice';
 import ReviewForm from './views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
 import RequestSend from './views/LibrarianRequest/RequestSend';

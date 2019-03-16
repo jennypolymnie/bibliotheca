@@ -9,7 +9,7 @@ import reachOutDropdown from './reachOutDropdown';
 
 const rootReducer = history => combineReducers({
     router: connectRouter(history),
-    updateProfile,
+    profile: updateProfile,
     reachOutDropdown,
     users
 });

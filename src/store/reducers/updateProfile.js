@@ -5,15 +5,15 @@ import {
 
 
 const initialState = {
-    UpdateProfile: {}
+    profile: {}
 };
 
 function updateProfile(state = initialState, action) {
     switch (action.type) {
         case UPDATE_PROFILE: {
             return Object.assign({}, state, {
-                UpdateProfile: {
-                    ...state.UpdateProfile,
+                profile: {
+                    ...state.profile,
                     labName: action.labName,
                     firstName: action.firstName,
                     lastName: action.lastName,

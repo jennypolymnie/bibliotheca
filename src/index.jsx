@@ -10,11 +10,11 @@ import './index.css';
 
 // import initial state
 import AppUsers from './components/data/AppUsers';
-import UpdateProfile from './components/data/UpdateProfile';
+import profile from './components/data/Profile';
 import Dropdown from './components/data/Dropdown';
 
 const initialState = {
-    updateProfile: UpdateProfile,
+    profile,
     users: AppUsers,
     reachOutDropdown: Dropdown,
     router: {}

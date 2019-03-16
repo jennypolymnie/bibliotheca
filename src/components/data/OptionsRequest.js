@@ -3,7 +3,7 @@ import StainNature from './StainNature';
 import ScreeningTest from './ScreeningTest';
 import Concentration from './Concentration';
 import RelevantPopulation from './RelevantPopulation';
-import AmplificationAutosomChemistry from './AmplificationAutosomChemistry';
+import AmplificationAutosomChemistry from './AmplificationAutoChemistry';
 import ActivityContext from './ActivityContext';
 import EnvironmentalConditions from './EnvironmentalConditions';
 

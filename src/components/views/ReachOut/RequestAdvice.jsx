@@ -5,7 +5,7 @@ import {
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Toggle from './Toggle';
-import './RequestEquipment.css';
+import './RequestAdvice.css';
 import ChemistryPanel from './ChemistryPanel';
 import EquipmentPanel from './EquipmentPanel';
 
@@ -28,11 +28,9 @@ class RequestAdvice extends Component {
     //     };
     // }
 
-    handleChange() {
-        this.setState(state => {
-            const activeOption = state.activeOption === 'chemistry' ? 'equipment' : 'chemistry';
-            console.log(activeOption);
-            return { activeOption };
+    handleChange(activeOption) {
+        this.setState({
+            activeOption
         });
     }
 
@@ -46,33 +44,11 @@ class RequestAdvice extends Component {
             <div className="RequestEquipment">
 
                 <Header as="h1">Demander conseil</Header>
-
+                <p>{'Choisissez la chimie ou l\'équipement pour lequel vous souhaitez obtenir des informations et recevez la liste des personnes que vous pouvez contacter à ce sujet.'}</p>
                 <Grid>
                     <Grid.Row columns={1}>
-                        <Grid.Column>
-                            <Form>
-                                <Form.Group grouped widths="equal">
-                                    <Form.Field
-                                        required
-                                        control={Input}
-                                        label="Poser votre question"
-                                        placeholder="question"
-                                    />
-                                    <Form.Field
-                                        required
-                                        control={Input}
-                                        label="Email de la personne à renseigner"
-                                        placeholder="adresse e-mail"
-                                    />
-                                </Form.Group>
-                            </Form>
-
-                        </Grid.Column>
-                    </Grid.Row>
-
-                    <Grid.Row columns={1}>
                         <Grid.Column textAlign="center">
-                            <Toggle handleChange={this.handleChange} checked={this.state.activeOption === 'equipment'} />
+                            <Toggle handleChange={this.handleChange} option={this.state.activeOption} />
                         </Grid.Column>
                     </Grid.Row>
 

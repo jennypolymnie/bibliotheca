@@ -3,7 +3,7 @@ import {
     Grid, Header, Segment, Dropdown
 } from 'semantic-ui-react';
 
-import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
+import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
 import './EquipmentPanel.css';
 
 const EquipmentPanel = () => (

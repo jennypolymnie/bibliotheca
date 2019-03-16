@@ -12,7 +12,8 @@
 @fontSize    : 14px;
 
 
-
+@positive: @blue;
+@negative: @darkgrey;
 @primaryColor   : @blue;
 @secondaryColor : @darkgolden;
 @textColor      : @darkgrey;

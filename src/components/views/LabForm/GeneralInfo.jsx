@@ -1,41 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Input, Button } from 'semantic-ui-react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import * as actionCreators from '../../../store/actions/actionCreators';
+import { Form } from 'semantic-ui-react';
 
-function mapStateToProps(state) {
-    return {
-        labName: state.updateProfile.labName,
-        firstName: state.updateProfile.firstName,
-        lastName: state.updateProfile.lastName,
-        country: state.updateProfile.country,
-        website: state.updateProfile.website,
-        technicalEmail: state.updateProfile.technicalEmail,
-        interpretationEmail: state.updateProfile.interpretationEmail
-    };
-}
-
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actionCreators, dispatch);
-}
 
 const GeneralInfo = props => (
     <Form>
         <Form.Group widths="equal">
-            <Form.Field
+            <Form.Input
                 fluid
                 required
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'labName')}
                 value={props.labName}
                 label="Nom du laboratoire"
                 placeholder="Nom du laboratoire"
             />
-            <Form.Field
+            <Form.Input
                 fluid
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'website')}
                 value={props.website}
                 label="Site web"
                 placeholder="Site web"
@@ -43,17 +24,17 @@ const GeneralInfo = props => (
         </Form.Group>
 
         <Form.Group widths="equal">
-            <Form.Field
+            <Form.Input
                 fluid
                 required
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'lastName')}
                 value={props.lastName}
                 label="Nom du directeur du laboratoire"
                 placeholder="Nom"
             />
-            <Form.Field
+            <Form.Input
                 required
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'firstName')}
                 value={props.firstName}
                 label="Prénom du directeur du laboratoire"
                 placeholder="Prénom"
@@ -62,17 +43,17 @@ const GeneralInfo = props => (
 
         </Form.Group>
         <Form.Group widths="equal">
-            <Form.Field
+            <Form.Input
                 fluid
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'technicalEmail')}
                 value={props.technicalEmail}
                 label="Email du contact technique"
                 placeholder="email technique"
                 type="email"
             />
 
-            <Form.Field
-                control={Input}
+            <Form.Input
+                onChange={(e, d) => props.onChange(e, d, 'interpretationEmail')}
                 value={props.interpretationEmail}
                 label="Email du contact interprétation"
                 placeholder="email interpretation"
@@ -82,9 +63,9 @@ const GeneralInfo = props => (
 
         <Form.Group>
 
-            <Form.Field
+            <Form.Input
                 required
-                control={Input}
+                onChange={(e, d) => props.onChange(e, d, 'country')}
                 value={props.country}
                 label="Pays"
                 placeholder="Pays"
@@ -92,7 +73,6 @@ const GeneralInfo = props => (
 
         </Form.Group>
 
-        {/* <Button onClick={props.updateProfile} /> */}
     </Form>
 );
 
@@ -105,7 +85,7 @@ GeneralInfo.propTypes = {
     technicalEmail: PropTypes.string,
     interpretationEmail: PropTypes.string,
     country: PropTypes.string,
-    updateProfile: PropTypes.func
+    onChange: PropTypes.func.isRequired
 };
 
 GeneralInfo.defaultProps = {
@@ -118,7 +98,4 @@ GeneralInfo.defaultProps = {
     country: null
 };
 
-
-const GeneralInfoConnect = connect(mapStateToProps, mapDispatchToProps)(GeneralInfo);
-
-export default GeneralInfoConnect;
+export default GeneralInfo;

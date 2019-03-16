@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const ExtractionChemistry = [
+const ExtractionDNAChemistry = [
     {
         id: 1, name: 'Choisir', value: 'Choisir', text: 'Choisir'
     },
@@ -16,11 +16,11 @@ const ExtractionChemistry = [
 
 ];
 
-ExtractionChemistry.PropTypes = {
+ExtractionDNAChemistry.PropTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
 
 };
-export default ExtractionChemistry;
+export default ExtractionDNAChemistry;

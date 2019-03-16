@@ -2,9 +2,9 @@ import React from 'react';
 import {
     Grid, Segment, Dropdown, Header
 } from 'semantic-ui-react';
-import ExtractionChemistry from '../../data/ExtractionChemistry';
-import QuantificationChemistry from '../../data/QuantificationChemistry';
-import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
+import ExtractionChemistry from '../../data/ExtractionDNAChemistry';
+import QuantificationChemistry from '../../data/QuantificationDNAChemistry';
+import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
 import AmplificationYChemistry from '../../data/AmplificationYChemistry';
 import SalivaTest from '../../data/SalivaTest';
 import BloodTest from '../../data/BloodTest';

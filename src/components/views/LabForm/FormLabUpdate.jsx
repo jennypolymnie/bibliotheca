@@ -3,25 +3,43 @@ import React, { Component } from 'react';
 import {
     Button, Checkbox, Form, Input, Icon, Radio, Grid
 } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import GeneralInfo from './GeneralInfo';
 import GridForm from './GridForm';
 import Research from '../PartnerStudy/Research';
 import GridFormEquipment from './GridFormEquipment';
 import StandardLayout from '../../layout/StandardLayout';
-import GeneralInfoConnect from './GeneralInfo';
 
+
+import * as actionCreators from '../../../store/actions/actionCreators';
 
 class FormLabUpdate extends Component {
-    state = {}
+    constructor(props) {
+        super(props);
+        this.state = {
+            ...props.profile,
+            activeMode: props.activeMode
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange = (e, { value }, stateField) => {
+        const stateUpdate = {};
+        stateUpdate[stateField] = value;
+        this.setState(stateUpdate);
+    }
 
     handleSame = (e, { value }) => this.setState({
         same: value
-    })
+    });
 
     handleDifferent = (e, { value }) => this.setState({
         different: value
-    })
+    });
 
 
     render() {
@@ -34,7 +52,16 @@ class FormLabUpdate extends Component {
                 </Grid.Row>
                 <Grid.Row columns={1}>
                     <Grid.Column>
-                        <GeneralInfoConnect />
+                        <GeneralInfo
+                            onChange={this.handleChange}
+                            labName={this.state.labName}
+                            website={this.state.website}
+                            lastName={this.state.lastName}
+                            firstName={this.state.firstName}
+                            technicalEmail={this.state.technicalEmail}
+                            interpretationEmail={this.state.interpretationEmail}
+                            country={this.state.country}
+                        />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row columns={1}>
@@ -148,7 +175,9 @@ class FormLabUpdate extends Component {
                 </Grid.Row>
                 <Grid.Row columns={1}>
                     <Grid.Column fluid>
-                        <GridForm />
+                        <GridForm
+
+                        />
                     </Grid.Column>
                 </Grid.Row>
 
@@ -182,4 +211,29 @@ class FormLabUpdate extends Component {
     }
 }
 
-export default StandardLayout(FormLabUpdate, 'Profil du laboratoire');
+
+FormLabUpdate.propTypes = {
+    profile: PropTypes.object.isRequired,
+    activeMode: PropTypes.string
+};
+
+FormLabUpdate.defaultProps = {
+    activeMode: 'view'
+};
+
+
+function mapStateToProps(state) {
+    return {
+        profile: state.profile
+    };
+}
+
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators(actionCreators, dispatch);
+}
+
+
+const FormLabUpdateConnect = connect(mapStateToProps, mapDispatchToProps)(FormLabUpdate);
+
+export default StandardLayout(FormLabUpdateConnect, 'Profil du laboratoire');

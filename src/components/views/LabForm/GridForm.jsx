@@ -2,16 +2,17 @@ import React from 'react';
 import {
     Grid, Segment, Dropdown, Header, Icon
 } from 'semantic-ui-react';
-import ExtractionChemistry from '../../data/ExtractionChemistry';
-import QuantificationChemistry from '../../data/QuantificationChemistry';
-import AmplificationAutosomChemistry from '../../data/AmplificationAutosomChemistry';
-import AmplificationYChemistry from '../../data/AmplificationYChemistry';
-import SalivaTest from '../../data/SalivaTest';
-import BloodTest from '../../data/BloodTest';
-import SpermTest from '../../data/SpermTest';
+import PropTypes from 'prop-types';
+// import ExtractionChemistry from '../../data/ExtractionChemistry';
+// import QuantificationChemistry from '../../data/QuantificationChemistry';
+// import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
+// import AmplificationYChemistry from '../../data/AmplificationYChemistry';
+// import SalivaTest from '../../data/SalivaTest';
+// import BloodTest from '../../data/BloodTest';
+// import SpermTest from '../../data/SpermTest';
 import './GridForm.css';
 
-const GridForm = () => (
+const GridForm = props => (
 
     <div>
 
@@ -26,7 +27,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={ExtractionChemistry}
+                                options={props.ExtractionDNAChemistry}
                                 placeholder="Choisir"
                             />
 
@@ -36,7 +37,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={ExtractionChemistry}
+                                options={props.ExtractionRNAChemistry}
                                 placeholder="Choisir"
                             />
 
@@ -46,7 +47,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={ExtractionChemistry}
+                                options={props.ConcentrationChemistry}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -88,7 +89,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={QuantificationChemistry}
+                                options={props.QuantificationDNAChemistry}
                                 placeholder="Choisir"
                             />
 
@@ -98,7 +99,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={QuantificationChemistry}
+                                options={props.QuantificationYChemistry}
                                 placeholder="Choisir"
                             />
 
@@ -142,7 +143,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={props.AmplificationAutoChemistry}
                                 placeholder="Choisir"
                             />
 
@@ -152,7 +153,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationYChemistry}
+                                options={props.AmplificationYChemistry}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -161,7 +162,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={props.AmplificationXChemistry}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -206,7 +207,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={BloodTest}
+                                options={props.BloodTest}
                                 placeholder="Choisir"
                             />
 
@@ -216,7 +217,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={SalivaTest}
+                                options={props.SalivaTest}
                                 placeholder="Choisir"
                             />
 
@@ -226,7 +227,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={SpermTest}
+                                options={props.SpermTest}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -269,7 +270,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={props.VaginalTest}
                                 placeholder="Choisir"
                             />
 
@@ -279,7 +280,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={props.UrinaTest}
                                 placeholder="Choisir"
                             />
 
@@ -289,7 +290,7 @@ const GridForm = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={props.ContactTest}
                                 placeholder="Choisir"
                             />
                         </Grid.Column>
@@ -324,5 +325,40 @@ const GridForm = () => (
 
     </div>
 );
+
+GridForm.propTypes = {
+    ExtractionDNAChemistry: PropTypes.string,
+    ExtractionRNAChemistry: PropTypes.string,
+    ConcentrationChemistry: PropTypes.string,
+    QuantificationDNAChemistry: PropTypes.string,
+    QuantificationYChemistry: PropTypes.string,
+    AmplificationAutoChemistry: PropTypes.string,
+    AmplificationYChemistry: PropTypes.string,
+    AmplificationXChemistry: PropTypes.string,
+    BloodTest: PropTypes.string,
+    SalivaTest: PropTypes.string,
+    UrinaTest: PropTypes.string,
+    VaginalTest: PropTypes.string,
+    ContactTest: PropTypes.string,
+    SpermTest: PropTypes.string
+
+
+};
+GridForm.defaultProps = {
+    ExtractionDNAChemistry: '',
+    ExtractionRNAChemistry: '',
+    ConcentrationChemistry: '',
+    QuantificationDNAChemistry: '',
+    QuantificationYChemistry: '',
+    AmplificationAutoChemistry: '',
+    AmplificationYChemistry: '',
+    AmplificationXChemistry: '',
+    BloodTest: '',
+    SalivaTest: '',
+    UrinaTest: '',
+    VaginalTest: '',
+    ContactTest: '',
+    SpermTest: ''
+};
 
 export default GridForm;
