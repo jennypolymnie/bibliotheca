@@ -11,10 +11,12 @@ import './index.css';
 // import initial state
 import AppUsers from './components/data/AppUsers';
 import UpdateProfile from './components/data/UpdateProfile';
+import Dropdown from './components/data/Dropdown';
 
 const initialState = {
     updateProfile: UpdateProfile,
     users: AppUsers,
+    reachOutDropdown: Dropdown,
     router: {}
 };
 const store = configureStore(initialState);

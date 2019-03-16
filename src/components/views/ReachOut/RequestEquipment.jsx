@@ -1,14 +1,40 @@
 import React, { Component } from 'react';
 import {
-    Button, Radio, Form, Input, Header, Grid, Checkbox, Label
+    Button, Radio, Form, Input, Header, Grid
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import GridForm from '../LabForm/GridForm';
+import PropTypes from 'prop-types';
+import Toggle from './Toggle';
 import './RequestEquipment.css';
+import ChemistryPanel from './ChemistryPanel';
+import EquipmentPanel from './EquipmentPanel';
 
+class RequestAdvice extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeOption: props.activeOption,
+            question: props.question
+        };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleQuestion = this.handleQuestion.bind(this);
+    }
 
-class RequestEquipment extends Component {
-    state = {}
+    // static getDerivedStateFromProps(props) {
+    //     console.log('stupid derive');
+    //     return {
+    //         activeOption: props.activeOption,
+    //         question: props.question
+    //     };
+    // }
+
+    handleChange() {
+        this.setState(state => {
+            const activeOption = state.activeOption === 'chemistry' ? 'equipment' : 'chemistry';
+            console.log(activeOption);
+            return { activeOption };
+        });
+    }
 
     handleQuestion = (e, { value }) => this.setState({
         question: value
@@ -46,24 +72,13 @@ class RequestEquipment extends Component {
 
                     <Grid.Row columns={1}>
                         <Grid.Column textAlign="center">
-                            <Button.Group>
-                                <Label color="blue" basic>chimie</Label>
-                                <Checkbox toggle />
-                                <Label color="blue" basic>Equipement</Label>
-                            </Button.Group>
-                        </Grid.Column>
-                    </Grid.Row>
-
-
-                    <Grid.Row columns={1}>
-                        <Grid.Column>
-                            <h2>Chimie</h2>
+                            <Toggle handleChange={this.handleChange} checked={this.state.activeOption === 'equipment'} />
                         </Grid.Column>
                     </Grid.Row>
 
                     <Grid.Row columns={1}>
                         <Grid.Column>
-                            <GridForm />
+                            {this.state.activeOption === 'chemistry' ? <ChemistryPanel /> : <EquipmentPanel />}
                         </Grid.Column>
                     </Grid.Row>
 
@@ -114,4 +129,27 @@ class RequestEquipment extends Component {
     }
 }
 
-export default RequestEquipment;
+
+RequestAdvice.propTypes = {
+    activeOption: PropTypes.string,
+    question: PropTypes.string
+};
+
+RequestAdvice.defaultProps = {
+    activeOption: 'chemistry',
+    question: ''
+};
+
+// function mapStateToProps(state) {
+//     return {
+//         activeOption: state.reachOutDropDown.choice,
+//         question: state.reachOutDropDown.question
+//     };
+// }
+
+// function mapDispatchToProps(dispatch) {
+//     // return bindActionCreators(actionCreators, dispatch);
+// }
+
+
+export default RequestAdvice; // connect(mapStateToProps, mapDispatchToProps)(RequestEquipment);

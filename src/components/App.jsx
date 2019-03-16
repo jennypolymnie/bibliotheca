@@ -12,7 +12,7 @@ import ArticleProposal from './views/LibrarianRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
 import PartnerStudy2 from './views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
-import RequestEquipment from './views/ReachOut/RequestEquipment';
+import RequestAdvice from './views/ReachOut/RequestEquipment';
 import ReviewForm from './views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
 import RequestSend from './views/LibrarianRequest/RequestSend';
@@ -68,7 +68,7 @@ const App = ({ history }) => (
                         <Route path="/libraryRequest" component={LibraryRequest} />
                         <Route path="/PartnerStudy" component={PartnerStudy2} />
                         <Route path="/List" component={PartnerListLab} />
-                        <Route path="/requestEquipment" component={RequestEquipment} />
+                        <Route path="/requestAdvice" component={RequestAdvice} />
                         <Route path="/review" component={ReviewForm} />
                         <Route path="/requestSend" component={RequestSend} />
                         <Route path="/proposalSend" component={ProposalSend} />
@@ -90,13 +90,12 @@ const App = ({ history }) => (
                         <Menu icon vertical secondary floated="left" className="fixed-center menu-buttons-right">
                             <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/requestEquipment" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
+                            <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
                         </Menu>
                     </div>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
-        {/* {React.cloneElement(this.props.children, this.props)} */}
     </ConnectedRouter>
 );
 

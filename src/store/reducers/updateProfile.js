@@ -5,25 +5,23 @@ import {
 
 
 const initialState = {
-    UpdateProfile: []
+    UpdateProfile: {}
 };
 
 function updateProfile(state = initialState, action) {
     switch (action.type) {
         case UPDATE_PROFILE: {
             return Object.assign({}, state, {
-                UpdateProfile: [
+                UpdateProfile: {
                     ...state.UpdateProfile,
-                    {
-                        labName: action.labName,
-                        firstName: action.firstName,
-                        lastName: action.lastName,
-                        country: action.country,
-                        website: action.website,
-                        technicalEmail: action.technicalEmail,
-                        interpretationEmail: action.interpretationEmail
-                    }
-                ]
+                    labName: action.labName,
+                    firstName: action.firstName,
+                    lastName: action.lastName,
+                    country: action.country,
+                    website: action.website,
+                    technicalEmail: action.technicalEmail,
+                    interpretationEmail: action.interpretationEmail
+                }
             });
         }
         default:

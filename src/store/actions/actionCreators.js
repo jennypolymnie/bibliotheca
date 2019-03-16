@@ -8,7 +8,8 @@ import {
     MAKE_A_SEARCH_SUBSOURCE,
     MAKE_A_SEARCH_SOURCE,
     MAKE_A_SEARCH_SUBACTIVITY,
-    UPDATE_PROFILE
+    UPDATE_PROFILE,
+    CHANGE_CHOICE
 } from './constants';
 
 // name of actioncreator
@@ -22,10 +23,9 @@ export function newUser(userID, userName, userPassword) {
     };
 }
 
-export function updateProfile(userID, labName, firstName, lastName, country, website, technicalEmail, interpretationEmail) {
+export function updateProfile(labName, firstName, lastName, country, website, technicalEmail, interpretationEmail) {
     return {
         type: UPDATE_PROFILE,
-        userID,
         labName,
         firstName,
         lastName,
@@ -33,6 +33,13 @@ export function updateProfile(userID, labName, firstName, lastName, country, web
         website,
         technicalEmail,
         interpretationEmail
+    };
+}
+
+export function changeChoice(choice) {
+    return {
+        type: CHANGE_CHOICE,
+        choice
     };
 }
 
