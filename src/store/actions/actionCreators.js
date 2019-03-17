@@ -9,7 +9,8 @@ import {
     MAKE_A_SEARCH_SOURCE,
     MAKE_A_SEARCH_SUBACTIVITY,
     UPDATE_PROFILE,
-    CHANGE_CHOICE
+    CHANGE_CHOICE,
+    SAVE_PROFILE
 } from './constants';
 
 // name of actioncreator
@@ -35,6 +36,14 @@ export function updateProfile(labName, firstName, lastName, country, website, te
         interpretationEmail
     };
 }
+
+export function saveProfile(profile) {
+    return {
+        type: SAVE_PROFILE,
+        profile
+    };
+}
+
 
 export function changeChoice(choice) {
     return {

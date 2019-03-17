@@ -8,6 +8,7 @@ import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import omit from 'lodash/omit';
 import GeneralInfo from './GeneralInfo';
 import ChemistryProfile from './GridForm';
 import Research from '../PartnerStudy/Research';
@@ -236,14 +237,14 @@ class FormLabUpdate extends Component {
 
                         <Checkbox
                             toggle
-                            label="Informations visibles pour les autres laboratoires. Trouver plus facile des partenaires d'étude ou des renseignements sur des technologies"
+                            label="Informations visibles pour les autres laboratoires. Trouver plus facilement des partenaires d'étude ou des renseignements sur des technologies"
                         />
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row columns={1}>
                     <Grid.Column fluid>
-                        <Button color="blue" size="large" as={Link} to="/logo">Enregistrer les modifications</Button>
+                        <Button onClick={() => this.props.saveProfile(omit(this.state, ['activeMode']))} color="blue" size="large">Enregistrer les modifications</Button>
                     </Grid.Column>
                 </Grid.Row>
 
@@ -255,7 +256,8 @@ class FormLabUpdate extends Component {
 
 FormLabUpdate.propTypes = {
     profile: PropTypes.object.isRequired,
-    activeMode: PropTypes.string
+    activeMode: PropTypes.string,
+    saveProfile: PropTypes.func.isRequired
 };
 
 FormLabUpdate.defaultProps = {
