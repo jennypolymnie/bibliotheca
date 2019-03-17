@@ -1,17 +1,17 @@
-import SalivaTestOptions from './SalivaTest';
-import BloodTestOptions from './BloodTest';
-import SpermTestOptions from './SpermTest';
-import UrinaTestOptions from './UrinaTest';
-import VaginalTestOptions from './VaginalTest';
-import ContactTestOptions from './ContactTest';
-import ExtractionDNAChemistryOptions from './ExtractionDNAChemistry';
-import ExtractionRNAChemistryOptions from './ExtractionRNAChemistry';
-import QuantificationDNAChemistryOptions from './QuantificationDNAChemistry';
-import QuantificationYChemistryOptions from './QuantificationYChemistry';
-import AmplificationAutoChemistryOptions from './AmplificationAutoChemistry';
-import AmplificationYChemistryOptions from './AmplificationYChemistry';
-import AmplificationXChemistryOptions from './AmplificationXChemistry';
-import ConcentrationChemistryOptions from './ConcentrationChemistryOptions';
+import salivaTestOptions from './SalivaTest';
+import bloodTestOptions from './BloodTest';
+import spermTestOptions from './SpermTest';
+import urinaTestOptions from './UrinaTest';
+import vaginalTestOptions from './VaginalTest';
+import contactTestOptions from './ContactTest';
+import extractionDNAChemistryOptions from './ExtractionDNAChemistry';
+import extractionRNAChemistryOptions from './ExtractionRNAChemistry';
+import quantificationDNAChemistryOptions from './QuantificationDNAChemistry';
+import quantificationYChemistryOptions from './QuantificationYChemistry';
+import amplificationAutoChemistryOptions from './AmplificationAutoChemistry';
+import amplificationYChemistryOptions from './AmplificationYChemistry';
+import amplificationXChemistryOptions from './AmplificationXChemistry';
+import concentrationChemistryOptions from './ConcentrationChemistryOptions';
 
 
 const profile = {
@@ -23,33 +23,33 @@ const profile = {
     website: 'www.curml.ch',
     technicalEmail: 'marielaure.morerod@chuv.ch',
     interpretationEmail: 'vincent.castella@chuv.ch',
-    SalivaTest: [],
-    SalivaTestOptions,
-    BloodTest: [],
-    BloodTestOptions,
-    SpermTest: [],
-    SpermTestOptions,
-    UrinaTest: [],
-    UrinaTestOptions,
-    VaginalTest: [],
-    VaginalTestOptions,
-    ContactTest: [],
-    ContactTestOptions,
-    ExtractionDNAChemistry: [],
-    ExtractionDNAChemistryOptions,
-    ExtractionRNAChemistry: [],
-    ExtractionRNAChemistryOptions,
-    ConcentrationChemistry: [],
-    ConcentrationChemistryOptions,
-    QuantificationDNAChemistry: [],
-    QuantificationDNAChemistryOptions,
-    QuantificationYChemistry: [],
-    QuantificationYChemistryOptions,
-    AmplificationAutoChemistry: [],
-    AmplificationAutoChemistryOptions,
-    AmplificationYChemistry: [],
-    AmplificationYChemistryOptions,
-    AmplificationXChemistry: [],
-    AmplificationXChemistryOptions
+    salivaTest: ['RSIDSaliva', 'amylase', null],
+    salivaTestOptions,
+    bloodTest: ['HexagonOBTI'],
+    bloodTestOptions,
+    spermTest: ['ChristmasTree'],
+    spermTestOptions,
+    urinaTest: ['RSIDUrine'],
+    urinaTestOptions,
+    vaginalTest: [],
+    vaginalTestOptions,
+    contactTest: [],
+    contactTestOptions,
+    extractionDNAChemistry: ['qiamp'],
+    extractionDNAChemistryOptions,
+    extractionRNAChemistry: [],
+    extractionRNAChemistryOptions,
+    concentrationChemistry: [],
+    concentrationChemistryOptions,
+    quantificationDNAChemistry: ['QuantifilerTrio'],
+    quantificationDNAChemistryOptions,
+    quantificationYChemistry: ['QuantifilerTrio'],
+    quantificationYChemistryOptions,
+    amplificationAutoChemistry: ['NGMSelect'],
+    amplificationAutoChemistryOptions,
+    amplificationYChemistry: ['PowerPlexY23'],
+    amplificationYChemistryOptions,
+    amplificationXChemistry: [],
+    amplificationXChemistryOptions
 };
 export default profile;

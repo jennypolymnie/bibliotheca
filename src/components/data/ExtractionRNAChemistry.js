@@ -2,16 +2,13 @@ import PropTypes from 'prop-types';
 
 const ExtractionRNAChemistry = [
     {
-        id: 1, name: 'Choisir', value: 'Choisir', text: 'Choisir'
+        id: 1, name: 'Qiamp', value: 'qiamp', text: 'Qiamp'
     },
     {
-        id: 2, name: 'Qiamp', value: 'qiamp', text: 'Qiamp'
+        id: 2, name: 'Investigator', value: 'investigator', text: 'Investigator'
     },
     {
-        id: 3, name: 'Investigator', value: 'investigator', text: 'Investigator'
-    },
-    {
-        id: 4, name: 'Autre', value: 'Autre', text: 'Autre'
+        id: 3, name: 'Autre', value: 'Autre', text: 'Autre'
     }
 
 ];

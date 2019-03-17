@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-    Button, Checkbox, Form, Input, Icon, Radio, Grid
+    Button, Checkbox, Form, Icon, Radio, Grid
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import './FormLabUpdate.css';
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import GeneralInfo from './GeneralInfo';
-import GridForm from './GridForm';
+import ChemistryProfile from './GridForm';
 import Research from '../PartnerStudy/Research';
 import GridFormEquipment from './GridFormEquipment';
 import StandardLayout from '../../layout/StandardLayout';
@@ -25,6 +25,20 @@ class FormLabUpdate extends Component {
             activeMode: props.activeMode
         };
         this.handleChange = this.handleChange.bind(this);
+        this.handleDropdownChange = this.handleDropdownChange.bind(this);
+    }
+
+    handleDropdownChange = (e, { value }, stateField, index) => {
+        this.setState(state => {
+            const stateUpdate = {};
+            const allExistingDropdowns = state[stateField];
+            stateUpdate[stateField] = [
+                ...allExistingDropdowns.slice(0, index),
+                value,
+                ...allExistingDropdowns.slice(index + 1)
+            ];
+            return stateUpdate;
+        });
     }
 
     handleChange = (e, { value }, stateField) => {
@@ -175,8 +189,35 @@ class FormLabUpdate extends Component {
                 </Grid.Row>
                 <Grid.Row columns={1}>
                     <Grid.Column fluid>
-                        <GridForm
-
+                        <ChemistryProfile
+                            onChange={this.handleDropdownChange}
+                            extractionDNAChemistry={this.state.extractionDNAChemistry}
+                            extractionRNAChemistry={this.state.extractionRNAChemistry}
+                            concentrationChemistry={this.state.concentrationChemistry}
+                            quantificationDNAChemistry={this.state.quantificationDNAChemistry}
+                            quantificationYChemistry={this.state.quantificationYChemistry}
+                            amplificationAutoChemistry={this.state.amplificationAutoChemistry}
+                            amplificationYChemistry={this.state.amplificationYChemistry}
+                            amplificationXChemistry={this.state.amplificationXChemistry}
+                            extractionDNAChemistryOptions={this.state.extractionDNAChemistryOptions}
+                            extractionRNAChemistryOptions={this.state.extractionRNAChemistryOptions}
+                            concentrationChemistryOptions={this.state.concentrationChemistryOptions}
+                            quantificationDNAChemistryOptions={this.state.quantificationDNAChemistryOptions}
+                            quantificationYChemistryOptions={this.state.quantificationYChemistryOptions}
+                            amplificationAutoChemistryOptions={this.state.amplificationAutoChemistryOptions}
+                            amplificationYChemistryOptions={this.state.amplificationYChemistryOptions}
+                            amplificationXChemistryOptions={this.state.amplificationXChemistryOptions}
+                            bloodTestOptions={this.state.bloodTestOptions}
+                            bloodTest={this.state.bloodTest}
+                            salivaTestOptions={this.state.salivaTestOptions}
+                            salivaTest={this.state.salivaTest}
+                            urinaTestOptions={this.state.urinaTestOptions}
+                            urinaTest={this.state.urinaTest}
+                            vaginalTestOptions={this.state.vaginalTestOptions}
+                            vaginalTest={this.state.vaginalTest}
+                            contactTestOptions={this.state.contactTestOptions}
+                            contactTest={this.state.contactTest}
+                            spermTestOptions={this.state.spermTestOptions}
                         />
                     </Grid.Column>
                 </Grid.Row>
