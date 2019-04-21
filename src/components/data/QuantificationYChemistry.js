@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 
 const QuantificationYChemistry = [
     {
@@ -21,11 +20,4 @@ const QuantificationYChemistry = [
     }
 ];
 
-QuantificationYChemistry.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
 export default QuantificationYChemistry;

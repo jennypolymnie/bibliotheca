@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Hierarchy from '../../data/Hierarchy';
 import OptionsRequest from '../../data/OptionsRequest';
 import StainNature from '../../data/StainNature';
+import Material from '../../data/Material';
 import StainSupport from '../../data/StainSupport';
 
 const generateList = id => OptionsRequest
@@ -38,7 +39,21 @@ const Preevaluation = () => (
                     />
                 </Grid.Column>
                 <Grid.Column>
-                    <Header as="h4" textAlign="center"> Support de la trace </Header>
+                    <Header as="h4" textAlign="center"> Matière du support </Header>
+                    <Dropdown
+                        placeholder="Choisir"
+                        fluid
+                        selection
+                        options={Material}
+                    />
+                </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={2}>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center" />
+                </Grid.Column>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center"> Support </Header>
                     <Dropdown
                         placeholder="Choisir"
                         fluid
@@ -70,7 +85,7 @@ const Data = () => (
     <Grid stretched>
         {
             Hierarchy.map(({ name, id }) => (
-                <Grid.Column key={id} width={4} padded stretched>
+                <Grid.Column key={id} width={5} padded stretched>
                     <Segment color="yellow" raised container className="search_option">
                         <Header textAlign="center" as="h2">{name}</Header>
                         {generateList(id)}

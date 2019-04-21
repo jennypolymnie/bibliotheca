@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import {
-    Button, Checkbox, Form, Icon, Radio, Grid
+    Button, Checkbox, Icon, Grid
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import './FormLabUpdate.css';
@@ -11,10 +11,11 @@ import { connect } from 'react-redux';
 import omit from 'lodash/omit';
 import GeneralInfo from './GeneralInfo';
 import ChemistryProfile from './GridForm';
-import Research from '../PartnerStudy/Research';
+import ResearchProfile from './ResearchProfile';
 import GridFormEquipment from './GridFormEquipment';
 import StandardLayout from '../../layout/StandardLayout';
-
+import OneOfYourTheme from './OneOfYourTheme';
+import AnotherTheme from './AnotherTheme';
 
 import * as actionCreators from '../../../store/actions/actionCreators';
 
@@ -27,6 +28,7 @@ class FormLabUpdate extends Component {
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleDropdownChange = this.handleDropdownChange.bind(this);
+        this.handleResearchThemeChange = this.handleResearchThemeChange.bind(this);
     }
 
     handleDropdownChange = (e, { value }, stateField, index) => {
@@ -47,6 +49,22 @@ class FormLabUpdate extends Component {
         stateUpdate[stateField] = value;
         this.setState(stateUpdate);
     }
+
+    handleResearchThemeChange(e, { checked }, theme) {
+        this.setState(prevState => {
+            const stateUpdate = {};
+            stateUpdate[theme] = checked;
+            const updateResearchThemes = {
+                researchThemes: {
+                    ...prevState.researchThemes,
+                    ...stateUpdate
+                }
+            };
+            console.log(updateResearchThemes);
+            return updateResearchThemes;
+        });
+    }
+
 
     handleSame = (e, { value }) => this.setState({
         same: value
@@ -95,92 +113,20 @@ class FormLabUpdate extends Component {
                 </Grid.Row>
                 <Grid.Row columns={1}>
                     <Grid.Column fluid>
-                        <Research />
+                        <ResearchProfile
+                            onChange={this.handleResearchThemeChange}
+                            researchThemes={this.state.researchThemes}
+                            researchThemesOptions={this.state.researchThemesOptions}
+                        />
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row columns={2}>
                     <Grid.Column fluid>
-                        <Form>
-                            <Form.Field label="Intérêt de collaboration sur un de vos thèmes" />
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de développement"
-                                    name="SameTheme"
-                                    value="developpement"
-                                    checked={this.state.same === 'developpement'}
-                                    onChange={this.handleSame}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de recherche"
-                                    name="SameTheme"
-                                    value="recherche"
-                                    checked={this.state.same === 'recherche'}
-                                    onChange={this.handleSame}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de validation"
-                                    name="SameTheme"
-                                    value="validation"
-                                    checked={this.state.same === 'validation'}
-                                    onChange={this.handleSame}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Non"
-                                    name="SameTheme"
-                                    value="non"
-                                    checked={this.state.same === 'non'}
-                                    onChange={this.handleSame}
-                                />
-                            </Form.Field>
-                        </Form>
+                        <OneOfYourTheme />
                     </Grid.Column>
                     <Grid.Column fluid>
-                        <Form>
-                            <Form.Field label="Intérêt de collaboration sur un autre thème que les votres" />
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de développement"
-                                    name="DifferentTheme"
-                                    value="developpement"
-                                    checked={this.state.different === 'developpement'}
-                                    onChange={this.handleDifferent}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de recherche"
-                                    name="DifferentTheme"
-                                    value="recherche"
-                                    checked={this.state.different === 'recherche'}
-                                    onChange={this.handleDifferent}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Oui pour un projet de validation"
-                                    name="DifferentTheme"
-                                    value="validation"
-                                    checked={this.state.different === 'validation'}
-                                    onChange={this.handleDifferent}
-                                />
-                            </Form.Field>
-                            <Form.Field>
-                                <Radio
-                                    label="Non"
-                                    name="DifferentTheme"
-                                    value="non"
-                                    checked={this.state.different === 'non'}
-                                    onChange={this.handleDifferent}
-                                />
-                            </Form.Field>
-                        </Form>
+                        <AnotherTheme />
                     </Grid.Column>
                 </Grid.Row>
 
@@ -195,7 +141,7 @@ class FormLabUpdate extends Component {
                             extractionDNAChemistry={this.state.extractionDNAChemistry}
                             extractionRNAChemistry={this.state.extractionRNAChemistry}
                             concentrationChemistry={this.state.concentrationChemistry}
-                            quantificationDNAChemistry={this.state.quantificationDNAChemistry}
+                            quantificationAutosomalChemistry={this.state.quantificationAutosomalChemistry}
                             quantificationYChemistry={this.state.quantificationYChemistry}
                             amplificationAutoChemistry={this.state.amplificationAutoChemistry}
                             amplificationYChemistry={this.state.amplificationYChemistry}
@@ -203,7 +149,7 @@ class FormLabUpdate extends Component {
                             extractionDNAChemistryOptions={this.state.extractionDNAChemistryOptions}
                             extractionRNAChemistryOptions={this.state.extractionRNAChemistryOptions}
                             concentrationChemistryOptions={this.state.concentrationChemistryOptions}
-                            quantificationDNAChemistryOptions={this.state.quantificationDNAChemistryOptions}
+                            quantificationAutosomalChemistryOptions={this.state.quantificationAutosomalChemistryOptions}
                             quantificationYChemistryOptions={this.state.quantificationYChemistryOptions}
                             amplificationAutoChemistryOptions={this.state.amplificationAutoChemistryOptions}
                             amplificationYChemistryOptions={this.state.amplificationYChemistryOptions}

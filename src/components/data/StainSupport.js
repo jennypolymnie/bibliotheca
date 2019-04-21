@@ -26,6 +26,9 @@ const StainSupport = [
     },
     {
         id: 9, name: 'Couteau', value: 'knife', text: 'Couteau'
+    },
+    {
+        id: 10, name: 'Drap de lit', value: 'bedding', text: 'Drap de lit'
     }
 
 

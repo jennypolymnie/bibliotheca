@@ -1,5 +1,4 @@
-
-const ExtractionDNAChemistry = [
+const BisulfiteConversionChemistry = [
     {
         id: 1, name: 'Qiamp', value: 'qiamp', text: 'Qiamp'
     },
@@ -12,4 +11,4 @@ const ExtractionDNAChemistry = [
 
 ];
 
-export default ExtractionDNAChemistry;
+export default BisulfiteConversionChemistry;

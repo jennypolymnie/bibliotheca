@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 
-const QuantificationDNAChemistry = [
+const QuantificationAutosomalChemistry = [
     {
-        id: 1, name: 'YHres', value: 'YHres', text: 'YHres'
+        id: 1, name: 'Investigator Quantiplex Kit', value: 'InvestigatorQuantiplexKit', text: 'Investigator Quantiplex Kit'
     },
     {
         id: 2, name: 'Quantifiler Duo', value: 'QuantifilerDuo', text: 'Quantifiler Duo'
@@ -21,11 +20,4 @@ const QuantificationDNAChemistry = [
     }
 ];
 
-QuantificationDNAChemistry.PropTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired
-
-};
-export default QuantificationDNAChemistry;
+export default QuantificationAutosomalChemistry;

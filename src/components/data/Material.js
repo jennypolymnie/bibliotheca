@@ -14,6 +14,15 @@ const Material = [
     },
     {
         id: 5, name: 'Plastique', value: 'plastic', text: 'Plastique'
+    },
+    {
+        id: 6, name: 'Jeans', value: 'jeans', text: 'Jeans'
+    },
+    {
+        id: 7, name: 'Coton', value: 'cotton', text: 'Coton'
+    },
+    {
+        id: 7, name: 'Metal', value: 'metal', text: 'Metal'
     }
 ];
 

@@ -4,7 +4,16 @@ import {
 } from 'semantic-ui-react';
 
 import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
+import AdhesiveTapes from '../../data/AdhesiveTapes';
+import Swabs from '../../data/Swabs';
+import NucleicCards from '../../data/NucleicCards';
+import ExtractionDNADevices from '../../data/ExtractionDNADevices';
 import './EquipmentPanel.css';
+import CapillaryElectrophoresisDevices from '../../data/CapillaryElectrophoresisDevices';
+import NextGenerationSequencers from '../../data/NextGenerationSequencers';
+import LightSources from '../../data/LightSources';
+import QuantificationDevices from '../../data/QuantificationDevices';
+import ThermalCycler from '../../data/ThermalCycler';
 
 const EquipmentPanel = () => (
 
@@ -18,6 +27,71 @@ const EquipmentPanel = () => (
                 </Grid.Row>
             </Grid>
         </div>
+
+        <div className="equipment">
+            <Header as="h3">Systèmes optiques</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center" />
+                            <Dropdown
+                                fluid
+                                selection
+                                options={LightSources}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
+        <div className="equipment">
+            <Header as="h3">Moyens de prélèvement</Header>
+            <Segment color="yellow" fluid>
+                <Grid columns={3} divided>
+                    <Grid.Row>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center"> Ecouvillons </Header>
+                            <Dropdown
+                                fluid
+                                selection
+                                options={Swabs}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center"> Adhésifs </Header>
+                            <Dropdown
+                                fluid
+                                selection
+                                options={AdhesiveTapes}
+                                placeholder="Choisir"
+                            />
+
+                        </Grid.Column>
+
+                        <Grid.Column fluid>
+                            <Header as="h4" textAlign="center"> Carte </Header>
+                            <Dropdown
+                                fluid
+                                selection
+                                options={NucleicCards}
+                                placeholder="Choisir"
+                            />
+                        </Grid.Column>
+
+                    </Grid.Row>
+                </Grid>
+            </Segment>
+        </div>
+
         <div className="equipment">
             <Header as="h3">Robot Extraction</Header>
             <Segment color="yellow" fluid>
@@ -29,7 +103,7 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={ExtractionDNADevices}
                                 placeholder="Choisir"
                             />
 
@@ -51,7 +125,7 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={QuantificationDevices}
                                 placeholder="Choisir"
                             />
 
@@ -73,7 +147,7 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={ThermalCycler}
                                 placeholder="Choisir"
                             />
 
@@ -94,7 +168,7 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={CapillaryElectrophoresisDevices}
                                 placeholder="Choisir"
                             />
 
@@ -115,7 +189,7 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                options={NextGenerationSequencers}
                                 placeholder="Choisir"
                             />
 

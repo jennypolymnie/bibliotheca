@@ -6,12 +6,13 @@ import vaginalTestOptions from './VaginalTest';
 import contactTestOptions from './ContactTest';
 import extractionDNAChemistryOptions from './ExtractionDNAChemistry';
 import extractionRNAChemistryOptions from './ExtractionRNAChemistry';
-import quantificationDNAChemistryOptions from './QuantificationDNAChemistry';
+import quantificationAutosomalChemistryOptions from './QuantificationAutosomalChemistry';
 import quantificationYChemistryOptions from './QuantificationYChemistry';
 import amplificationAutoChemistryOptions from './AmplificationAutoChemistry';
 import amplificationYChemistryOptions from './AmplificationYChemistry';
 import amplificationXChemistryOptions from './AmplificationXChemistry';
 import concentrationChemistryOptions from './ConcentrationChemistryOptions';
+import researchThemesOptions from './ResearchThemes';
 
 
 const profile = {
@@ -41,8 +42,8 @@ const profile = {
     extractionRNAChemistryOptions,
     concentrationChemistry: [],
     concentrationChemistryOptions,
-    quantificationDNAChemistry: ['QuantifilerTrio'],
-    quantificationDNAChemistryOptions,
+    quantificationAutosomalChemistry: ['QuantifilerTrio'],
+    quantificationAutosomalChemistryOptions,
     quantificationYChemistry: ['QuantifilerTrio'],
     quantificationYChemistryOptions,
     amplificationAutoChemistry: ['NGMSelect'],
@@ -50,6 +51,8 @@ const profile = {
     amplificationYChemistry: ['PowerPlexY23'],
     amplificationYChemistryOptions,
     amplificationXChemistry: [],
-    amplificationXChemistryOptions
+    amplificationXChemistryOptions,
+    researchThemes: {},
+    researchThemesOptions
 };
 export default profile;

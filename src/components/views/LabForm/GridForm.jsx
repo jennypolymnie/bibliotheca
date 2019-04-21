@@ -85,13 +85,13 @@ const ChemistryProfile = props => (
                 <Grid.Row>
                     <Grid.Column fluid>
                         <Header as="h4" textAlign="center"> ADN autosomal </Header>
-                        {props.quantificationDNAChemistry.map((chemistry, i) => (
+                        {props.quantificationAutosomalChemistry.map((chemistry, i) => (
                             <Dropdown
-                                onChange={(e, d) => props.onChange(e, d, 'quantificationDNAChemistry', i)}
+                                onChange={(e, d) => props.onChange(e, d, 'quantificationAutosomalChemistry', i)}
                                 fluid
                                 selection
                                 value={chemistry}
-                                options={props.quantificationDNAChemistryOptions}
+                                options={props.quantificationAutosomalChemistryOptions}
                                 placeholder="Choisir"
                             />
                         ))}
@@ -357,8 +357,8 @@ ChemistryProfile.propTypes = {
     extractionRNAChemistryOptions: PropTypes.string,
     concentrationChemistry: PropTypes.string,
     concentrationChemistryOptions: PropTypes.string,
-    quantificationDNAChemistry: PropTypes.string,
-    quantificationDNAChemistryOptions: PropTypes.string,
+    quantificationAutosomalChemistry: PropTypes.string,
+    quantificationAutosomalChemistryOptions: PropTypes.string,
     quantificationYChemistry: PropTypes.string,
     quantificationYChemistryOptions: PropTypes.string,
     amplificationAutoChemistry: PropTypes.string,
@@ -390,8 +390,8 @@ ChemistryProfile.defaultProps = {
     extractionRNAChemistryOptions: '',
     concentrationChemistry: '',
     concentrationChemistryOptions: '',
-    quantificationDNAChemistry: '',
-    quantificationDNAChemistryOptions: '',
+    quantificationAutosomalChemistry: '',
+    quantificationAutosomalChemistryOptions: '',
     quantificationYChemistry: '',
     quantificationYChemistryOptions: '',
     amplificationAutoChemistry: '',

@@ -6,9 +6,6 @@ const Hierarchy = [
         id: 'source', name: 'Source', value: 'source', text: 'Source'
     },
     {
-        id: 'subactivity', name: 'Sous Activité', value: 'subactivity', text: 'Sous Activité'
-    },
-    {
         id: 'activity', name: 'Activité', value: 'activity', text: 'Activité'
     }
 ];

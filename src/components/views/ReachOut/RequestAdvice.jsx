@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Radio, Form, Input, Header, Grid
+    Button, Radio, Form, Header, Grid
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -19,14 +19,6 @@ class RequestAdvice extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleQuestion = this.handleQuestion.bind(this);
     }
-
-    // static getDerivedStateFromProps(props) {
-    //     console.log('stupid derive');
-    //     return {
-    //         activeOption: props.activeOption,
-    //         question: props.question
-    //     };
-    // }
 
     handleChange(activeOption) {
         this.setState({
@@ -91,7 +83,7 @@ class RequestAdvice extends Component {
 
                             <Button
                                 as={Link}
-                                to="/List"
+                                to="/ReachoutList"
                                 color="blue"
                                 size="large"
                             >

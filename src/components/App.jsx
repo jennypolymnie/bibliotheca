@@ -12,6 +12,7 @@ import ArticleProposal from './views/LibrarianRequest/ArticleProposal';
 import LibraryRequest from './views/LibraryRequest/LibraryRequest';
 import PartnerStudy2 from './views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './views/PartnerStudy/PartnerListLab/PartnerListLab';
+import ReachOutListLab from './views/ReachOut/ReachOutListLab/ReachOutListLab';
 import RequestAdvice from './views/ReachOut/RequestAdvice';
 import ReviewForm from './views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid';
@@ -68,6 +69,7 @@ const App = ({ history }) => (
                         <Route path="/libraryRequest" component={LibraryRequest} />
                         <Route path="/PartnerStudy" component={PartnerStudy2} />
                         <Route path="/List" component={PartnerListLab} />
+                        <Route path="/ReachoutList" component={ReachOutListLab} />
                         <Route path="/requestAdvice" component={RequestAdvice} />
                         <Route path="/review" component={ReviewForm} />
                         <Route path="/requestSend" component={RequestSend} />

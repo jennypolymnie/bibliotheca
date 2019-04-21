@@ -1,6 +1,4 @@
 
-import PropTypes from 'prop-types';
-
 const Users = [
     {
         userID: 1, name: 'UGF', directorName: 'Vincent Castella', directorEmail: 'Vincent.Castella@chuv.ch', profil: 'Lab', website: 'www.ugf.ch'
@@ -14,11 +12,4 @@ const Users = [
 
 ];
 
-Users.PropTypes = {
-    userID: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    directorName: PropTypes.string.isRequired,
-    directorEmail: PropTypes.string.isRequired,
-    profil: PropTypes.string.isRequired
-};
 export default Users;

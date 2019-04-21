@@ -10,7 +10,7 @@ const BooksellerRequest = () => (
 
     <Grid container>
         <Grid.Row>
-            <Header as="h1">Question à la bibliothécaire</Header>
+            <Header as="h1">Communiquer avec la bibliothécaire</Header>
         </Grid.Row>
 
         <Grid.Row>
@@ -19,7 +19,7 @@ const BooksellerRequest = () => (
                     required
                     control={TextArea}
                     label="Comment puis je vous aider?"
-                    placeholder="Posez votre question"
+                    placeholder="Posez votre question ou faite lui part de vos commentaires"
                     style={{ minHeight: 200 }}
                 />
             </Form>
