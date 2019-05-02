@@ -19,7 +19,7 @@ import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid
 import RequestSend from './views/LibrarianRequest/RequestSend';
 import ProposalSend from './views/LibrarianRequest/ProposalSend';
 import Profile from './views/Profile/Profile';
-import SearchPage from './views/Review/SearchPage';
+import MainPage from './views/Review/MainPage';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
 import ForumPage from './views/forum/Forum';
@@ -46,7 +46,7 @@ const App = ({ history }) => (
                         <Menu icon compact vertical secondary floated="right" className="fixed-center menu-buttons-left">
                             <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/search" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
+                            <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="question circle outline" color="yellow" size={buttonSize} />
 
                         </Menu>
@@ -72,10 +72,10 @@ const App = ({ history }) => (
                         <Route path="/ReachoutList" component={ReachOutListLab} />
                         <Route path="/requestAdvice" component={RequestAdvice} />
                         <Route path="/review" component={ReviewForm} />
+                        <Route path="/searchorreview" component={MainPage} />
                         <Route path="/requestSend" component={RequestSend} />
                         <Route path="/proposalSend" component={ProposalSend} />
                         <Route path="/profilType" component={Profile} />
-                        <Route path="/search" component={SearchPage} />
                         <Route path="/forum" component={ForumPage} />
                         <Route render={() => <h1>404 Error</h1>} />
                     </Switch>

@@ -29,6 +29,18 @@ const StainSupport = [
     },
     {
         id: 10, name: 'Drap de lit', value: 'bedding', text: 'Drap de lit'
+    },
+    {
+        id: 11, name: 'Cartes de crédit', value: 'creditCards', text: 'Cartes de crédit'
+    },
+    {
+        id: 12, name: 'Téléphone mobile', value: 'mobilePhone', text: 'Téléphone mobile'
+    },
+    {
+        id: 13, name: 'Cartouche', value: 'cartridgeCase', text: 'Cartouche'
+    },
+    {
+        id: 14, name: 'Carte SIM', value: 'simCard', text: 'Carte SIM'
     }
 
 

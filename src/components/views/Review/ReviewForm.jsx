@@ -46,7 +46,7 @@ class ReviewForm extends Component {
             <div className="ReviewForm">
 
                 <div>
-                    <Header as="h1"> Donner votre avis sur cet article </Header>
+                    <Header as="h1"> Donner votre avis sur ce document </Header>
                 </div>
                 <div className="ArticleReviewed">
                     <ArticleReviewed

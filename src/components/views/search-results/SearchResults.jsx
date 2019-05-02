@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {
     Input, Checkbox, Dropdown, Grid, Segment, Search, List
 } from 'semantic-ui-react';
-import './stylesheets/SearchResults.css';
+// import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
 import BdArticles from './BdArticles';
@@ -24,10 +24,10 @@ class SearchResults extends Component {
                     <Grid padded="vertically">
                         <Grid.Row>
                             <Grid.Column width={4}>
-                                <Search placeholder="mots clés" />
+                                {/* <Search placeholder="mots clés" /> */}
                             </Grid.Column>
                             <Grid.Column width={8}>
-                                <Dropdown label="Type" value="source" options={options} basic as="h3" />
+                                {/* <Dropdown label="Type" value="source" options={options} basic as="h3" /> */}
                             </Grid.Column>
                             <Grid.Column width={4}>
                                 <Checkbox toggle label="Utiliser le profil du laboratoire" />
@@ -47,14 +47,31 @@ class SearchResults extends Component {
                                 <Input label={{ content: 'Test', color: 'grey' }} placeholder="RSIDSaliva" />
                             </Grid.Column>
                         </Grid.Row>
+                        <Grid.Row>
+                            <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
+                        </Grid.Row>
                     </Grid>
                 </Segment>
                 <List relaxed>
-                    <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
                     {BdArticles.map(({
-                        authors, title, id, abstract, journal, link
+                        authors, title, id, abstract, journal, year, link, reference, ...otherCharacteristics
                     }) => (
-                        <Article key={id} author={authors} title={title} journal={journal} abstract={abstract} link={link} onClick={this.handleCardClick} />
+                        <Article
+                            key={id}
+                            author={authors}
+                            title={title}
+                            journal={journal}
+                            abstract={abstract}
+                            reference={reference}
+                            year={year}
+                            link={link}
+                            onClick={this.handleCardClick}
+                            otherCharacteristics={otherCharacteristics}
+                            // nature="salive"
+                            // concentration="<100pg/ul"
+                            // test="RSIDSaliva"
+                            // support="mouchoir"
+                        />
                     ))
                     }
                 </List>

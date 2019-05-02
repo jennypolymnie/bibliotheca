@@ -7,6 +7,9 @@ const Hierarchy = [
     },
     {
         id: 'activity', name: 'Activité', value: 'activity', text: 'Activité'
+    },
+    {
+        id: 'filiation', name: 'Filiation', value: 'filiation', text: 'Filiation'
     }
 ];
 export default Hierarchy;

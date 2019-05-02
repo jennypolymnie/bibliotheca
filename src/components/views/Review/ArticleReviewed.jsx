@@ -1,7 +1,6 @@
 import React from 'react';
-import { Rating, Segment } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import InputExemple from '../search-results/InputExemple';
 import './ArticleReviewed.css';
 
 
@@ -21,14 +20,11 @@ const ArticleReviewed = ({
                     <span className="emphasis">Title: </span>
                     {title}
                     {' '}
-
                 </p>
-
                 <p>
                     <span className="emphasis">Journal: </span>
                     {journal}
                     {' '}
-
                 </p>
                 <p>
                     <span className="emphasis">Abstract: </span>
@@ -40,7 +36,7 @@ const ArticleReviewed = ({
                 </p>
             </div>
 
-            <div className="Review">
+            {/* <div className="Review">
                 <InputExemple info="Nombre d'avis" />
                 <p>Rigueur</p>
                 <Rating disabled icon="star" defaultRating={2} maxRating={5} />
@@ -51,7 +47,7 @@ const ArticleReviewed = ({
                 <p>Interprétation</p>
                 <Rating disabled icon="star" defaultRating={3} maxRating={5} />
 
-            </div>
+            </div> */}
         </Segment>
     </div>
 );
@@ -61,7 +57,16 @@ ArticleReviewed.PropTypes = {
     title: PropTypes.string.isRequired,
     abstract: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    link: PropTypes.string.isRequired
+    link: PropTypes.string.isRequired,
+    journal: PropTypes.string.isRequired
 };
+
+ArticleReviewed.defaultProps = {
+    author: '',
+    title: '',
+    abstract: '',
+    link: ''
+};
+
 
 export default ArticleReviewed;

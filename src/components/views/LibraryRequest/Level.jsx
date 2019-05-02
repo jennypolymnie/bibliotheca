@@ -8,6 +8,7 @@ import OptionsRequest from '../../data/OptionsRequest';
 import StainNature from '../../data/StainNature';
 import Material from '../../data/Material';
 import StainSupport from '../../data/StainSupport';
+import OptionsPreevaluation from '../../data/OptionsPreevaluation';
 
 const generateList = id => OptionsRequest
     .filter(option => option.categories.includes(id))
@@ -28,7 +29,7 @@ const generateList = id => OptionsRequest
 const Preevaluation = () => (
     <Segment color="yellow" raised container>
         <Grid>
-            <Grid.Row columns={2}>
+            <Grid.Row columns={3}>
                 <Grid.Column>
                     <Header as="h4" textAlign="center"> Nature de la trace </Header>
                     <Dropdown
@@ -47,11 +48,6 @@ const Preevaluation = () => (
                         options={Material}
                     />
                 </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={2}>
-                <Grid.Column>
-                    <Header as="h4" textAlign="center" />
-                </Grid.Column>
                 <Grid.Column>
                     <Header as="h4" textAlign="center"> Support </Header>
                     <Dropdown
@@ -59,6 +55,23 @@ const Preevaluation = () => (
                         fluid
                         selection
                         options={StainSupport}
+                    />
+                </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={3}>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center" />
+                </Grid.Column>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center" />
+                </Grid.Column>
+                <Grid.Column>
+                    <Header as="h4" textAlign="center"> Options </Header>
+                    <Dropdown
+                        placeholder="Choisir"
+                        fluid
+                        selection
+                        options={OptionsPreevaluation}
                     />
                 </Grid.Column>
             </Grid.Row>

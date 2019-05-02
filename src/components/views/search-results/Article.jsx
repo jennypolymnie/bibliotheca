@@ -5,57 +5,48 @@ import {
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import TableCheck from './TableCheck';
+import ReferenceFormat from './ReferenceFormat';
 import './stylesheets/Article.css';
+import PopupAbstract from './PopupAbstract';
+import PopupButton from './PopupButton';
 
 
 const Article = ({
-    author, title, abstract, link, nature, concentration, support, test, onClick, journal
+    author, title, reference, abstract, year, link, nature, concentration, support, test, journal, otherCharacteristics
 }) => (
     <Segment>
         <div className="Presentation">
 
-            <div className="MainData" onClick={() => onClick(Article)}>
+            <div className="MainData">
+                {/* <p>
+                    <PopupAbstract trigger={<ReferenceFormat author={author} title={title} journal={journal} year={year} />} />
+                </p> */}
                 <p>
-                    <span className="emphasis">Authors: </span>
-                    {author}
-                </p>
-                <p>
-                    <span className="emphasis">Title: </span>
-                    {title}
-                    {' '}
-
-                </p>
-
-                <p>
-                    <span className="emphasis">Journal: </span>
-                    {journal}
-                    {' '}
+                    <PopupAbstract
+                        title={title}
+                        author={author}
+                        journal={journal}
+                        reference={reference}
+                        year={year}
+                    />
 
                 </p>
                 <p>
-                    <span className="emphasis">Abstract: </span>
-                    {abstract}
-                </p>
-                <p>
-                    <span className="emphasis">Lien: </span>
                     {link}
                 </p>
             </div>
 
             <div className="Elements">
                 <TableCheck
-                    nature={nature}
-                    support={support}
-                    concentration={concentration}
-                    test={test}
+                    otherCharacteristics={otherCharacteristics}
                 />
             </div>
 
         </div>
 
         <div className="Review">
-            <Button as={Link} to="/review" color="blue"> Donnez votre avis </Button>
-            <div>
+            {/* <Button as={Link} to="/review" color="blue"> Donnez votre avis </Button> */}
+            {/* <div>
                 <div>Rigueur</div>
                 <Rating disabled icon="star" defaultRating={2} maxRating={5} />
             </div>
@@ -70,8 +61,14 @@ const Article = ({
             <div>
                 <div>Interprétation</div>
                 <Rating disabled icon="star" defaultRating={3} maxRating={5} />
-            </div>
+            </div> */}
+            {/* <div>
+                <PopupButton />
+            </div> */}
             <Menu>
+                <Menu.Item>
+                    <PopupButton />
+                </Menu.Item>
                 <Menu.Item as="a">
                     <Icon name="users" />
                     {' '}
@@ -92,11 +89,19 @@ Article.propTypes = {
     title: PropTypes.string.isRequired,
     abstract: PropTypes.string.isRequired,
     nature: PropTypes.string.isRequired,
+    year: PropTypes.string.isRequired,
+    reference: PropTypes.string.isRequired,
+    journal: PropTypes.string.isRequired,
     // hierarchyLevel: PropTypes.string.isRequired,
     support: PropTypes.string.isRequired,
     // transfert: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
-    link: PropTypes.string.isRequired
+    link: PropTypes.string.isRequired,
+    otherCharacteristics: PropTypes.shape
+};
+
+Article.defaultProps = {
+    otherCharacteristics: {}
 };
 
 export default Article;
