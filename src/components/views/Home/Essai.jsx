@@ -48,9 +48,9 @@ class Essai extends Component {
                     onRequestClose={this.closeModal}
                     style={customStyles}
                 >
-                    <Button.Group basic size='small' floated="right">
-                        <Button icon='close' onClick={this.closeModal} />
-                        <Button icon='share alternate' />
+                    <Button.Group basic size="small" floated="right">
+                        <Button icon="close" onClick={this.closeModal} />
+                        <Button icon="share alternate" />
                     </Button.Group>
                     <Video url="https://www.youtube.com/watch?v=S98-BIpzZuk&start_radio=1&list=RDS98-BIpzZuk" playing />
                 </Modal>

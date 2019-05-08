@@ -59,20 +59,20 @@ const ChemistryProfile = props => (
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
 
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -120,14 +120,14 @@ const ChemistryProfile = props => (
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
 
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                     <Grid.Column>
 
@@ -188,20 +188,20 @@ const ChemistryProfile = props => (
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
 
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -258,20 +258,20 @@ const ChemistryProfile = props => (
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
 
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
@@ -328,20 +328,20 @@ const ChemistryProfile = props => (
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
 
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                     <Grid.Column>
                         <p>
                             <Icon color="yellow" name="plus circle" />
                             Ajouter un kit
-                            </p>
+                        </p>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

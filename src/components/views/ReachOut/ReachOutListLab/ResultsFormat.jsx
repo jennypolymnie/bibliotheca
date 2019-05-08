@@ -6,25 +6,25 @@ import { Segment, Label } from 'semantic-ui-react';
 const ResultsFormat = ({
     labName, directorName, website, onClick
 }) => (
-        <Segment raised>
-            <Label color="blue" ribbon size="large">
-                {labName}
-            </Label>
-            <div onClick={() => onClick(ResultsFormat)}>
-                <p>
+    <Segment raised>
+        <Label color="blue" ribbon size="large">
+            {labName}
+        </Label>
+        <div onClick={() => onClick(ResultsFormat)}>
+            <p>
                     Nom du responsable:
                 {directorName}
-                    {' '}
+                {' '}
 
-                </p>
-                <p>
+            </p>
+            <p>
                     Site web du laboratoire:
                 <a href="www.curml.ch">{website}</a>
-                </p>
+            </p>
 
-            </div>
-        </Segment>
-    );
+        </div>
+    </Segment>
+);
 
 ResultsFormat.PropTypes = {
     labName: PropTypes.string.isRequired,

@@ -9,6 +9,7 @@ import ReferenceFormat from './ReferenceFormat';
 import './stylesheets/Article.css';
 import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
+import PopupCard from './PopupCard';
 
 
 const Article = ({
@@ -21,16 +22,14 @@ const Article = ({
                 {/* <p>
                     <PopupAbstract trigger={<ReferenceFormat author={author} title={title} journal={journal} year={year} />} />
                 </p> */}
-                <p>
-                    <PopupAbstract
-                        title={title}
-                        author={author}
-                        journal={journal}
-                        reference={reference}
-                        year={year}
-                    />
-
-                </p>
+                <PopupAbstract
+                    title={title}
+                    author={author}
+                    journal={journal}
+                    reference={reference}
+                    year={year}
+                />
+                <PopupCard />
                 <p>
                     {link}
                 </p>

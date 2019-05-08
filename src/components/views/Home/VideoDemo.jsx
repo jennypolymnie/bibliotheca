@@ -42,8 +42,8 @@ class Video extends Component {
 
                 <ReactPlayer
                     ref="player"
-                    width='2'
-                    height='2'
+                    width="2"
+                    height="2"
                     url={url}
                     playing={playing}
                 />

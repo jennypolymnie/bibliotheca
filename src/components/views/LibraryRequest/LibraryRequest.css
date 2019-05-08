@@ -1,9 +1,4 @@
 .LibraryRequest{
-    /* flex-wrap: wrap;
-    flex-direction: column;
-    padding: 5px 5px 5px 5px;
-    margin: auto;
-    user-select: none; */
     width: 100%;
 }
 
@@ -16,13 +11,6 @@
     height:700px;
 
 }
-
-/* .BlocActivity, .BlocSource, .BlocSubSource, .BlocSubActivity {
-    width: 300px;
-    padding: 5px 5px 5px 5px;
-    height: 600px;
-    margin:10px 10px 10px 10px;
-} */
 
 .QuestionDropdown{
     height: 400px;
@@ -44,7 +32,3 @@
     text-orientation: upright;
     text-align: center;
 }
-
-/* .ui.segment.basic.search_option_field {
-     margin: 1em 0em; 
-} */

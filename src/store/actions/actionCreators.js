@@ -10,7 +10,8 @@ import {
     MAKE_A_SEARCH_SUBACTIVITY,
     UPDATE_PROFILE,
     CHANGE_CHOICE,
-    SAVE_PROFILE
+    SAVE_PROFILE,
+    SAVE_RESEARCH_REQUEST
 } from './constants';
 
 // name of actioncreator
@@ -41,6 +42,13 @@ export function saveProfile(profile) {
     return {
         type: SAVE_PROFILE,
         profile
+    };
+}
+
+export function saveResearchRequest(userRequest) {
+    return {
+        type: SAVE_RESEARCH_REQUEST,
+        userRequest
     };
 }
 
