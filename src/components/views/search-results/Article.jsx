@@ -3,17 +3,17 @@ import {
     Segment, Menu, Icon, Label, Grid
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import TableCheck from './TableCheck';
 import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
 
 const Article = ({
-    author, title, reference, abstract, year, link, journal, otherCharacteristics, fieldRequest
+    author, title, reference, abstract, year, link, journal
 }) => (
     <Segment>
         <Grid>
-            <Grid.Row columns={3}>
+            <Grid.Row>
                 <Grid.Column width={10}>
                     <PopupAbstract
                         title={title}
@@ -26,10 +26,7 @@ const Article = ({
                     <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
                 </Grid.Column>
                 <Grid.Column width={3}>
-                    <TableCheck
-                        fieldRequest={fieldRequest}
-                        otherCharacteristics={otherCharacteristics}
-                    />
+                    <TableCheck />
                 </Grid.Column>
                 <Grid.Column width={3}>
 

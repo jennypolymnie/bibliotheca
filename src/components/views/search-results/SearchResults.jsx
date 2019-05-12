@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-    Input, Checkbox, Grid, Segment, List
+    Label, Checkbox, Grid, Segment, List,
+    Container, Header
 } from 'semantic-ui-react';
 // import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
@@ -30,10 +31,17 @@ const SearchResults = ({
                         <Checkbox toggle label="Utiliser le profil du laboratoire" />
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row>
+                <Grid.Row columns={3}>
                     {userRequest.map(option => (
                         <Grid.Column>
-                            <Input label={option.label} value={option.value} />
+                            <Container fluid>
+                                {option.label}
+                                <Header as='h4'>{option.value}</Header>
+                            </Container>
+                            {/* <Label color="blue">
+                                {option.label}
+                                <Label.Detail as="Label" basic>{option.value}</Label.Detail>
+                            </Label> */}
                         </Grid.Column>
                     ))}
                 </Grid.Row>
@@ -45,7 +53,7 @@ const SearchResults = ({
         <List relaxed>
             {filteredArticles
                 .map(({
-                    authors, title, id, abstract, journal, year, linkScienceDirect, reference, ...otherCharacteristics
+                    authors, title, id, abstract, journal, year, linkScienceDirect, reference// , ...otherCharacteristics
                 }) => (
                     <Article
                         key={id}
@@ -56,7 +64,7 @@ const SearchResults = ({
                         reference={reference}
                         link={linkScienceDirect}
                         year={year}
-                        otherCharacteristics={otherCharacteristics}
+                        // otherCharacteristics={otherCharacteristics}
                     />
                 ))
             }

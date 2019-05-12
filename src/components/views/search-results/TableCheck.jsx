@@ -1,26 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Icon, Grid } from 'semantic-ui-react';
+import { Icon, Grid, Label } from 'semantic-ui-react';
 import {
     userRequestFieldsSelector
 } from '../../../store/selectors/searchResults';
 
 const TableCheck = ({
-    otherCharacteristics,
     fieldRequest
 }) => (
-    <Grid padded={false}>
-        <Grid.Row padding={false}>
-            <Grid.Column textAlign="right" width={4} padded={false}>
-                {fieldRequest.map(option => (
+    <Grid padded={false}>  
+        {fieldRequest.map(option => (
+            <Grid.Row padding={false}>
+                <Grid.Column textAlign="left" width={2} padded={false}>
                     <Icon
-                        name={option === otherCharacteristics.option ? 'check' : 'close icon'}
+                        fitted
+                        name={'check'}
                         size="small"
-                        color={option === otherCharacteristics.option ? 'blue' : 'red'}
+                        color={'blue'}
                     />
-                ))}
-            </Grid.Column>
-        </Grid.Row>
+                </Grid.Column>
+                <Grid.Column textAlign="left" width={12} padded={false}>
+                    {option}
+                </Grid.Column>
+            </Grid.Row>
+        ))}
     </Grid>
 );
 
