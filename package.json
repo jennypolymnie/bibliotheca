@@ -41,6 +41,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-form": "^8.1.0",
+    "reselect": "^4.0.0",
     "sass-loader": "^7.1.0",
     "screenfull": "^4.0.1",
     "screenfull-react": "^0.0.1",

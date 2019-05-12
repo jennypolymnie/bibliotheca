@@ -14,20 +14,25 @@ class LibraryRequest extends Component {
         super(props);
         this.selectOption = this.selectOption.bind(this);
         this.submitRequest = this.submitRequest.bind(this);
-        this.state = {};
+        this.state = {
+            options: []
+        };
     }
 
-    selectOption(option, value) {
+    selectOption(option, value, id) {
+        const currentOptions = this.state.options;
         this.setState({
-            [option]: value
+            options: [
+                ...currentOptions,
+                { label: option, value, id }
+            ]
         });
     }
 
     submitRequest(optionList) {
-        const userRequest = optionList.map(option => ({
-            label: option,
-            value: this.state[option]
-        }));
+        const userRequest = this.state.options
+            .filter(option => optionList
+                .some(optionFromList => optionFromList === option.label));
         this.props.onSubmit(userRequest);
     }
 

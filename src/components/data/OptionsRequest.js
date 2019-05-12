@@ -9,47 +9,47 @@ import AmplificationAutosomChemistry from './AmplificationAutoChemistry';
 import ActivityContext from './ActivityContext';
 import EnvironmentalConditions from './EnvironmentalConditions';
 
-const OptionsRequest = [
+const OptionsRequestData = [
 
     {
-        id: 1, name: 'Population pertinente', options: RelevantPopulation, categories: ['subsource']
+        id: 'population', name: 'Population pertinente', options: RelevantPopulation, categories: ['subsource']
     },
     {
-        id: 2, name: 'Kit d\'amplication', options: AmplificationAutosomChemistry, categories: ['subsource']
+        id: 'marqueurs', name: 'Kit d\'amplication', options: AmplificationAutosomChemistry, categories: ['subsource']
     },
     {
-        id: 3, name: 'Nature supposée de la trace', options: StainNature, categories: ['source']
+        id: 'nature', name: 'Nature supposée de la trace', options: StainNature, categories: ['source']
     },
     {
-        id: 4, name: 'Support de la trace', options: StainSupport, categories: ['source', 'subactivity', 'activity']
+        id: 'support', name: 'Support de la trace', options: StainSupport, categories: ['source', 'subactivity', 'activity']
     },
     {
-        id: 5, name: 'Concentration [ng/ul]', options: Concentration, categories: ['source', 'subactivity']
+        id: 'concentration', name: 'Concentration [ng/ul]', options: Concentration, categories: ['source', 'subactivity']
     },
     {
-        id: 6, name: 'Test indicatif', options: ScreeningTest, categories: ['source', 'subactivity']
+        id: 'test indicatif', name: 'Test indicatif', options: ScreeningTest, categories: ['source', 'subactivity']
+    },
+    // {
+    //     id: 7, name: 'Fluides à distinguer', options: ScreeningTest, categories: ['subactivity']
+    // },
+    // {
+    //     id: 8, name: 'Test indicatif additionnel', options: ScreeningTest, categories: ['subactivity']
+    // },
+    {
+        id: 'nature', name: 'Nature de la trace', options: StainNature, categories: ['activity']
     },
     {
-        id: 7, name: 'Fluides à distinguer', options: ScreeningTest, categories: ['subactivity']
+        id: 'temps', name: 'Temps entre faits et prélèvements', options: Time, categories: ['activity']
     },
     {
-        id: 8, name: 'Test indicatif additionnel', options: ScreeningTest, categories: ['subactivity']
+        id: 'transfert', name: 'Type de transfert supposé', options: TransfertTypes, categories: ['activity']
     },
     {
-        id: 9, name: 'Nature de la trace', options: StainNature, categories: ['activity']
+        id: 'activité', name: 'Type d\'activité', options: ActivityContext, categories: ['activity']
     },
     {
-        id: 10, name: 'Temps entre faits et prélèvements', options: Time, categories: ['activity']
-    },
-    {
-        id: 11, name: 'Type de transfert supposé', options: TransfertTypes, categories: ['activity']
-    },
-    {
-        id: 12, name: 'Type d\'activité', options: ActivityContext, categories: ['activity']
-    },
-    {
-        id: 13, name: 'Conditions environnementales', options: EnvironmentalConditions, categories: ['activity']
+        id: 'conditions', name: 'Conditions environnementales', options: EnvironmentalConditions, categories: ['activity']
     }
 ];
 
-export default OptionsRequest;
+export default OptionsRequestData;

@@ -5,14 +5,13 @@ import StainSupport from './StainSupport';
 
 const OptionsRequestPreeval = [
     {
-        id: 1, name: 'Nature de la trace', options: StainNature
+        id: 'nature', name: 'Nature de la trace', options: StainNature
     },
     {
-        id: 1, name: 'Matière du support', options: Material
+        id: 'material', name: 'Matière du support', options: Material
     },
-
     {
-        id: 3, name: 'Support', options: StainSupport
+        id: 'support', name: 'Support', options: StainSupport
     }
 ];
 

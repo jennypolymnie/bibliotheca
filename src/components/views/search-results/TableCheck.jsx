@@ -1,86 +1,60 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Icon, Grid } from 'semantic-ui-react';
+import {
+    userRequestFieldsSelector
+} from '../../../store/selectors/searchResults';
 
-const TableCheck = ({ otherCharacteristics }) => (
+const TableCheck = ({
+    otherCharacteristics,
+    fieldRequest
+}) => (
     <Grid padded={false}>
         <Grid.Row padding={false}>
             <Grid.Column textAlign="right" width={4} padded={false}>
-                <Icon
-                    name={otherCharacteristics.nature === 'salive' ? 'check' : 'close icon'}
-                    size="small"
-                    color={otherCharacteristics.nature === 'salive' ? 'blue' : 'red'}
-                />
-            </Grid.Column>
-            <Grid.Column width={12} padded={false}>
-                Nature
-            </Grid.Column>
-        </Grid.Row>
-        <Grid.Row padded={false}>
-            <Grid.Column textAlign="right" width={4} padded={false}>
-                <Icon
-                    name={otherCharacteristics.support === 'mouchoir' ? 'check' : 'close icon'}
-                    size="small"
-                    color={otherCharacteristics.support === 'mouchoir' ? 'blue' : 'red'}
-                />
-            </Grid.Column>
-            <Grid.Column width={12} padded={false}>
-                Support
-            </Grid.Column>
-        </Grid.Row>
-        <Grid.Row padded={false}>
-            <Grid.Column textAlign="right" width={4} padded={false}>
-                <Icon
-                    name={otherCharacteristics.concentration === '<100pg/ul' ? 'check' : 'close icon'}
-                    size="small"
-                    color={otherCharacteristics.concentration === '<100pg/ul' ? 'blue' : 'red'}
-                />
-            </Grid.Column>
-            <Grid.Column width={12} padded={false}>
-                Concentration
-            </Grid.Column>
-        </Grid.Row>
-        <Grid.Row padded={false}>
-            <Grid.Column textAlign="right" width={4} padded={false}>
-                <Icon
-                    name={otherCharacteristics.test === 'RSIDSaliva' ? 'check' : 'close icon'}
-                    size="small"
-                    color={otherCharacteristics.test === 'RSIDSaliva' ? 'blue' : 'red'}
-                />
-            </Grid.Column>
-            <Grid.Column width={12} padded={false}>
-                Test indicatif
+                {fieldRequest.map(option => (
+                    <Icon
+                        name={option === otherCharacteristics.option ? 'check' : 'close icon'}
+                        size="small"
+                        color={option === otherCharacteristics.option ? 'blue' : 'red'}
+                    />
+                ))}
             </Grid.Column>
         </Grid.Row>
     </Grid>
 );
 
 
-// {BdArticles.map(({
-//     authors, title, id, abstract, journal, link, ...otherCharacteristics
-// }) => (
+const mapStateToProps = state => ({
+    fieldRequest: userRequestFieldsSelector(state)
+
+});
+
+export default connect(mapStateToProps)(TableCheck);
+
+
+// const TableCheck = ({ otherCharacteristics, fieldRequest }) => (
 //     <Grid padded={false}>
 //         <Grid.Row padding={false}>
 //             <Grid.Column textAlign="right" width={4} padded={false}>
-//                 <Icon
-//                     name={otherCharacteristics.map === otherCharacteristics.store ? 'check' : 'close icon'}
-//                     size="small"
-//                     color={otherCharacteristics.map === 'salive' ? 'blue' : 'red'}
-//                 />
-//             </Grid.Column>
-//             <Grid.Column width={12} padded={false}>
-//                 Nature
+//                 {fieldRequest.map(option => (
+//                     <Icon
+//                         name={option === otherCharacteristics.fieldRequest ? 'check' : 'close icon'}
+//                         size="small"
+//                         color={option === otherCharacteristics.fieldRequest ? 'blue' : 'red'}
+//                     />
+//                 ))}
 //             </Grid.Column>
 //         </Grid.Row>
 //     </Grid>
+// );
 
+// TableCheck.propTypes = {
+//     otherCharacteristics: PropTypes.shape
+// };
 
-TableCheck.propTypes = {
-    otherCharacteristics: PropTypes.shape
-};
+// TableCheck.defaultProps = {
+//     otherCharacteristics: {}
+// };
 
-TableCheck.defaultProps = {
-    otherCharacteristics: {}
-};
-
-export default TableCheck;
+// export default TableCheck;

@@ -7,27 +7,24 @@ import {
 // import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
-import BdArticles from './BdArticles';
 import StandardLayout from '../../layout/StandardLayout';
-import { userRequestSelector } from '../../../store/selectors/searchResults';
+import {
+    userRequestSelector, filteredArticleSelector, countFilteredArticlesSelector, userRequestFieldsSelector
+} from '../../../store/selectors/searchResults';
 
-// const options = [
-//     {
-//         text: 'Source',
-//         value: 'source'
-//     }
-// ];
-
-const SearchResults = ({ userRequest }) => (
+const SearchResults = ({
+    userRequest,
+    filteredArticles,
+    count,
+    // fieldRequest
+}) => (
     <div className="recherche">
         <Segment secondary>
             <Grid padded="vertically">
                 <Grid.Row>
                     <Grid.Column width={4}>
-                        {/* <Search placeholder="mots clés" /> */}
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        {/* <Dropdown label="Type" value="source" options={options} basic as="h3" /> */}
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <Checkbox toggle label="Utiliser le profil du laboratoire" />
@@ -35,45 +32,50 @@ const SearchResults = ({ userRequest }) => (
                 </Grid.Row>
                 <Grid.Row>
                     {userRequest.map(option => (
-                        <Grid.Column width={4}>
+                        <Grid.Column>
                             <Input label={option.label} value={option.value} />
                         </Grid.Column>
                     ))}
                 </Grid.Row>
                 <Grid.Row>
-                    <CountElement name="Nombre d'articles correspondant à votre recherche" count={4} />
+                    <CountElement name="Nombre d'articles correspondant à votre recherche" count={count} />
                 </Grid.Row>
             </Grid>
         </Segment>
         <List relaxed>
-            {BdArticles.map(({
-                authors, title, id, abstract, journal, year, link, reference, ...otherCharacteristics
-            }) => (
-                <Article
-                    key={id}
-                    author={authors}
-                    title={title}
-                    journal={journal}
-                    abstract={abstract}
-                    reference={reference}
-                    year={year}
-                    link={link}
-                    // onClick={this.handleCardClick}
-                    otherCharacteristics={otherCharacteristics}
-                    // nature="salive"
-                    // concentration="<100pg/ul"
-                    // test="RSIDSaliva"
-                    // support="mouchoir"
-                />
-            ))
+            {filteredArticles
+                .map(({
+                    authors, title, id, abstract, journal, year, linkScienceDirect, reference, ...otherCharacteristics
+                }) => (
+                    <Article
+                        key={id}
+                        author={authors}
+                        title={title}
+                        journal={journal}
+                        abstract={abstract}
+                        reference={reference}
+                        link={linkScienceDirect}
+                        year={year}
+                        otherCharacteristics={otherCharacteristics}
+                    />
+                ))
             }
-        </List>
 
+            {/* :
+     
+            <div>No data found </div>; */}
+
+        </List>
     </div>
 );
 
+
 const mapStateToProps = state => ({
-    userRequest: userRequestSelector(state)
+    userRequest: userRequestSelector(state),
+    filteredArticles: filteredArticleSelector(state),
+    count: countFilteredArticlesSelector(state)
+    // fieldRequest: userRequestFieldsSelector(state)
+
 });
 
 export default connect(mapStateToProps)(StandardLayout(SearchResults, 'Résultat de la recherche'));

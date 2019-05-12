@@ -12,7 +12,6 @@ const userRequestReducer = (state = [], action) => {
             ];
         }
         default:
-            console.log('HERE');
             return state;
     }
 };

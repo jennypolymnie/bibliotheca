@@ -6,9 +6,26 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Hierarchy from '../../data/Hierarchy';
 import OptionsRequestPreeval from '../../data/OptionsRequestPreeval';
-import OptionsRequest from '../../data/OptionsRequest';
+import OptionsRequestData from '../../data/OptionsRequest';
+import OptionsRequestBayesian from '../../data/OptionsRequestBayesian';
 
-const generateList = (id, selectOption) => OptionsRequest
+const generateListPreeval = selectOption => OptionsRequestPreeval
+    .map(filteredOption => (
+        <Grid.Column>
+            <Header sub>
+                {filteredOption.name}
+            </Header>
+            <Dropdown
+                placeholder="Choisir"
+                fluid
+                selection
+                onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
+                options={filteredOption.options}
+            />
+        </Grid.Column>
+    ));
+
+const generateListData = (id, selectOption) => OptionsRequestData
     .filter(option => option.categories.includes(id))
     .map(filteredOption => (
         <Segment basic className="search_option_field">
@@ -25,7 +42,7 @@ const generateList = (id, selectOption) => OptionsRequest
         </Segment>
     ));
 
-const generateListPreeval = selectOption => OptionsRequestPreeval
+const generateListBayesian = selectOption => OptionsRequestBayesian
     .map(filteredOption => (
         <Segment basic className="search_option_field">
             <Header sub>
@@ -42,87 +59,30 @@ const generateListPreeval = selectOption => OptionsRequestPreeval
     ));
 
 const Preevaluation = ({ selectOption, submitRequest }) => (
-    <Grid stretched>
-        <Grid.Column padded stretched>
-            <Segment color="yellow" raised container className="search_option">
+    <Segment color="yellow" raised container className="search_option">
+        <Grid>
+            <Grid.Row columns={3}>
                 {generateListPreeval(selectOption)}
-                <Grid.Row stretched verticalAlign="bottom" className="search_button">
-                    <Button
-                        color="blue"
-                        size="large"
-                        as={Link}
-                        to="/articles"
-                        onClick={() => {
-                            const options = OptionsRequestPreeval
-                                .map(filteredOption => filteredOption.name);
-                            submitRequest(options);
-                        }}
-                    >
-                                Envoyez la requête
-                    </Button>
-                </Grid.Row>
-            </Segment>
-        </Grid.Column>
-    </Grid>
+            </Grid.Row>
+            <Grid.Row verticalAlign="middle" centered>
+                <Button
+                    color="blue"
+                    size="large"
+                    as={Link}
+                    to="/articles"
+                    floated="right"
+                    onClick={() => {
+                        const options = OptionsRequestPreeval
+                            .map(filteredOption => filteredOption.name);
+                        submitRequest(options);
+                    }}
+                >
+                    Envoyez la requête
+                </Button>
+            </Grid.Row>
+        </Grid>
+    </Segment>
 );
-
-// const Preevaluation = ({ selectOption, submitRequest }) => (
-//     <Segment color="yellow" raised container>
-//         <Grid>
-//             <Grid.Row columns={3}>
-//                 <Grid.Column>
-//                     <Header as="h4" textAlign="center"> Nature de la trace </Header>
-//                     <Dropdown
-//                         placeholder="Choisir"
-//                         fluid
-//                         selection
-//                         onChange={(event, data) => selectOption(Label, data.value)}
-//                         options={StainNature}
-//                     />
-//                 </Grid.Column>
-//                 <Grid.Column>
-//                     <Header as="h4" textAlign="center"> Matière du support </Header>
-//                     <Dropdown
-//                         placeholder="Choisir"
-//                         fluid
-//                         selection
-//                         onChange={(event, data) => selectOption(Label, data.value)}
-//                         options={Material}
-//                     />
-//                 </Grid.Column>
-//                 <Grid.Column>
-//                     <Header as="h4" textAlign="center"> Support </Header>
-//                     <Dropdown
-//                         placeholder="Choisir"
-//                         fluid
-//                         selection
-//                         onChange={(event, data) => selectOption(Label, data.value)}
-//                         options={StainSupport}
-//                     />
-//                 </Grid.Column>
-//             </Grid.Row>
-
-//             <Grid.Row>
-//                 <Grid.Column>
-//                     <Button
-//                         color="blue"
-//                         size="large"
-//                         as={Link}
-//                         to="/articles"
-//                         // onClick={() => {
-//                         //     const optionsList = 
-//                         //     submitRequest(optionsList);
-//                         // }}
-//                     >
-//                         Envoyez la requête
-//                     </Button>
-//                 </Grid.Column>
-//             </Grid.Row>
-//         </Grid>
-//     </Segment>
-
-// );
-
 
 const Data = ({ selectOption, submitRequest }) => (
     <Grid stretched>
@@ -131,7 +91,7 @@ const Data = ({ selectOption, submitRequest }) => (
                 <Grid.Column key={id} width={5} padded stretched>
                     <Segment color="yellow" raised container className="search_option">
                         <Header textAlign="center" as="h2">{name}</Header>
-                        {generateList(id, selectOption)}
+                        {generateListData(id, selectOption)}
                         <Grid.Row stretched verticalAlign="bottom" className="search_button">
                             <Button
                                 color="blue"
@@ -139,7 +99,7 @@ const Data = ({ selectOption, submitRequest }) => (
                                 as={Link}
                                 to="/articles"
                                 onClick={() => {
-                                    const options = OptionsRequest
+                                    const options = OptionsRequestData
                                         .filter(option => option.categories.includes(id))
                                         .map(filteredOption => filteredOption.name);
                                     submitRequest(options);
@@ -156,43 +116,28 @@ const Data = ({ selectOption, submitRequest }) => (
 );
 
 const BayesianNetwork = ({ selectOption, submitRequest }) => (
-    <Segment color="yellow" raised container>
-        <Grid>
-            <Grid.Row columns={2}>
-                <Grid.Column>
-                    <Header as="h4" textAlign="center"> Niveau </Header>
-                    <Dropdown
-                        placeholder="Choisir"
-                        fluid
-                        selection
-                        options={Hierarchy}
-                        onChange={(event, data) => selectOption(Hierarchy.name, data.value)}
-                    />
-                </Grid.Column>
-                <Grid.Column>
-                </Grid.Column>
-            </Grid.Row>
-
-            <Grid.Row>
-                <Grid.Column>
+    <Grid stretched>
+        <Grid.Column padded stretched>
+            <Segment color="yellow" raised container className="search_option">
+                {generateListBayesian(selectOption)}
+                <Grid.Row stretched verticalAlign="bottom" className="search_button">
                     <Button
                         color="blue"
                         size="large"
                         as={Link}
                         to="/articles"
-                        // onClick={() => {
-                        //     const options = OptionsRequest
-                        //         .map(filteredOption => filteredOption.name);
-                        //     submitRequest(options);
-                        // }}
+                        onClick={() => {
+                            const options = OptionsRequestBayesian
+                                .map(filteredOption => filteredOption.name);
+                            submitRequest(options);
+                        }}
                     >
                         Envoyez la requête
                     </Button>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
-    </Segment>
-
+                </Grid.Row>
+            </Segment>
+        </Grid.Column>
+    </Grid>
 );
 
 const Level = ({ selectOption, submitRequest }) => (

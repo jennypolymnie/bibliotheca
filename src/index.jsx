@@ -13,12 +13,12 @@ import AppUsers from './components/data/AppUsers';
 import profile from './components/data/Profile';
 import Dropdown from './components/data/Dropdown';
 import researchRequest from './components/data/ResearchRequest';
-import userRequest from './components/data/UserRequest';
+// import userRequest from './components/data/UserRequest';
 
 const initialState = {
     researchRequest,
     profile,
-    userRequest,
+    userRequest: [],
     users: AppUsers,
     reachOutDropdown: Dropdown,
     router: {}

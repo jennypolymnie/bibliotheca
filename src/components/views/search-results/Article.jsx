@@ -1,84 +1,53 @@
 import React from 'react';
 import {
-    Button, Rating, Segment, Menu, Icon, Label
+    Segment, Menu, Icon, Label, Grid
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import TableCheck from './TableCheck';
-import ReferenceFormat from './ReferenceFormat';
-import './stylesheets/Article.css';
 import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
-import PopupCard from './PopupCard';
-
 
 const Article = ({
-    author, title, reference, abstract, year, link, nature, concentration, support, test, journal, otherCharacteristics
+    author, title, reference, abstract, year, link, journal, otherCharacteristics, fieldRequest
 }) => (
     <Segment>
-        <div className="Presentation">
+        <Grid>
+            <Grid.Row columns={3}>
+                <Grid.Column width={10}>
+                    <PopupAbstract
+                        title={title}
+                        author={author}
+                        journal={journal}
+                        reference={reference}
+                        year={year}
+                        abstract={abstract}
+                    />
+                    <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
+                </Grid.Column>
+                <Grid.Column width={3}>
+                    <TableCheck
+                        fieldRequest={fieldRequest}
+                        otherCharacteristics={otherCharacteristics}
+                    />
+                </Grid.Column>
+                <Grid.Column width={3}>
 
-            <div className="MainData">
-                {/* <p>
-                    <PopupAbstract trigger={<ReferenceFormat author={author} title={title} journal={journal} year={year} />} />
-                </p> */}
-                <PopupAbstract
-                    title={title}
-                    author={author}
-                    journal={journal}
-                    reference={reference}
-                    year={year}
-                />
-                <PopupCard />
-                <p>
-                    {link}
-                </p>
-            </div>
-
-            <div className="Elements">
-                <TableCheck
-                    otherCharacteristics={otherCharacteristics}
-                />
-            </div>
-
-        </div>
-
-        <div className="Review">
-            {/* <Button as={Link} to="/review" color="blue"> Donnez votre avis </Button> */}
-            {/* <div>
-                <div>Rigueur</div>
-                <Rating disabled icon="star" defaultRating={2} maxRating={5} />
-            </div>
-            <div>
-                <div>Analyse</div>
-                <Rating disabled icon="star" defaultRating={3} maxRating={5} />
-            </div>
-            <div>
-                <div>Résultats</div>
-                <Rating disabled icon="star" defaultRating={4} maxRating={5} />
-            </div>
-            <div>
-                <div>Interprétation</div>
-                <Rating disabled icon="star" defaultRating={3} maxRating={5} />
-            </div> */}
-            {/* <div>
-                <PopupButton />
-            </div> */}
-            <Menu>
-                <Menu.Item>
-                    <PopupButton />
-                </Menu.Item>
-                <Menu.Item as="a">
-                    <Icon name="users" />
-                    {' '}
-                    Nombre d'avis
-                    <Label color="blue" floating>
-                        22
-                    </Label>
-                </Menu.Item>
-            </Menu>
-
-        </div>
+                    <Menu compact>
+                        <Menu.Item>
+                            <PopupButton />
+                        </Menu.Item>
+                        <Menu.Item as="a">
+                            <Icon name="users" />
+                            Avis
+                            <Label color="blue" floating>
+                                22
+                            </Label>
+                        </Menu.Item>
+                    </Menu>
+                </Grid.Column>
+            </Grid.Row>
+        </Grid>
     </Segment>
 
 );

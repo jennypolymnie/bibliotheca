@@ -26,7 +26,7 @@ class ArticleProposal extends Component {
                                 required
                                 control={Input}
                                 label="Titre du document"
-                                placeholder="Titre"
+                                placeholder=""
                             />
                             <Form.Field
                                 required

@@ -9,11 +9,18 @@ const BdArticles = [
         abstract: 'We demonstrate here that the RSID™-saliva test can be used as a test for human salivary...',
         journal: 'Forensic Science International',
         reference: '194(1-3), 67-71',
-        link: 'https://www.sciencedirect.com/science/article/pii/S0379073809004204',
+        linkScienceDirect: 'https://www.sciencedirect.com/science/article/pii/S0379073809004204',
         nature: 'salive',
+        material: 'bois',
         support: 'mouchoir',
+        population: '',
+        marqueur: '',
         concentration: '<100pg/ul',
-        test: 'RSIDSaliva'
+        test: 'RSIDSaliva',
+        temps: '',
+        transfert: '',
+        activité: '',
+        conditions: ''
     },
     {
         id: 2,
@@ -23,11 +30,18 @@ const BdArticles = [
         abstract: 'Understanding the variables impacting DNA transfer, persistence, prevalence and recovery (DNA-TPPR) has become increasingly relevant in investigations...',
         journal: 'Forensic Science International: Genetics',
         reference: '194(1-3), 67-71',
-        link: 'https://www.sciencedirect.com/science/article/pii/S1872497318303958',
+        linkScienceDirect: 'https://www.sciencedirect.com/science/article/pii/S1872497318303958',
         nature: 'salive',
+        material: 'bois',
         support: 'mouchoir',
+        population: '',
+        marqueur: '',
         concentration: '<100pg/ul',
-        test: 'RSIDSaliva'
+        test: 'RSIDSaliva',
+        temps: '',
+        transfert: '',
+        activité: '',
+        conditions: ''
     },
     {
         id: 3,
@@ -37,11 +51,18 @@ const BdArticles = [
         abstract: 'DNA profiles can be obtained from fabrics where a person has made direct contact with clothing. A standard approach is to cut out a section of the fabric and then use a commercially available method to extract and isolate the DNA... ',
         journal: 'Forensic Science International: Genetics',
         reference: '194(1-3), 67-71',
-        link: 'https://www.sciencedirect.com/science/article/abs/pii/S1872497309001240',
+        linkScienceDirect: 'https://www.sciencedirect.com/science/article/abs/pii/S1872497309001240',
         nature: 'salive',
-        support: 'swab',
+        material: 'bois',
+        support: 'mouchoir',
+        population: '',
+        marqueur: '',
         concentration: '<100pg/ul',
-        test: 'RSIDSaliva'
+        test: 'RSIDSaliva',
+        temps: '',
+        transfert: '',
+        activité: '',
+        conditions: ''
     },
     {
         id: 4,
@@ -51,11 +72,18 @@ const BdArticles = [
         abstract: 'Determining the type and origin of body fluids in a forensic investigation can provide important assistance in reconstructing crime scenes...',
         journal: 'Forensic Science International: Genetics',
         reference: '194(1-3), 67-71',
-        link: 'https://www.sciencedirect.com/science/article/abs/pii/S1872497316300175',
-        nature: 'sang',
+        linkScienceDirect: 'https://www.sciencedirect.com/science/article/abs/pii/S1872497316300175',
+        nature: 'salive',
+        material: 'bois',
         support: 'mouchoir',
+        population: '',
+        marqueur: '',
         concentration: '<100pg/ul',
-        test: 'RSIDSaliva'
+        test: 'RSIDSaliva',
+        temps: '',
+        transfert: '',
+        activité: '',
+        conditions: ''
     }
 ];
 
