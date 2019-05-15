@@ -27,6 +27,7 @@ import './App.css';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
 import EquipmentPart from './views/LabForm/EquipmentPart';
+import ReviewSummary from './views/Review/ReviewSummary';
 
 // import { createRequireFromPath } from 'module';
 
@@ -77,6 +78,7 @@ const App = ({ history }) => (
                         <Route path="/proposalSend" component={ProposalSend} />
                         <Route path="/profilType" component={Profile} />
                         <Route path="/forum" component={ForumPage} />
+                        <Route path="/reviewSummary" component={ReviewSummary} />
                         <Route render={() => <h1>404 Error</h1>} />
                     </Switch>
                 </Grid.Column>

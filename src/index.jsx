@@ -16,7 +16,6 @@ import Dropdown from './components/data/Dropdown';
 
 const initialState = {
     profile,
-    userRequest: [],
     users: AppUsers,
     reachOutDropdown: Dropdown,
     router: {}

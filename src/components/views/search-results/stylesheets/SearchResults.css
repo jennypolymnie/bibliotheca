@@ -18,3 +18,7 @@
 .resultat {
   margin-bottom: 30px;
 }
+
+.padded-container {
+  padding-bottom: 1em;
+}

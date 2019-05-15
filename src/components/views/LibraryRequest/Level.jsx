@@ -36,7 +36,7 @@ const generateListData = (id, selectOption) => OptionsRequestData
                 placeholder="Choisir"
                 fluid
                 selection
-                onChange={(event, data) => selectOption(filteredOption.name, data.value)}
+                onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
         </Segment>
@@ -52,7 +52,7 @@ const generateListBayesian = selectOption => OptionsRequestBayesian
                 placeholder="Choisir"
                 fluid
                 selection
-                onChange={(event, data) => selectOption(filteredOption.name, data.value)}
+                onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
         </Segment>

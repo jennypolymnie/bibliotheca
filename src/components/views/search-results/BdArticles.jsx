@@ -2,7 +2,7 @@
 
 const BdArticles = [
     {
-        id: 1,
+        id: 'A1',
         authors: 'David G. Casey, Judy Price',
         year: '2017',
         title: 'The sensitivity and specificity of the RSID-saliva kit for the detection of human salivary amylse in the Forensic Science Laboratory, Dublin, Ireland',
@@ -23,7 +23,7 @@ const BdArticles = [
         conditions: ''
     },
     {
-        id: 2,
+        id: 'A2',
         authors: 'Roland A.H.van Oorschot, Bianca Szkuta, Georgina E.Meakin, Bas Kokshoorn, Mariya Goray',
         year: '2017',
         title: 'DNA transfer in forensic science: A review',
@@ -44,7 +44,7 @@ const BdArticles = [
         conditions: ''
     },
     {
-        id: 3,
+        id: 'A3',
         authors: 'Adrian Linacre, Vera Pekarek, Yuvaneswari Chandramoulee Swaran, Shanan S.Tobe',
         year: '2017',
         title: 'Generation of DNA profiles from fabrics without DNA extraction',
@@ -65,7 +65,7 @@ const BdArticles = [
         conditions: ''
     },
     {
-        id: 4,
+        id: 'A4',
         authors: 'Deborah S.B.S.Silva, Joana Antunes, Kuppareddi Balamurugan, George Duncan, Clarice S.Alho, Bruce McCord',
         year: '2017',
         title: 'Developmental validation studies of epigenetic DNA methylation markers for the detection of blood, semen and saliva samples',
@@ -74,7 +74,7 @@ const BdArticles = [
         reference: '194(1-3), 67-71',
         linkScienceDirect: 'https://www.sciencedirect.com/science/article/abs/pii/S1872497316300175',
         nature: 'salive',
-        material: 'bois',
+        material: 'paper',
         support: 'mouchoir',
         population: '',
         marqueur: '',

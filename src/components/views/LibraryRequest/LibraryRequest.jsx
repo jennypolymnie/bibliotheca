@@ -20,13 +20,12 @@ class LibraryRequest extends Component {
     }
 
     selectOption(option, value, id) {
-        const currentOptions = this.state.options;
-        this.setState({
+        this.setState(({ options: currentOptions }) => ({
             options: [
-                ...currentOptions,
+                ...currentOptions.filter(existingOption => existingOption.id !== id),
                 { label: option, value, id }
             ]
-        });
+        }));
     }
 
     submitRequest(optionList) {
@@ -40,9 +39,6 @@ class LibraryRequest extends Component {
         return (
 
             <div className="LibraryRequest">
-                <div className="ProfilIncluded">
-                    <Checkbox toggle label="Utiliser le profil du laboratoire" />
-                </div>
                 <Level selectOption={this.selectOption} submitRequest={this.submitRequest} />
             </div>
         );

@@ -1,23 +1,14 @@
 import React from 'react';
-import { Label } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import './stylesheets/NbArticle.css';
 import PropTypes from 'prop-types';
 
 const CountElement = ({ name, count }) => (
-    <div className="CountElement">
-        <Label color="blue" basic>
-            <span>
-                {' '}
-                {name}
-                {' '}
-            </span>
-            <span>
-                {' '}
-                {count}
-                {' '}
-            </span>
-        </Label>
-    </div>
+    <Container fluid>
+        <span>
+            {`${name}: ${count}`}
+        </span>
+    </Container>
 );
 
 CountElement.propTypes = {
