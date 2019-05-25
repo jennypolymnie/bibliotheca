@@ -3,24 +3,28 @@
 const BdArticles = [
     {
         id: 'A1',
-        authors: 'David G. Casey, Judy Price',
-        year: '2017',
-        title: 'The sensitivity and specificity of the RSID-saliva kit for the detection of human salivary amylse in the Forensic Science Laboratory, Dublin, Ireland',
+        authors: 'Duncan Taylor, Alex Biedermann, Tacha Hicks, Christophe Champod',
+        year: '2018',
+        title: 'A template for constructing Bayesian networks in forensic biology cases when considering activity level propositions',
         abstract: 'We demonstrate here that the RSID™-saliva test can be used as a test for human salivary...',
-        journal: 'Forensic Science International',
-        reference: '194(1-3), 67-71',
-        linkScienceDirect: 'https://www.sciencedirect.com/science/article/pii/S0379073809004204',
-        nature: 'salive',
-        material: 'bois',
-        support: 'mouchoir',
+        journal: 'Forensic Science International: Genetics ',
+        reference: 'Volume 33, Pages 136-146',
+        linkScienceDirect: 'https://www.sciencedirect.com/science/article/pii/S187249731730282X',
+        nature: '',
+        material: '',
+        support: '',
         population: '',
         marqueur: '',
-        concentration: '<100pg/ul',
-        test: 'RSIDSaliva',
+        concentration: '',
+        test: '',
         temps: '',
         transfert: '',
         activité: '',
-        conditions: ''
+        conditions: '',
+        categories: [
+            'activity',
+            'network'
+        ]
     },
     {
         id: 'A2',
@@ -41,7 +45,11 @@ const BdArticles = [
         temps: '',
         transfert: '',
         activité: '',
-        conditions: ''
+        conditions: '',
+        categories: [
+            'activity',
+            'data'
+        ]
     },
     {
         id: 'A3',
@@ -62,7 +70,11 @@ const BdArticles = [
         temps: '',
         transfert: '',
         activité: '',
-        conditions: ''
+        conditions: '',
+        categories: [
+            'activity',
+            'data'
+        ]
     },
     {
         id: 'A4',
@@ -83,7 +95,11 @@ const BdArticles = [
         temps: '',
         transfert: '',
         activité: '',
-        conditions: ''
+        conditions: '',
+        categories: [
+            'activity',
+            'data'
+        ]
     },
     {
         id: 'A5',
@@ -105,7 +121,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'source'
+        categories: [
+            'source',
+            'network'
+        ]
     },
     {
         id: 'A6',
@@ -127,7 +146,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'source'
+        categories: [
+            'activity',
+            'evaluation'
+        ]
     },
     {
         id: 'A7',
@@ -149,7 +171,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'activité'
+        categories: [
+            'activity',
+            'data'
+        ]
     },
     {
         id: 'A8',
@@ -171,7 +196,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'activité'
+        categories: [
+            'activity',
+            'data'
+        ]
 
     },
     {
@@ -194,7 +222,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'source'
+        categories: [
+            'activity',
+            'evaluation'
+        ]
     },
     {
         id: 'A10',
@@ -216,7 +247,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'activité'
+        categories: [
+            'activity',
+            'data'
+        ]
     },
     {
         id: 'A11',
@@ -238,7 +272,10 @@ const BdArticles = [
         transfert: '',
         activité: '',
         conditions: '',
-        niveau: 'activité'
+        categories: [
+            'activity',
+            'network'
+        ]
     }
 ];
 
