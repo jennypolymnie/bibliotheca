@@ -60,13 +60,7 @@ class ReviewForm extends Component {
                     <Header as="h1"> Donner votre avis sur ce document </Header>
                     <div>
                         <Article
-                            id={selectedArticle.id}
-                            author={selectedArticle.authors}
-                            title={selectedArticle.title}
-                            reference={selectedArticle.reference}
-                            year={selectedArticle.year}
-                            link={selectedArticle.link}
-                            journal={selectedArticle.journal}
+                            article={selectedArticle}
                             canReview={false}
                         />
                     </div>

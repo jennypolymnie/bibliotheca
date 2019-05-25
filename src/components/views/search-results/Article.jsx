@@ -10,99 +10,102 @@ import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
 import { saveSelectedArticle } from '../../../store/actions/actionCreators';
 
-const Article = ({
-    id,
-    author,
-    title,
-    reference,
-    abstract,
-    year,
-    link,
-    journal,
-    articleCharacteristics,
-    selectArticle,
-    history,
-    canReview
-}) => (
-    <Segment>
-        <Grid>
-            <Grid.Row>
-                <Grid.Column width={10}>
-                    <PopupAbstract
-                        title={title}
-                        author={author}
-                        journal={journal}
-                        reference={reference}
-                        year={year}
-                        abstract={abstract}
-                    />
-                    <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    { canReview && (
-                        <TableCheck
-                            articleCharacteristics={articleCharacteristics}
+const Article = ({ article, canReview, history, selectArticle }) => {
+    const {
+        id,
+        authors,
+        title,
+        reference,
+        abstract,
+        year,
+        link,
+        journal,
+        score,
+        ...articleCharacteristics
+    } = article;
+    return (
+        <Segment>
+            <Grid>
+                <Grid.Row>
+                    <Grid.Column width={10}>
+                        <PopupAbstract
+                            title={title}
+                            author={authors}
+                            journal={journal}
+                            reference={reference}
+                            year={year}
+                            abstract={abstract}
                         />
-                    )}
-                </Grid.Column>
-                <Grid.Column stretched width={3}>
-                    <Grid.Row centered>
-                        {/* <div> */}
-                        <Statistic as="Grid.Column" size="small" color="blue">
-                            <Statistic.Value>
-                                {'5'}
-                            </Statistic.Value>
-                            <Statistic.Label>
-                                {'/12'}
-                            </Statistic.Label>
-                        </Statistic>
-                        {/* </div> */}
-                    </Grid.Row>
-                    <Grid.Row>
+                        <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
+                    </Grid.Column>
+                    <Grid.Column width={3}>
                         { canReview && (
-                            <Menu compact>
-                                <Menu.Item>
-                                    <PopupButton />
-                                </Menu.Item>
-                                <Menu.Item
-                                    onClick={() => {
-                                        selectArticle(id);
-                                        history.push('/reviewSummary');
-                                    }}
-                                >
-                                    <Icon name="users" />
-                                    Avis
-                                    <Label color="blue" floating>
-                                        22
-                                    </Label>
-                                </Menu.Item>
-                            </Menu>
+                            <TableCheck
+                                articleCharacteristics={articleCharacteristics}
+                            />
                         )}
-                    </Grid.Row>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
-    </Segment>
+                    </Grid.Column>
+                    <Grid.Column stretched width={3}>
+                        <Grid.Row centered>
+                            {/* <div> */}
+                            <Statistic as="Grid.Column" size="small" color="blue">
+                                <Statistic.Value>
+                                    {score}
+                                </Statistic.Value>
+                                <Statistic.Label>
+                                    {'/12'}
+                                </Statistic.Label>
+                            </Statistic>
+                            {/* </div> */}
+                        </Grid.Row>
+                        <Grid.Row>
+                            { canReview && (
+                                <Menu compact>
+                                    <Menu.Item>
+                                        <PopupButton />
+                                    </Menu.Item>
+                                    <Menu.Item
+                                        onClick={() => {
+                                            selectArticle(id);
+                                            history.push('/reviewSummary');
+                                        }}
+                                    >
+                                        <Icon name="users" />
+                                        Avis
+                                        <Label color="blue" floating>
+                                            22
+                                        </Label>
+                                    </Menu.Item>
+                                </Menu>
+                            )}
+                        </Grid.Row>
+                    </Grid.Column>
+                </Grid.Row>
+            </Grid>
+        </Segment>
+    );
+};
 
-);
 
 Article.propTypes = {
-    id: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    abstract: PropTypes.string.isRequired,
-    year: PropTypes.string.isRequired,
-    reference: PropTypes.string.isRequired,
-    journal: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    articleCharacteristics: PropTypes.shape,
-    selectArticle: PropTypes.func.isRequired,
+    article: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        abstract: PropTypes.string.isRequired,
+        year: PropTypes.string.isRequired,
+        reference: PropTypes.string.isRequired,
+        journal: PropTypes.string.isRequired,
+        link: PropTypes.string.isRequired,
+        articleCharacteristics: PropTypes.shape,
+        score: PropTypes.number.isRequired
+    }).isRequired,
     canReview: PropTypes.bool,
-    history: PropTypes.array.isRequired
+    history: PropTypes.array.isRequired,
+    selectArticle: PropTypes.func.isRequired
 };
 
 Article.defaultProps = {
-    articleCharacteristics: {},
     canReview: true
 };
 

@@ -16,13 +16,7 @@ const ReviewSummary = ({
 }) => (
     <div>
         <Article
-            id={selectedArticle.id}
-            author={selectedArticle.authors}
-            title={selectedArticle.title}
-            reference={selectedArticle.reference}
-            year={selectedArticle.year}
-            link={selectedArticle.link}
-            journal={selectedArticle.journal}
+            article={selectedArticle}
             canReview={false}
         />
         <List relaxed>
@@ -34,6 +28,7 @@ const ReviewSummary = ({
                             statistic={option.statistic}
                             results={option.results}
                             interpretation={option.interpretation}
+                            comments={option.comments}
                         />
                     ))
                 : <div>{'Aucun avis n\'a été émis pour le moment'}</div>

@@ -24,7 +24,8 @@ const BdArticles = [
         categories: [
             'activity',
             'network'
-        ]
+        ],
+        score: 9
     },
     {
         id: 'A2',
@@ -49,7 +50,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 10
     },
     {
         id: 'A3',
@@ -74,7 +76,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 12
     },
     {
         id: 'A4',
@@ -99,7 +102,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 5
     },
     {
         id: 'A5',
@@ -124,7 +128,8 @@ const BdArticles = [
         categories: [
             'source',
             'network'
-        ]
+        ],
+        score: 6
     },
     {
         id: 'A6',
@@ -149,7 +154,8 @@ const BdArticles = [
         categories: [
             'activity',
             'evaluation'
-        ]
+        ],
+        score: 7
     },
     {
         id: 'A7',
@@ -174,7 +180,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 8
     },
     {
         id: 'A8',
@@ -199,7 +206,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 9
 
     },
     {
@@ -225,7 +233,8 @@ const BdArticles = [
         categories: [
             'activity',
             'evaluation'
-        ]
+        ],
+        score: 10
     },
     {
         id: 'A10',
@@ -250,7 +259,8 @@ const BdArticles = [
         categories: [
             'activity',
             'data'
-        ]
+        ],
+        score: 12
     },
     {
         id: 'A11',
@@ -275,7 +285,8 @@ const BdArticles = [
         categories: [
             'activity',
             'network'
-        ]
+        ],
+        score: 2
     }
 ];
 

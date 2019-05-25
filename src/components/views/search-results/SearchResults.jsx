@@ -44,24 +44,11 @@ const SearchResults = ({
             </Grid.Row>
         </Grid>
         <List relaxed>
-
-
             {filteredArticles.length
                 ? filteredArticles
-                    .map(({
-                        authors, title, id, abstract, journal, year, linkScienceDirect, reference, ...articleCharacteristics
-                    }) => (
+                    .map(article => (
                         <Article
-                            key={id}
-                            id={id}
-                            author={authors}
-                            title={title}
-                            journal={journal}
-                            abstract={abstract}
-                            reference={reference}
-                            link={linkScienceDirect}
-                            year={year}
-                            articleCharacteristics={articleCharacteristics}
+                            article={article}
                         />
                     ))
                 : <div> Aucun article trouvé </div> }

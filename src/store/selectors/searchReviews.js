@@ -20,3 +20,8 @@ export const countReviewsSelector = createSelector(
     filteredArticleReviewsSelector,
     articleReviews => articleReviews.length
 );
+
+export const articleScoreSelector = createSelector(
+    filteredArticleReviewsSelector,
+    articleReviews => articleReviews.reduce((totalScore, currentArticle) => totalScore + currentArticle.score, 0) / articleReviews.length
+);
