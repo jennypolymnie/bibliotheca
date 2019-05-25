@@ -42,6 +42,7 @@ export function saveProfile(profile) {
 }
 
 export function saveResearchRequest(userRequest) {
+    console.log(userRequest);
     return {
         type: SAVE_RESEARCH_REQUEST,
         userRequest

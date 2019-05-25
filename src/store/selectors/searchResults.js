@@ -7,12 +7,20 @@ export const allArticlesSelector = () => BdArticles;
 
 export const userRequestFieldsSelector = createSelector(
     userRequestSelector,
-    userRequest => userRequest.map(field => field.id)
+    userRequest => userRequest.options.map(field => field.id)
 );
 
-export const filteredArticleSelector = createSelector(
+export const filterCategoriesArticleSelector = createSelector(
     [userRequestSelector, allArticlesSelector],
-    (userRequest, allArticles) => userRequest.reduce(
+    (userRequest, allArticles) => allArticles.filter(
+        article => article.categories.includes(userRequest.category)
+    )
+);
+
+
+export const filteredArticleSelector = createSelector(
+    [userRequestSelector, filterCategoriesArticleSelector],
+    (userRequest, allArticles) => userRequest.options.reduce(
         (filteredResult, currentUserOption) => filteredResult
             .filter(article => article[currentUserOption.id] === currentUserOption.value),
         allArticles
@@ -20,11 +28,11 @@ export const filteredArticleSelector = createSelector(
 );
 
 export const scoredArticleSelector = createSelector(
-    [userRequestSelector, allArticlesSelector],
+    [userRequestSelector, filterCategoriesArticleSelector],
     (userRequest, allArticles) => {
         const scoredArticles = [];
         allArticles.forEach(article => {
-            const score = userRequest.filter(option => article[option.id] === option.value).length;
+            const score = userRequest.options.filter(option => article[option.id] === option.value).length;
             if (score > 0) {
                 scoredArticles.push(
                     {

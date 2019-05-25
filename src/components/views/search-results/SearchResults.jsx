@@ -28,8 +28,8 @@ const SearchResults = ({
                 </Grid.Column>
             </Grid.Row>
             <Grid.Row columns={3}>
-                {userRequest.map(option => (
-                    <Grid.Column>
+                {userRequest.options.map(option => (
+                    <Grid.Column key={option.id}>
                         <Container fluid className="padded-container">
                             {option.label}
                             <Header as="h4">{option.value}</Header>
@@ -49,6 +49,7 @@ const SearchResults = ({
                     .map(article => (
                         <Article
                             article={article}
+                            key={article.name}
                         />
                     ))
                 : <div> Aucun article trouvé </div> }

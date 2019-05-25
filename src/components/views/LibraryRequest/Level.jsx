@@ -72,9 +72,11 @@ const Preevaluation = ({ selectOption, submitRequest }) => (
                     to="/articles"
                     floated="right"
                     onClick={() => {
+                        console.log('PREEVAL');
                         const options = OptionsRequestPreeval
                             .map(filteredOption => filteredOption.name);
-                        submitRequest(options);
+                        console.log('PRESUBMIT');
+                        submitRequest(options, 'preevaluation');
                     }}
                 >
                     Envoyez la requête
@@ -107,7 +109,7 @@ const Data = ({ selectOption, submitRequest }) => (
                                     const options = OptionsRequestData
                                         .filter(option => option.categories.includes(id))
                                         .map(filteredOption => filteredOption.name);
-                                    submitRequest(options);
+                                    submitRequest(options, id);
                                 }}
                             >
                                 Envoyez la requête
@@ -139,7 +141,7 @@ const BayesianNetwork = ({ selectOption, submitRequest }) => (
                         onClick={() => {
                             const options = OptionsRequestBayesian
                                 .map(filteredOption => filteredOption.name);
-                            submitRequest(options);
+                            submitRequest(options, 'bayesian network');
                         }}
                     >
                         Envoyez la requête

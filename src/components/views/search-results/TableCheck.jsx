@@ -11,7 +11,7 @@ const TableCheck = ({
     userRequest
 }) => (
     <Grid padded={false}>
-        {userRequest.map(option => (
+        {userRequest.options.map(option => (
             <Grid.Row padding={false}>
                 <Grid.Column textAlign="right" width={3} padded={false}>
                     <Icon

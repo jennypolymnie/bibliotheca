@@ -25,10 +25,15 @@ class LibraryRequest extends Component {
         }));
     }
 
-    submitRequest(optionList) {
-        const userRequest = this.state.options
+    submitRequest(optionList, category) {
+        const options = this.state.options
             .filter(option => optionList
                 .some(optionFromList => optionFromList === option.label));
+        const userRequest = {
+            options,
+            category
+        };
+        console.log('++++++');
         this.props.onSubmit(userRequest);
     }
 

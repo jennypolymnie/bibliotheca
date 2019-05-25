@@ -23,9 +23,10 @@ const BdArticles = [
         conditions: '',
         categories: [
             'activity',
-            'network'
+            'bayesian network'
         ],
-        score: 9
+        score: 9,
+        reviewCount: 4
     },
     {
         id: 'A2',
@@ -51,7 +52,8 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 10
+        score: 10,
+        reviewCount: 6
     },
     {
         id: 'A3',
@@ -77,7 +79,8 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 12
+        score: 12,
+        reviewCount: 4
     },
     {
         id: 'A4',
@@ -103,7 +106,8 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 5
+        score: 5,
+        reviewCount: 2
     },
     {
         id: 'A5',
@@ -127,9 +131,10 @@ const BdArticles = [
         conditions: '',
         categories: [
             'source',
-            'network'
+            'bayesian network'
         ],
-        score: 6
+        score: 6,
+        reviewCount: 1
     },
     {
         id: 'A6',
@@ -153,9 +158,10 @@ const BdArticles = [
         conditions: '',
         categories: [
             'activity',
-            'evaluation'
+            'preevaluation'
         ],
-        score: 7
+        score: 7,
+        reviewCount: 3
     },
     {
         id: 'A7',
@@ -207,7 +213,8 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 9
+        score: 9,
+        reviewCount: 3
 
     },
     {
@@ -231,10 +238,10 @@ const BdArticles = [
         activité: '',
         conditions: '',
         categories: [
-            'activity',
-            'evaluation'
+            'preevaluation'
         ],
-        score: 10
+        score: 10,
+        reviewCount: 5
     },
     {
         id: 'A10',
@@ -260,7 +267,8 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 12
+        score: 12,
+        reviewCount: 3
     },
     {
         id: 'A11',
@@ -284,9 +292,10 @@ const BdArticles = [
         conditions: '',
         categories: [
             'activity',
-            'network'
+            'bayesian network'
         ],
-        score: 2
+        score: 2,
+        reviewCount: 1
     }
 ];
 

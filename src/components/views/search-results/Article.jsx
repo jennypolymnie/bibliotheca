@@ -26,6 +26,7 @@ const Article = ({
         link,
         journal,
         score,
+        reviewCount,
         ...articleCharacteristics
     } = article;
     return (
@@ -52,7 +53,6 @@ const Article = ({
                     </Grid.Column>
                     <Grid.Column stretched width={3}>
                         <Grid.Row centered>
-                            {/* <div> */}
                             <Statistic as="Grid.Column" size="small" color="blue">
                                 <Statistic.Value>
                                     {score}
@@ -61,7 +61,6 @@ const Article = ({
                                     {'/12'}
                                 </Statistic.Label>
                             </Statistic>
-                            {/* </div> */}
                         </Grid.Row>
                         <Grid.Row>
                             { canReview && (
@@ -78,7 +77,7 @@ const Article = ({
                                         <Icon name="users" />
                                         Avis
                                         <Label color="blue" floating>
-                                            22
+                                            {reviewCount}
                                         </Label>
                                     </Menu.Item>
                                 </Menu>
@@ -103,7 +102,8 @@ Article.propTypes = {
         journal: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired,
         articleCharacteristics: PropTypes.shape,
-        score: PropTypes.number.isRequired
+        score: PropTypes.number.isRequired,
+        reviewCount: PropTypes.number.isRequired
     }).isRequired,
     canReview: PropTypes.bool,
     history: PropTypes.array.isRequired,
