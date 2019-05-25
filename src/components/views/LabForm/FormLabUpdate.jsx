@@ -104,7 +104,7 @@ class FormLabUpdate extends Component {
                                 <h2>Axes de recherche</h2>
                             </div>
                             <div>
-                                <Button basic circular color="darkgrey" icon as={Link} to="/articles">
+                                <Button basic circular color="grey" icon as={Link} to="/articles">
                                     <Icon size="large" name="question circle" />
                                 </Button>
                             </div>

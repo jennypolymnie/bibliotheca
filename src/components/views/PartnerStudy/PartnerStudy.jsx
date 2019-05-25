@@ -127,7 +127,7 @@ class PartnerStudy extends Component {
                             </Form>
                         </Grid.Column>
                         <Grid.Column textAlign="left">
-                            <Button basic circular color="darkgrey" icon as={Link} to="/articles">
+                            <Button basic circular color="grey" icon as={Link} to="/articles">
                                 <Icon size="large" name="question circle" />
                             </Button>
                         </Grid.Column>

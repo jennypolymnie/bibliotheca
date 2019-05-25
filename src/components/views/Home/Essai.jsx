@@ -41,7 +41,7 @@ class Essai extends Component {
             <div>
                 <Button icon color="grey" fluid onClick={this.openModal}>
                     Démo
-                    <Icon size="large" name="video play" color="darkgrey" />
+                    <Icon size="large" name="video play" color="grey" />
                 </Button>
                 <Modal
                     isOpen={this.state.modalIsOpen}

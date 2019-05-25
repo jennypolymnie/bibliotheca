@@ -9,9 +9,8 @@ import Essai from './Essai';
 const Login = () => (
     <Segment>
         <Grid container>
-            <Grid.Row container columns={1}>
+            <Grid.Row columns={1}>
                 <Form className="login-form">
-
                     <Form.Input
                         fluid
                         icon="user"
@@ -36,7 +35,7 @@ const Login = () => (
                 <Grid.Column>
                     <Button icon color="yellow" fluid as={Link} to="/profilType">
                         {'Créer votre profil '}
-                        <Icon size="large" name="user" color="darkgrey" />
+                        <Icon size="large" name="user" color="grey" />
                     </Button>
                 </Grid.Column>
                 <Grid.Column>

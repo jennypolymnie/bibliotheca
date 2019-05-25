@@ -23,7 +23,7 @@ import MainPage from './views/Review/MainPage';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
 import ForumPage from './views/forum/Forum';
-import './App.css';
+import './App.less';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
 import EquipmentPart from './views/LabForm/EquipmentPart';
@@ -44,7 +44,7 @@ const App = ({ history }) => (
                     </Menu>
 
                     <div className="vertical-center">
-                        <Menu icon compact vertical secondary floated="right" className="fixed-center menu-buttons-left">
+                        <Menu icon compact vertical secondary className="fixed-center menu-buttons-left">
                             <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
@@ -86,12 +86,12 @@ const App = ({ history }) => (
 
                 <Grid.Column width={1} textAlign="center" color="blue" className="paddless-column">
 
-                    <Menu icon floated="center" secondary className="fixed-top menu-buttons-right">
+                    <Menu icon secondary className="fixed-top menu-buttons-right">
                         <AvailableActiveItem to="/profilUpdate" fitted name="user profile" iconName="user circle" color="yellow" size={buttonSize} />
                     </Menu>
 
                     <div className="vertical-center">
-                        <Menu icon vertical secondary floated="left" className="fixed-center menu-buttons-right">
+                        <Menu icon vertical secondary className="fixed-center menu-buttons-right">
                             <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
                             <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />

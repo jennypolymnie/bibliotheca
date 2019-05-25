@@ -1,5 +1,6 @@
 import React from 'react';
 import { Statistic } from 'semantic-ui-react';
+import './stylesheets/Statistics.less';
 
 const items = [
     {
