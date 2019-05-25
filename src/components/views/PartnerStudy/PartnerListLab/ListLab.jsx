@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Segment, Label } from 'semantic-ui-react';
+import { Segment, Label, Button } from 'semantic-ui-react';
 
 
 const ListLab = ({
@@ -10,7 +10,7 @@ const ListLab = ({
         <Label color="blue" ribbon size="large">
             {labName}
         </Label>
-        <div onClick={() => onClick(ListLab)}>
+        <Button as="div" onClick={() => onClick(ListLab)}>
             <p>
                     Nom du responsable:
                 {directorName}
@@ -30,15 +30,15 @@ const ListLab = ({
                 <a href="www.curml.ch">{website}</a>
             </p>
 
-        </div>
+        </Button>
     </Segment>
 );
 
-ListLab.PropTypes = {
+ListLab.propTypes = {
     labName: PropTypes.string.isRequired,
     directorName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    webSite: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
 

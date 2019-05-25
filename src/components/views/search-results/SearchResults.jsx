@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
-    Checkbox, Grid, Segment, List,
+    Checkbox, Grid, List,
     Container, Header
 } from 'semantic-ui-react';
-// import './stylesheets/SearchResults.css';
 import CountElement from './NbArticle';
 import Article from './Article';
 import StandardLayout from '../../layout/StandardLayout';
@@ -17,11 +17,10 @@ import './stylesheets/SearchResults.css';
 const SearchResults = ({
     userRequest,
     filteredArticles,
-    count,
+    count
     // fieldRequest
 }) => (
     <div className="recherche">
-        {/* <Segment Segment color="yellow" raised container> */}
         <Grid>
             <Grid.Row>
                 <Grid.Column>
@@ -33,7 +32,7 @@ const SearchResults = ({
                     <Grid.Column>
                         <Container fluid className="padded-container">
                             {option.label}
-                            <Header as='h4'>{option.value}</Header>
+                            <Header as="h4">{option.value}</Header>
                         </Container>
                     </Grid.Column>
                 ))}
@@ -44,7 +43,6 @@ const SearchResults = ({
                 </Grid.Column>
             </Grid.Row>
         </Grid>
-        {/* </Segment> */}
         <List relaxed>
 
 
@@ -71,6 +69,11 @@ const SearchResults = ({
     </div>
 );
 
+SearchResults.propTypes = {
+    userRequest: PropTypes.array.isRequired,
+    filteredArticles: PropTypes.array.isRequired,
+    count: PropTypes.number.isRequired
+};
 
 const mapStateToProps = state => ({
     userRequest: userRequestSelector(state),

@@ -2,8 +2,6 @@ import React from 'react';
 import {
     Grid, Header, Segment, Dropdown
 } from 'semantic-ui-react';
-
-import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
 import AdhesiveTapes from '../../data/AdhesiveTapes';
 import Swabs from '../../data/Swabs';
 import NucleicCards from '../../data/NucleicCards';

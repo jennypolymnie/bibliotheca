@@ -377,8 +377,8 @@ ChemistryProfile.propTypes = {
     vaginalTestOptions: PropTypes.array,
     contactTest: PropTypes.arrayOf(PropTypes.string),
     contactTestOptions: PropTypes.array,
-    spermTest: PropTypes.arrayOf(PropTypes.string),
-    spermTestOptions: PropTypes.array,
+    // spermTest: PropTypes.arrayOf(PropTypes.string),
+    // spermTestOptions: PropTypes.array,
     onChange: PropTypes.func.isRequired
 
 
@@ -409,9 +409,9 @@ ChemistryProfile.defaultProps = {
     vaginalTest: '',
     vaginalTestOptions: '',
     contactTest: '',
-    contactTestOptions: '',
-    spermTest: '',
-    spermTestOptions: ''
+    contactTestOptions: ''
+    // spermTest: '',
+    // spermTestOptions: ''
 };
 
 export default ChemistryProfile;

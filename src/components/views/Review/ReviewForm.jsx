@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
     Radio, Form, Button, Header
 } from 'semantic-ui-react';
-import ArticleReviewed from './ArticleReviewed';
 import './ReviewForm.css';
-import ReviewQuestions from './ReviewQuestions';
-import TableQuestions from './TableQuestions';
 import Article from '../search-results/Article';
 import { selectedArticleSelector } from '../../../store/selectors/searchReviews';
 
-
-
-
 class ReviewForm extends Component {
-    state = {}
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.handleRigor = this.handleRigor.bind(this);
+        this.handleStat = this.handleStat.bind(this);
+        this.handleResult = this.handleResult.bind(this);
+        this.handleInterpret = this.handleInterpret.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
 
     handleRigor = (e, { value }) => this.setState({
         rigor: value
@@ -35,13 +38,15 @@ class ReviewForm extends Component {
     handleChange = name => {
         switch (name) {
             case 'rigor':
-                return handleRigor;
+                return this.handleRigor;
             case 'stat':
-                return handleStat;
+                return this.handleStat;
             case 'result':
-                return handleResult;
+                return this.handleResult;
             case 'interpret':
-                return handleInterpret;
+                return this.handleInterpret;
+            default:
+                return Function.prototype;
         }
     }
 
@@ -66,25 +71,6 @@ class ReviewForm extends Component {
                         />
                     </div>
                 </div>
-           
-
-                {// <div>
-
-                    // {TableQuestions.map(({ id, label, name, value }) => (
-                    // <ReviewQuestions
-                    // key={id}
-                    // label={label}
-                    // name={name}
-                    // value={value}
-                    // checked={this.state.value===value}
-                    // onChange={this.handleChange({name})}
-                    // >
-                    // </ReviewQuestions>
-
-                    // ))}
-                    // </div>
-                }
-
 
                 <div className="QuestionRadio">
                     <p> Rigueur scientifique </p>
@@ -237,6 +223,10 @@ class ReviewForm extends Component {
         );
     }
 }
+
+ReviewForm.propTypes = {
+    selectedArticle: PropTypes.shape.isRequired
+};
 
 const mapStateToProps = state => ({
     selectedArticle: selectedArticleSelector(state)

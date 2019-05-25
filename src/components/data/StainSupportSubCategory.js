@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Material from './Material';
 
 const Material = [

@@ -84,6 +84,11 @@ const Preevaluation = ({ selectOption, submitRequest }) => (
     </Segment>
 );
 
+Preevaluation.propTypes = {
+    selectOption: PropTypes.func.isRequired,
+    submitRequest: PropTypes.func.isRequired
+};
+
 const Data = ({ selectOption, submitRequest }) => (
     <Grid stretched>
         {
@@ -115,6 +120,11 @@ const Data = ({ selectOption, submitRequest }) => (
     </Grid>
 );
 
+Data.propTypes = {
+    selectOption: PropTypes.func.isRequired,
+    submitRequest: PropTypes.func.isRequired
+};
+
 const BayesianNetwork = ({ selectOption, submitRequest }) => (
     <Grid stretched>
         <Grid.Column padded stretched>
@@ -139,6 +149,11 @@ const BayesianNetwork = ({ selectOption, submitRequest }) => (
         </Grid.Column>
     </Grid>
 );
+
+BayesianNetwork.propTypes = {
+    selectOption: PropTypes.func.isRequired,
+    submitRequest: PropTypes.func.isRequired
+};
 
 const Level = ({ selectOption, submitRequest }) => (
     <Tab
@@ -183,7 +198,6 @@ const Level = ({ selectOption, submitRequest }) => (
 );
 
 Level.propTypes = {
-    onSubmit: PropTypes.func.isRequired,
     selectOption: PropTypes.func.isRequired,
     submitRequest: PropTypes.func.isRequired
 };

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Radio, Input, Header, Grid, Icon, Segment
+    Button, Form, Radio, Input, Header, Grid, Icon
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import Research from './Research';
@@ -127,7 +127,7 @@ class PartnerStudy extends Component {
                             </Form>
                         </Grid.Column>
                         <Grid.Column textAlign="left">
-                            <Button basic circular color="darkgrey" icon as={Link} to="/articles">
+                            <Button basic circular color="grey" icon as={Link} to="/articles">
                                 <Icon size="large" name="question circle" />
                             </Button>
                         </Grid.Column>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Icon, Grid } from 'semantic-ui-react';
 import {
     userRequestSelector
@@ -29,6 +30,10 @@ const TableCheck = ({
     </Grid>
 );
 
+TableCheck.propTypes = {
+    articleCharacteristics: PropTypes.shape.isRequired,
+    userRequest: PropTypes.array.isRequired
+};
 
 const mapStateToProps = state => ({
     userRequest: userRequestSelector(state)
@@ -36,30 +41,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(TableCheck);
-
-
-// const TableCheck = ({ otherCharacteristics, fieldRequest }) => (
-//     <Grid padded={false}>
-//         <Grid.Row padding={false}>
-//             <Grid.Column textAlign="right" width={4} padded={false}>
-//                 {fieldRequest.map(option => (
-//                     <Icon
-//                         name={option === otherCharacteristics.fieldRequest ? 'check' : 'close icon'}
-//                         size="small"
-//                         color={option === otherCharacteristics.fieldRequest ? 'blue' : 'red'}
-//                     />
-//                 ))}
-//             </Grid.Column>
-//         </Grid.Row>
-//     </Grid>
-// );
-
-// TableCheck.propTypes = {
-//     otherCharacteristics: PropTypes.shape
-// };
-
-// TableCheck.defaultProps = {
-//     otherCharacteristics: {}
-// };
-
-// export default TableCheck;
