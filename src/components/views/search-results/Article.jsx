@@ -10,7 +10,12 @@ import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
 import { saveSelectedArticle } from '../../../store/actions/actionCreators';
 
-const Article = ({ article, canReview, history, selectArticle }) => {
+const Article = ({
+    article,
+    canReview,
+    history,
+    selectArticle
+}) => {
     const {
         id,
         authors,

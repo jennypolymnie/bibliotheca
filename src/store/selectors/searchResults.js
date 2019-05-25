@@ -29,7 +29,7 @@ export const scoredArticleSelector = createSelector(
                 scoredArticles.push(
                     {
                         ...article,
-                        score
+                        searchRanking: score
                     }
                 );
             }
@@ -40,7 +40,7 @@ export const scoredArticleSelector = createSelector(
 
 export const sortedArticleSelector = createSelector(
     scoredArticleSelector,
-    scoredArticles => scoredArticles.sort((a, b) => (b.score - a.score))
+    scoredArticles => scoredArticles.sort((a, b) => (b.searchRanking - a.searchRanking) || (b.score - a.score))
 );
 
 export const countFilteredArticlesSelector = createSelector(
