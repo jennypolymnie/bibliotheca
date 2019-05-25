@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { ConnectedRouter } from 'connected-react-router';
+import { withRouter } from 'react-router-dom';
 import { Route, Switch } from 'react-router';
-import PropTypes from 'prop-types';
 import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './views/search-results/SearchResults';
 import FormLab from './views/LabForm/FormLab';
@@ -34,77 +33,71 @@ import ReviewSummary from './views/Review/ReviewSummary';
 
 const buttonSize = 'large';
 
-const App = ({ history }) => (
-    <ConnectedRouter history={history}>
-        <Grid padded className="full-height">
-            <Grid.Row>
-                <Grid.Column width={1} color="blue" className="paddless-column">
-                    <Menu icon compact secondary className="fixed-top menu-buttons-left">
-                        <AvailableActiveItem to="/logo" src={logoYellow} name="request" color="yellow" size={buttonSize} />
+const App = () => (
+    <Grid padded className="full-height">
+        <Grid.Row>
+            <Grid.Column width={1} color="blue" className="paddless-column">
+                <Menu icon compact secondary className="fixed-top menu-buttons-left">
+                    <AvailableActiveItem to="/logo" src={logoYellow} name="request" color="yellow" size={buttonSize} />
+                </Menu>
+
+                <div className="vertical-center">
+                    <Menu icon compact vertical secondary className="fixed-center menu-buttons-left">
+                        <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="question circle outline" color="yellow" size={buttonSize} />
+
                     </Menu>
-
-                    <div className="vertical-center">
-                        <Menu icon compact vertical secondary className="fixed-center menu-buttons-left">
-                            <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="question circle outline" color="yellow" size={buttonSize} />
-
-                        </Menu>
-                    </div>
-                </Grid.Column>
-                <Grid.Column width={14}>
-                    <Switch>
-                        <Route exact path="/" component={LoginWithCenterGrid} />
-                        <Route path="/logo">
-                            <LogoWithCenterGrid src={logoBlue} size="massive" />
-                        </Route>
-                        <Route path="/proposals" component={ArticleProposal} />
-                        <Route path="/articles" component={SearchResults} />
-                        <Route path="/profilUpdate" component={FormLabUpdate} />
-                        <Route path="/reviewForm" component={ReviewForm} />
-                        <Route path="/booksellerRequest" component={BooksellerRequest} />
-                        <Route path="/formLab" component={FormLab} />
-                        <Route path="/analyticalPart" component={AnalyticalPart} />
-                        <Route path="/equipmentPart" component={EquipmentPart} />
-                        <Route path="/libraryRequest" component={LibraryRequest} />
-                        <Route path="/PartnerStudy" component={PartnerStudy2} />
-                        <Route path="/List" component={PartnerListLab} />
-                        <Route path="/ReachoutList" component={ReachOutListLab} />
-                        <Route path="/requestAdvice" component={RequestAdvice} />
-                        <Route path="/reviewForm" component={ReviewForm} />
-                        <Route path="/searchorreview" component={MainPage} />
-                        <Route path="/requestSend" component={RequestSend} />
-                        <Route path="/proposalSend" component={ProposalSend} />
-                        <Route path="/profilType" component={Profile} />
-                        <Route path="/forum" component={ForumPage} />
-                        <Route path="/reviewSummary" component={ReviewSummary} />
-                        <Route render={() => <h1>404 Error</h1>} />
-                    </Switch>
-                </Grid.Column>
+                </div>
+            </Grid.Column>
+            <Grid.Column width={14}>
+                <Switch>
+                    <Route exact path="/" component={LoginWithCenterGrid} />
+                    <Route path="/logo">
+                        <LogoWithCenterGrid src={logoBlue} size="massive" />
+                    </Route>
+                    <Route path="/proposals" component={ArticleProposal} />
+                    <Route path="/articles" component={SearchResults} />
+                    <Route path="/profilUpdate" component={FormLabUpdate} />
+                    <Route path="/reviewForm" component={ReviewForm} />
+                    <Route path="/booksellerRequest" component={BooksellerRequest} />
+                    <Route path="/formLab" component={FormLab} />
+                    <Route path="/analyticalPart" component={AnalyticalPart} />
+                    <Route path="/equipmentPart" component={EquipmentPart} />
+                    <Route path="/libraryRequest" component={LibraryRequest} />
+                    <Route path="/PartnerStudy" component={PartnerStudy2} />
+                    <Route path="/List" component={PartnerListLab} />
+                    <Route path="/ReachoutList" component={ReachOutListLab} />
+                    <Route path="/requestAdvice" component={RequestAdvice} />
+                    <Route path="/reviewForm" component={ReviewForm} />
+                    <Route path="/searchorreview" component={MainPage} />
+                    <Route path="/requestSend" component={RequestSend} />
+                    <Route path="/proposalSend" component={ProposalSend} />
+                    <Route path="/profilType" component={Profile} />
+                    <Route path="/forum" component={ForumPage} />
+                    <Route path="/reviewSummary" component={ReviewSummary} />
+                    <Route render={() => <h1>404 Error</h1>} />
+                </Switch>
+            </Grid.Column>
 
 
-                <Grid.Column width={1} textAlign="center" color="blue" className="paddless-column">
+            <Grid.Column width={1} textAlign="center" color="blue" className="paddless-column">
 
-                    <Menu icon secondary className="fixed-top menu-buttons-right">
-                        <AvailableActiveItem to="/profilUpdate" fitted name="user profile" iconName="user circle" color="yellow" size={buttonSize} />
+                <Menu icon secondary className="fixed-top menu-buttons-right">
+                    <AvailableActiveItem to="/profilUpdate" fitted name="user profile" iconName="user circle" color="yellow" size={buttonSize} />
+                </Menu>
+
+                <div className="vertical-center">
+                    <Menu icon vertical secondary className="fixed-center menu-buttons-right">
+                        <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
                     </Menu>
-
-                    <div className="vertical-center">
-                        <Menu icon vertical secondary className="fixed-center menu-buttons-right">
-                            <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
-                            <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
-                        </Menu>
-                    </div>
-                </Grid.Column>
-            </Grid.Row>
-        </Grid>
-    </ConnectedRouter>
+                </div>
+            </Grid.Column>
+        </Grid.Row>
+    </Grid>
 );
 
-App.propTypes = {
-    history: PropTypes.array.isRequired
-};
-
-export default App;
+export default withRouter(App);

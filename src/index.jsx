@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import configureStore, { history } from './store/store';
+import configureStore from './store/store';
 import App from './components/App';
 import 'semantic-ui-less/semantic.less';
 import './index.css';
@@ -24,8 +24,8 @@ const store = configureStore(initialState);
 
 ReactDom.render(
     <Provider store={store}>
-        <BrowserRouter history={history}>
-            <App history={history} />
+        <BrowserRouter>
+            <App />
         </BrowserRouter>
     </Provider>,
     document.querySelector('#app') // eslint-disable-line no-undef
