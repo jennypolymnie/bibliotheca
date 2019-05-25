@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
     Radio, Form, Button, Header
 } from 'semantic-ui-react';
@@ -6,6 +7,10 @@ import ArticleReviewed from './ArticleReviewed';
 import './ReviewForm.css';
 import ReviewQuestions from './ReviewQuestions';
 import TableQuestions from './TableQuestions';
+import Article from '../search-results/Article';
+import { selectedArticleSelector } from '../../../store/selectors/searchReviews';
+
+
 
 
 class ReviewForm extends Component {
@@ -41,23 +46,27 @@ class ReviewForm extends Component {
     }
 
     render() {
+        const { selectedArticle } = this.props;
         return (
 
             <div className="ReviewForm">
 
                 <div>
                     <Header as="h1"> Donner votre avis sur ce document </Header>
+                    <div>
+                        <Article
+                            id={selectedArticle.id}
+                            author={selectedArticle.authors}
+                            title={selectedArticle.title}
+                            reference={selectedArticle.reference}
+                            year={selectedArticle.year}
+                            link={selectedArticle.link}
+                            journal={selectedArticle.journal}
+                            canReview={false}
+                        />
+                    </div>
                 </div>
-                <div className="ArticleReviewed">
-                    <ArticleReviewed
-                        author="David G. Casey, Judy Price'"
-                        title="The sensitivity and specificity of the RSID-saliva kit for the detection of human salivary amylse in the Forensic Science Laboratory, Dublin, Ireland"
-                        journal="Forensic Science International"
-                        abstract="We demonstrate here that the RSID™-saliva test can be used as a test for human salivary..."
-                        link="https://www.sciencedirect.com/science/article/pii/S0379073809004204"
-                        onClick={this.handleCardClick}
-                    />
-                </div>
+           
 
                 {// <div>
 
@@ -218,7 +227,9 @@ class ReviewForm extends Component {
                             />
                         </Form.Field>
                     </Form>
-
+                    <Form>
+                        <Form.TextArea label="Commentaires" />
+                    </Form>
                 </div>
                 <Button color="blue">Soumettez votre opinion</Button>
 
@@ -227,4 +238,8 @@ class ReviewForm extends Component {
     }
 }
 
-export default ReviewForm;
+const mapStateToProps = state => ({
+    selectedArticle: selectedArticleSelector(state)
+});
+
+export default connect(mapStateToProps)(ReviewForm);

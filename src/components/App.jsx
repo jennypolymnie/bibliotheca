@@ -72,7 +72,7 @@ const App = ({ history }) => (
                         <Route path="/List" component={PartnerListLab} />
                         <Route path="/ReachoutList" component={ReachOutListLab} />
                         <Route path="/requestAdvice" component={RequestAdvice} />
-                        <Route path="/review" component={ReviewForm} />
+                        <Route path="/reviewForm" component={ReviewForm} />
                         <Route path="/searchorreview" component={MainPage} />
                         <Route path="/requestSend" component={RequestSend} />
                         <Route path="/proposalSend" component={ProposalSend} />

@@ -1,28 +1,31 @@
 
 const Material = [
     {
-        id: 1, name: 'Laine', value: 'whool', text: 'Laine'
+        id: 1, name: 'Laine', value: 'Laine', text: 'Laine'
     },
     {
-        id: 2, name: 'Papier', value: 'paper', text: 'Papier'
+        id: 2, name: 'Papier', value: 'Papier', text: 'Papier'
     },
     {
-        id: 3, name: 'Verre', value: 'glass', text: 'Verre'
+        id: 3, name: 'Verre', value: 'Verre', text: 'Verre'
     },
     {
-        id: 4, name: 'Bois', value: 'wood', text: 'Bois'
+        id: 4, name: 'Bois', value: 'Bois', text: 'Bois'
     },
     {
-        id: 5, name: 'Plastique', value: 'plastic', text: 'Plastique'
+        id: 5, name: 'Plastique', value: 'Plastique', text: 'Plastique'
     },
     {
-        id: 6, name: 'Jeans', value: 'jeans', text: 'Jeans'
+        id: 6, name: 'Jeans', value: 'Jeans', text: 'Jeans'
     },
     {
-        id: 7, name: 'Coton', value: 'cotton', text: 'Coton'
+        id: 7, name: 'Coton', value: 'Coton', text: 'Coton'
     },
     {
-        id: 7, name: 'Metal', value: 'metal', text: 'Metal'
+        id: 8, name: 'Metal', value: 'Metal', text: 'Metal'
+    },
+    {
+        id: 9, name: 'Nylon', value: 'Nylon', text: 'Nylon'
     }
 ];
 

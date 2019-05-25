@@ -16,14 +16,12 @@ const ReviewSummary = ({
     <div>
         <Article
             id={selectedArticle.id}
-            author={selectedArticle.author}
+            author={selectedArticle.authors}
             title={selectedArticle.title}
             reference={selectedArticle.reference}
-            abstract={selectedArticle.abstract}
             year={selectedArticle.year}
             link={selectedArticle.link}
             journal={selectedArticle.journal}
-            articleCharacteristics={selectedArticle.articleCharacteristics}
             canReview={false}
         />
         <List relaxed>

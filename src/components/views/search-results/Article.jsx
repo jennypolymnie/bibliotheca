@@ -52,7 +52,7 @@ const Article = ({
                             <Statistic.Value>
                                 {'5'}
                             </Statistic.Value>
-                            <Statistic.Label>{"/12"}</Statistic.Label>
+                            <Statistic.Label>{'/12'}</Statistic.Label>
                         </Statistic>
                         {/* </div> */}
                     </Grid.Row>

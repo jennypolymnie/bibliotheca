@@ -12,7 +12,7 @@ const ReferenceFormat = ({
             {`${author}. `}
             {`(${year}). `}
             <i>{journal}</i>
-            {`${reference}. `}
+            {` ${reference}. `}
         </p>
     </React.Fragment>
 );

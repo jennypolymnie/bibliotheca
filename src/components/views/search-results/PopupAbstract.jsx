@@ -14,6 +14,7 @@ const PopupAbstract = ({
     );
     return (
         <Popup
+            position="right center"
             trigger={article}
             wide="very"
         >
