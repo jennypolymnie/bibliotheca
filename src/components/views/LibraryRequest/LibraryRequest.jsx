@@ -33,7 +33,6 @@ class LibraryRequest extends Component {
             options,
             category
         };
-        console.log('++++++');
         this.props.onSubmit(userRequest);
     }
 

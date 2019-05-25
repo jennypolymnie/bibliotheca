@@ -4,7 +4,7 @@ import {
 } from '../actions/constants';
 
 
-const userRequestReducer = (state = {}, action) => {
+const userRequestReducer = (state = { options: [] }, action) => {
     switch (action.type) {
         case SAVE_RESEARCH_REQUEST: {
             return {

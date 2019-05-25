@@ -18,7 +18,7 @@ import { LogoWithCenterGrid, LoginWithCenterGrid } from './views/Home/CenterGrid
 import RequestSend from './views/LibrarianRequest/RequestSend';
 import ProposalSend from './views/LibrarianRequest/ProposalSend';
 import Profile from './views/Profile/Profile';
-import MainPage from './views/Review/MainPage';
+import TraditionalSearch from './views/Review/TraditionalSearch';
 import AnalyticalPart from './views/LabForm/AnalyticPart';
 import { AvailableActiveItem } from './views/Home/ActiveIcon';
 import ForumPage from './views/forum/Forum';
@@ -71,7 +71,7 @@ const App = () => (
                     <Route path="/ReachoutList" component={ReachOutListLab} />
                     <Route path="/requestAdvice" component={RequestAdvice} />
                     <Route path="/reviewForm" component={ReviewForm} />
-                    <Route path="/searchorreview" component={MainPage} />
+                    <Route path="/searchorreview" component={TraditionalSearch} />
                     <Route path="/requestSend" component={RequestSend} />
                     <Route path="/proposalSend" component={ProposalSend} />
                     <Route path="/profilType" component={Profile} />
