@@ -12,7 +12,7 @@ const InputExemple = ({ info, entry }) => (
     </div>
 );
 
-InputExemple.PropTypes = {
+InputExemple.propTypes = {
     info: PropTypes.string.isRequired,
     entry: PropTypes.number.isRequired
 };

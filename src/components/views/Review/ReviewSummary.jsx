@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
     List
 } from 'semantic-ui-react';
@@ -43,6 +44,15 @@ const ReviewSummary = ({
     </div>
 );
 
+ReviewSummary.propTypes = {
+    reviews: PropTypes.array,
+    selectedArticle: PropTypes.object
+};
+
+ReviewSummary.defaultProps = {
+    reviews: [],
+    selectedArticle: {}
+};
 
 const mapStateToProps = state => ({
     reviews: filteredArticleReviewsSelector(state),

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
 import Modal from 'react-modal';
 import { Button, Icon } from 'semantic-ui-react';
 import Video from './VideoDemo';

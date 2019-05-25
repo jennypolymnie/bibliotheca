@@ -11,8 +11,8 @@ const PartnerListLab = () => (
 
         <div>
             <CountElement name="Nombre de laboratoire pouvant être intéressé" count={2} />
-            {Users.filter(user => user.profil === 'Lab').map((user, index) => (
-                <ListLab key={index} labName={user.name} directorName={user.directorName} email={user.directorEmail} website={user.website} />
+            {Users.filter(user => user.profil === 'Lab').map(user => (
+                <ListLab key={user.name} labName={user.name} directorName={user.directorName} email={user.directorEmail} website={user.website} />
             ))
             }
         </div>

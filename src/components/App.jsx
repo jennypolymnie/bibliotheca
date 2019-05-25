@@ -104,7 +104,7 @@ const App = ({ history }) => (
 );
 
 App.propTypes = {
-    history: PropTypes.object
+    history: PropTypes.array.isRequired
 };
 
 export default App;

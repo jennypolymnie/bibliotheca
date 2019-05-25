@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Radio, Input, Header, Grid, Icon, Segment
+    Button, Form, Radio, Input, Header, Grid, Icon
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import Research from './Research';

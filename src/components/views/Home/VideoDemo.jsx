@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { Component } from 'react';
 import { findDOMNode } from 'react-dom';
 import screenfull from 'screenfull';
@@ -23,7 +25,8 @@ class Video extends Component {
     }
 
     playPause = () => {
-        this.setState({ playing: !this.state.playing });
+        const { playing } = this.state;
+        this.setState({ playing: !playing });
     }
 
     stop = () => {

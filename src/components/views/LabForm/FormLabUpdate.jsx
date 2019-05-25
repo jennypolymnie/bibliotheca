@@ -60,7 +60,6 @@ class FormLabUpdate extends Component {
                     ...stateUpdate
                 }
             };
-            console.log(updateResearchThemes);
             return updateResearchThemes;
         });
     }

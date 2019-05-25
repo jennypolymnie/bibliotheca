@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Segment, Label } from 'semantic-ui-react';
-
+import { Segment, Label, Button } from 'semantic-ui-react';
 
 const ResultsFormat = ({
     labName, directorName, website, onClick
@@ -10,7 +9,7 @@ const ResultsFormat = ({
         <Label color="blue" ribbon size="large">
             {labName}
         </Label>
-        <div onClick={() => onClick(ResultsFormat)}>
+        <Button as="div" onClick={() => onClick(ResultsFormat)}>
             <p>
                     Nom du responsable:
                 {directorName}
@@ -21,22 +20,15 @@ const ResultsFormat = ({
                     Site web du laboratoire:
                 <a href="www.curml.ch">{website}</a>
             </p>
-
-        </div>
+        </Button>
     </Segment>
 );
 
-ResultsFormat.PropTypes = {
+ResultsFormat.propTypes = {
     labName: PropTypes.string.isRequired,
     directorName: PropTypes.string.isRequired,
-    webSite: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
-
-ResultsFormat.PropTypes.defaultProps = {
-    labName: '',
-    directorName: ''
-};
-
 
 export default ResultsFormat;

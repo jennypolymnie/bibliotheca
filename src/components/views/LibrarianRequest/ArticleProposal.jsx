@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, TextArea, Input, Header, Grid
+    Button, Form, TextArea, Input, Header, Grid, Message
 } from 'semantic-ui-react';
 import './ArticleProposal.css';
 import { Link } from 'react-router-dom';
@@ -48,9 +48,9 @@ class ArticleProposal extends Component {
                         </Form.Group>
 
                         <Form.Group grouped>
-                            <label>
+                            <Message>
                                 {'Détenez vous les droits d\'auteur de ce document?'}
-                            </label>
+                            </Message>
                             <Form.Radio
                                 label="Oui et je consens à la distribution libre sur bibliotheca"
                                 value="yes"

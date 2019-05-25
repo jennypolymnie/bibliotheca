@@ -34,38 +34,45 @@ const generateIconProps = props => {
     };
 };
 
-const ActiveItem = C => props => {
-    const { to, name, src } = props;
+const ActiveItem = C => {
+    const wrapped = props => {
+        const {
+            to,
+            name,
+            src,
+            history
+        } = props;
 
-    const iconProps = generateIconProps(props);
-    const redirect = toPath => {
-        if (toPath) {
-            props.history.push({
-                pathname: toPath
-            });
-        }
+        const iconProps = generateIconProps(props);
+        const redirect = toPath => {
+            if (toPath) {
+                history.push({
+                    pathname: toPath
+                });
+            }
+        };
+
+        return (
+            <C onClick={() => redirect(to)} name={name} active={false}>
+                {renderIcon(src, iconProps)}
+            </C>
+        );
     };
 
-    return (
-        <C onClick={() => redirect(to)} name={name} active={false}>
-            {renderIcon(src, iconProps)}
-        </C>
-    );
-};
+    wrapped.propTypes = {
+        to: PropTypes.string,
+        name: PropTypes.string,
+        src: PropTypes.any,
+        history: PropTypes.any
+    };
+    wrapped.defaultProps = {
+        to: undefined,
+        name: undefined,
+        src: undefined,
+        history: undefined
+    };
 
-ActiveItem.propTypes = {
-    to: PropTypes.string,
-    name: PropTypes.string,
-    src: PropTypes.any,
-    iconName: PropTypes.string,
-    history: PropTypes.any
-};
-ActiveItem.defaultProps = {
-    to: undefined,
-    name: undefined,
-    src: undefined,
-    iconName: undefined,
-    history: undefined
+    return wrapped;
 };
 
 export const AvailableActiveItem = withRouter(ActiveItem(Menu.Item));

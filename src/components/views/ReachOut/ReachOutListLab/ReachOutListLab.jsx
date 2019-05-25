@@ -11,8 +11,8 @@ const ReachOutListLab = () => (
 
         <div>
             <CountElement name="Nombre de laboratoire pouvant être intéressé" count={2} />
-            {Laboratories.filter(user => user.profil === 'Lab').map((user, index) => (
-                <ResultsFormat key={index} labName={user.name} directorName={user.directorName} email={user.directorEmail} website={user.website} />
+            {Laboratories.filter(user => user.profil === 'Lab').map(user => (
+                <ResultsFormat key={user.name} labName={user.name} directorName={user.directorName} email={user.directorEmail} website={user.website} />
             ))
             }
         </div>

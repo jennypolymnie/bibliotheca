@@ -30,11 +30,10 @@ const ProfileContent = props => {
     );
 };
 
-// ProfileContent.PropTypes = {
-//     text: PropTypes.string.isRequired,
-//     cost: PropTypes.number.isRequired,
-//     to: PropTypes.string.isRequired
-
-// };
+ProfileContent.propTypes = {
+    text: PropTypes.string.isRequired,
+    cost: PropTypes.number.isRequired,
+    to: PropTypes.string.isRequired
+};
 
 export default ProfileContent;

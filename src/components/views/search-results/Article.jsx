@@ -52,7 +52,7 @@ const Article = ({
                             <Statistic.Value>
                                 {'5'}
                             </Statistic.Value>
-                            <Statistic.Label>{"/12"}</Statistic.Label>
+                            <Statistic.Label>/12</Statistic.Label>
                         </Statistic>
                         {/* </div> */}
                     </Grid.Row>
@@ -95,7 +95,8 @@ Article.propTypes = {
     link: PropTypes.string.isRequired,
     articleCharacteristics: PropTypes.shape,
     selectArticle: PropTypes.func.isRequired,
-    canReview: PropTypes.bool
+    canReview: PropTypes.bool,
+    history: PropTypes.array.isRequired
 };
 
 Article.defaultProps = {
