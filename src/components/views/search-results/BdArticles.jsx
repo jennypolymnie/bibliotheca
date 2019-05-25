@@ -23,7 +23,7 @@ const BdArticles = [
         conditions: '',
         categories: [
             'activity',
-            'bayesian network'
+            'bayesianNetworkActivity'
         ],
         score: 9,
         reviewCount: 4
@@ -131,7 +131,7 @@ const BdArticles = [
         conditions: '',
         categories: [
             'source',
-            'bayesian network'
+            'bayesianNetworkSource'
         ],
         score: 6,
         reviewCount: 1
@@ -292,7 +292,7 @@ const BdArticles = [
         conditions: '',
         categories: [
             'activity',
-            'bayesian network'
+            'bayesianNetworkActivity'
         ],
         score: 2,
         reviewCount: 1

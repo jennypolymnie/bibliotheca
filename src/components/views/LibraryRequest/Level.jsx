@@ -5,9 +5,10 @@ import {
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Hierarchy from '../../data/Hierarchy';
+import BayesianNetworkCategory from '../../data/BayesianNetworkCategory';
 import OptionsRequestPreeval from '../../data/OptionsRequestPreeval';
 import OptionsRequestData from '../../data/OptionsRequest';
-import OptionsRequestBayesian from '../../data/OptionsRequestBayesian';
+// import OptionsRequestBayesian from '../../data/OptionsRequestBayesian';
 
 const generateListPreeval = selectOption => OptionsRequestPreeval
     .map(filteredOption => (
@@ -42,21 +43,21 @@ const generateListData = (id, selectOption) => OptionsRequestData
         </Segment>
     ));
 
-const generateListBayesian = selectOption => OptionsRequestBayesian
-    .map(filteredOption => (
-        <Segment basic className="search_option_field">
-            <Header sub>
-                {filteredOption.name}
-            </Header>
-            <Dropdown
-                placeholder="Choisir"
-                fluid
-                selection
-                onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
-                options={filteredOption.options}
-            />
-        </Segment>
-    ));
+// const generateListBayesian = selectOption => OptionsRequestBayesian
+//     .map(filteredOption => (
+//         <Segment basic className="search_option_field">
+//             <Header sub>
+//                 {filteredOption.name}
+//             </Header>
+//             <Dropdown
+//                 placeholder="Choisir"
+//                 fluid
+//                 selection
+//                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
+//                 options={filteredOption.options}
+//             />
+//         </Segment>
+//     ));
 
 const Preevaluation = ({ selectOption, submitRequest }) => (
     <Segment color="yellow" raised container className="search_option">
@@ -72,10 +73,8 @@ const Preevaluation = ({ selectOption, submitRequest }) => (
                     to="/articles"
                     floated="right"
                     onClick={() => {
-                        console.log('PREEVAL');
                         const options = OptionsRequestPreeval
                             .map(filteredOption => filteredOption.name);
-                        console.log('PRESUBMIT');
                         submitRequest(options, 'preevaluation');
                     }}
                 >
@@ -109,7 +108,7 @@ const Data = ({ selectOption, submitRequest }) => (
                                     const options = OptionsRequestData
                                         .filter(option => option.categories.includes(id))
                                         .map(filteredOption => filteredOption.name);
-                                    submitRequest(options, id);
+                                    submitRequest(options, id, 'data');
                                 }}
                             >
                                 Envoyez la requête
@@ -129,26 +128,32 @@ Data.propTypes = {
 
 const BayesianNetwork = ({ selectOption, submitRequest }) => (
     <Grid stretched>
-        <Grid.Column padded stretched>
-            <Segment color="yellow" raised container className="search_option">
-                {generateListBayesian(selectOption)}
-                <Grid.Row stretched verticalAlign="bottom" className="search_button">
-                    <Button
-                        color="blue"
-                        size="large"
-                        as={Link}
-                        to="/articles"
-                        onClick={() => {
-                            const options = OptionsRequestBayesian
-                                .map(filteredOption => filteredOption.name);
-                            submitRequest(options, 'bayesian network');
-                        }}
-                    >
-                        Envoyez la requête
-                    </Button>
-                </Grid.Row>
-            </Segment>
-        </Grid.Column>
+        {
+            BayesianNetworkCategory.map(({ name, id }) => (
+                <Grid.Column key={id} width={7} padded stretched>
+                    <Segment color="yellow" raised container className="search_option">
+                        <Header textAlign="center" as="h2">{name}</Header>
+                        {generateListData(id, selectOption)}
+                        <Grid.Row stretched verticalAlign="bottom" className="search_button">
+                            <Button
+                                color="blue"
+                                size="large"
+                                as={Link}
+                                to="/articles"
+                                onClick={() => {
+                                    const options = OptionsRequestData
+                                        .filter(option => option.categories.includes(id))
+                                        .map(filteredOption => filteredOption.name);
+                                    submitRequest(options, id, 'bayesian network');
+                                }}
+                            >
+                                Envoyez la requête
+                            </Button>
+                        </Grid.Row>
+                    </Segment>
+                </Grid.Column>
+            ))
+        }
     </Grid>
 );
 
