@@ -37,6 +37,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={LightSources}
                                 placeholder="Choisir"
                             />
@@ -58,6 +60,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={Swabs}
                                 placeholder="Choisir"
                             />
@@ -69,6 +73,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AdhesiveTapes}
                                 placeholder="Choisir"
                             />
@@ -80,6 +86,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={NucleicCards}
                                 placeholder="Choisir"
                             />
@@ -101,6 +109,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={ExtractionDNADevices}
                                 placeholder="Choisir"
                             />
@@ -123,6 +133,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={QuantificationDevices}
                                 placeholder="Choisir"
                             />
@@ -145,6 +157,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={ThermalCycler}
                                 placeholder="Choisir"
                             />
@@ -166,6 +180,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={CapillaryElectrophoresisDevices}
                                 placeholder="Choisir"
                             />
@@ -187,6 +203,8 @@ const EquipmentPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={NextGenerationSequencers}
                                 placeholder="Choisir"
                             />

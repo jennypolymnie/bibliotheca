@@ -6,7 +6,6 @@ import {
     Checkbox, Grid, List,
     Container, Header
 } from 'semantic-ui-react';
-import CountElement from './NbArticle';
 import Article from './Article';
 import StandardLayout from '../../layout/StandardLayout';
 import {
@@ -36,10 +35,11 @@ const SearchResults = ({
                         </Container>
                     </Grid.Column>
                 ))}
-            </Grid.Row>
-            <Grid.Row>
                 <Grid.Column>
-                    <CountElement name="Nombre d'articles correspondant à votre recherche" count={count} />
+                    <Container fluid className="padded-container">
+                        Articles trouvés
+                        <Header as="h4">{count}</Header>
+                    </Container>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -52,7 +52,7 @@ const SearchResults = ({
                             key={article.name}
                         />
                     ))
-                : <div> Aucun article trouvé </div> }
+                : '' }
         </List>
     </div>
 );
