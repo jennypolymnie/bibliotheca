@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
-    Button, Form, Input, Header, Grid
+    Button, Form, Input, Grid
 } from 'semantic-ui-react';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
 import StandardLayout from '../../layout/StandardLayout';

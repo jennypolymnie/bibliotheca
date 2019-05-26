@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import './LibraryRequest.css';
 import StandardLayout from '../../layout/StandardLayout';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
 import Level from './Level';
+import './LibraryRequest.less';
 
 class LibraryRequest extends Component {
     constructor(props) {

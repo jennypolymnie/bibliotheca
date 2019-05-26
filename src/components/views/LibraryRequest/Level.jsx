@@ -22,6 +22,7 @@ const generateListPreeval = selectOption => OptionsRequestPreeval
                 selection
                 search
                 clearable
+                floating
                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
@@ -41,6 +42,7 @@ const generateListData = (id, selectOption) => OptionsRequestData
                 selection
                 search
                 clearable
+                floating
                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
