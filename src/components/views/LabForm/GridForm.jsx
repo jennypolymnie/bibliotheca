@@ -19,6 +19,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'extractionDNAChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.extractionDNAChemistryOptions}
                                 placeholder="Choisir"
@@ -32,6 +34,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'extractionRNAChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.extractionRNAChemistryOptions}
                                 placeholder="Choisir"
@@ -45,6 +49,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'concentrationChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.concentrationChemistryOptions}
                                 placeholder="Choisir"
@@ -90,6 +96,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'quantificationAutosomalChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.quantificationAutosomalChemistryOptions}
                                 placeholder="Choisir"
@@ -103,6 +111,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'quantificationYChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.quantificationYChemistryOptions}
                                 placeholder="Choisir"
@@ -147,6 +157,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'amplificationAutoChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.amplificationAutoChemistryOptions}
                                 placeholder="Choisir"
@@ -160,6 +172,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'amplificationYChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.amplificationYChemistryOptions}
                                 placeholder="Choisir"
@@ -174,6 +188,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'amplificationXChemistry', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={chemistry}
                                 options={props.amplificationXChemistryOptions}
                                 placeholder="Choisir"
@@ -218,6 +234,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'bloodTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.bloodTestOptions}
                                 placeholder="Choisir"
@@ -231,6 +249,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'salivaTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.salivaTestOptions}
                                 placeholder="Choisir"
@@ -244,6 +264,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'spermTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.spermTestOptions}
                                 placeholder="Choisir"
@@ -288,6 +310,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'vaginalTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.vaginalTestOptions}
                                 placeholder="Choisir"
@@ -301,6 +325,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'urinaTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.urinaTestOptions}
                                 placeholder="Choisir"
@@ -314,6 +340,8 @@ const ChemistryProfile = props => (
                                 onChange={(e, d) => props.onChange(e, d, 'contactTest', i)}
                                 fluid
                                 selection
+                                search
+                                clearable
                                 value={test}
                                 options={props.contactTestOptions}
                                 placeholder="Choisir"

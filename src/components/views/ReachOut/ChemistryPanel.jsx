@@ -43,6 +43,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={BloodTest}
                                 placeholder="Choisir"
                             />
@@ -53,6 +55,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={SalivaTest}
                                 placeholder="Choisir"
                             />
@@ -63,6 +67,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={SpermTest}
                                 placeholder="Choisir"
                             />
@@ -83,6 +89,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={VaginalTest}
                                 placeholder="Choisir"
                             />
@@ -93,6 +101,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={UrinaTest}
                                 placeholder="Choisir"
                             />
@@ -103,6 +113,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={ContactTest}
                                 placeholder="Choisir"
                             />
@@ -124,6 +136,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={ExtractionDNAChemistry}
                                 placeholder="Choisir"
                             />
@@ -134,6 +148,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={ExtractionRNAChemistry}
                                 placeholder="Choisir"
                             />
@@ -144,6 +160,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={BisulfiteConversionChemistry}
                                 placeholder="Choisir"
                             />
@@ -164,6 +182,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={QuantificationAutosomalChemistry}
                                 placeholder="Choisir"
                             />
@@ -174,6 +194,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={QuantificationYChemistry}
                                 placeholder="Choisir"
                             />
@@ -198,6 +220,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationAutoChemistry}
                                 placeholder="Choisir"
                             />
@@ -208,6 +232,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationYChemistry}
                                 placeholder="Choisir"
                             />
@@ -217,6 +243,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationXChemistry}
                                 placeholder="Choisir"
                             />
@@ -237,6 +265,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationAutoChemistry}
                                 placeholder="Choisir"
                             />
@@ -247,6 +277,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationYChemistry}
                                 placeholder="Choisir"
                             />
@@ -256,6 +288,8 @@ const ChemistryPanel = () => (
                             <Dropdown
                                 fluid
                                 selection
+                                search
+                                clearable
                                 options={AmplificationXChemistry}
                                 placeholder="Choisir"
                             />
