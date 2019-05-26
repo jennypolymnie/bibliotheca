@@ -42,7 +42,7 @@ const Article = ({
                             year={year}
                             abstract={abstract}
                         />
-                        <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
+                        {link && (<a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>)}
                     </Grid.Column>
                     <Grid.Column width={3}>
                         { canReview && (
