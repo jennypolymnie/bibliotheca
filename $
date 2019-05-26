@@ -1,0 +1,15 @@
+Modifications Mise En Forme ReviewForm
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche preparationIsfg
+# Votre branche est à jour avec 'origin/preparationIsfg'.
+#
+# Modifications qui seront validées :
+#	modifié :         src/components/App.jsx
+#	modifié :         src/components/views/LibrarianRequest/ArticleProposal.jsx
+#	modifié :         src/components/views/Review/ReviewForm.jsx
+#	supprimé :        src/components/views/Review/TraditionalSearch.css
+#	modifié :         src/components/views/Review/TraditionalSearch.jsx
+#	nouveau fichier : src/components/views/Review/TraditionalSearch.less
+#

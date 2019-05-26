@@ -26,7 +26,12 @@ const BdArticles = [
             'bayesianNetworkActivity'
         ],
         score: 9,
-        reviewCount: 4
+        reviewCount: 4,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
     },
     {
         id: 'A2',
@@ -53,7 +58,10 @@ const BdArticles = [
             'data'
         ],
         score: 10,
-        reviewCount: 6
+        reviewCount: 6,
+        labmatch: [
+            'E'
+        ]
     },
     {
         id: 'A3',
@@ -80,7 +88,12 @@ const BdArticles = [
             'data'
         ],
         score: 12,
-        reviewCount: 4
+        reviewCount: 4,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
     },
     {
         id: 'A4',
@@ -107,7 +120,11 @@ const BdArticles = [
             'data'
         ],
         score: 5,
-        reviewCount: 2
+        reviewCount: 2,
+        labmatch: [
+            'E',
+            'A'
+        ]
     },
     {
         id: 'A5',
@@ -134,7 +151,10 @@ const BdArticles = [
             'bayesianNetworkSource'
         ],
         score: 6,
-        reviewCount: 1
+        reviewCount: 1,
+        labmatch: [
+            'A'
+        ]
     },
     {
         id: 'A6',
@@ -161,7 +181,12 @@ const BdArticles = [
             'preevaluation'
         ],
         score: 7,
-        reviewCount: 3
+        reviewCount: 3,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
     },
     {
         id: 'A7',
@@ -187,7 +212,11 @@ const BdArticles = [
             'activity',
             'data'
         ],
-        score: 8
+        score: 8,
+        labmatch: [
+            'E',
+            'Q'
+        ]
     },
     {
         id: 'A8',
@@ -214,7 +243,12 @@ const BdArticles = [
             'data'
         ],
         score: 9,
-        reviewCount: 3
+        reviewCount: 3,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
 
     },
     {
@@ -240,7 +274,12 @@ const BdArticles = [
         categories: [
             'preevaluation'
         ],
-        reviewCount: 0
+        reviewCount: 0,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
     },
     {
         id: 'A10',
@@ -267,7 +306,10 @@ const BdArticles = [
             'data'
         ],
         score: 12,
-        reviewCount: 3
+        reviewCount: 3,
+        labmatch: [
+            'Q'
+        ]
     },
     {
         id: 'A11',
@@ -293,7 +335,12 @@ const BdArticles = [
             'bayesianNetworkActivity'
         ],
         score: 2,
-        reviewCount: 1
+        reviewCount: 1,
+        labmatch: [
+            'E',
+            'Q',
+            'A'
+        ]
     }
 ];
 

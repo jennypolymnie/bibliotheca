@@ -10,7 +10,7 @@ const BooksellerRequest = () => (
 
     <Grid container>
         <Grid.Row>
-            <Form className="to-librarian">
+            <Form>
                 <Form.Field
                     required
                     control={TextArea}

@@ -27,6 +27,7 @@ const Article = ({
         journal,
         score,
         reviewCount,
+        labmatch,
         ...articleCharacteristics
     } = article;
     return (
@@ -34,15 +35,22 @@ const Article = ({
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={10}>
-                        <PopupAbstract
-                            title={title}
-                            author={authors}
-                            journal={journal}
-                            reference={reference}
-                            year={year}
-                            abstract={abstract}
-                        />
-                        <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
+                        <Grid.Row>
+                            <PopupAbstract
+                                title={title}
+                                author={authors}
+                                journal={journal}
+                                reference={reference}
+                                year={year}
+                                abstract={abstract}
+                            />
+                            <a href={link} rel="noopener noreferrer" target="_blank">Science direct</a>
+                        </Grid.Row>
+                        <Grid.Row>
+                            <span>
+                                {labmatch}
+                            </span>
+                        </Grid.Row>
                     </Grid.Column>
                     <Grid.Column width={3}>
                         { canReview && (
