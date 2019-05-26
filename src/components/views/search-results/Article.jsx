@@ -55,7 +55,7 @@ const Article = ({
                         <Grid.Row centered>
                             <Statistic as="Grid.Column" size="small" color="blue">
                                 <Statistic.Value>
-                                    {score}
+                                    {score === undefined ? '-' : score}
                                 </Statistic.Value>
                                 <Statistic.Label>
                                     {'/12'}
@@ -102,7 +102,7 @@ Article.propTypes = {
         journal: PropTypes.string.isRequired,
         link: PropTypes.string.isRequired,
         articleCharacteristics: PropTypes.shape,
-        score: PropTypes.number.isRequired,
+        score: PropTypes.number,
         reviewCount: PropTypes.number.isRequired
     }).isRequired,
     canReview: PropTypes.bool,

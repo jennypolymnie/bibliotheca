@@ -4,7 +4,7 @@ import { Segment, Label, Container } from 'semantic-ui-react';
 
 
 const ListLab = ({
-    labName, directorName, email, website, onClick
+    labName, directorName, email, website, onClick, site
 }) => (
     <Segment raised>
         <Label color="blue" ribbon size="large">
@@ -22,7 +22,7 @@ const ListLab = ({
             </p>
             <p>
                 <span>Site web du laboratoire: </span>
-                <a href={`http://${website}`}>{website}</a>
+                <a href={website}>{site}</a>
             </p>
 
         </Container>
@@ -34,7 +34,8 @@ ListLab.propTypes = {
     directorName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     website: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    site: PropTypes.string.isRequired
 };
 
 

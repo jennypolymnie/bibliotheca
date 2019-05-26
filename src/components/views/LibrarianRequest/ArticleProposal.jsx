@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, TextArea, Input, Header, Grid, Message
+    Button, Form, TextArea, Input, Grid, Message
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../../layout/StandardLayout';
+import './ArticleProposal.less';
 
 class ArticleProposal extends Component {
     state = {}
@@ -18,7 +19,6 @@ class ArticleProposal extends Component {
                 <Grid.Row>
                     <Form className="to-librarian">
                         <Form.Group widths="equal" grouped>
-
                             <Form.Field
                                 required
                                 control={Input}
@@ -40,7 +40,7 @@ class ArticleProposal extends Component {
                             <Form.Field
                                 control={Input}
                                 label="Lien public"
-                                placeholder="adresse html"
+                                placeholder="http://"
                             />
                         </Form.Group>
 

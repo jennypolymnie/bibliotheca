@@ -46,7 +46,7 @@ const App = () => (
                         <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="question circle outline" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="envelope" color="yellow" size={buttonSize} />
 
                     </Menu>
                 </div>
@@ -61,7 +61,7 @@ const App = () => (
                     <Route path="/articles" component={SearchResults} />
                     <Route path="/profilUpdate" component={FormLabUpdate} />
                     <Route path="/reviewForm" component={ReviewForm} />
-                    <Route path="/booksellerRequest" component={BooksellerRequest} />
+                    <Route path="/librarianRequest" component={BooksellerRequest} />
                     <Route path="/formLab" component={FormLab} />
                     <Route path="/analyticalPart" component={AnalyticalPart} />
                     <Route path="/equipmentPart" component={EquipmentPart} />
@@ -92,7 +92,7 @@ const App = () => (
                     <Menu icon vertical secondary className="fixed-center menu-buttons-right">
                         <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="universal access" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="question circle outline" color="yellow" size={buttonSize} />
                     </Menu>
                 </div>
             </Grid.Column>

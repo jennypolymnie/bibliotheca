@@ -62,7 +62,7 @@ const BdReviews = [
     },
     {
         id: 7,
-        articleID: 'A2',
+        articleID: 'A3',
         rigor: 3,
         statistic: 2,
         results: 3,
@@ -72,7 +72,127 @@ const BdReviews = [
     },
     {
         id: 8,
+        articleID: 'A3',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 9,
+        articleID: 'A3',
+        rigor: 3,
+        statistic: 2,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 10
+    },
+    {
+        id: 10,
+        articleID: 'A3',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 11,
         articleID: 'A2',
+        rigor: 3,
+        statistic: 2,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 10
+    },
+    {
+        id: 12,
+        articleID: 'A2',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 13,
+        articleID: 'A2',
+        rigor: 3,
+        statistic: 2,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 10
+    },
+    {
+        id: 14,
+        articleID: 'A2',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 15,
+        articleID: 'A2',
+        rigor: 3,
+        statistic: 2,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 10
+    },
+    {
+        id: 16,
+        articleID: 'A2',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 17,
+        articleID: 'A8',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 18,
+        articleID: 'A8',
+        rigor: 3,
+        statistic: 2,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 10
+    },
+    {
+        id: 19,
+        articleID: 'A8',
+        rigor: 2,
+        statistic: 1,
+        results: 3,
+        interpretation: 2,
+        comments: '',
+        score: 8
+    },
+    {
+        id: 20,
+        articleID: 'A11',
         rigor: 2,
         statistic: 1,
         results: 3,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Segment, Label, Container } from 'semantic-ui-react';
 
 const ResultsFormat = ({
-    labName, directorName, email, website, onClick
+    labName, directorName, email, website, onClick, site
 }) => (
     <Segment raised>
         <Label color="blue" ribbon size="large">
@@ -21,7 +21,7 @@ const ResultsFormat = ({
             </p>
             <p>
                 <span>Site web du laboratoire: </span>
-                <a href={`https://${website}`}>{website}</a>
+                <a href={website}>{site}</a>
             </p>
 
         </Container>
@@ -33,7 +33,8 @@ ResultsFormat.propTypes = {
     directorName: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     website: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    site: PropTypes.string.isRequired
 };
 
 export default ResultsFormat;

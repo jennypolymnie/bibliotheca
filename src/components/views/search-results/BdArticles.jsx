@@ -240,8 +240,7 @@ const BdArticles = [
         categories: [
             'preevaluation'
         ],
-        score: 10,
-        reviewCount: 5
+        reviewCount: 0
     },
     {
         id: 'A10',
