@@ -26,7 +26,7 @@ const SearchResults = ({
                     <Checkbox toggle label="Utiliser le profil du laboratoire" />
                 </Grid.Column>
             </Grid.Row>
-            <Grid.Row columns={3}>
+            <Grid.Row columns={3} className="searchParameterRow">
                 {userRequest.options.map(option => (
                     <Grid.Column key={option.id}>
                         <Container fluid className="padded-container">

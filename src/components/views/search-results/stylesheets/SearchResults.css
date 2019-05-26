@@ -22,3 +22,10 @@
 .padded-container {
   padding-bottom: 1em;
 }
+
+.searchParameterRow {
+  margin: 1rem;
+  border: 1px solid #BBAB8F;
+  border-radius: 5px;
+  padding: 1rem;
+}
