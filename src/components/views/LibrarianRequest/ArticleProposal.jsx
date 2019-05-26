@@ -47,19 +47,19 @@ class ArticleProposal extends Component {
                         <Form.Group grouped>
                             <Message>
                                 {'Détenez vous les droits d\'auteur de ce document?'}
+                                <Form.Radio
+                                    label="Oui et je consens à la distribution libre sur bibliotheca"
+                                    value="yes"
+                                    checked={value === 'yes'}
+                                    onChange={this.handleChange}
+                                />
+                                <Form.Radio
+                                    label="Non"
+                                    value="no"
+                                    checked={value === 'no'}
+                                    onChange={this.handleChange}
+                                />
                             </Message>
-                            <Form.Radio
-                                label="Oui et je consens à la distribution libre sur bibliotheca"
-                                value="yes"
-                                checked={value === 'yes'}
-                                onChange={this.handleChange}
-                            />
-                            <Form.Radio
-                                label="Non"
-                                value="no"
-                                checked={value === 'no'}
-                                onChange={this.handleChange}
-                            />
                         </Form.Group>
                         <Form.Field
                             control={TextArea}

@@ -7,7 +7,7 @@ import {
 } from 'semantic-ui-react';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
 import StandardLayout from '../../layout/StandardLayout';
-import './TraditionalSearch.css';
+import './TraditionalSearch.less';
 
 class TraditionalSearch extends Component {
     constructor(props) {
@@ -46,31 +46,31 @@ class TraditionalSearch extends Component {
                             <Form.Field
                                 control={Input}
                                 label="Titre"
-                                placeholder="Titre"
+                                placeholder=""
                                 onChange={(event, { value }) => this.updateOption('title', value, 'title')}
                             />
                             <Form.Field
                                 control={Input}
                                 label="Auteurs"
-                                placeholder="Auteurs"
+                                placeholder=""
                                 onChange={(event, { value }) => this.updateOption('authors', value, 'authors')}
                             />
                             <Form.Field
                                 control={Input}
                                 label="Mots-clé"
-                                placeholder="Mots-clé"
+                                placeholder=""
                             />
                             <Form.Field
                                 control={Input}
                                 label="Journal"
-                                placeholder="Journal"
+                                placeholder=""
                                 onChange={(event, { value }) => this.updateOption('journal', value, 'journal')}
                             />
 
                             <Form.Field
                                 control={Input}
                                 label="Année"
-                                placeholder="Année"
+                                placeholder=""
                                 onChange={(event, { value }) => this.updateOption('year', value, 'year')}
                             />
                         </Form.Group>

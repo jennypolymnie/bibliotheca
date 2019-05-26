@@ -45,8 +45,8 @@ const App = () => (
                     <Menu icon compact vertical secondary className="fixed-center menu-buttons-left">
                         <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/searchorreview" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/booksellerRequest" fitted name="question" iconName="envelope" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/search" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/librarianRequest" fitted name="question" iconName="envelope" color="yellow" size={buttonSize} />
 
                     </Menu>
                 </div>
@@ -71,7 +71,7 @@ const App = () => (
                     <Route path="/ReachoutList" component={ReachOutListLab} />
                     <Route path="/requestAdvice" component={RequestAdvice} />
                     <Route path="/reviewForm" component={ReviewForm} />
-                    <Route path="/searchorreview" component={TraditionalSearch} />
+                    <Route path="/search" component={TraditionalSearch} />
                     <Route path="/requestSend" component={RequestSend} />
                     <Route path="/proposalSend" component={ProposalSend} />
                     <Route path="/profilType" component={Profile} />
