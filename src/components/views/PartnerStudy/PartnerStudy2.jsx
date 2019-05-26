@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {
-    Button, Form, Radio, Input, Header, Segment
+    Button, Form, Radio, Grid
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import StandardLayout from '../../layout/StandardLayout';
 import Research from './Research';
 
 
@@ -19,76 +20,42 @@ class PartnerStudy2 extends Component {
 
     render() {
         return (
-            <div className="PartnerStudy">
-
-                <div>
-                    <Header as="h1">
-                        {'Trouver un partenaire d\'étude'}
-                    </Header>
-                </div>
-
-                <Segment.Group>
-                    <Segment><h2>Informations générales</h2></Segment>
-                    <Segment.Group>
-                        <Segment>
-                            <Form>
-                                <Form.Field
-                                    fluid
-                                    inline
-                                    required
-                                    control={Input}
-                                    label="Titre de votre projet"
-                                    placeholder="Titre"
+            <div>
+                <Grid>
+                    <Grid.Row>
+                        <h2>Informations générales</h2>
+                        <Form>
+                            <Form.Field label="Même pays que le votre?" />
+                            <Form.Field>
+                                <Radio
+                                    label="Oui"
+                                    name="radioGroup"
+                                    value="oui"
+                                    checked={this.state.pays === 'oui'}
+                                    onChange={this.handlePays}
                                 />
-                            </Form>
-                        </Segment>
-                        <Segment>
-                            <Form>
-                                <Form.Field
-                                    fluid
-                                    inline
-                                    required
-                                    control={Input}
-                                    label="Email de la personne de contact pour ce projet"
-                                    placeholder="Email"
+                            </Form.Field>
+                            <Form.Field>
+                                <Radio
+                                    label="Non"
+                                    name="radioGroup"
+                                    value="non"
+                                    checked={this.state.pays === 'non'}
+                                    onChange={this.handlePays}
                                 />
-                            </Form>
-                        </Segment>
-                        <Segment>
-                            <Form>
-                                <Form.Field label="Même pays que le votre?" />
-                                <Form.Field>
-                                    <Radio
-                                        label="Oui"
-                                        name="radioGroup"
-                                        value="oui"
-                                        checked={this.state.pays === 'oui'}
-                                        onChange={this.handlePays}
-                                    />
-                                </Form.Field>
-                                <Form.Field>
-                                    <Radio
-                                        label="Non"
-                                        name="radioGroup"
-                                        value="non"
-                                        checked={this.state.pays === 'non'}
-                                        onChange={this.handlePays}
-                                    />
-                                </Form.Field>
-                                <Form.Field>
-                                    <Radio
-                                        label="Sans importance"
-                                        name="radioGroup"
-                                        value="sansimportance"
-                                        checked={this.state.pays === 'sansimportance'}
-                                        onChange={this.handlePays}
-                                    />
-                                </Form.Field>
-                            </Form>
-                        </Segment>
-                    </Segment.Group>
-
-                    <Segment>
+                            </Form.Field>
+                            <Form.Field>
+                                <Radio
+                                    label="Sans importance"
+                                    name="radioGroup"
+                                    value="sansimportance"
+                                    checked={this.state.pays === 'sansimportance'}
+                                    onChange={this.handlePays}
+                                />
+                            </Form.Field>
+                        </Form>
+                    </Grid.Row>
+                    <Grid.Row>
                         <h2>Axes de recherche</h2>
                         <Research />
                         <Form>
@@ -121,22 +88,22 @@ class PartnerStudy2 extends Component {
                                 />
                             </Form.Field>
                         </Form>
-                    </Segment>
+                    </Grid.Row>
 
-                    <Segment>
+                    <Grid.Row>
                         <Button
                             as={Link}
                             to="/List"
                             color="blue"
                             size="large"
                         >
-                            Lancer la requête
+                                Lancer la requête
                         </Button>
-                    </Segment>
-                </Segment.Group>
+                    </Grid.Row>
+                </Grid>
             </div>
         );
     }
 }
 
-export default PartnerStudy2;
+export default StandardLayout(PartnerStudy2, 'Trouver un partenaire d\'étude');

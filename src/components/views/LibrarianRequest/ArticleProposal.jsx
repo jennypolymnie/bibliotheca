@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {
     Button, Form, TextArea, Input, Header, Grid, Message
 } from 'semantic-ui-react';
-import './ArticleProposal.css';
 import { Link } from 'react-router-dom';
+import StandardLayout from '../../layout/StandardLayout';
 
 class ArticleProposal extends Component {
     state = {}
@@ -15,9 +15,6 @@ class ArticleProposal extends Component {
         return (
 
             <Grid container>
-                <Grid.Row>
-                    <Header as="h1">Proposer un document</Header>
-                </Grid.Row>
                 <Grid.Row>
                     <Form className="to-librarian">
                         <Form.Group widths="equal" grouped>
@@ -89,4 +86,4 @@ class ArticleProposal extends Component {
     }
 }
 
-export default ArticleProposal;
+export default StandardLayout(ArticleProposal, 'Proposer un document');

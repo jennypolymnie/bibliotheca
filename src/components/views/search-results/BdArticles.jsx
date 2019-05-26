@@ -291,7 +291,6 @@ const BdArticles = [
         activité: '',
         conditions: '',
         categories: [
-            'activity',
             'bayesianNetworkActivity'
         ],
         score: 2,

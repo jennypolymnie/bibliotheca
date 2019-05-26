@@ -1,18 +1,14 @@
 import React from 'react';
 import {
-    Button, Form, TextArea, Header, Grid
+    Button, Form, TextArea, Grid
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import './ArticleProposal.css';
+import StandardLayout from '../../layout/StandardLayout';
 
 
 const BooksellerRequest = () => (
 
     <Grid container>
-        <Grid.Row>
-            <Header as="h1">Communiquer avec la bibliothécaire</Header>
-        </Grid.Row>
-
         <Grid.Row>
             <Form className="to-librarian">
                 <Form.Field
@@ -39,4 +35,4 @@ const BooksellerRequest = () => (
     </Grid>
 );
 
-export default BooksellerRequest;
+export default StandardLayout(BooksellerRequest, 'Communiquer avec la bibliothécaire');

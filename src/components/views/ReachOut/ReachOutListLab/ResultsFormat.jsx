@@ -1,32 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Segment, Label, Button } from 'semantic-ui-react';
+import { Segment, Label, Container } from 'semantic-ui-react';
 
 const ResultsFormat = ({
-    labName, directorName, website, onClick
+    labName, directorName, email, website, onClick
 }) => (
     <Segment raised>
         <Label color="blue" ribbon size="large">
             {labName}
         </Label>
-        <Button as="div" onClick={() => onClick(ResultsFormat)}>
+        <Container text-align="left" onClick={() => onClick(ResultsFormat)}>
             <p>
-                    Nom du responsable:
-                {directorName}
-                {' '}
+                {`Nom du responsable: ${directorName}`}
+            </p>
+            <p>
+                <span>Email pour les questions techniques: </span>
+                <a href={`mailto:${email}`}>
+                    {email}
+                </a>
+            </p>
+            <p>
+                <span>Site web du laboratoire: </span>
+                <a href={`https://${website}`}>{website}</a>
+            </p>
 
-            </p>
-            <p>
-                    Site web du laboratoire:
-                <a href="www.curml.ch">{website}</a>
-            </p>
-        </Button>
+        </Container>
     </Segment>
 );
 
 ResultsFormat.propTypes = {
     labName: PropTypes.string.isRequired,
     directorName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
     website: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired
 };
