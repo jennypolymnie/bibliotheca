@@ -12,7 +12,7 @@ import OptionsRequestData from '../../data/OptionsRequest';
 
 const generateListPreeval = selectOption => OptionsRequestPreeval
     .map(filteredOption => (
-        <Grid.Column>
+        <Segment basic className="search_option_field">
             <Header sub>
                 {filteredOption.name}
             </Header>
@@ -20,10 +20,12 @@ const generateListPreeval = selectOption => OptionsRequestPreeval
                 placeholder="Choisir"
                 fluid
                 selection
+                search
+                clearable
                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
-        </Grid.Column>
+        </Segment>
     ));
 
 const generateListData = (id, selectOption) => OptionsRequestData
@@ -37,52 +39,39 @@ const generateListData = (id, selectOption) => OptionsRequestData
                 placeholder="Choisir"
                 fluid
                 selection
+                search
+                clearable
                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
                 options={filteredOption.options}
             />
         </Segment>
     ));
 
-// const generateListBayesian = selectOption => OptionsRequestBayesian
-//     .map(filteredOption => (
-//         <Segment basic className="search_option_field">
-//             <Header sub>
-//                 {filteredOption.name}
-//             </Header>
-//             <Dropdown
-//                 placeholder="Choisir"
-//                 fluid
-//                 selection
-//                 onChange={(event, data) => selectOption(filteredOption.name, data.value, filteredOption.id)}
-//                 options={filteredOption.options}
-//             />
-//         </Segment>
-//     ));
-
 const Preevaluation = ({ selectOption, submitRequest }) => (
-    <Segment color="yellow" raised container className="search_option">
-        <Grid>
-            <Grid.Row columns={3}>
+    <Grid stretched>
+        <Grid.Column width={5} padded stretched>
+            <Segment color="yellow" raised container className="search_option">
+                <Header textAlign="center" as="h2">Évaluation</Header>
                 {generateListPreeval(selectOption)}
-            </Grid.Row>
-            <Grid.Row verticalAlign="middle" centered>
-                <Button
-                    color="blue"
-                    size="large"
-                    as={Link}
-                    to="/articles"
-                    floated="right"
-                    onClick={() => {
-                        const options = OptionsRequestPreeval
-                            .map(filteredOption => filteredOption.name);
-                        submitRequest(options, 'preevaluation');
-                    }}
-                >
-                    Envoyez la requête
-                </Button>
-            </Grid.Row>
-        </Grid>
-    </Segment>
+                <Grid.Row stretched verticalAlign="bottom" className="search_button">
+                    <Button
+                        color="blue"
+                        size="large"
+                        as={Link}
+                        to="/articles"
+                        floated="right"
+                        onClick={() => {
+                            const options = OptionsRequestPreeval
+                                .map(filteredOption => filteredOption.name);
+                            submitRequest(options, 'preevaluation');
+                        }}
+                    >
+                        Envoyez la requête
+                    </Button>
+                </Grid.Row>
+            </Segment>
+        </Grid.Column>
+    </Grid>
 );
 
 Preevaluation.propTypes = {
@@ -130,7 +119,7 @@ const BayesianNetwork = ({ selectOption, submitRequest }) => (
     <Grid stretched>
         {
             BayesianNetworkCategory.map(({ name, id }) => (
-                <Grid.Column key={id} width={7} padded stretched>
+                <Grid.Column key={id} width={5} padded stretched>
                     <Segment color="yellow" raised container className="search_option">
                         <Header textAlign="center" as="h2">{name}</Header>
                         {generateListData(id, selectOption)}

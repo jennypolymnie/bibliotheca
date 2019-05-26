@@ -10,8 +10,6 @@ import {
     SAVE_SELECTED_ARTICLE
 } from './constants';
 
-// name of actioncreator
-
 export function newUser(userID, userName, userPassword) {
     return {
         type: NEW_USER,
@@ -42,7 +40,6 @@ export function saveProfile(profile) {
 }
 
 export function saveResearchRequest(userRequest) {
-    console.log(userRequest);
     return {
         type: SAVE_RESEARCH_REQUEST,
         userRequest

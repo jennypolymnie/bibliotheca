@@ -34,7 +34,6 @@ class TraditionalSearch extends Component {
         //     category: 'all'
         // };
         // this.props.onSubmit(userRequest);
-        console.log(this.state.options, this.props.onSubmit);
         this.props.history.push('/articles');
     }
 

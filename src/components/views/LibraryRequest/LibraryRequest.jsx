@@ -17,12 +17,18 @@ class LibraryRequest extends Component {
     }
 
     selectOption(option, value, id) {
-        this.setState(({ options: currentOptions }) => ({
-            options: [
-                ...currentOptions.filter(existingOption => existingOption.id !== id),
-                { label: option, value, id }
-            ]
-        }));
+        if (value) {
+            this.setState(({ options: currentOptions }) => ({
+                options: [
+                    ...currentOptions.filter(existingOption => existingOption.id !== id),
+                    { label: option, value, id }
+                ]
+            }));
+        } else {
+            this.setState(({ options: currentOptions }) => ({
+                options: currentOptions.filter(existingOption => existingOption.id !== id)
+            }));
+        }
     }
 
     submitRequest(optionList, category) {
