@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import {
-    Segment, Menu, Icon, Label, Grid, Statistic
+    Segment, Button, Icon, Label, Grid, Statistic
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import TableCheck from './TableCheck';
 import PopupAbstract from './PopupAbstract';
 import PopupButton from './PopupButton';
 import { saveSelectedArticle } from '../../../store/actions/actionCreators';
+import './stylesheets/Article.less';
 
 const Article = ({
     article,
@@ -35,7 +36,7 @@ const Article = ({
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={10}>
-                        <Grid.Row>
+                        <Grid.Row stretched className="articleInfo">
                             <PopupAbstract
                                 title={title}
                                 author={authors}
@@ -48,18 +49,18 @@ const Article = ({
                         </Grid.Row>
                         <Grid.Row>
                             <span>
-                                {labmatch}
+                                {labmatch.join(' ')}
                             </span>
                         </Grid.Row>
                     </Grid.Column>
-                    <Grid.Column width={3}>
+                    <Grid.Column width={4}>
                         { canReview && (
                             <TableCheck
                                 articleCharacteristics={articleCharacteristics}
                             />
                         )}
                     </Grid.Column>
-                    <Grid.Column stretched width={3}>
+                    <Grid.Column stretched width={2}>
                         <Grid.Row centered>
                             <Statistic as="Grid.Column" size="small" color="blue">
                                 <Statistic.Value>
@@ -72,23 +73,26 @@ const Article = ({
                         </Grid.Row>
                         <Grid.Row>
                             { canReview && (
-                                <Menu compact>
-                                    <Menu.Item>
+                                <Segment basic compact className="reviewSegment">
+                                    <Button.Group>
                                         <PopupButton />
-                                    </Menu.Item>
-                                    <Menu.Item
-                                        onClick={() => {
-                                            selectArticle(id);
-                                            history.push('/reviewSummary');
-                                        }}
-                                    >
-                                        <Icon name="users" />
-                                        Avis
-                                        <Label color="blue" floating>
-                                            {reviewCount}
-                                        </Label>
-                                    </Menu.Item>
-                                </Menu>
+                                        <Button
+                                            icon
+                                            color="blue"
+                                            inverted
+                                            onClick={() => {
+                                                selectArticle(id);
+                                                history.push('/reviewSummary');
+                                            }}
+                                        >
+                                            <Icon name="users" />
+                                            <span className="reviewText"> Avis </span>
+                                        </Button>
+                                    </Button.Group>
+                                    <Label color="blue" floating basic>
+                                        {reviewCount}
+                                    </Label>
+                                </Segment>
                             )}
                         </Grid.Row>
                     </Grid.Column>
