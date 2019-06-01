@@ -3,7 +3,7 @@ import {
     CHANGE_CHOICE
 } from '../actions/constants';
 
-import GridForm from '../../components/views/LabForm/GridForm';
+import GridForm from '../../components/views/LabForm/ChemistryGridForm';
 import GridFormEquipment from '../../components/views/LabForm/GridFormEquipment';
 
 const initialState = {

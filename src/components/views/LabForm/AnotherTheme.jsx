@@ -1,58 +1,43 @@
 import React from 'react';
 import {
-    Form, Radio
+    Form
 } from 'semantic-ui-react';
-import PropTypes from 'prop-types';
 
-const AnotherTheme = props => (
+const AnotherTheme = () => (
 
     <Form>
         <Form.Field label="Intérêt de collaboration sur un autre thème que les votres" />
         <Form.Field>
-            <Radio
+            <Form.Checkbox
                 label="Oui pour un projet de développement"
                 name="DifferentTheme"
                 value="developpement"
-                checked={props.different}
-
             />
         </Form.Field>
         <Form.Field>
-            <Radio
+            <Form.Checkbox
                 label="Oui pour un projet de recherche"
                 name="DifferentTheme"
                 value="recherche"
-                checked={props.different}
-
             />
         </Form.Field>
         <Form.Field>
-            <Radio
+            <Form.Checkbox
                 label="Oui pour un projet de validation"
                 name="DifferentTheme"
                 value="validation"
-                checked={props.different}
+                checked
 
             />
         </Form.Field>
         <Form.Field>
-            <Radio
+            <Form.Checkbox
                 label="Non"
                 name="DifferentTheme"
                 value="non"
-                checked={props.different}
-
             />
         </Form.Field>
     </Form>
 );
-
-AnotherTheme.propTypes = {
-    different: PropTypes.string
-};
-
-AnotherTheme.defaultProps = {
-    different: ''
-};
 
 export default AnotherTheme;

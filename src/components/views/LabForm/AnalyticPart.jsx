@@ -4,7 +4,7 @@ import {
 } from 'semantic-ui-react';
 import './FormLab.css';
 import { Link } from 'react-router-dom';
-import GridForm from './GridForm';
+import GridForm from './ChemistryGridForm';
 
 
 const AnalyticalPart = () => (

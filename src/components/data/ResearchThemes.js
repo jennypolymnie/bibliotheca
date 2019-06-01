@@ -9,9 +9,6 @@ const researchThemes = [
         id: 3, name: 'ADN ancien', value: 'oldDNA', text: 'ADN ancien'
     },
     {
-        id: 4, name: 'Nature du fluide biologique', value: 'stainNature', text: 'Nature du fluide biologique'
-    },
-    {
         id: 5, name: 'Méthylation', value: 'methylation', text: 'Méthylation'
     },
     {
@@ -25,9 +22,6 @@ const researchThemes = [
     },
     {
         id: 9, name: 'ADN mitochondrial', value: 'mitochondrialDNA', text: 'ADN mitochondrial'
-    },
-    {
-        id: 10, name: 'ADN mitochondrial', value: 'mitochondrialDNA', text: 'ADN mitochondrial'
     },
     {
         id: 11, name: 'Logiciel d\'interprétation', value: 'interpretationSoftware', text: 'Logiciel d\'interprétation'

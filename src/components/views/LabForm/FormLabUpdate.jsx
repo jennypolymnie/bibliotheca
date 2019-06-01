@@ -6,18 +6,17 @@ import {
 import PropTypes from 'prop-types';
 import './FormLabUpdate.css';
 import { Link } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import omit from 'lodash/omit';
 import GeneralInfo from './GeneralInfo';
-import ChemistryProfile from './GridForm';
+import ChemistryProfile from './ChemistryGridForm';
 import ResearchProfile from './ResearchProfile';
 import GridFormEquipment from './GridFormEquipment';
 import StandardLayout from '../../layout/StandardLayout';
 import OneOfYourTheme from './OneOfYourTheme';
 import AnotherTheme from './AnotherTheme';
 
-import * as actionCreators from '../../../store/actions/actionCreators';
+import { saveProfile } from '../../../store/actions/actionCreators';
 
 class FormLabUpdate extends Component {
     constructor(props) {
@@ -29,6 +28,13 @@ class FormLabUpdate extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleDropdownChange = this.handleDropdownChange.bind(this);
         this.handleResearchThemeChange = this.handleResearchThemeChange.bind(this);
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({
+            ...props.profile,
+            activeMode: props.activeMode
+        });
     }
 
     handleDropdownChange = (e, { value }, stateField, index) => {
@@ -189,7 +195,7 @@ class FormLabUpdate extends Component {
 
                 <Grid.Row columns={1}>
                     <Grid.Column fluid>
-                        <Button onClick={() => this.props.saveProfile(omit(this.state, ['activeMode']))} color="blue" size="large">Enregistrer les modifications</Button>
+                        <Button onClick={() => this.props.onSaveProfile(omit(this.state, ['activeMode']))} color="blue" size="large">Enregistrer les modifications</Button>
                     </Grid.Column>
                 </Grid.Row>
 
@@ -202,7 +208,7 @@ class FormLabUpdate extends Component {
 FormLabUpdate.propTypes = {
     profile: PropTypes.object.isRequired,
     activeMode: PropTypes.string,
-    saveProfile: PropTypes.func.isRequired
+    onSaveProfile: PropTypes.func.isRequired
 };
 
 FormLabUpdate.defaultProps = {
@@ -217,11 +223,11 @@ function mapStateToProps(state) {
 }
 
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actionCreators, dispatch);
-}
+const mapDispatchToProps = dispatch => ({
+    onSaveProfile: profile => dispatch(saveProfile(profile))
+});
 
 
-const FormLabUpdateConnect = connect(mapStateToProps, mapDispatchToProps)(FormLabUpdate);
+const FormLabUpdateConnect = connect(mapStateToProps, mapDispatchToProps)(StandardLayout(FormLabUpdate, 'Profil du laboratoire'));
 
-export default StandardLayout(FormLabUpdateConnect, 'Profil du laboratoire');
+export default FormLabUpdateConnect;

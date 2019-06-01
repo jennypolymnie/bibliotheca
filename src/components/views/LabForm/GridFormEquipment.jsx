@@ -3,7 +3,10 @@ import {
     Grid, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
 
-import AmplificationAutosomChemistry from '../../data/AmplificationAutoChemistry';
+import ThermalCycler from '../../data/ThermalCycler';
+import QuantificationDevices from '../../data/QuantificationDevices';
+import CapillaryElectrophoresisDevices from '../../data/CapillaryElectrophoresisDevices';
+import NextGenerationSequencers from '../../data/NextGenerationSequencers';
 import './GridFormEquipment.css';
 
 const GridFormEquipment = () => (
@@ -20,7 +23,10 @@ const GridFormEquipment = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                value="Autre"
+                                options={[{
+                                    id: 1, name: 'Autre', value: 'Autre', text: 'Autre'
+                                }]}
                                 placeholder="Choisir"
                             />
 
@@ -56,7 +62,8 @@ const GridFormEquipment = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                value="7500FastRealTimePCRSystem"
+                                options={QuantificationDevices}
                                 placeholder="Choisir"
                             />
 
@@ -92,7 +99,8 @@ const GridFormEquipment = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                value="VeritiThermalCycler"
+                                options={ThermalCycler}
                                 placeholder="Choisir"
                             />
 
@@ -127,7 +135,8 @@ const GridFormEquipment = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                value="3500xlGeneticAnalyzer"
+                                options={CapillaryElectrophoresisDevices}
                                 placeholder="Choisir"
                             />
 
@@ -162,7 +171,8 @@ const GridFormEquipment = () => (
                             <Dropdown
                                 fluid
                                 selection
-                                options={AmplificationAutosomChemistry}
+                                value="IonGeneStudioS5"
+                                options={NextGenerationSequencers}
                                 placeholder="Choisir"
                             />
 

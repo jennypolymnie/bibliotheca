@@ -259,7 +259,7 @@ const ChemistryProfile = props => (
                     </Grid.Column>
                     <Grid.Column>
                         <Header as="h4" textAlign="center"> Sperme </Header>
-                        {/* {props.spermTest.map((test, i) => (
+                        {props.spermTest.map((test, i) => (
                             <Dropdown
                                 onChange={(e, d) => props.onChange(e, d, 'spermTest', i)}
                                 fluid
@@ -270,7 +270,7 @@ const ChemistryProfile = props => (
                                 options={props.spermTestOptions}
                                 placeholder="Choisir"
                             />
-                        ))} */}
+                        ))}
                     </Grid.Column>
                 </Grid.Row>
 
@@ -379,22 +379,22 @@ const ChemistryProfile = props => (
 );
 
 ChemistryProfile.propTypes = {
-    extractionDNAChemistry: PropTypes.string,
-    extractionDNAChemistryOptions: PropTypes.string,
-    extractionRNAChemistry: PropTypes.string,
-    extractionRNAChemistryOptions: PropTypes.string,
-    concentrationChemistry: PropTypes.string,
-    concentrationChemistryOptions: PropTypes.string,
-    quantificationAutosomalChemistry: PropTypes.string,
-    quantificationAutosomalChemistryOptions: PropTypes.string,
-    quantificationYChemistry: PropTypes.string,
-    quantificationYChemistryOptions: PropTypes.string,
-    amplificationAutoChemistry: PropTypes.string,
-    amplificationAutoChemistryOptions: PropTypes.string,
-    amplificationYChemistry: PropTypes.string,
-    amplificationYChemistryOptions: PropTypes.string,
-    amplificationXChemistry: PropTypes.string,
-    amplificationXChemistryOptions: PropTypes.string,
+    extractionDNAChemistry: PropTypes.arrayOf(PropTypes.string),
+    extractionDNAChemistryOptions: PropTypes.array,
+    extractionRNAChemistry: PropTypes.arrayOf(PropTypes.string),
+    extractionRNAChemistryOptions: PropTypes.array,
+    concentrationChemistry: PropTypes.arrayOf(PropTypes.string),
+    concentrationChemistryOptions: PropTypes.array,
+    quantificationAutosomalChemistry: PropTypes.arrayOf(PropTypes.string),
+    quantificationAutosomalChemistryOptions: PropTypes.array,
+    quantificationYChemistry: PropTypes.arrayOf(PropTypes.string),
+    quantificationYChemistryOptions: PropTypes.array,
+    amplificationAutoChemistry: PropTypes.arrayOf(PropTypes.string),
+    amplificationAutoChemistryOptions: PropTypes.array,
+    amplificationYChemistry: PropTypes.arrayOf(PropTypes.string),
+    amplificationYChemistryOptions: PropTypes.array,
+    amplificationXChemistry: PropTypes.arrayOf(PropTypes.string),
+    amplificationXChemistryOptions: PropTypes.array,
     bloodTest: PropTypes.arrayOf(PropTypes.string),
     bloodTestOptions: PropTypes.array,
     salivaTest: PropTypes.arrayOf(PropTypes.string),
@@ -405,41 +405,41 @@ ChemistryProfile.propTypes = {
     vaginalTestOptions: PropTypes.array,
     contactTest: PropTypes.arrayOf(PropTypes.string),
     contactTestOptions: PropTypes.array,
-    // spermTest: PropTypes.arrayOf(PropTypes.string),
-    // spermTestOptions: PropTypes.array,
+    spermTest: PropTypes.arrayOf(PropTypes.string),
+    spermTestOptions: PropTypes.array,
     onChange: PropTypes.func.isRequired
 
 
 };
 ChemistryProfile.defaultProps = {
-    extractionDNAChemistry: '',
-    extractionDNAChemistryOptions: '',
-    extractionRNAChemistry: '',
-    extractionRNAChemistryOptions: '',
-    concentrationChemistry: '',
-    concentrationChemistryOptions: '',
-    quantificationAutosomalChemistry: '',
-    quantificationAutosomalChemistryOptions: '',
-    quantificationYChemistry: '',
-    quantificationYChemistryOptions: '',
-    amplificationAutoChemistry: '',
-    amplificationAutoChemistryOptions: '',
-    amplificationYChemistry: '',
-    amplificationYChemistryOptions: '',
-    amplificationXChemistry: '',
-    amplificationXChemistryOptions: '',
-    bloodTest: '',
-    bloodTestOptions: '',
-    salivaTest: [],
+    extractionDNAChemistry: [''],
+    extractionDNAChemistryOptions: [],
+    extractionRNAChemistry: [''],
+    extractionRNAChemistryOptions: [],
+    concentrationChemistry: [''],
+    concentrationChemistryOptions: [],
+    quantificationAutosomalChemistry: [''],
+    quantificationAutosomalChemistryOptions: [],
+    quantificationYChemistry: [''],
+    quantificationYChemistryOptions: [],
+    amplificationAutoChemistry: [''],
+    amplificationAutoChemistryOptions: [],
+    amplificationYChemistry: [''],
+    amplificationYChemistryOptions: [],
+    amplificationXChemistry: [''],
+    amplificationXChemistryOptions: [],
+    bloodTest: [''],
+    bloodTestOptions: [],
+    salivaTest: [''],
     salivaTestOptions: [],
-    urinaTest: '',
-    urinaTestOptions: '',
-    vaginalTest: '',
-    vaginalTestOptions: '',
-    contactTest: '',
-    contactTestOptions: ''
-    // spermTest: '',
-    // spermTestOptions: ''
+    urinaTest: [''],
+    urinaTestOptions: [],
+    vaginalTest: [''],
+    vaginalTestOptions: [],
+    contactTest: [''],
+    contactTestOptions: [],
+    spermTest: [''],
+    spermTestOptions: []
 };
 
 export default ChemistryProfile;
