@@ -4,13 +4,14 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../../layout/StandardLayout';
+import './BooksellerRequest.less';
 
 
 const BooksellerRequest = () => (
 
     <Grid container>
         <Grid.Row>
-            <Form>
+            <Form className="wide-grid">
                 <Form.Field
                     required
                     control={TextArea}

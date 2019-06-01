@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-    Segment, Rating, Grid
+    Segment, Rating, Grid, Label
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import './Review.less';
 
 
 const Review = ({
@@ -10,28 +11,48 @@ const Review = ({
 }) => (
     <Segment>
         <Grid>
-            <Grid.Row>
-                <Grid.Column width={3}>
-                    <span>Rigueur</span>
-                    <Rating icon="star" defaultRating={rigor} maxRating={3} />
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    <span>Statistique</span>
-                    <Rating icon="star" defaultRating={statistic} maxRating={3} />
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    <span>Résultats</span>
-                    <Rating icon="star" defaultRating={results} maxRating={3} />
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    <span>Interprétation</span>
-                    <Rating icon="star" defaultRating={interpretation} maxRating={3} />
-                </Grid.Column>
-            </Grid.Row>
-            <span>Commentaires</span>
-            {comments}
-            <Grid.Row>
-            </Grid.Row>
+            <Grid.Column className="review-column">
+                <Grid.Row>
+                    <Label basic as="h4" className="review-rating">
+                        <Label.Detail className="rating-details">
+                            <Rating icon="star" defaultRating={rigor} maxRating={3} disabled size="mini" />
+                        </Label.Detail>
+                        Rigueur
+                    </Label>
+                </Grid.Row>
+                <Grid.Row>
+                    <Label basic as="h4" className="review-rating">
+                        <Label.Detail className="rating-details">
+                            <Rating icon="star" defaultRating={statistic} maxRating={3} disabled size="mini" />
+                        </Label.Detail>
+                        Statistique
+                    </Label>
+                </Grid.Row>
+                <Grid.Row>
+                    <Label basic as="h4" className="review-rating">
+                        <Label.Detail className="rating-details">
+                            <Rating icon="star" defaultRating={results} maxRating={3} disabled size="mini" />
+                        </Label.Detail>
+                        Résultats
+                    </Label>
+                </Grid.Row>
+                <Grid.Row>
+                    <Label basic as="h4" className="review-rating">
+                        <Label.Detail className="rating-details">
+                            <Rating icon="star" defaultRating={interpretation} maxRating={3} disabled size="mini" />
+                        </Label.Detail>
+                        Interprétation
+                    </Label>
+                </Grid.Row>
+            </Grid.Column>
+            <Grid.Column>
+                <Grid.Row>
+                    Commentaires
+                </Grid.Row>
+                <Grid.Row>
+                    {comments}
+                </Grid.Row>
+            </Grid.Column>
         </Grid>
     </Segment>
 

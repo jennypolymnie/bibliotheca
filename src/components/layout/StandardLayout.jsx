@@ -12,9 +12,9 @@ const StandardLayout = (C, title) => props => (
                 </Header>
             </Grid.Row>
             <Grid.Row width={16}>
-                <div style={{ width: '100%' }}>
-                    <C {...props} />
-                </div>
+                {/* <div style={{ width: '100%' }}> */}
+                <C {...props} />
+                {/* </div> */}
             </Grid.Row>
         </Grid>
     </Segment>
