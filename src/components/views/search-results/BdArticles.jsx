@@ -184,7 +184,6 @@ const BdArticles = [
         reviewCount: 3,
         labmatch: [
             'E',
-            'Q',
             'A'
         ]
     },
@@ -277,7 +276,6 @@ const BdArticles = [
         reviewCount: 0,
         labmatch: [
             'E',
-            'Q',
             'A'
         ]
     },

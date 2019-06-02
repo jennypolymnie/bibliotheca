@@ -188,7 +188,7 @@ class FormLabUpdate extends Component {
 
                         <Checkbox
                             toggle
-                            label="Informations visibles pour les autres laboratoires. Trouver plus facilement des partenaires d'étude ou des renseignements sur des technologies"
+                            label="Informations visibles pour les autres laboratoires. Leur permet de vous proposer des projets de recherche ou de vous demander conseil."
                         />
                     </Grid.Column>
                 </Grid.Row>
