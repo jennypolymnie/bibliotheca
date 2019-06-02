@@ -20,3 +20,7 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.ui.form{
+    width: 100%; 
+}

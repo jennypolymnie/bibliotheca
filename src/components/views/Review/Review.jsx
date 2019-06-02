@@ -45,9 +45,11 @@ const Review = ({
                     </Label>
                 </Grid.Row>
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column className="comments-column">
                 <Grid.Row>
-                    Commentaires
+                    <Label basic as="h4" className="review-rating">
+                        Commentaires
+                    </Label>
                 </Grid.Row>
                 <Grid.Row>
                     {comments}
