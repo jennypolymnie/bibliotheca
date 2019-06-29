@@ -10,7 +10,7 @@ const BdArticles = [
         journal: 'Forensic Science International: Genetics ',
         reference: 'Volume 33, Pages 136-146',
         link: 'https://www.sciencedirect.com/science/article/pii/S187249731730282X',
-        nature: '',
+        nature: 'Cellules épithéliales',
         material: '',
         support: '',
         population: '',
@@ -22,15 +22,11 @@ const BdArticles = [
         activité: '',
         conditions: '',
         categories: [
-            'activity',
             'bayesianNetworkActivity'
         ],
-        score: 9,
+        score: 12,
         reviewCount: 4,
         labmatch: [
-            'E',
-            'Q',
-            'A'
         ]
     },
     {
@@ -50,9 +46,9 @@ const BdArticles = [
         concentration: '',
         test: '',
         temps: '',
-        transfert: '',
+        transfert: 'Primaire',
         activité: '',
-        conditions: '',
+        conditions: 'Espace fermé',
         categories: [
             'activity',
             'data'
@@ -60,7 +56,6 @@ const BdArticles = [
         score: 10,
         reviewCount: 6,
         labmatch: [
-            'E'
         ]
     },
     {
@@ -177,7 +172,6 @@ const BdArticles = [
         activité: '',
         conditions: '',
         categories: [
-            'activity',
             'preevaluation'
         ],
         score: 7,
@@ -234,19 +228,17 @@ const BdArticles = [
         concentration: '',
         test: '',
         temps: '',
-        transfert: '',
-        activité: '',
-        conditions: '',
+        transfert: 'Primaire',
+        activité: 'Saisir',
+        conditions: 'Espace fermé',
         categories: [
             'activity',
             'data'
         ],
-        score: 9,
+        score: 12,
         reviewCount: 3,
         labmatch: [
-            'E',
-            'Q',
-            'A'
+            'Q'
         ]
 
     },
@@ -288,17 +280,17 @@ const BdArticles = [
         journal: 'Forensic Science International: Genetics',
         reference: 'Volume 36, Pages 13-19',
         link: 'https://www.sciencedirect.com/science/article/pii/S1872497318301522',
-        nature: '',
+        nature: 'Cellules épithéliales',
         material: '',
-        support: '',
+        support: 'Cartouche',
         population: '',
         marqueur: '',
         concentration: '',
         test: '',
         temps: '',
-        transfert: '',
-        activité: '',
-        conditions: '',
+        transfert: 'Primaire',
+        activité: 'Saisir',
+        conditions: 'Espace fermé',
         categories: [
             'activity',
             'data'
@@ -306,7 +298,6 @@ const BdArticles = [
         score: 12,
         reviewCount: 3,
         labmatch: [
-            'Q'
         ]
     },
     {
@@ -332,12 +323,67 @@ const BdArticles = [
         categories: [
             'bayesianNetworkActivity'
         ],
-        score: 2,
+        score: 11,
         reviewCount: 1,
         labmatch: [
-            'E',
-            'Q',
-            'A'
+        ]
+    },
+    {
+        id: 'A12',
+        authors: 'Ane Elida Fonneløpa, Merete Ramsea, Thore Egelanda, Peter Gill',
+        year: '2017',
+        title: 'The implications of shedder status and background DNA on direct and secondary transfer in an attack scenario',
+        abstract: 'In court questions are often raised related to how trace DNA was deposited, directly during the crime or innocently for instance by secondary transfer. It is therefore of interest to have knowledge of the probability of transfer or secondary transfer in different situations. Factors that could influence transfer probabilities are background DNA and the shedder status of the involved persons. In this study, we have classified participants as high or low DNA shedders. We observed DNA transfer in a simulated attack scenario, and demonstrated that shedder status has a significant influence of transfer rates. We have examined the background DNA in samples from T-shirts worn in an area with frequent human traffic and detected multiple contributors. We further demonstrated that DNA from co-workers of a T-shirt wearer can be secondarily transferred from the environment and detected in samples, and that the composition of background DNA is correlated with the shedder status of the wearer. Finally, we have illustrated the inference with the results of transfer probabilities and a fictive case with the use of a Bayesian network.',
+        journal: 'Forensic Science International: Genetics',
+        reference: '29 (2017) 48–60',
+        link: 'https://www.sciencedirect.com/science/article/pii/S0379073817302360?via%3Dihub',
+        nature: 'Salive',
+        material: '',
+        support: 'T-shirt',
+        population: '',
+        marqueur: '',
+        concentration: '',
+        test: '',
+        temps: '',
+        transfert: 'Primaire',
+        activité: 'Discuter',
+        conditions: 'Espace fermé',
+        categories: [
+            'activity',
+            'data'
+        ],
+        score: 11,
+        reviewCount: 1,
+        labmatch: [
+        ]
+    },
+    {
+        id: 'A13',
+        authors: 'Julia Burrill, Barbara Daniel, Nunzianda Frascione',
+        year: '2019',
+        title: 'A review of trace “Touch DNA” deposits: Variability factors and an exploration of cellular composition',
+        abstract: 'The use in courtrooms of forensic DNA typing results from presumably touched or handled items is increasing as the sensitivity of detection techniques improves. Research investigating how much DNA can be recovered from handled items, whether trace DNA can be detected under certain scenarios including varying degrees of indirect transfer, and factors which may influence these results is summarized here. Fundamentally, our current understanding of the cellular content of touch deposits and the origins of the potential trace DNA therein is extremely limited. Possible origins include anucleate corneocytes, fragmentary cells/nuclei, nucleated epithelial cells from hands, transferred nucleated cells, and cell-free DNA. Here we review the existing evidence for each possible source and consider remaining knowledge gaps regarding forensically relevant touch depositions.',
+        journal: 'Forensic Science International: Genetics',
+        reference: '39 (2019) 8–18',
+        link: 'https://www.sciencedirect.com/science/article/pii/S0379073817302360?via%3Dihub',
+        nature: 'Cellules épithéliales',
+        material: '',
+        support: 'Peau',
+        population: '',
+        marqueur: '',
+        concentration: '',
+        test: '',
+        temps: '',
+        transfert: 'Primaire',
+        activité: 'Saisir',
+        conditions: 'Espace fermé',
+        categories: [
+            'activity',
+            'data'
+        ],
+        score: 10,
+        reviewCount: 1,
+        labmatch: [
         ]
     }
 ];

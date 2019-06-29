@@ -53,7 +53,7 @@ const Preevaluation = ({ selectOption, submitRequest }) => (
     <Grid stretched>
         <Grid.Column width={5} padded stretched>
             <Segment color="yellow" raised container className="search_option">
-                <Header textAlign="center" as="h2">Évaluation</Header>
+                <Header textAlign="center" as="h2">Détecter / Prélever</Header>
                 {generateListPreeval(selectOption)}
                 <Grid.Row stretched verticalAlign="bottom" className="search_button">
                     <Button

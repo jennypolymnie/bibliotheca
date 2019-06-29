@@ -44,6 +44,9 @@ const StainSupport = [
     },
     {
         id: 15, name: 'Ecouvillon', value: 'Ecouvillon', text: 'Ecouvillon'
+    },
+    {
+        id: 16, name: 'T-shirt', value: 'T-shirt', text: 'T-shirt'
     }
 
 

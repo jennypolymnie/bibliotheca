@@ -21,11 +21,11 @@ const SearchResults = ({
 }) => (
     <div className="recherche">
         <Grid>
-            <Grid.Row>
+            {/* <Grid.Row>
                 <Grid.Column>
                     <Checkbox toggle label="Utiliser le profil du laboratoire" />
                 </Grid.Column>
-            </Grid.Row>
+            </Grid.Row> */}
             <Grid.Row columns={3} className="searchParameterRow">
                 {userRequest.options.map(option => (
                     <Grid.Column key={option.id}>
