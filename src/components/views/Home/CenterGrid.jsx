@@ -2,8 +2,31 @@ import React from 'react';
 import {
     Image, Grid, Menu, Segment, Header
 } from 'semantic-ui-react';
+import LocalizedStrings from 'react-localization';
 import Login from './Login';
 import Statistics from './Statistics';
+
+const translations = new LocalizedStrings({
+    en: {
+        search: 'Search the library',
+        propose: 'Proposer un article',
+        evaluate: 'Evaluer un article',
+        ask: 'Poser une question',
+        forum: 'Entrer dans le forum',
+        partner: 'Rechercher un partenaire',
+        help: 'Demander conseil'
+    },
+    fr: {
+        search: 'Interroger la bibliothèque',
+        propose: 'Proposer un article',
+        evaluate: 'Evaluer un article',
+        ask: 'Poser une question',
+        forum: 'Entrer dans le forum',
+        partner: 'Rechercher un partenaire',
+        help: 'Demander conseil'
+
+    }
+});
 
 const withCenterGrid = (C, showMenu) => props => (
     <div className="vertical-center">
@@ -17,10 +40,10 @@ const withCenterGrid = (C, showMenu) => props => (
                 <Grid.Column verticalAlign="middle" textAlign="left" width={5}>
                     { showMenu && (
                         <Menu text vertical size="massive" className="fixed-center fixed-left-text">
-                            <Menu.Item content="Interroger la bibliothèque" as={Segment} basic size="huge" compact active={false} />
-                            <Menu.Item content="Proposer un article" as={Segment} basic size="huge" compact active={false} />
-                            <Menu.Item content="Evaluer un article" as={Segment} basic size="huge" compact active={false} />
-                            <Menu.Item content="Poser une question" as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.search} as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.propose} as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.evaluate} as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.ask} as={Segment} basic size="huge" compact active={false} />
                         </Menu>
                     )}
                 </Grid.Column>
@@ -30,9 +53,9 @@ const withCenterGrid = (C, showMenu) => props => (
                 <Grid.Column verticalAlign="middle" textAlign="right" width={5}>
                     { showMenu && (
                         <Menu text vertical size="massive" className="fixed-center fixed-right-text">
-                            <Menu.Item content="Entrer dans le forum" as={Segment} basic size="huge" compact active={false} />
-                            <Menu.Item content="Rechercher un partenaire" as={Segment} basic size="huge" compact active={false} />
-                            <Menu.Item content="Demander conseil" as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.forum} as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.partner} as={Segment} basic size="huge" compact active={false} />
+                            <Menu.Item content={translations.help} as={Segment} basic size="huge" compact active={false} />
                         </Menu>
                     )}
                 </Grid.Column>
