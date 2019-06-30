@@ -3,7 +3,7 @@ import {
     Segment, Rating, Grid, Label
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import './Review.less';
+import './stylesheets/Review.less';
 
 
 const Review = ({

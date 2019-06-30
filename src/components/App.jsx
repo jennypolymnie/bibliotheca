@@ -13,7 +13,7 @@ import PartnerStudy2 from './Views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './Views/PartnerStudy/PartnerListLab/PartnerListLab';
 import ReachOutListLab from './Views/ReachOut/ReachOutListLab/ReachOutListLab';
 import RequestAdvice from './Views/ReachOut/RequestAdvice';
-import ReviewForm from './Views/Review/ReviewForm';
+import ReviewForm from './Views/Review/SubComponent/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './Views/Home/Home';
 import RequestSend from './Views/Ask/SubComponents/RequestSend';
 import ProposalSend from './Views/Propose/SubComponents/ProposalSend';
@@ -26,7 +26,7 @@ import './App.less';
 import logoYellow from '../resources/bibliotheca_yellow.svg';
 import logoBlue from '../resources/bibliotheca_blue.svg';
 import EquipmentPart from './Views/Profile/SubComponents/EquipmentPart';
-import ReviewSummary from './Views/Review/ReviewSummary';
+import ReviewSummary from './Views/Review/SubComponent/ReviewSummary';
 
 // import { createRequireFromPath } from 'module';
 

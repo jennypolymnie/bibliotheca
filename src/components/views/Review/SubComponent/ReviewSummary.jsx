@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import {
     List
 } from 'semantic-ui-react';
-import Review from './Review';
-import StandardLayout from '../../Layouts/StandardLayout';
-import Article from '../search-results/Article';
-import { filteredArticleReviewsSelector, selectedArticleSelector } from '../../../store/selectors/searchReviews';
+import Review from '../Review';
+import StandardLayout from '../../../Layouts/StandardLayout';
+import Article from '../../search-results/Article';
+import { filteredArticleReviewsSelector, selectedArticleSelector } from '../../../../store/selectors/searchReviews';
 
 
 const ReviewSummary = ({

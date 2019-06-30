@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import {
     Radio, Form, Button, Grid
 } from 'semantic-ui-react';
-import './ReviewForm.css';
-import Article from '../search-results/Article';
-import { selectedArticleSelector } from '../../../store/selectors/searchReviews';
-import StandardLayout from '../../Layouts/StandardLayout';
+import '../stylesheets/ReviewForm.css';
+import Article from '../../search-results/Article';
+import { selectedArticleSelector } from '../../../../store/selectors/searchReviews';
+import StandardLayout from '../../../Layouts/StandardLayout';
 
 class ReviewForm extends Component {
     constructor(props) {
