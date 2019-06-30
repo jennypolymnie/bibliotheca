@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Button, Checkbox, Form
 } from 'semantic-ui-react';
-import './FormLab.css';
 import { Link } from 'react-router-dom';
 import GridFormEquipment from './GridFormEquipment';
 

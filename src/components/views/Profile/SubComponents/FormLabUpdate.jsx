@@ -4,7 +4,7 @@ import {
     Button, Checkbox, Icon, Grid
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import './FormLabUpdate.css';
+import '../stylesheets/FormLabUpdate.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import omit from 'lodash/omit';
@@ -12,11 +12,11 @@ import GeneralInfo from './GeneralInfo';
 import ChemistryProfile from './ChemistryGridForm';
 import ResearchProfile from './ResearchProfile';
 import GridFormEquipment from './GridFormEquipment';
-import StandardLayout from '../../Layouts/StandardLayout';
+import StandardLayout from '../../../Layouts/StandardLayout';
 import OneOfYourTheme from './OneOfYourTheme';
 import AnotherTheme from './AnotherTheme';
 
-import { saveProfile } from '../../../store/actions/actionCreators';
+import { saveProfile } from '../../../../store/actions/actionCreators';
 
 class FormLabUpdate extends Component {
     constructor(props) {

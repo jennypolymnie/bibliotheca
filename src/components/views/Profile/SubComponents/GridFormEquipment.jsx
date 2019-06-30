@@ -3,11 +3,10 @@ import {
     Grid, Header, Segment, Dropdown, Icon
 } from 'semantic-ui-react';
 
-import ThermalCycler from '../../data/ThermalCycler';
-import QuantificationDevices from '../../data/QuantificationDevices';
-import CapillaryElectrophoresisDevices from '../../data/CapillaryElectrophoresisDevices';
-import NextGenerationSequencers from '../../data/NextGenerationSequencers';
-import './GridFormEquipment.css';
+import ThermalCycler from '../../../data/ThermalCycler';
+import QuantificationDevices from '../../../data/QuantificationDevices';
+import CapillaryElectrophoresisDevices from '../../../data/CapillaryElectrophoresisDevices';
+import NextGenerationSequencers from '../../../data/NextGenerationSequencers';
 
 const GridFormEquipment = () => (
 

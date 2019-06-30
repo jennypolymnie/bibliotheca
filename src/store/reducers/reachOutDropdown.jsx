@@ -3,8 +3,8 @@ import {
     CHANGE_CHOICE
 } from '../actions/constants';
 
-import GridForm from '../../components/views/LabForm/ChemistryGridForm';
-import GridFormEquipment from '../../components/views/LabForm/GridFormEquipment';
+import GridForm from '../../components/Views/Profile/SubComponents/ChemistryGridForm';
+import GridFormEquipment from '../../components/Views/Profile/SubComponents/GridFormEquipment';
 
 const initialState = {
     Dropdown: {}
