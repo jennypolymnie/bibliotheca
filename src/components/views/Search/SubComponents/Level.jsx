@@ -4,10 +4,10 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Hierarchy from '../../data/Hierarchy';
-import BayesianNetworkCategory from '../../data/BayesianNetworkCategory';
-import OptionsRequestPreeval from '../../data/OptionsRequestPreeval';
-import OptionsRequestData from '../../data/OptionsRequest';
+import Hierarchy from '../../../data/Hierarchy';
+import BayesianNetworkCategory from '../../../data/BayesianNetworkCategory';
+import OptionsRequestPreeval from '../../../data/OptionsRequestPreeval';
+import OptionsRequestData from '../../../data/OptionsRequest';
 // import OptionsRequestBayesian from '../../data/OptionsRequestBayesian';
 
 const generateListPreeval = selectOption => OptionsRequestPreeval

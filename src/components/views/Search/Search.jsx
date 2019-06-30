@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import StandardLayout from '../../Layouts/StandardLayout';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
-import Level from './Level';
-import './LibraryRequest.less';
+import Level from './SubComponents/Level';
+import './stylesheets/Search.less';
 
-class LibraryRequest extends Component {
+class Search extends Component {
     constructor(props) {
         super(props);
         this.selectOption = this.selectOption.bind(this);
@@ -56,9 +56,9 @@ const mapDispatchToProps = dispatch => ({
     onSubmit: userRequest => dispatch(saveResearchRequest(userRequest))
 });
 
-LibraryRequest.propTypes = {
+Search.propTypes = {
     onSubmit: PropTypes.func.isRequired
 };
 
 
-export default connect(null, mapDispatchToProps)(StandardLayout(LibraryRequest, 'Interroger la bibliothèque'));
+export default connect(null, mapDispatchToProps)(StandardLayout(Search, 'Interroger la bibliothèque'));

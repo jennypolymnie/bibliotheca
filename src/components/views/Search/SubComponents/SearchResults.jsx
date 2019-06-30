@@ -6,12 +6,12 @@ import {
     Grid, List,
     Container, Header
 } from 'semantic-ui-react';
-import Article from './Article';
-import StandardLayout from '../../Layouts/StandardLayout';
+import Article from '../../../CommonComponents/Article/Article';
+import StandardLayout from '../../../Layouts/StandardLayout';
 import {
     userRequestSelector, sortedArticleSelector, countSortedArticlesSelector
-} from '../../../store/selectors/searchResults';
-import './stylesheets/SearchResults.css';
+} from '../../../../store/selectors/searchResults';
+import '../stylesheets/SearchResults.css';
 
 const SearchResults = ({
     userRequest,

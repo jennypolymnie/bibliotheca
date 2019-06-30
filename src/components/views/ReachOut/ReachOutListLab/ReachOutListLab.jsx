@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Grid } from 'semantic-ui-react';
 import ResultsFormat from './ResultsFormat';
 import CountDisplay from '../../../CommonComponents/CountDisplay/CountDisplay';
-import Laboratories from '../../../data/Laboratories';
+import Laboratories from './Laboratories';
 import StandardLayout from '../../../Layouts/StandardLayout';
 
 const ReachOutListLab = () => (

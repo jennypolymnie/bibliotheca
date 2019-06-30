@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { allArticlesSelector } from './searchResults';
-import BdReviews from '../../components/Views/Review/BdReviews';
+import BdReviews from '../../components/data/BdReviews';
 
 export const allArticlesReviewsSelector = () => BdReviews;
 

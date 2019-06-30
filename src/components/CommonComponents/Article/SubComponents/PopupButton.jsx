@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button, Popup } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import { saveSelectedArticle } from '../../../store/actions/actionCreators';
+import { saveSelectedArticle } from '../../../../store/actions/actionCreators';
 
 const PopupButton = props => (
     <Popup

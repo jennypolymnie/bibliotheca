@@ -7,7 +7,7 @@ import {
 } from 'semantic-ui-react';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
 import StandardLayout from '../../Layouts/StandardLayout';
-import './TraditionalSearch.less';
+import './stylesheets/SimpleSearch.less';
 
 class TraditionalSearch extends Component {
     constructor(props) {

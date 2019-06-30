@@ -5,9 +5,9 @@ import {
     Segment, Button, Icon, Label, Grid, Statistic
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import TableCheck from './TableCheck';
-import PopupAbstract from './PopupAbstract';
-import PopupButton from './PopupButton';
+import TableCheck from './SubComponents/TableCheck';
+import PopupAbstract from './SubComponents/PopupAbstract';
+import PopupButton from './SubComponents/PopupButton';
 import { saveSelectedArticle } from '../../../store/actions/actionCreators';
 import './stylesheets/Article.less';
 

@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import BdArticles from '../../components/Views/search-results/BdArticles';
+import BdArticles from '../../components/data/BdArticles';
 
 export const userRequestSelector = state => state.userRequest;
 

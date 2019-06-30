@@ -5,7 +5,7 @@ import {
     Radio, Form, Button, Grid
 } from 'semantic-ui-react';
 import '../stylesheets/ReviewForm.css';
-import Article from '../../search-results/Article';
+import Article from '../../../CommonComponents/Article/Article';
 import { selectedArticleSelector } from '../../../../store/selectors/searchReviews';
 import StandardLayout from '../../../Layouts/StandardLayout';
 

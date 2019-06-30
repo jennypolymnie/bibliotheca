@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Icon, Grid } from 'semantic-ui-react';
 import {
     userRequestSelector
-} from '../../../store/selectors/searchResults';
+} from '../../../../store/selectors/searchResults';
 
 const TableCheck = ({
     articleCharacteristics,
