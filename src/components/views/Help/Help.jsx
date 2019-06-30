@@ -4,10 +4,10 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Toggle from './Toggle';
-import './RequestAdvice.css';
-import ChemistryPanel from './ChemistryPanel';
-import EquipmentPanel from './EquipmentPanel';
+import Toggle from './SubComponents/Toggle';
+import './stylesheets/Help.css';
+import ChemistryPanel from './SubComponents/ChemistryPanel';
+import EquipmentPanel from './SubComponents/EquipmentPanel';
 
 class RequestAdvice extends Component {
     constructor(props) {

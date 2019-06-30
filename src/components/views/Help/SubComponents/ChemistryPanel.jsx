@@ -2,22 +2,22 @@ import React from 'react';
 import {
     Grid, Segment, Dropdown, Header
 } from 'semantic-ui-react';
-import ExtractionDNAChemistry from '../../data/ExtractionDNAChemistry';
-import ExtractionRNAChemistry from '../../data/ExtractionRNAChemistry';
-import BisulfiteConversionChemistry from '../../data/BisulfiteConversionChemistry';
-import QuantificationAutosomalChemistry from '../../data/QuantificationAutosomalChemistry';
-import QuantificationYChemistry from '../../data/QuantificationYChemistry';
-import AmplificationAutoChemistry from '../../data/AmplificationAutoChemistry';
-import AmplificationYChemistry from '../../data/AmplificationYChemistry';
-import AmplificationXChemistry from '../../data/AmplificationXChemistry';
-import SalivaTest from '../../data/SalivaTest';
-import BloodTest from '../../data/BloodTest';
-import SpermTest from '../../data/SpermTest';
-import UrinaTest from '../../data/UrinaTest';
-import VaginalTest from '../../data/VaginalTest';
-import ContactTest from '../../data/ContactTest';
+import ExtractionDNAChemistry from '../../../data/ExtractionDNAChemistry';
+import ExtractionRNAChemistry from '../../../data/ExtractionRNAChemistry';
+import BisulfiteConversionChemistry from '../../../data/BisulfiteConversionChemistry';
+import QuantificationAutosomalChemistry from '../../../data/QuantificationAutosomalChemistry';
+import QuantificationYChemistry from '../../../data/QuantificationYChemistry';
+import AmplificationAutoChemistry from '../../../data/AmplificationAutoChemistry';
+import AmplificationYChemistry from '../../../data/AmplificationYChemistry';
+import AmplificationXChemistry from '../../../data/AmplificationXChemistry';
+import SalivaTest from '../../../data/SalivaTest';
+import BloodTest from '../../../data/BloodTest';
+import SpermTest from '../../../data/SpermTest';
+import UrinaTest from '../../../data/UrinaTest';
+import VaginalTest from '../../../data/VaginalTest';
+import ContactTest from '../../../data/ContactTest';
 
-import './ChemistryPanel.css';
+import '../stylesheets/ChemistryPanel.css';
 
 const ChemistryPanel = () => (
 

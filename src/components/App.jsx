@@ -9,10 +9,10 @@ import FormLabUpdate from './Views/Profile/SubComponents/FormLabUpdate';
 import Ask from './Views/Ask/Ask';
 import Propose from './Views/Propose/Propose';
 import LibraryRequest from './Views/LibraryRequest/LibraryRequest';
-import PartnerStudy2 from './Views/PartnerStudy/PartnerStudy2';
-import PartnerListLab from './Views/PartnerStudy/PartnerListLab/PartnerListLab';
-import ReachOutListLab from './Views/ReachOut/ReachOutListLab/ReachOutListLab';
-import RequestAdvice from './Views/ReachOut/RequestAdvice';
+import Partner from './Views/Partner/Partner';
+import PartnerListLab from './Views/Partner/SubComponent/PartnerListLab/PartnerListLab';
+import ReachOutListLab from './Views/Help/ReachOutListLab/ReachOutListLab';
+import Help from './Views/Help/Help';
 import ReviewForm from './Views/Review/SubComponent/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './Views/Home/Home';
 import RequestSend from './Views/Ask/SubComponents/RequestSend';
@@ -66,10 +66,10 @@ const App = () => (
                     <Route path="/analyticalPart" component={AnalyticalPart} />
                     <Route path="/equipmentPart" component={EquipmentPart} />
                     <Route path="/libraryRequest" component={LibraryRequest} />
-                    <Route path="/PartnerStudy" component={PartnerStudy2} />
+                    <Route path="/partner" component={Partner} />
                     <Route path="/List" component={PartnerListLab} />
                     <Route path="/ReachoutList" component={ReachOutListLab} />
-                    <Route path="/requestAdvice" component={RequestAdvice} />
+                    <Route path="/help" component={Help} />
                     <Route path="/reviewForm" component={ReviewForm} />
                     <Route path="/search" component={TraditionalSearch} />
                     <Route path="/requestSend" component={RequestSend} />
@@ -91,8 +91,8 @@ const App = () => (
                 <div className="vertical-center">
                     <Menu icon vertical secondary className="fixed-center menu-buttons-right">
                         <AvailableActiveItem to="/forum" fitted name="" iconName="discussions" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/PartnerStudy" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/requestAdvice" fitted name="equipment" iconName="question circle outline" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/partner" fitted name="partner" iconName="users" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/help" fitted name="equipment" iconName="question circle outline" color="yellow" size={buttonSize} />
                     </Menu>
                 </div>
             </Grid.Column>

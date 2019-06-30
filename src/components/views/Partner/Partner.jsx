@@ -4,7 +4,7 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../../Layouts/StandardLayout';
-import Research from './Research';
+import Research from '../../CommonComponents/ResearchFields/ResearchFields';
 
 
 class PartnerStudy2 extends Component {

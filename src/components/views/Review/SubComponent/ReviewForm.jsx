@@ -144,7 +144,6 @@ class ReviewForm extends Component {
                             </div>
                         </Grid.Column>
                     </Grid.Row>
-                    
                     <Grid.Row columns={2} stretched>
                         <Grid.Column>
                             <div className="QuestionRadio">
@@ -179,7 +178,6 @@ class ReviewForm extends Component {
                                     </Form.Field>
                                 </Form>
                             </div>
-                        
                         </Grid.Column>
                         <Grid.Column>
                             <div className="QuestionRadio">

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Button, Grid } from 'semantic-ui-react';
-import ListLab from './ListLab';
-import CountElement from '../../search-results/NbArticle';
+import ListLab from '../../../../CommonComponents/LabList/LabList';
+import CountElement from '../../../search-results/NbArticle';
 import Users from './Users';
-import StandardLayout from '../../../Layouts/StandardLayout';
-
+import StandardLayout from '../../../../Layouts/StandardLayout';
+// REMOVE THIS
 const PartnerListLab = () => (
     <div>
         <Grid container>

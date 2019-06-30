@@ -2,16 +2,16 @@ import React from 'react';
 import {
     Grid, Header, Segment, Dropdown
 } from 'semantic-ui-react';
-import AdhesiveTapes from '../../data/AdhesiveTapes';
-import Swabs from '../../data/Swabs';
-import NucleicCards from '../../data/NucleicCards';
-import ExtractionDNADevices from '../../data/ExtractionDNADevices';
-import './EquipmentPanel.css';
-import CapillaryElectrophoresisDevices from '../../data/CapillaryElectrophoresisDevices';
-import NextGenerationSequencers from '../../data/NextGenerationSequencers';
-import LightSources from '../../data/LightSources';
-import QuantificationDevices from '../../data/QuantificationDevices';
-import ThermalCycler from '../../data/ThermalCycler';
+import AdhesiveTapes from '../../../data/AdhesiveTapes';
+import Swabs from '../../../data/Swabs';
+import NucleicCards from '../../../data/NucleicCards';
+import ExtractionDNADevices from '../../../data/ExtractionDNADevices';
+import '../stylesheets/EquipmentPanel.css';
+import CapillaryElectrophoresisDevices from '../../../data/CapillaryElectrophoresisDevices';
+import NextGenerationSequencers from '../../../data/NextGenerationSequencers';
+import LightSources from '../../../data/LightSources';
+import QuantificationDevices from '../../../data/QuantificationDevices';
+import ThermalCycler from '../../../data/ThermalCycler';
 
 const EquipmentPanel = () => (
 
