@@ -7,7 +7,7 @@ import {
 import './ReviewForm.css';
 import Article from '../search-results/Article';
 import { selectedArticleSelector } from '../../../store/selectors/searchReviews';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 
 class ReviewForm extends Component {
     constructor(props) {

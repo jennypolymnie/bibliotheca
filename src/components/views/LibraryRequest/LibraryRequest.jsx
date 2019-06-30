@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
 import Level from './Level';
 import './LibraryRequest.less';

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Header, Segment } from 'semantic-ui-react';
-import ThemeSelector from './ThemeSelector';
-import DiscussionItems from './DiscussionItems';
-import StandardLayout from '../../layout/StandardLayout';
+import ThemeSelector from './SubComponents/ThemeSelector';
+import DiscussionItems from './SubComponents/DiscussionItems';
+import StandardLayout from '../../Layouts/StandardLayout';
 
 const topics = [
     {

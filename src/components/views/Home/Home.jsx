@@ -2,8 +2,8 @@ import React from 'react';
 import {
     Image, Grid, Menu, Segment, Header
 } from 'semantic-ui-react';
-import Login from './Login';
-import Statistics from './Statistics';
+import Login from './SubComponents/Login';
+import Statistics from './SubComponents/Statistics';
 
 const withCenterGrid = (C, showMenu) => props => (
     <div className="vertical-center">

@@ -6,7 +6,7 @@ import {
     Button, Form, Input, Grid
 } from 'semantic-ui-react';
 import { saveResearchRequest } from '../../../store/actions/actionCreators';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import './TraditionalSearch.less';
 
 class TraditionalSearch extends Component {

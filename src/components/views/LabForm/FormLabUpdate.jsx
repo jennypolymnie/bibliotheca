@@ -12,7 +12,7 @@ import GeneralInfo from './GeneralInfo';
 import ChemistryProfile from './ChemistryGridForm';
 import ResearchProfile from './ResearchProfile';
 import GridFormEquipment from './GridFormEquipment';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import OneOfYourTheme from './OneOfYourTheme';
 import AnotherTheme from './AnotherTheme';
 

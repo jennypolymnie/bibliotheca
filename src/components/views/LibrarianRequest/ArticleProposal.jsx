@@ -3,7 +3,7 @@ import {
     Button, Form, TextArea, Input, Grid, Message
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import './ArticleProposal.less';
 
 class ArticleProposal extends Component {

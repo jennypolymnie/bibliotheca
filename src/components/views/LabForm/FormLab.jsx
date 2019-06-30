@@ -4,7 +4,7 @@ import {
 } from 'semantic-ui-react';
 import './FormLab.css';
 import { Link } from 'react-router-dom';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 
 class FormLab extends Component {
     state = {}

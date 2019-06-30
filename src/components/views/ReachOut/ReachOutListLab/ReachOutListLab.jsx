@@ -3,7 +3,7 @@ import { Button, Grid } from 'semantic-ui-react';
 import ResultsFormat from './ResultsFormat';
 import CountElement from '../../search-results/NbArticle';
 import Laboratories from './Laboratories';
-import StandardLayout from '../../../layout/StandardLayout';
+import StandardLayout from '../../../Layouts/StandardLayout';
 
 const ReachOutListLab = () => (
     <div>

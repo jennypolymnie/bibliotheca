@@ -3,11 +3,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import {
-    Checkbox, Grid, List,
+    Grid, List,
     Container, Header
 } from 'semantic-ui-react';
 import Article from './Article';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import {
     userRequestSelector, sortedArticleSelector, countSortedArticlesSelector
 } from '../../../store/selectors/searchResults';

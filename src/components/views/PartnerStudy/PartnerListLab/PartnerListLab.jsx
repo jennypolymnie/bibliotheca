@@ -3,7 +3,7 @@ import { Button, Grid } from 'semantic-ui-react';
 import ListLab from './ListLab';
 import CountElement from '../../search-results/NbArticle';
 import Users from './Users';
-import StandardLayout from '../../../layout/StandardLayout';
+import StandardLayout from '../../../Layouts/StandardLayout';
 
 const PartnerListLab = () => (
     <div>

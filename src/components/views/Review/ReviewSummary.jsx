@@ -5,7 +5,7 @@ import {
     List
 } from 'semantic-ui-react';
 import Review from './Review';
-import StandardLayout from '../../layout/StandardLayout';
+import StandardLayout from '../../Layouts/StandardLayout';
 import Article from '../search-results/Article';
 import { filteredArticleReviewsSelector, selectedArticleSelector } from '../../../store/selectors/searchReviews';
 
