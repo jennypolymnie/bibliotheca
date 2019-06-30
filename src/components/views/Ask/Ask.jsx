@@ -4,7 +4,7 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../../Layouts/StandardLayout';
-import './BooksellerRequest.less';
+import './stylesheets/Ask.less';
 
 
 const BooksellerRequest = () => (

@@ -6,8 +6,8 @@ import { Grid, Menu } from 'semantic-ui-react';
 import SearchResults from './Views/search-results/SearchResults';
 import FormLab from './Views/Profile/Profile';
 import FormLabUpdate from './Views/Profile/SubComponents/FormLabUpdate';
-import BooksellerRequest from './Views/LibrarianRequest/BooksellerRequest';
-import ArticleProposal from './Views/LibrarianRequest/ArticleProposal';
+import Ask from './Views/Ask/Ask';
+import Propose from './Views/Propose/Propose';
 import LibraryRequest from './Views/LibraryRequest/LibraryRequest';
 import PartnerStudy2 from './Views/PartnerStudy/PartnerStudy2';
 import PartnerListLab from './Views/PartnerStudy/PartnerListLab/PartnerListLab';
@@ -15,8 +15,8 @@ import ReachOutListLab from './Views/ReachOut/ReachOutListLab/ReachOutListLab';
 import RequestAdvice from './Views/ReachOut/RequestAdvice';
 import ReviewForm from './Views/Review/ReviewForm';
 import { LogoWithCenterGrid, LoginWithCenterGrid } from './Views/Home/Home';
-import RequestSend from './Views/LibrarianRequest/RequestSend';
-import ProposalSend from './Views/LibrarianRequest/ProposalSend';
+import RequestSend from './Views/Ask/SubComponents/RequestSend';
+import ProposalSend from './Views/Propose/SubComponents/ProposalSend';
 import Profile from './Views/Profile/SubComponents/UserProfile/Profile';
 import TraditionalSearch from './Views/Review/TraditionalSearch';
 import AnalyticalPart from './Views/Profile/SubComponents/AnalyticPart';
@@ -44,9 +44,9 @@ const App = () => (
                 <div className="vertical-center">
                     <Menu icon compact vertical secondary className="fixed-center menu-buttons-left">
                         <AvailableActiveItem to="/libraryRequest" fitted name="request" iconName="search" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/proposals" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/propose" fitted name="proposal" iconName="cloud upload" color="yellow" size={buttonSize} />
                         <AvailableActiveItem to="/search" fitted name="search" iconName="star half" color="yellow" size={buttonSize} />
-                        <AvailableActiveItem to="/librarianRequest" fitted name="question" iconName="envelope" color="yellow" size={buttonSize} />
+                        <AvailableActiveItem to="/ask" fitted name="question" iconName="envelope" color="yellow" size={buttonSize} />
 
                     </Menu>
                 </div>
@@ -57,11 +57,11 @@ const App = () => (
                     <Route path="/logo">
                         <LogoWithCenterGrid src={logoBlue} size="massive" />
                     </Route>
-                    <Route path="/proposals" component={ArticleProposal} />
+                    <Route path="/propose" component={Propose} />
                     <Route path="/articles" component={SearchResults} />
                     <Route path="/profilUpdate" component={FormLabUpdate} />
                     <Route path="/reviewForm" component={ReviewForm} />
-                    <Route path="/librarianRequest" component={BooksellerRequest} />
+                    <Route path="/ask" component={Ask} />
                     <Route path="/formLab" component={FormLab} />
                     <Route path="/analyticalPart" component={AnalyticalPart} />
                     <Route path="/equipmentPart" component={EquipmentPart} />

@@ -4,7 +4,7 @@ import {
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import StandardLayout from '../../Layouts/StandardLayout';
-import './ArticleProposal.less';
+import './stylesheets/Propose.less';
 
 class ArticleProposal extends Component {
     state = {}
